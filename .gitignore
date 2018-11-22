@@ -1,0 +1,6 @@
+# Ignore Hidden files.
+*.DS_Store
+*.phpintel
+
+#Keep .gitkeep files
+!*.gitkeep
