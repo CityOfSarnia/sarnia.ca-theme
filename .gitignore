@@ -1,6 +1,7 @@
 # Ignore Hidden files.
 *.DS_Store
 *.phpintel
+config.codekit3
 
 #Keep .gitkeep files
 !*.gitkeep
