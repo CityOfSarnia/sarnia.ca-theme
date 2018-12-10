@@ -1,0 +1,26 @@
+.feature-notification {
+  background-color: $yellow-lt;
+  border-bottom: 5px solid $yellow;
+  padding: 20px 0;
+
+  @media screen and (min-width: $bp-menu) {
+  }
+}
+
+.feature-notification__headline {
+  @include font(18, 24);
+  margin-bottom: 5px;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-style: normal;
+  color: $grey;
+}
+
+.feature-notification__text {
+  @include font(16, 24);
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+  color: $grey;
+}

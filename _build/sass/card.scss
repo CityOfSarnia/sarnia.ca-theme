@@ -1,0 +1,42 @@
+.card {
+  background-color: $white;
+  border: 1px solid $smoke;
+}
+
+.card__main {
+  padding: 30px;
+  // min-height: 200px;
+}
+
+.card__headline {
+  @include font(24, 30);
+  margin-bottom: 5px;
+  font-family: $font-secondary;
+  color: $grey;
+  font-weight: 300;
+  font-style: normal;
+
+  a {
+    text-decoration: none;
+    color: $grey;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.card__text {
+  @include font(14, 22);
+  margin: 0;
+  font-family: $font-primary;
+  color: $grey;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.card__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

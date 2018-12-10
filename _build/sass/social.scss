@@ -1,0 +1,19 @@
+.social-links {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.social-links__icon {
+	@include default-transition;
+	margin-right: 12px;
+	opacity: 1;
+	
+	&:hover {
+		opacity: .8;
+	}
+	
+	svg {
+		width: 32px;
+	}
+}

@@ -1,0 +1,7 @@
+@mixin default-transition {
+  transition: all .25s ease 0s;
+}
+
+@mixin header-transition {
+  transition: all .4s ease 0s;
+}

@@ -1,0 +1,99 @@
+.section {
+  position: relative;
+  padding: 60px 0;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 100px 0;
+  }
+}
+
+.section--white {
+  background-color: $white;
+}
+
+.section--smoke {
+  background-color: $smoke;
+}
+
+.section--border {
+  border-bottom: 2px solid $smoke;
+}
+
+.section--flat {
+  padding: 60px 0 0;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 100px 0 0;
+  }
+}
+
+.section__columns {
+  @media screen and (min-width: $bp-md) {
+    display: grid;
+  }
+}
+
+.section__columns--2 {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 60px;
+}
+
+.section__columns--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.section__column {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media screen and (min-width: $bp-md) {
+    margin: 0;
+  }
+}
+
+.section__header {
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $bp-md) {
+    padding-bottom: 80px;
+  }
+}
+
+.section__header--min {
+  padding-bottom: 40px;
+
+  @media screen and (min-width: $bp-md) {
+    padding-bottom: 40px;
+  }
+}
+
+.section__headline {
+  @include font(20, 26, 1.5px);
+  margin-bottom: 30px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $blue;
+
+  @media screen and (min-width: $bp-md) {
+    @include font(20, 26, 1.5px);
+  }
+}
+
+.section__byline {
+  @include font(26, 38, 1px);
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-style: normal;
+  color: $black;
+
+  @media screen and (min-width: $bp-md) {
+    @include font(32, 48, 1px);
+  }
+}

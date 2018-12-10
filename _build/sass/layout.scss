@@ -1,0 +1,33 @@
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1144px;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 0 60px;
+  }
+
+  &.container--full {
+    padding: 0;
+
+    @media screen and (min-width: $bp-md) {
+      padding: 0 60px;
+    }
+  }
+}
+
+.container--min {
+  max-width: 800px;
+}
+
+main {
+  background-color: rgba($off-white, 1);
+}
+
+.push {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $bp-md) {
+    margin-bottom: 100px;
+  }
+}
