@@ -1,0 +1,18 @@
+.header {
+  position: relative;
+  @media screen and (min-width: $bp-menu) {
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // background-color: $alert;
+  padding: 30px 50px;
+  z-index: 1;
+}

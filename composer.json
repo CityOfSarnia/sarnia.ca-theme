@@ -1,7 +1,0 @@
-{
-  "name": "colethorsen/sarnia.ca-theme",
-  "type": "wordpress-theme",
-  "require": {
-    "composer/installers": "v1.0.6"
-  }
-}

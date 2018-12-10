@@ -1,0 +1,98 @@
+.footer {
+  position: relative;
+}
+
+.footer__main {
+  background-color: $blue-md;
+  padding: 40px 0 60px;
+}
+
+.contact-list {
+  a {
+    @include default-transition;
+    color: rgba($white, 1);
+  }
+
+  a:hover {
+    color: rgba($white, 1);
+  }
+}
+
+.contact-list__headline {
+  @include font(18, 24);
+  margin-bottom: 10px;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-style: normal;
+  color: $white;
+}
+
+.contact-list__item {
+  margin-bottom: 7px;
+}
+
+.contact-item {
+  display: flex;
+}
+
+.contact-item__headline {
+  @include font(14, 20);
+  flex-shrink: 0;
+  flex-basis: 70px;
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-style: normal;
+  color: $white;
+}
+
+.contact-item__text {
+  @include font(14, 20);
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+  color: $white;
+}
+
+.footer-social {
+  margin-top: 20px;
+
+  .social-links__icon svg {
+    width: 24px;
+  }
+}
+
+.footer__menu {
+  background-color: $blue-dk;
+  padding: 23px 0;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+
+  .menu-item {
+    @include font(14, 14);
+    position: relative;
+    padding: 0 15px;
+    font-family: $font-primary;
+    font-weight: 300;
+    font-style: normal;
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media screen and (min-width: $bp-menu) {
+    }
+  }
+
+  a {
+    @include default-transition;
+    color: rgba($white, 1);
+  }
+
+  a:hover {
+    color: rgba($white, 1);
+  }
+}

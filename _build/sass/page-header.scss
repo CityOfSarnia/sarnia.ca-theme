@@ -1,0 +1,26 @@
+.page-header {
+	margin-bottom: 40px;
+	
+	@media screen and (min-width: $bp-md) {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		grid-gap: 60px;
+		margin-bottom: 60px;
+	}
+}
+
+.page-header__headline {
+	@include font(22, 30, 1px);
+	margin: 0 0 20px;
+	font-family: $font-primary;
+	font-weight: 700;
+	font-style: normal;
+	color: $black;
+	
+	@media screen and (min-width: $bp-md) {
+		@include font(24, 32, 1px);
+		margin: 0;
+	}
+}
+
+.page-header__cta {}

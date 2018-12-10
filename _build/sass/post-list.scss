@@ -1,0 +1,76 @@
+.post-list {
+  @media screen and (min-width: $bp-md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.post-list__item {
+  display: flex;
+  margin: 0 0 40px;
+
+  @media screen and (min-width: $bp-md) {
+  }
+}
+
+.post-list__image {
+  display: block;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 20px 0 0;
+  width: 120px;
+  height: 80px;
+
+  &.post-list__image--placeholder {
+    background-image: url("../img/wmc-logo.svg");
+    background-size: 80%;
+    background-color: $black;
+  }
+
+  @media screen and (min-width: $bp-md) {
+    margin: 0 60px 0 0;
+    width: 300px;
+    height: 200px;
+
+    &.post-list__image--placeholder {
+      background-size: 60%;
+    }
+  }
+}
+
+.post-list__content {
+  p {
+    @include font(18, 28, 0.5px);
+    margin: 0;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-style: normal;
+    color: $black;
+  }
+
+  a {
+    color: $black;
+  }
+}
+
+.post-list__headline {
+  @include font(22, 28, -0.5px);
+  margin: 0 0 10px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-style: normal;
+
+  @media screen and (min-width: $bp-md) {
+    @include font(26, 34, -0.5px);
+  }
+}
+
+.post-list__excerpt {
+  display: none;
+
+  @media screen and (min-width: $bp-md) {
+    display: block;
+  }
+}
