@@ -48,23 +48,23 @@
 
 					<div class="footer-social">
 						<?php if( get_field('twitter', 'option') ) { ?>
-						<a href="<?php the_field('twitter', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/_/img/social-twitter-icon.svg'); ?></a>
+						<a href="<?php the_field('twitter', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/assets/img/social-twitter-icon.svg'); ?></a>
 						<?php } ?>
 
 						<?php if( get_field('facebook', 'option') ) { ?>
-						<a href="<?php the_field('facebook', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/_/img/social-facebook-icon.svg'); ?></a>
+						<a href="<?php the_field('facebook', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/assets/img/social-facebook-icon.svg'); ?></a>
 						<?php } ?>
 
 						<?php if( get_field('linkedin', 'option') ) { ?>
-						<a href="<?php the_field('linkedin', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/_/img/social-linkedin-icon.svg'); ?></a>
+						<a href="<?php the_field('linkedin', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/assets/img/social-linkedin-icon.svg'); ?></a>
 						<?php } ?>
 
 						<?php if( get_field('youtube', 'option') ) { ?>
-						<a href="<?php the_field('youtube', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/_/img/social-youtube-icon.svg'); ?></a>
+						<a href="<?php the_field('youtube', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/assets/img/social-youtube-icon.svg'); ?></a>
 						<?php } ?>
 
 						<?php if( get_field('instagram', 'option') ) { ?>
-						<a href="<?php the_field('instagram', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/_/img/social-instagram-icon.svg'); ?></a>
+						<a href="<?php the_field('instagram', 'option'); ?>" class="social-links__icon"><?php include(TEMPLATEPATH . '/assets/img/social-instagram-icon.svg'); ?></a>
 						<?php } ?>
 					</div>
 
@@ -87,8 +87,6 @@
 </footer>
 
 <?php wp_footer(); ?>
-
-<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 
 </body>
 

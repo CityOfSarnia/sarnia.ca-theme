@@ -1,0 +1,48 @@
+@import "mixins/font-size";
+@import "mixins/transitions";
+@import "variables/breakpoints";
+@import "variables/colours";
+
+$font-primary: "Open Sans", Helvetica, Arial, sans-serif;
+$font-secondary: "Playfair Display", Georgia, Times, serif;
+
+@import "banner";
+@import "btn";
+
+// .banner {
+//   background-color: $blue-md;
+//   height: 300px;
+//   font-family: $font-primary;
+// }
+
+// .banner__headline {
+//   font-family: $font-secondary;
+//   color: $white;
+// }
+
+// .banner__headline {
+//   font-family: $font-secondary;
+//   color: $white;
+// }
+
+.banner {
+  h1 {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:active,
+  a:hover {
+    color: $white;
+  }
+}
+
+.recent-notifications {
+  background-color: $yellow-lt;
+  margin-top: -80px;
+  padding: 10px;
+  font-family: $font-secondary;
+  color: $grey;
+  text-align: center;
+}

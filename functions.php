@@ -68,6 +68,18 @@
 		)
 	) );
 
+
+	// Theme Fonts URL
+	function sarnia_theme_fonts_url() {
+		$font_families = apply_filters( 'sarnia_theme_fonts', array( 'Open+Sans:300,300i,400,600|Playfair+Display' ) );
+		$query_args = array(
+			'family' => implode( '|', $font_families ),
+			'subset' => 'latin,latin-ext',
+		);
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+		return esc_url_raw( $fonts_url );
+	}
+
 	add_action('acf/init', 'my_acf_init');
 	function my_acf_init() {
 		
@@ -157,15 +169,26 @@
 	// Add support for page excerpts
 	add_post_type_support( 'page', 'excerpt' );
 
-	// Load admin block style
-	function load_admin_block_style() {
-		wp_register_style( 'admin_block_css', get_template_directory_uri() . '/assets/css/admin-block-style.css', false, '1.0.0' );
-		wp_enqueue_style( 'admin_block_css' );
-	}
-	add_action( 'admin_enqueue_scripts', 'load_admin_block_style' );
+	function sarnia_scripts() {
+		wp_enqueue_style( 'sarnia-fonts', sarnia_theme_fonts_url() );
+		wp_enqueue_style( 'sarnia-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
+		wp_enqueue_script( 'sarnia-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array( 'jquery' ), filemtime( get_stylesheet_directory() . '/assets/js/global-min.js' ), true );
 
-	// Load block styles
-	// wp_enqueue_style( 'block_css', get_template_directory_uri() . '/assets/css/block-style.css', false, '1.0.0' );
+		// Move jQuery to footer
+		if( ! is_admin() ) {
+			wp_deregister_script( 'jquery' );
+			wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+			wp_enqueue_script( 'jquery' );
+		}
+	}
+	add_action( 'wp_enqueue_scripts', 'sarnia_scripts' );
+
+	// Gutenberg scripts and styles
+	function sarnia_gutenberg_scripts() {
+		wp_enqueue_style( 'sarnia-fonts', sarnia_theme_fonts_url() );
+		wp_enqueue_style( 'sarnia', get_stylesheet_directory_uri() . '/assets/css/admin-block-style.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/admin-block-style.css' ) );
+	}
+	add_action( 'enqueue_block_editor_assets', 'sarnia_gutenberg_scripts' );
 
 
 ?>

@@ -27,14 +27,9 @@
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); echo '/assets/css/main.css?' . filemtime( get_stylesheet_directory() . '/assets/css/main.css'); ?>" type="text/css" media="screen, projection" />
-	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600|Playfair+Display" rel="stylesheet">
 	
 	<?php wp_enqueue_script("jquery"); ?>
 	

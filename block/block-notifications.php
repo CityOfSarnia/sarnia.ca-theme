@@ -10,7 +10,7 @@
 
   <div class="container recent-notifications__wrapper">
 
-    <p>Notifications</p>
+    <p>Recent notifications</p>
 
   </div>
 
