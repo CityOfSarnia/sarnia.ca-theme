@@ -6,29 +6,27 @@
 $font-primary: "Open Sans", Helvetica, Arial, sans-serif;
 $font-secondary: "Playfair Display", Georgia, Times, serif;
 
-@import "banner";
-@import "btn";
-
-// .banner {
-//   background-color: $blue-md;
-//   height: 300px;
-//   font-family: $font-primary;
-// }
-
-// .banner__headline {
-//   font-family: $font-secondary;
-//   color: $white;
-// }
-
-// .banner__headline {
-//   font-family: $font-secondary;
-//   color: $white;
-// }
+.wp-block {
+  @import "typography";
+  @import "banner";
+  @import "btn";
+  @import "card";
+}
 
 .banner {
   h1 {
     margin: 0;
   }
+  a {
+    text-decoration: none;
+  }
+  a:active,
+  a:hover {
+    color: $white;
+  }
+}
+
+.card {
   a {
     text-decoration: none;
   }
@@ -45,4 +43,8 @@ $font-secondary: "Playfair Display", Georgia, Times, serif;
   font-family: $font-secondary;
   color: $grey;
   text-align: center;
+
+  p {
+    margin: 0;
+  }
 }
