@@ -21,6 +21,53 @@
 		register_nav_menu( 'primary-menu', __( 'Primary Menu' ) );
 		register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
 	}
+
+	function create_my_post_types() {
+		register_post_type( 'notifications',
+				array(
+						'labels' => array(
+						'name' => __( 'Notifications' ),
+						'singular_name' => __( 'Notification' )
+						),
+						'public' => true,
+						'menu_icon' => 'dashicons-star-filled',
+						'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+			'exclude_from_search' => true,
+			'show_in_admin_bar'   => false,
+			'show_in_nav_menus'   => false,
+			'publicly_queryable'  => false,
+			'query_var'           => false,
+				)
+		);
+	}
+
+	add_action( 'init', 'create_my_post_types' );
+
+	// Create Custom Taxonomies
+	add_action( 'init', 'build_taxonomies', 0 );  
+	
+	function build_taxonomies() {
+					
+		register_taxonomy(  
+			'filter',  
+			array('notifications'),  
+			array(  
+				'hierarchical' => true,  
+				'label' => 'Filter',  
+				'query_var' => true,  
+			)  
+		);
+
+		register_taxonomy(  
+			'notification-type',  
+			array('notifications'),  
+			array(  
+				'hierarchical' => true,  
+				'label' => 'Notification Type',  
+				'query_var' => true,  
+			)  
+		);
+	}
 	
 	// Register Options Page
 	if( function_exists('acf_add_options_page') ) {
@@ -107,7 +154,7 @@
 				'description'			=> __('A banner block.'),
 				'render_callback'	=> 'my_acf_block_render_callback',
 				'category'				=> 'formatting',
-				'icon'						=> 'admin-comments',
+				'icon'						=> 'id',
 				'keywords'				=> array( 'banner', 'menu', 'nav' ),
 			));
 
@@ -118,7 +165,7 @@
 				'description'			=> __('A post or page card block.'),
 				'render_callback'	=> 'my_acf_block_render_callback',
 				'category'				=> 'formatting',
-				'icon'						=> 'admin-comments',
+				'icon'						=> 'media-default',
 				'keywords'				=> array( 'post', 'card' ),
 			));
 
@@ -129,7 +176,7 @@
 				'description'			=> __('A custom card block.'),
 				'render_callback'	=> 'my_acf_block_render_callback',
 				'category'				=> 'formatting',
-				'icon'						=> 'admin-comments',
+				'icon'						=> 'media-text',
 				'keywords'				=> array( 'custom', 'card' ),
 			));
 
@@ -140,7 +187,7 @@
 				'description'			=> __('A notifications block.'),
 				'render_callback'	=> 'my_acf_block_render_callback',
 				'category'				=> 'formatting',
-				'icon'						=> 'admin-comments',
+				'icon'						=> 'star-filled',
 				'keywords'				=> array( 'notifications' ),
 			));
 
@@ -151,7 +198,7 @@
 				'description'			=> __('Recent posts by category block.'),
 				'render_callback'	=> 'my_acf_block_render_callback',
 				'category'				=> 'formatting',
-				'icon'						=> 'admin-comments',
+				'icon'						=> 'admin-page',
 				'keywords'				=> array( 'recent', 'posts', 'news' ),
 			));
 
@@ -162,7 +209,7 @@
 				'description'			=> __('A navigation block.'),
 				'render_callback'	=> 'my_acf_block_render_callback',
 				'category'				=> 'formatting',
-				'icon'						=> 'admin-comments',
+				'icon'						=> 'list-view',
 				'keywords'				=> array( 'navigation', 'menu', 'nav' ),
 			));
 
@@ -574,6 +621,49 @@
 					'container' => 'div',
 					'allow_null' => 1,
 				),
+				array(
+					'key' => 'field_5c1713f0b2167',
+					'label' => 'Menu Headline',
+					'name' => 'menu_headline',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c171407b2168',
+					'label' => 'Menu Image',
+					'name' => 'menu_image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
 			),
 			'location' => array(
 				array(
@@ -695,6 +785,49 @@
 					'return_format' => 'id',
 					'multiple' => 0,
 				),
+				array(
+					'key' => 'field_5c16f929e1ffd',
+					'label' => 'Recent Posts Headline',
+					'name' => 'recent_posts_headline',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c16f9581f897',
+					'label' => 'Recent Posts Image',
+					'name' => 'recent_posts_image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
 			),
 			'location' => array(
 				array(
@@ -788,6 +921,3 @@
 		));
 		
 		endif;
-?>
-
-

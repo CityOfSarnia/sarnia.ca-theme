@@ -8,12 +8,21 @@
 <!-- the "no-js" class is for Modernizr. --> 
 
 <head>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'GA_TRACKING_ID');
+</script>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<?php if (is_search()) { ?>
 		<meta name="robots" content="noindex, nofollow" /> 
@@ -34,32 +43,21 @@
 	<?php wp_enqueue_script("jquery"); ?>
 	
 	<?php wp_head(); ?>
-	
-	<!-- Google Analytics -->
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', '']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	
-	</script>
 		
 </head>
 
 <body <?php body_class(); ?>>
 
-	<div class="feature-notification">
-		<div class="container">
-			<div class="feature-notification__headline">Road Closure</div>
-			<div class="feature-notification__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iste ea reiciendis quam minima error necessitatibus optio Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+	<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1 ) ); ?>        
+	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+		<div class="feature-notification">
+			<div class="container">
+				<div class="feature-notification__headline"><?php the_title(); ?></div>
+				<div class="feature-notification__text"><?php the_content(); ?></div>
+			</div>
 		</div>
-	</div>
+	<?php endwhile; ?>			
+	<?php wp_reset_query(); ?>
  
 	<header class="header" role="banner">
 		<div class="header__wrapper">

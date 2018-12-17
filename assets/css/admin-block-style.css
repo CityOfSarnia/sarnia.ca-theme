@@ -199,6 +199,13 @@
   background-color: #fff;
   border: 1px solid #f4f6fb; }
 
+.wp-block .card__image {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 120px; }
+
 .wp-block .card__main {
   padding: 30px; }
 

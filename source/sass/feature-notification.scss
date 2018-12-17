@@ -17,10 +17,12 @@
 }
 
 .feature-notification__text {
-  @include font(16, 24);
-  margin-bottom: 0;
-  font-family: $font-primary;
-  font-weight: 300;
-  font-style: normal;
-  color: $grey;
+  p {
+    @include font(16, 24);
+    margin-bottom: 0;
+    font-family: $font-primary;
+    font-weight: 300;
+    font-style: normal;
+    color: $grey;
+  }
 }
