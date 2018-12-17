@@ -3,6 +3,14 @@
   border: 1px solid $smoke;
 }
 
+.card__image {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 120px;
+}
+
 .card__main {
   padding: 30px;
   // min-height: 200px;

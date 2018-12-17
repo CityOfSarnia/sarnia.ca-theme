@@ -1,0 +1,58 @@
+.navigation-card {
+  background-color: $white;
+  border: 1px solid $smoke;
+  margin-bottom: 40px;
+}
+
+.navigation-card__image {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 120px;
+}
+
+.navigation-card__main {
+  border-top: 6px solid $yellow;
+  padding: 30px 40px;
+}
+
+.navigation-card__headline {
+  @include font(24, 32);
+  margin-bottom: 15px;
+  font-family: $font-secondary;
+  color: $grey;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navigation-card__menu {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px 30px;
+  }
+  .menu-item {
+    border-top: 1px solid $grey-lt;
+    padding-top: 10px;
+    // background-color: $blue-md;
+
+    a {
+      @include font(14, 18);
+      margin: 0 0 10px;
+      text-decoration: none;
+      color: $blue;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .sub-menu {
+    .menu-item {
+      border: 0;
+      padding: 0;
+    }
+  }
+}
