@@ -50,10 +50,25 @@
 
 	<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1 ) ); ?>        
 	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+		<?php
+			$terms = get_the_terms( $post->ID, 'notification-icon' );
+			if ($terms) {
+				$terms_slugs = array();
+				foreach ( $terms as $term ) {
+						$terms_slugs[] = $term->slug;
+				}
+				$icon = $terms_slugs[0];
+			} else {
+				$icon = 'default-notification';
+			}
+		?>
 		<div class="feature-notification">
-			<div class="container">
-				<div class="feature-notification__headline"><?php the_title(); ?></div>
-				<div class="feature-notification__text"><?php the_content(); ?></div>
+			<div class="container feature-notification__wrapper">
+				<div class="feature-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
+				<div class="feature-notification__main">
+					<h4 class="feature-notification__headline"><?php the_title(); ?></h4>
+					<p class="feature-notification__text"><?php echo get_the_content(); ?></p>
+				</div>
 			</div>
 		</div>
 	<?php endwhile; ?>			

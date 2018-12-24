@@ -25,7 +25,7 @@
   }
 
   &:focus {
-    background-color: darken($blue, 5%) !important;
+    background-color: darken($blue, 5%);
   }
 
   &.btn--secondary {
@@ -36,7 +36,7 @@
     }
 
     &:focus {
-      background-color: darken($blue, 5%) !important;
+      background-color: darken($blue, 5%);
     }
   }
 
@@ -48,5 +48,30 @@
       padding: 0 25px;
       height: 36px;
     }
+  }
+
+  &.btn--outline {
+    @include font(14, 14);
+    // font-weight: 400;
+    background-color: transparent;
+    border: 1px solid $grey;
+    height: 32px;
+    color: $grey;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $black;
+      color: $black;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border: 1px solid $black;
+      color: $black;
+    }
+  }
+
+  &.btn--center {
+    margin: 0 auto;
   }
 }

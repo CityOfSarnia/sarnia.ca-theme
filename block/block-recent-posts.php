@@ -18,15 +18,20 @@
 
   <div class="news-card__main">
 
+    <?php $cat_id = get_field('recent_posts_category'); ?>
+    <?php $catName = get_cat_name( $cat_id ) ?>
+
     <?php if( get_field('recent_posts_headline') ) { ?>
 
       <h2 class="news-card__headline"><?php the_field('recent_posts_headline');?></h2>
 
+    <?php } else { ?>
+
+      <h2 class="news-card__headline"><?php echo $catName; ?></h2>
+
     <?php } ?>
 
-    <?php $cat = get_field('recent_posts_category'); ?>
-
-    <?php $loop = new WP_Query( array( 'post_type' => 'post', 'cat' => $cat, 'posts_per_page' => 3 ) ); ?>
+    <?php $loop = new WP_Query( array( 'post_type' => 'post', 'cat' => $cat_id, 'posts_per_page' => 3 ) ); ?>
 
     <ul class="news-card-list">
         

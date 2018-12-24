@@ -1,33 +1,39 @@
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1144px;
+  max-width: 1300px;
 
   @media screen and (min-width: $bp-md) {
     padding: 0 60px;
   }
 
-  &.container--full {
-    padding: 0;
-
-    @media screen and (min-width: $bp-md) {
-      padding: 0 60px;
-    }
+  &.container--min {
+    max-width: 800px;
   }
-}
-
-.container--min {
-  max-width: 800px;
 }
 
 main {
   background-color: rgba($off-white, 1);
 }
 
-.push {
-  margin-bottom: 60px;
+@media screen and (min-width: $bp-md) {
+  .alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: auto;
+    max-width: 1000%;
+  }
 
-  @media screen and (min-width: $bp-md) {
-    margin-bottom: 100px;
+  .alignwide {
+    margin-left: calc(25% - 25vw);
+    margin-right: calc(25% - 25vw);
+    width: auto;
+    max-width: 1000%;
+  }
+
+  .alignwide img,
+  .alignfull img {
+    display: block;
+    margin: 0 auto;
   }
 }

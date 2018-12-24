@@ -12,7 +12,7 @@ Template Name: Home
 
 	<article>
 
-		<div class="container">
+		<div class="container container--min">
 			
 			<?php the_content(); ?>
 		

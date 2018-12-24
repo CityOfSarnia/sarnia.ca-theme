@@ -1,0 +1,69 @@
+.notification-list {
+  padding-bottom: 100px;
+}
+
+.notification-list__item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
+  border-bottom: 1px solid $grey-lt;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    grid-template-columns: 32px 1fr 3fr;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.notification__header {
+  padding-right: 20px;
+}
+
+.notification__headline {
+  @include font(16, 24);
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-style: normal;
+  color: $grey;
+}
+
+.notification__date {
+  @include font(16, 24);
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+  color: $grey;
+}
+
+.notification__text {
+  @include font(16, 24);
+  grid-column: span 2;
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+  color: $grey;
+
+  @media screen and (min-width: $bp-md) {
+    grid-column: auto;
+  }
+}
+
+.notification__icon {
+  width: 32px;
+  height: 32px;
+  svg {
+    fill: $grey;
+  }
+}
+
+.notification-btn {
+  text-align: center;
+  margin-bottom: 40px;
+}

@@ -59,11 +59,11 @@
 		);
 
 		register_taxonomy(  
-			'notification-type',  
+			'notification-icon',  
 			array('notifications'),  
 			array(  
 				'hierarchical' => true,  
-				'label' => 'Notification Type',  
+				'label' => 'Notification Icon',  
 				'query_var' => true,  
 			)  
 		);
@@ -81,6 +81,7 @@
 		add_theme_support( 'disable-custom-colors' );
 		add_theme_support('disable-custom-font-sizes');
 		add_theme_support( 'responsive-embeds' );
+		remove_filter( 'the_content', 'wpautop' );
 	}
 	add_action( 'after_setup_theme', 'sarnia_setup' );
 
@@ -617,7 +618,7 @@
 						'class' => '',
 						'id' => '',
 					),
-					'save_format' => 'menu',
+					'save_format' => 'id',
 					'container' => 'div',
 					'allow_null' => 1,
 				),
@@ -671,6 +672,49 @@
 						'param' => 'block',
 						'operator' => '==',
 						'value' => 'acf/navigation',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'normal',
+			'style' => 'default',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => '',
+			'active' => 1,
+			'description' => '',
+		));
+		
+		acf_add_local_field_group(array(
+			'key' => 'group_5c1adbf094daa',
+			'title' => 'Notification Details',
+			'fields' => array(
+				array(
+					'key' => 'field_5c1adbfa22e61',
+					'label' => 'Notification Date',
+					'name' => 'notification_date',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'notifications',
 					),
 				),
 			),

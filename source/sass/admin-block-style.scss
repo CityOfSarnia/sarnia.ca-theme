@@ -11,6 +11,8 @@ $font-secondary: "Playfair Display", Georgia, Times, serif;
   @import "banner";
   @import "btn";
   @import "card";
+  @import "news-card";
+  @import "navigation-card";
 }
 
 .banner {
@@ -36,6 +38,15 @@ $font-secondary: "Playfair Display", Georgia, Times, serif;
   }
 }
 
+.news-card,
+.navigation-card {
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
 .recent-notifications {
   background-color: $yellow-lt;
   margin-top: -80px;
@@ -46,5 +57,15 @@ $font-secondary: "Playfair Display", Georgia, Times, serif;
 
   p {
     margin: 0;
+  }
+}
+
+.wp-block-columns {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgba($smoke, 0.3);
+
+  .editor-rich-text {
+    background-color: $white;
   }
 }

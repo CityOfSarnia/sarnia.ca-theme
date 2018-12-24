@@ -7,6 +7,12 @@
   }
 }
 
+.feature-notification__wrapper {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 20px;
+}
+
 .feature-notification__headline {
   @include font(18, 24);
   margin-bottom: 5px;
@@ -16,13 +22,22 @@
   color: $grey;
 }
 
+.feature-notification__main {
+}
+
 .feature-notification__text {
-  p {
-    @include font(16, 24);
-    margin-bottom: 0;
-    font-family: $font-primary;
-    font-weight: 300;
-    font-style: normal;
-    color: $grey;
+  @include font(16, 24);
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+  color: $grey;
+}
+
+.feature-notification__icon {
+  width: 32px;
+  height: 32px;
+  svg {
+    fill: $grey;
   }
 }

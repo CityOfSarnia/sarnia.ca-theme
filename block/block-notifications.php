@@ -7,16 +7,41 @@
 ?>
 
 <div class="recent-notifications">
-
-  <div class="container recent-notifications__wrapper">
-
-    <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'posts_per_page' => 3 ) ); ?>        
-    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-      <?php the_title(); ?>
-      <?php the_excerpt(); ?>
-    <?php endwhile; ?>			
-    <?php wp_reset_query(); ?>
-
+  <div class="">
+    <div class="recent-notifications__wrapper">
+      <div class="recent-notification-list">
+        <div class="recent-notification__top recent-notification__top--subscribe">
+          <a href="#" class="btn btn--outline">Subscribe</a>
+        </div>
+        <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'posts_per_page' => 3 ) ); ?>    
+        <?php $count = 0; ?>
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <?php
+            $terms = get_the_terms( $post->ID, 'notification-icon' );
+            if ($terms) {
+              $terms_slugs = array();
+              foreach ( $terms as $term ) {
+                  $terms_slugs[] = $term->slug;
+              }
+              $icon = $terms_slugs[0];
+            } else {
+              $icon = 'default-notification';
+            }
+            $post_id = get_the_ID();
+            $count++;
+          ?>
+          <div class="recent-notification__top recent-notification__top--<?php echo $count; ?>">
+            <div class="recent-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
+            <h4 class="recent-notification__headline"><?php the_title(); ?></h4>
+            <p class="recent-notification__date"><?php the_field('notification_date', $post_id); ?></p>
+          </div>
+          <div class="recent-notification__bottom recent-notification__bottom--<?php echo $count; ?>">
+            <p class="recent-notification__text"><?php echo get_the_excerpt(); ?></p>
+          </div>
+        <?php endwhile; ?>
+        <div class="recent-notification__top recent-notification__top--more"><a href="/notifications" class="btn btn--outline">More</a></div>
+      </div>
+      <?php wp_reset_query(); ?>
+    </div>
   </div>
-
 </div>

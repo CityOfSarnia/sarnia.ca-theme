@@ -67,3 +67,26 @@ h4 {
   font-style: normal;
   margin: 0 0 10px;
 }
+
+.wp-block-table {
+  margin: 0 0 30px;
+  width: 100%;
+
+  tr {
+    background-color: rgba($blue, 0.05);
+
+    &:nth-child(odd) {
+      background-color: rgba($blue, 0.1);
+    }
+  }
+
+  td {
+    border: 0;
+    padding: 10px;
+    @include font(16, 24);
+    font-family: $font-primary;
+    color: $grey;
+    font-weight: 300;
+    font-style: normal;
+  }
+}

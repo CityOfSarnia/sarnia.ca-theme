@@ -8,15 +8,105 @@
 
   @media screen and (min-width: $bp-menu) {
   }
-
-  p {
-    margin: 0;
-  }
 }
 
 .recent-notifications__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+}
+
+.recent-notification__icon {
+  width: 22px;
+  height: 22px;
+  svg {
+    fill: $grey;
+  }
+}
+
+.recent-notification-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.recent-notification__top {
+  background-color: $yellow;
+}
+
+.recent-notification__top--subscribe {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  max-width: calc(1000% / 5);
+}
+
+.recent-notification__top--1 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  max-width: calc(1000% / 5);
+}
+
+.recent-notification__bottom--1 {
+  background-color: $yellow-lt;
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.recent-notification__top--2 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  max-width: calc(1000% / 5);
+}
+
+.recent-notification__bottom--2 {
+  background-color: $yellow-lt;
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
+.recent-notification__top--3 {
+  grid-column: 5/6;
+  grid-row: 1/2;
+  max-width: calc(1000% / 5);
+}
+
+.recent-notification__bottom--3 {
+  background-color: $yellow-lt;
+  grid-column: 5/6;
+  grid-row: 2/3;
+}
+
+.recent-notification__top--more {
+  grid-column: 6/7;
+  grid-row: 1/2;
+  max-width: calc(1000% / 5);
+}
+
+.recent-notification-list__item {
+}
+
+.recent-notification__headline {
+  @include font(14, 18);
+  margin-bottom: 2px;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-style: normal;
+  color: $grey;
+}
+
+.recent-notification__date {
+  @include font(14, 20);
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+  color: $grey;
+}
+
+.recent-notification__text {
+  @include font(14, 20);
+  margin-bottom: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+  color: $grey;
 }
