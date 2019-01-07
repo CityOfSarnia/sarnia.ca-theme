@@ -1,0 +1,26 @@
+.wp-block-file {}
+
+.wp-block-file .wp-block-file__button {
+  @include default-transition;
+  @include font(16, 16);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 20px;
+  background-color: $blue;
+  border-radius: 5px;
+  height: 40px;
+  font-family: $font-primary;
+  color: $white;
+  font-weight: 300;
+  font-style: normal;
+
+  &:hover {
+    background-color: darken($blue, 5%);
+  }
+
+  &:focus {
+    background-color: darken($blue, 5%);
+  }
+}

@@ -40,13 +40,13 @@
 			
 		</div>
 	
-		<article class="post content">
+		<article>
 			
 			<div class="container container--min">
 				
-				<header class="page__header">
+				<header class="post__header">
 					
-					<h1 class="page__headline"><?php the_title(); ?></h1>
+					<h1 class="post__headline"><?php the_title(); ?></h1>
 					
 				</header>
 			

@@ -92,19 +92,22 @@
 			'core/image',
 			'core/paragraph',
 			'core/heading',
-			// 'core/list',
 			'core/gallery',
 			'core/table',
 			'core/columns',
+			'core/file',
 			'acf/post-card',
 			'acf/custom-card',
 			'acf/banner',
 			'acf/notifications',
 			'acf/navigation',
-			'acf/recent-posts'
-			//'core/video',
-			//'core/embed',
-			//'core-embed/youtube'
+			'acf/recent-posts',
+			'core/video',
+			'core-embed/youtube',
+			'core-embed/vimeo',
+			'core-embed/facebook',
+			'core-embed/twitter',
+			'gravityforms/block'
 		);
 	}
 
