@@ -4,7 +4,7 @@
 	
 	<div class="container content">
 		
-		<h1>Welcome to BranchHQ</h1>
+		<h1>Welcome to the City of Sarnia</h1>
 			
 		<p>We are sorry that you did not find what you were expecting.</p>
 			

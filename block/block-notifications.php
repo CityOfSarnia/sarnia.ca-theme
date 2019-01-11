@@ -7,14 +7,13 @@
 ?>
 
 <div class="recent-notifications">
-  <div class="">
-    <div class="recent-notifications__wrapper">
-      <div class="recent-notification-list">
-        <div class="recent-notification__top recent-notification__top--subscribe">
+    <div class="recent-notification-list--top">
+      <div class="container recent-notification-list">
+        <div class="recent-notification-list__item">
           <a href="#" class="btn btn--outline">Subscribe</a>
         </div>
+        <!-- Recent Notification Query for Headers and screen readers -->
         <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'posts_per_page' => 3 ) ); ?>    
-        <?php $count = 0; ?>
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <?php
             $terms = get_the_terms( $post->ID, 'notification-icon' );
@@ -28,20 +27,33 @@
               $icon = 'default-notification';
             }
             $post_id = get_the_ID();
-            $count++;
           ?>
-          <div class="recent-notification__top recent-notification__top--<?php echo $count; ?>">
+          <a href="/notifications" class="recent-notification-list__item">
             <div class="recent-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
             <h4 class="recent-notification__headline"><?php the_title(); ?></h4>
             <p class="recent-notification__date"><?php the_field('notification_date', $post_id); ?></p>
-          </div>
-          <div class="recent-notification__bottom recent-notification__bottom--<?php echo $count; ?>">
-            <p class="recent-notification__text"><?php echo get_the_excerpt(); ?></p>
-          </div>
+            <p class="recent-notification__text hidden"><?php echo get_the_excerpt(); ?></p>
+          </a>
         <?php endwhile; ?>
-        <div class="recent-notification__top recent-notification__top--more"><a href="/notifications" class="btn btn--outline">More</a></div>
+        <?php wp_reset_query(); ?>
+        <div class="recent-notification-list__item">
+          <a href="/notifications" class="btn btn--outline">More</a>
+        </div>
       </div>
-      <?php wp_reset_query(); ?>
     </div>
-  </div>
+
+    <div class="recent-notification-list--bottom" aria-hidden="true">
+      <div class="container recent-notification-list ">
+        <div class="recent-notification-list__item"></div>
+        <!-- Recent Notification Query for Expert Only -->
+        <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'posts_per_page' => 3 ) ); ?>    
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <a href="/notifications" class="recent-notification-list__item">
+            <p class="recent-notification__text"><?php echo get_the_excerpt(); ?></p>
+          </a>
+        <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+        <div class="recent-notification-list__item"></div>
+      </div>
+    </div>
 </div>

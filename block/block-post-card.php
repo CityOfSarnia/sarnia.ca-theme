@@ -35,7 +35,7 @@ setup_postdata( $post );
 
 </div>
 
-<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+<?php wp_reset_postdata(); ?>
 
 <?php } else { ?>
 

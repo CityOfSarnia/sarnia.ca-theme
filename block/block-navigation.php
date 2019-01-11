@@ -40,7 +40,7 @@
 
   </div>
 
-<?php } else { ?>d
+<?php } else { ?>
 
   <p>Select a menu...</p>
 

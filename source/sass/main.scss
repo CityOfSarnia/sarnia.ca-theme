@@ -9,24 +9,14 @@
 
 @import "body";
 @import "typography";
-@import "content";
 @import "layout";
 @import "section";
 
-@import "page";
-@import "post";
-@import "posts";
-@import "post-list";
-
 @import "banner";
-
-@import "page-header";
-
 @import "header";
 @import "footer";
 @import "search";
 @import "social";
-@import "nav";
 @import "btn";
 @import "logo";
 
@@ -35,13 +25,10 @@
 @import "navigation-card";
 
 @import "gallery";
-
 @import "block-file";
-
 @import "notifications";
 @import "recent-notifications";
 @import "feature-notification";
-
-@import "contact-form";
+@import "gform";
 
 @import "reset-wp";
