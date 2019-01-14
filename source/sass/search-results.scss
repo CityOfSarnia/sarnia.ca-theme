@@ -1,14 +1,8 @@
-.gsc-resultsRoot {
-}
-
-.gsc-results {
-}
-
 .gsc-webResult .gsc-result {
-  // background-color: fuchsia !important;
-  margin: 0 0 20px !important;
-  padding: 0 0 20px !important;
-  border-bottom: 1px solid rgba($grey-lt, 0.5) !important;
+  margin: 0 0 25px !important;
+  padding: 30px !important;
+  border: 1px solid rgba($smoke, 1) !important;
+  background-color: $white !important;
 }
 
 .gsc-thumbnail-inside {
@@ -19,24 +13,24 @@
 .gs-title b {
   margin-bottom: 0 !important;
   height: auto !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
-  font-weight: 600 !important;
+  font-size: 24px !important;
+  line-height: 32px !important;
+  font-family: "Playfair Display", Georgia, Times, serif;
+  font-weight: 400 !important;
   font-style: normal !important;
   color: $grey !important;
+  text-decoration: none !important;
+}
+
+.gs-title b {
+  color: $blue !important;
 }
 
 .gsc-url-top {
-  // background-color: aqua !important;
   padding: 0 !important;
 }
 .gs-visibleUrl {
   color: $alert !important;
-}
-
-.gsc-table-result {
-  // background-color: limegreen !important;
 }
 
 .gs-webResult .gs-snippet {
@@ -48,14 +42,60 @@
   color: $grey !important;
 
   b {
-    color: $blue !important;
+    color: $black !important;
     font-weight: 600 !important;
   }
 }
 
-.gsc-expansionArea {
+.gcsc-branding {
+  justify-content: center;
 }
 
-.gcsc-branding {
-  // display: none !important;
+.gsc-branding-text:first-child,
+.gcsc-branding-text:first-child {
+  flex-grow: 0 !important;
+}
+
+.gsc-branding-text,
+.gcsc-branding-text {
+  font-size: 14px !important;
+  color: rgba($grey, 1) !important;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+
+.gsc-cursor {
+  display: flex !important;
+  justify-content: center;
+  margin: 80px 0 40px !important;
+}
+
+.gsc-cursor-page {
+  transition: all 0.3s;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $blue !important;
+  width: 40px !important;
+  height: 40px !important;
+  background-color: $blue !important;
+  color: $white !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+
+.gsc-results .gsc-cursor-box .gsc-cursor-page:hover {
+  background-color: darken($blue, 5%) !important;
+  text-decoration: none !important;
+}
+
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page,
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page:hover {
+  border: 1px solid $yellow !important;
+  background-color: $yellow-lt !important;
+  color: $grey !important;
 }

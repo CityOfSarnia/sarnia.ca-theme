@@ -19,15 +19,15 @@ table.gsc-search-box {
 
 .gsc-input-box {
   border: 0 !important;
-  background-color: fuchsia !important;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px 0 0 8px !important;
 }
 
 .gsc-input {
   background-color: $white !important;
+  background-position: 18px 19px !important;
   height: 50px !important;
   margin: 0 !important;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px 0 0 8px !important;
 
   td {
     padding: 0 !important;
@@ -46,12 +46,12 @@ input.gsc-input {
 
 .gsst_a .gscb_a {
   transition: all 0.3s;
-  color: $blue;
+  color: rgba($blue, 0.7) !important;
 }
 
 .gsst_a:hover .gscb_a,
 .gsst_a:focus .gscb_a {
-  color: $blue;
+  color: $blue !important;
 }
 
 .gsc-search-button {

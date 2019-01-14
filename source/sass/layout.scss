@@ -7,6 +7,10 @@
     padding: 0 60px;
   }
 
+  &.container--md {
+    max-width: 1000px;
+  }
+
   &.container--min {
     max-width: 800px;
   }

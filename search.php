@@ -12,7 +12,7 @@ Template Name: Search
 
 	<article>
 
-		<div class="container">
+		<div class="container container--md">
 			<?php the_content(); ?>
 			
 			<div class="search-results">
