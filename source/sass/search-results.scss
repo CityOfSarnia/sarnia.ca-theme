@@ -1,0 +1,61 @@
+.gsc-resultsRoot {
+}
+
+.gsc-results {
+}
+
+.gsc-webResult .gsc-result {
+  // background-color: fuchsia !important;
+  margin: 0 0 20px !important;
+  padding: 0 0 20px !important;
+  border-bottom: 1px solid rgba($grey-lt, 0.5) !important;
+}
+
+.gsc-thumbnail-inside {
+  padding: 0 !important;
+}
+
+.gs-title,
+.gs-title b {
+  margin-bottom: 0 !important;
+  height: auto !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: $grey !important;
+}
+
+.gsc-url-top {
+  // background-color: aqua !important;
+  padding: 0 !important;
+}
+.gs-visibleUrl {
+  color: $alert !important;
+}
+
+.gsc-table-result {
+  // background-color: limegreen !important;
+}
+
+.gs-webResult .gs-snippet {
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+  color: $grey !important;
+
+  b {
+    color: $blue !important;
+    font-weight: 600 !important;
+  }
+}
+
+.gsc-expansionArea {
+}
+
+.gcsc-branding {
+  // display: none !important;
+}

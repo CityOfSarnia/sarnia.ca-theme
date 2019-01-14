@@ -9,7 +9,7 @@
 			<div class="container container--min">
 			
 				<?php the_content(); ?>
-			
+
 			</div>
 		
 		</article>

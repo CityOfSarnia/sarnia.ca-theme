@@ -77,7 +77,20 @@
 	<header class="header" role="banner">
 		<div class="header__wrapper">
 			<a href="/" class="logo">City of Sarnia</a>
-			<div class="search-form"></div>
+			<div class="search-form">
+				<script>
+					(function() {
+						var cx = '011834652543007666948:m6gm5sunju8';
+						var gcse = document.createElement('script');
+						gcse.type = 'text/javascript';
+						gcse.async = true;
+						gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+						var s = document.getElementsByTagName('script')[0];
+						s.parentNode.insertBefore(gcse, s);
+					})();
+				</script>
+				<gcse:searchbox-only resultsUrl="/search"></gcse:searchbox-only>
+			</div>
 		</div>
 	</header>
 	
