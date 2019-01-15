@@ -6,7 +6,7 @@
 
 	<article>
 		
-		<div class="container container--min">
+		<div class="container container--min content">
 				
 			<?php the_content(); ?>
 			

@@ -86,6 +86,47 @@
     font-weight: 300;
     font-style: normal; }
 
+.wp-block .content ol,
+.wp-block .content ul {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  margin: 0 0 30px;
+  padding: 0;
+  counter-reset: item;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #333; }
+
+.wp-block .content ul li {
+  position: relative;
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 12px; }
+  .wp-block .content ul li::before {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    background-color: #333;
+    content: ""; }
+
+.wp-block .content ol li {
+  position: relative;
+  counter-increment: item;
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 12px; }
+  .wp-block .content ol li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: counters(item, "") ".";
+    color: #333; }
+
 .wp-block .banner {
   display: flex;
   justify-content: center;

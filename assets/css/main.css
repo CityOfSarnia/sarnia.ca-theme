@@ -265,6 +265,47 @@ h4 {
     font-weight: 300;
     font-style: normal; }
 
+.content ol,
+.content ul {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  margin: 0 0 30px;
+  padding: 0;
+  counter-reset: item;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #333; }
+
+.content ul li {
+  position: relative;
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 12px; }
+  .content ul li::before {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    background-color: #333;
+    content: ""; }
+
+.content ol li {
+  position: relative;
+  counter-increment: item;
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 12px; }
+  .content ol li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: counters(item, "") ".";
+    color: #333; }
+
 .container {
   margin: 0 auto;
   padding: 0 20px;
@@ -1059,7 +1100,7 @@ main {
   color: #333 !important; }
 
 .gform_wrapper ul li.gfield {
-  padding-top: 15px !important; }
+  padding: 15px 0 0 !important; }
 
 .gform_wrapper li.gfield select {
   display: inline-block !important;

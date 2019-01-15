@@ -94,6 +94,7 @@
 			'core/heading',
 			'core/gallery',
 			'core/table',
+			'core/list',
 			'core/columns',
 			'core/file',
 			'acf/post-card',
