@@ -1,7 +1,11 @@
 .card {
   background-color: $white;
   border: 1px solid $smoke;
-  margin-bottom: 40px;
+  margin: 0 -21px 30px;
+
+  @media screen and (min-width: $bp-md) {
+    margin: 0 0 40px;
+  }
 }
 
 .card__image {
@@ -13,7 +17,11 @@
 }
 
 .card__main {
-  padding: 30px;
+  padding: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 30px;
+  }
 }
 
 .card__headline {
@@ -46,5 +54,13 @@
 .card__cta {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    margin-top: 30px;
+  }
+}
+
+.wp-block-column {
+  margin: 0;
 }

@@ -1,7 +1,11 @@
 .news-card {
   background-color: $white;
   border: 1px solid $smoke;
-  margin-bottom: 40px;
+  margin: 0 -21px 30px;
+
+  @media screen and (min-width: $bp-md) {
+    margin: 0 0 40px;
+  }
 }
 
 .news-card__image {
@@ -14,7 +18,11 @@
 
 .news-card__main {
   border-top: 6px solid $alert;
-  padding: 30px 40px;
+  padding: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 30px;
+  }
 }
 
 .news-card__headline {
@@ -24,6 +32,10 @@
   color: $grey;
   font-weight: 400;
   font-style: normal;
+}
+
+.news-card-list {
+  margin: 0;
 }
 
 .news-card-list__item {

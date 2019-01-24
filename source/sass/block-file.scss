@@ -1,4 +1,29 @@
-.wp-block-file {}
+.wp-block-file {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border: 1px solid $smoke;
+  padding: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  a {
+    @include font(24, 32);
+    margin-bottom: 10px;
+    font-family: $font-secondary;
+    color: $grey;
+    font-weight: 400;
+    font-style: normal;
+    align-self: start;
+
+    @media screen and (min-width: $bp-md) {
+      margin: 0 !important;
+    }
+  }
+}
 
 .wp-block-file .wp-block-file__button {
   @include default-transition;
@@ -23,4 +48,8 @@
   &:focus {
     background-color: darken($blue, 5%);
   }
+}
+
+.wp-block-file * + .wp-block-file__button {
+  margin: 0 !important;
 }

@@ -781,7 +781,10 @@ main {
 .card {
   background-color: #fff;
   border: 1px solid #f4f6fb;
-  margin-bottom: 40px; }
+  margin: 0 -21px 30px; }
+  @media screen and (min-width: 850px) {
+    .card {
+      margin: 0 0 40px; } }
 
 .card__image {
   position: relative;
@@ -791,7 +794,10 @@ main {
   height: 120px; }
 
 .card__main {
-  padding: 30px; }
+  padding: 20px; }
+  @media screen and (min-width: 850px) {
+    .card__main {
+      padding: 30px; } }
 
 .card__headline {
   font-size: 24px;
@@ -823,12 +829,21 @@ main {
 .card__cta {
   display: flex;
   justify-content: center;
-  margin-top: 30px; }
+  margin-top: 20px; }
+  @media screen and (min-width: 850px) {
+    .card__cta {
+      margin-top: 30px; } }
+
+.wp-block-column {
+  margin: 0; }
 
 .news-card {
   background-color: #fff;
   border: 1px solid #f4f6fb;
-  margin-bottom: 40px; }
+  margin: 0 -21px 30px; }
+  @media screen and (min-width: 850px) {
+    .news-card {
+      margin: 0 0 40px; } }
 
 .news-card__image {
   position: relative;
@@ -839,7 +854,10 @@ main {
 
 .news-card__main {
   border-top: 6px solid #b11e3a;
-  padding: 30px 40px; }
+  padding: 20px; }
+  @media screen and (min-width: 850px) {
+    .news-card__main {
+      padding: 30px; } }
 
 .news-card__headline {
   font-size: 24px;
@@ -851,6 +869,9 @@ main {
   color: #333;
   font-weight: 400;
   font-style: normal; }
+
+.news-card-list {
+  margin: 0; }
 
 .news-card-list__item {
   margin: 0 0 25px;
@@ -882,7 +903,10 @@ main {
 .navigation-card {
   background-color: #fff;
   border: 1px solid #f4f6fb;
-  margin-bottom: 40px; }
+  margin: 0 -21px 30px; }
+  @media screen and (min-width: 850px) {
+    .navigation-card {
+      margin: 0 0 40px; } }
 
 .navigation-card__image {
   position: relative;
@@ -893,7 +917,10 @@ main {
 
 .navigation-card__main {
   border-top: 6px solid #ffde00;
-  padding: 30px 40px; }
+  padding: 20px; }
+  @media screen and (min-width: 850px) {
+    .navigation-card__main {
+      padding: 30px; } }
 
 .navigation-card__headline {
   font-size: 24px;
@@ -910,7 +937,11 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   grid-auto-flow: dense;
-  grid-gap: 20px 30px; }
+  grid-gap: 20px 30px;
+  margin: 0; }
+
+.navigation-card__menu .sub-menu {
+  margin: 0; }
 
 .navigation-card__menu .menu-item {
   margin: 0;
@@ -947,6 +978,31 @@ main {
   .blocks-gallery-item::before {
     display: none; }
 
+.wp-block-file {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #f4f6fb;
+  padding: 20px; }
+  @media screen and (min-width: 850px) {
+    .wp-block-file {
+      flex-direction: row;
+      justify-content: space-between; } }
+  .wp-block-file a {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.3333333333;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", Georgia, Times, serif;
+    color: #333;
+    font-weight: 400;
+    font-style: normal;
+    align-self: start; }
+    @media screen and (min-width: 850px) {
+      .wp-block-file a {
+        margin: 0 !important; } }
+
 .wp-block-file .wp-block-file__button {
   transition: all .25s ease 0s;
   font-size: 16px;
@@ -969,6 +1025,9 @@ main {
     background-color: #3666f1; }
   .wp-block-file .wp-block-file__button:focus {
     background-color: #3666f1; }
+
+.wp-block-file * + .wp-block-file__button {
+  margin: 0 !important; }
 
 .notification-list {
   padding-bottom: 100px; }
@@ -1239,8 +1298,11 @@ main {
 .lwptoc {
   background-color: #fff;
   border: 1px solid #f4f6fb;
-  padding: 30px;
+  padding: 20px;
   margin: 0 0 30px; }
+  @media screen and (min-width: 850px) {
+    .lwptoc {
+      padding: 30px; } }
   .lwptoc li,
   .lwptoc li li {
     margin-bottom: 10px; }
@@ -1372,10 +1434,14 @@ input.gsc-input {
   height: 20px !important; }
 
 .gsc-webResult .gsc-result {
-  margin: 0 0 25px !important;
-  padding: 30px !important;
+  margin: 0 0 20px !important;
+  padding: 20px !important;
   border: 1px solid #f4f6fb !important;
   background-color: #fff !important; }
+  @media screen and (min-width: 850px) {
+    .gsc-webResult .gsc-result {
+      margin: 0 0 25px !important;
+      padding: 30px !important; } }
 
 .gsc-thumbnail-inside {
   padding: 0 !important; }
@@ -1457,6 +1523,10 @@ input.gsc-input {
   border: 1px solid #ffde00 !important;
   background-color: #fff5b2 !important;
   color: #333 !important; }
+
+.gsc-above-wrapper-area {
+  padding: 0 !important;
+  border: 0 !important; }
 
 /* Wordpress reset
 -------------------------------------------------------------------------------*/

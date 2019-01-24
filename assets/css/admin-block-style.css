@@ -284,7 +284,10 @@
 .wp-block .card {
   background-color: #fff;
   border: 1px solid #f4f6fb;
-  margin-bottom: 40px; }
+  margin: 0 -21px 30px; }
+  @media screen and (min-width: 850px) {
+    .wp-block .card {
+      margin: 0 0 40px; } }
 
 .wp-block .card__image {
   position: relative;
@@ -294,7 +297,10 @@
   height: 120px; }
 
 .wp-block .card__main {
-  padding: 30px; }
+  padding: 20px; }
+  @media screen and (min-width: 850px) {
+    .wp-block .card__main {
+      padding: 30px; } }
 
 .wp-block .card__headline {
   font-size: 24px;
@@ -326,12 +332,21 @@
 .wp-block .card__cta {
   display: flex;
   justify-content: center;
-  margin-top: 30px; }
+  margin-top: 20px; }
+  @media screen and (min-width: 850px) {
+    .wp-block .card__cta {
+      margin-top: 30px; } }
+
+.wp-block .wp-block-column {
+  margin: 0; }
 
 .wp-block .news-card {
   background-color: #fff;
   border: 1px solid #f4f6fb;
-  margin-bottom: 40px; }
+  margin: 0 -21px 30px; }
+  @media screen and (min-width: 850px) {
+    .wp-block .news-card {
+      margin: 0 0 40px; } }
 
 .wp-block .news-card__image {
   position: relative;
@@ -342,7 +357,10 @@
 
 .wp-block .news-card__main {
   border-top: 6px solid #b11e3a;
-  padding: 30px 40px; }
+  padding: 20px; }
+  @media screen and (min-width: 850px) {
+    .wp-block .news-card__main {
+      padding: 30px; } }
 
 .wp-block .news-card__headline {
   font-size: 24px;
@@ -354,6 +372,9 @@
   color: #333;
   font-weight: 400;
   font-style: normal; }
+
+.wp-block .news-card-list {
+  margin: 0; }
 
 .wp-block .news-card-list__item {
   margin: 0 0 25px;
@@ -385,7 +406,10 @@
 .wp-block .navigation-card {
   background-color: #fff;
   border: 1px solid #f4f6fb;
-  margin-bottom: 40px; }
+  margin: 0 -21px 30px; }
+  @media screen and (min-width: 850px) {
+    .wp-block .navigation-card {
+      margin: 0 0 40px; } }
 
 .wp-block .navigation-card__image {
   position: relative;
@@ -396,7 +420,10 @@
 
 .wp-block .navigation-card__main {
   border-top: 6px solid #ffde00;
-  padding: 30px 40px; }
+  padding: 20px; }
+  @media screen and (min-width: 850px) {
+    .wp-block .navigation-card__main {
+      padding: 30px; } }
 
 .wp-block .navigation-card__headline {
   font-size: 24px;
@@ -413,7 +440,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   grid-auto-flow: dense;
-  grid-gap: 20px 30px; }
+  grid-gap: 20px 30px;
+  margin: 0; }
+
+.wp-block .navigation-card__menu .sub-menu {
+  margin: 0; }
 
 .wp-block .navigation-card__menu .menu-item {
   margin: 0;
