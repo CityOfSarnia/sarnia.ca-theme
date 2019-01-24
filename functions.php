@@ -10,6 +10,7 @@
 	add_theme_support( 'post-thumbnails');
 	add_image_size( 'home-banner', 1000, 900, true );
 	add_image_size( 'banner', 1600, 600, true );
+	add_image_size( 'card', 780, 200, true );
 		    
 	// Add Theme Features
 	add_post_type_support( 'page', 'excerpt' );
@@ -86,7 +87,7 @@
 	add_action( 'after_setup_theme', 'sarnia_setup' );
 
 	// Limit the core blocks
-	add_filter( 'allowed_block_types', 'sarnia_allowed_block_types' );
+	// add_filter( 'allowed_block_types', 'sarnia_allowed_block_types' );
 	function sarnia_allowed_block_types( $allowed_blocks ) {
 		return array(
 			'core/image',
@@ -97,6 +98,7 @@
 			'core/list',
 			'core/columns',
 			'core/file',
+			'core/html',
 			'acf/post-card',
 			'acf/custom-card',
 			'acf/banner',
@@ -108,7 +110,8 @@
 			'core-embed/vimeo',
 			'core-embed/facebook',
 			'core-embed/twitter',
-			'gravityforms/block'
+			'gravityforms/block',
+			'lwptoc/block'
 		);
 	}
 

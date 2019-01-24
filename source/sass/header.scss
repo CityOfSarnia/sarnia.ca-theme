@@ -1,18 +1,21 @@
 .header {
   position: relative;
-  @media screen and (min-width: $bp-menu) {
-  }
 }
 
 .header__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  // background-color: $alert;
-  padding: 30px 50px;
+  padding: 30px 20px;
   z-index: 1;
+
+  @media screen and (min-width: $bp-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 50px;
+  }
 }

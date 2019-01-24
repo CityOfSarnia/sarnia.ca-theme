@@ -1,16 +1,26 @@
 .search-form {
-  min-width: 440px;
+  width: 100%;
+  max-width: 440px;
+
+  @media screen and (min-width: $bp-md) {
+    width: auto;
+    min-width: 440px;
+  }
 }
 
 form.gsc-search-box {
   margin: 0 !important;
-  height: 50px !important;
+  height: 40px !important;
   font-size: 16px !important;
   line-height: 24px !important;
   font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
   font-weight: 600 !important;
   font-style: normal !important;
   color: $grey !important;
+
+  @media screen and (min-width: $bp-md) {
+    height: 50px !important;
+  }
 }
 
 table.gsc-search-box {
@@ -24,10 +34,15 @@ table.gsc-search-box {
 
 .gsc-input {
   background-color: $white !important;
-  background-position: 18px 19px !important;
-  height: 50px !important;
+  background-position: 18px 14px !important;
+  height: 40px !important;
   margin: 0 !important;
   border-radius: 8px 0 0 8px !important;
+
+  @media screen and (min-width: $bp-md) {
+    background-position: 18px 19px !important;
+    height: 50px !important;
+  }
 
   td {
     padding: 0 !important;
@@ -56,12 +71,18 @@ input.gsc-input {
 
 .gsc-search-button {
   margin: 0 !important;
-  height: 50px !important;
-  width: 80px !important;
+  padding: 0 !important;
+  height: 40px !important;
+  width: 40px !important;
   border: 0 !important;
   border-radius: 0 8px 8px 0 !important;
   background-color: $blue !important;
   color: $white !important;
+
+  @media screen and (min-width: $bp-md) {
+    height: 50px !important;
+    width: 60px !important;
+  }
 }
 
 .gsc-search-button-v2 svg {

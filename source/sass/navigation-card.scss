@@ -34,8 +34,14 @@
     grid-gap: 20px 30px;
   }
   .menu-item {
+    margin: 0;
+    padding: 0;
     border-top: 1px solid $grey-lt;
     padding-top: 10px;
+
+    &::before {
+      display: none;
+    }
 
     a {
       @include font(14, 18);

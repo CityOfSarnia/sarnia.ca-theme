@@ -12,7 +12,7 @@
 
     <?php if( get_field('custom_card_image') ) { ?>
 
-      <img src="<?php $image = get_field('custom_card_image'); echo($image['sizes']['medium']); ?>" alt="<?php the_field('custom_card_headline');?>">
+      <div class="card__image" style="background-image: url('<?php $image = get_field('custom_card_image'); echo($image['sizes']['large']); ?>')" alt="<?php the_field('custom_card_headline');?>"></div>
 
     <?php } ?>
 		
