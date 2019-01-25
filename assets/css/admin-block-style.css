@@ -526,8 +526,7 @@
   padding: 10px 0; }
 
 .wp-block .recent-notification-list__item {
-  display: flex;
-  background-color: aqua; }
+  display: flex; }
 
 .wp-block .recent-notification__icon {
   flex-shrink: 0;
@@ -536,9 +535,6 @@
   margin-right: 10px; }
   .wp-block .recent-notification__icon svg {
     fill: #333; }
-
-.wp-block .recent-notification__header {
-  background-color: blue; }
 
 .wp-block .recent-notification__headline {
   font-size: 14px;

@@ -1156,8 +1156,7 @@ main {
   padding: 10px 0; }
 
 .recent-notification-list__item {
-  display: flex;
-  background-color: aqua; }
+  display: flex; }
 
 .recent-notification__icon {
   flex-shrink: 0;
@@ -1166,9 +1165,6 @@ main {
   margin-right: 10px; }
   .recent-notification__icon svg {
     fill: #333; }
-
-.recent-notification__header {
-  background-color: blue; }
 
 .recent-notification__headline {
   font-size: 14px;
