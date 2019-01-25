@@ -21,7 +21,7 @@
 
   @media screen and (min-width: $bp-md) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
+    grid-gap: 80px;
   }
 }
 
@@ -31,9 +31,9 @@
   margin-top: 20px;
 
   @media screen and (min-width: $bp-md) {
-    justify-self: start;
+    justify-self: end;
     order: 1;
-    margin: 0;
+    margin-top: 40px;
   }
 
   .logo {
@@ -99,6 +99,7 @@
 .footer-social {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
 
   @media screen and (min-width: $bp-md) {
