@@ -685,11 +685,11 @@ main {
 
 .social-links__icon {
   transition: all .25s ease 0s;
-  margin: 0 8px;
+  margin: 0 10px;
   opacity: 1; }
   @media screen and (min-width: 850px) {
     .social-links__icon {
-      margin: 0 16px 0 0; } }
+      margin: 0 20px 0 0; } }
   .social-links__icon:hover {
     opacity: 0.8; }
   .social-links__icon svg {
