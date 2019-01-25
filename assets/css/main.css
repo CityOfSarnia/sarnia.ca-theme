@@ -1551,6 +1551,19 @@ input.gsc-input {
   padding: 0 !important;
   border: 0 !important; }
 
+.post-list__item {
+  margin: 0 0 20px;
+  padding: 20px;
+  border: 1px solid #f4f6fb;
+  background-color: #fff; }
+  @media screen and (min-width: 850px) {
+    .post-list__item {
+      margin: 0 0 25px;
+      padding: 30px; } }
+
+.post-list__excerpt {
+  margin: 0; }
+
 /* Wordpress reset
 -------------------------------------------------------------------------------*/
 #page-wrap {
