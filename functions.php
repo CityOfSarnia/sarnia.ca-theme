@@ -1,5 +1,30 @@
 <?php
 
+	
+	function card_colour()
+	{
+		global $card_count;
+
+		$card_count++;
+
+		switch($card_count){
+			case 1 :
+				$colour = 'blue';
+				break;
+			case 2 :
+				$colour = 'red';
+				break;
+			case 3 :
+				$colour = 'yellow';
+				$card_count == 0;
+				break;
+			default :
+				$card_count == 0;
+		}
+		
+		return $colour;
+	}
+
 	// Custom Except Length
 	function sarnia_excerpt_length( $length ) {
 		return 20;
@@ -11,7 +36,7 @@
 	add_image_size( 'home-banner', 1000, 900, true );
 	add_image_size( 'banner', 1600, 600, true );
 	add_image_size( 'card', 780, 200, true );
-		    
+			
 	// Add Theme Features
 	add_post_type_support( 'page', 'excerpt' );
 	

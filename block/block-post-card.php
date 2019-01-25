@@ -15,6 +15,9 @@ $post = $post_object;
 setup_postdata( $post );
 ?>
 
+
+
+
 <div class="card">
 
   <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'card' );?>
@@ -24,6 +27,8 @@ setup_postdata( $post );
     <div class="card__image" style="background-image: url('<?php echo $thumb['0'];?>')"></div>
 
   <?php } ?>
+
+  <?=card_colour(); ?>
 
   <div class="card__main">
 
