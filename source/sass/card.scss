@@ -1,7 +1,29 @@
-.card {
+.post-card {
   background-color: $white;
   border: 1px solid $smoke;
-  margin-bottom: 40px;
+  margin: 0 -21px 30px;
+
+  @media screen and (min-width: 600px) {
+    margin: 0 0 40px;
+  }
+
+  &.card--blue {
+    .card__main {
+      border-top: 6px solid $blue;
+    }
+  }
+
+  &.card--red {
+    .card__main {
+      border-top: 6px solid $alert;
+    }
+  }
+
+  &.card--yellow {
+    .card__main {
+      border-top: 6px solid $yellow;
+    }
+  }
 }
 
 .card__image {
@@ -13,8 +35,11 @@
 }
 
 .card__main {
-  padding: 30px;
-  // min-height: 200px;
+  padding: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 30px;
+  }
 }
 
 .card__headline {
@@ -47,5 +72,13 @@
 .card__cta {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    margin-top: 30px;
+  }
+}
+
+.wp-block-column {
+  margin: 0;
 }

@@ -1,7 +1,29 @@
 .navigation-card {
   background-color: $white;
   border: 1px solid $smoke;
-  margin-bottom: 40px;
+  margin: 0 -21px 30px;
+
+  &.card--blue {
+    .navigation-card__main {
+      border-top: 6px solid $blue;
+    }
+  }
+
+  &.card--red {
+    .navigation-card__main {
+      border-top: 6px solid $alert;
+    }
+  }
+
+  &.card--yellow {
+    .navigation-card__main {
+      border-top: 6px solid $yellow;
+    }
+  }
+
+  @media screen and (min-width: $bp-md) {
+    margin: 0 0 40px;
+  }
 }
 
 .navigation-card__image {
@@ -13,8 +35,11 @@
 }
 
 .navigation-card__main {
-  border-top: 6px solid $yellow;
-  padding: 30px 40px;
+  padding: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 30px;
+  }
 }
 
 .navigation-card__headline {
@@ -32,10 +57,22 @@
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     grid-auto-flow: dense;
     grid-gap: 20px 30px;
+    margin: 0;
   }
+
+  .sub-menu {
+    margin: 0;
+  }
+
   .menu-item {
+    margin: 0;
+    padding: 0;
     border-top: 1px solid $grey-lt;
     padding-top: 10px;
+
+    &::before {
+      display: none;
+    }
 
     a {
       @include font(14, 18);

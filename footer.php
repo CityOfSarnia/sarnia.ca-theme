@@ -4,13 +4,13 @@
 
 	<div class="footer__main">
 		<div class="container">
-			<div class="section__columns section__columns--2">
+			<div class="footer__columns">
 
-				<div class="section__column">
+				<div class="footer__logo">
 					<a href="/" class="logo">City of Sarnia</a>
 				</div>
 
-				<div class="section__column">
+				<div class="footer__contact">
 
 					<div class="contact-list">
 

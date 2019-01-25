@@ -30,8 +30,10 @@
           ?>
           <a href="/notifications" class="recent-notification-list__item">
             <div class="recent-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
-            <h4 class="recent-notification__headline"><?php the_title(); ?></h4>
-            <p class="recent-notification__date"><?php the_field('notification_date', $post_id); ?></p>
+            <header class="recent-notification__header">
+              <h4 class="recent-notification__headline"><?php the_title(); ?></h4>
+              <p class="recent-notification__date"><?php the_field('notification_date', $post_id); ?></p>
+            </header>
             <p class="recent-notification__text hidden"><?php echo get_the_excerpt(); ?></p>
           </a>
         <?php endwhile; ?>

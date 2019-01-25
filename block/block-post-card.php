@@ -15,11 +15,13 @@ $post = $post_object;
 setup_postdata( $post );
 ?>
 
-<div class="card">
+<div class="post-card <?=card_colour(); ?>">
+
+  <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'card' );?>
 
   <?php if ( has_post_thumbnail($post->ID) ) { ?>
 
-    <?php echo get_the_post_thumbnail($post->ID, 'medium'); ?>
+    <div class="card__image" style="background-image: url('<?php echo $thumb['0'];?>')"></div>
 
   <?php } ?>
 

@@ -16,39 +16,52 @@
 
 <article class="posts">
 
-	<div class="container">
+	<div class="container container--min">
 				
 		<div class="post-list">
+
+			<?php
+				$currCat = get_category(get_query_var('cat'));
+				$cat_name = $currCat->name;
+				$cat_id   = get_cat_ID( $cat_name );
+			?>
 		
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$temp = $wp_query;
+				$wp_query = null;
+				$wp_query = new WP_Query();
+				$wp_query->query('showposts=10&post_type=post&paged='.$paged.'&cat='.$cat_id);
+				while ($wp_query->have_posts()) : $wp_query->the_post();
+			?>
 			
 				<div class="post-list__item">
 					
-					<?php if (has_post_thumbnail() ) { ?>
-					
-						<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );?>
-					
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-list__image" style="background-image: url('<?php echo $thumb['0'];?>')"></a>
-					
-					<?php } else { ?>
-					
-						<a href="<?php the_permalink(); ?>" class="post-list__image post-list__image--placeholder"></a>
-					
-					<?php } ?>
-					
-					<div class="post-list__content">
-									
-						<h3 class="post-list__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><h3>
+					<h3 class="post-list__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						
-						<div class="post-list__excerpt"><?php the_excerpt(); ?></div>
-											
-					</div>
+					<p class="post-list__excerpt"><?php echo get_the_excerpt(); ?></p>
 						
 				</div>
 		
-			<?php endwhile; endif; ?>
+			<?php endwhile; ?>
 		
 		</div>
+
+		<?php
+			global $wp_query;
+		
+			$big = 999999999;
+			echo '<div class="paginate-links">';
+				echo paginate_links( array(
+				'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				'format' => '?paged=%#%',
+				'prev_text' => __('<<'),
+				'next_text' => __('>>'),
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $wp_query->max_num_pages
+				) );
+			echo '</div>';
+		?>
 	
 	</div>
 

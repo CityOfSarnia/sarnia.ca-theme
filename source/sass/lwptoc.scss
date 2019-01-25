@@ -1,0 +1,76 @@
+.lwptoc {
+  background-color: $white;
+  border: 1px solid $smoke;
+  padding: 20px;
+  margin: 0 0 30px;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 30px;
+  }
+
+  li,
+  li li {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    margin: 20px 0 0 0;
+  }
+
+  ul ul {
+    margin: 10px 0 10px 30px;
+  }
+}
+
+.lwptoc_i {
+  display: block !important;
+  background-color: $white !important;
+  padding: 0 !important;
+}
+
+.lwptoc_header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+}
+
+.lwptoc_title {
+  @include font(28, 34);
+  font-family: $font-secondary;
+  color: $grey;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lwptoc_items {
+  // margin-top: 20px;
+
+  li::before {
+    display: none !important;
+  }
+}
+
+.lwptoc-light .lwptoc_items a {
+  @include font(16, 24);
+  font-family: $font-primary;
+  color: $grey;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lwptoc-light .lwptoc_items a:link {
+  color: $grey;
+}
+
+.lwptoc-light .lwptoc_items a:visited {
+  color: $grey;
+}
+
+.lwptoc_item_number {
+  color: $grey-md !important;
+}
+
+.lwptoc_toggle {
+  display: none;
+}

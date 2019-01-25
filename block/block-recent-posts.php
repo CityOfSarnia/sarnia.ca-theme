@@ -8,7 +8,7 @@
 
 <?php if( get_field('recent_posts_category') ) { ?>
 
-<div class="news-card">
+<div class="news-card <?=card_colour(); ?>">
 
   <?php if( get_field('recent_posts_image') ) { ?>
 
@@ -23,11 +23,11 @@
 
     <?php if( get_field('recent_posts_headline') ) { ?>
 
-      <h2 class="news-card__headline"><?php the_field('recent_posts_headline');?></h2>
+      <h3 class="news-card__headline"><?php the_field('recent_posts_headline');?></h3>
 
     <?php } else { ?>
 
-      <h2 class="news-card__headline"><?php echo $catName; ?></h2>
+      <h3 class="news-card__headline"><?php echo $catName; ?></h3>
 
     <?php } ?>
 

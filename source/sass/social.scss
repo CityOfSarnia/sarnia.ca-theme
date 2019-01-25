@@ -1,19 +1,25 @@
 .social-links {
-	display: flex;
-	align-items: center;
-	margin-top: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .social-links__icon {
-	@include default-transition;
-	margin-right: 12px;
-	opacity: 1;
-	
-	&:hover {
-		opacity: .8;
-	}
-	
-	svg {
-		width: 32px;
-	}
+  @include default-transition;
+  margin: 0 10px;
+  opacity: 1;
+
+  @media screen and (min-width: $bp-md) {
+    margin: 0 20px 0 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
 }

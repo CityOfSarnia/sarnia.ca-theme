@@ -1,11 +1,51 @@
 .footer {
   position: relative;
-  margin-top: 80px;
+  margin-top: 40px;
+
+  @media screen and (min-width: $bp-md) {
+    margin-top: 80px;
+  }
 }
 
 .footer__main {
   background-color: $blue-md;
-  padding: 40px 0 60px;
+  padding: 20px 0;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 40px 0;
+  }
+}
+
+.footer__columns {
+  display: grid;
+
+  @media screen and (min-width: $bp-md) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
+}
+
+.footer__logo {
+  justify-self: center;
+  order: 2;
+  margin-top: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    justify-self: end;
+    order: 1;
+    margin-top: 40px;
+  }
+
+  .logo {
+    margin: 0;
+  }
+}
+
+.footer__contact {
+  order: 1;
+  @media screen and (min-width: $bp-md) {
+    order: 2;
+  }
 }
 
 .contact-list {
@@ -57,7 +97,14 @@
 }
 
 .footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
+
+  @media screen and (min-width: $bp-md) {
+    justify-content: start;
+  }
 
   .social-links__icon svg {
     width: 24px;
@@ -70,13 +117,22 @@
 }
 
 .footer-menu {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: $bp-md) {
+    display: flex;
+  }
 
   .menu-item {
     @include font(14, 14);
     position: relative;
-    padding: 0 15px;
+    margin: 0;
+    padding: 0;
     font-family: $font-primary;
     font-weight: 300;
     font-style: normal;
@@ -84,7 +140,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    @media screen and (min-width: $bp-menu) {
+    &::before {
+      display: none;
+    }
+
+    @media screen and (min-width: $bp-md) {
+      padding: 0 15px;
     }
   }
 
@@ -96,4 +157,13 @@
   a:hover {
     color: rgba($white, 1);
   }
+}
+
+.footer-menu__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu__container {
+  max-width: 500px;
 }
