@@ -789,7 +789,7 @@ main {
   background-color: #fff;
   border: 1px solid #f4f6fb;
   margin: 0 -21px 30px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 600px) {
     .post-card {
       margin: 0 0 40px; } }
   .post-card.card--blue .card__main {
@@ -1563,6 +1563,18 @@ input.gsc-input {
 
 .post-list__excerpt {
   margin: 0; }
+
+@media (min-width: 600px) {
+  .wp-block-columns {
+    flex-wrap: nowrap; } }
+
+@media (min-width: 600px) {
+  .wp-block-column:not(:first-child) {
+    margin-left: 25px; }
+  .wp-block-column:nth-child(odd) {
+    margin-right: 25px; }
+  .wp-block-column:not(:last-child) {
+    margin-right: 25px; } }
 
 /* Wordpress reset
 -------------------------------------------------------------------------------*/

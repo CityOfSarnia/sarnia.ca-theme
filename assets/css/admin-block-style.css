@@ -286,7 +286,7 @@
   background-color: #fff;
   border: 1px solid #f4f6fb;
   margin: 0 -21px 30px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 600px) {
     .wp-block .post-card {
       margin: 0 0 40px; } }
   .wp-block .post-card.card--blue .card__main {
