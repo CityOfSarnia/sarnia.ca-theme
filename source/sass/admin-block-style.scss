@@ -13,59 +13,62 @@ $font-secondary: "Playfair Display", Georgia, Times, serif;
   @import "card";
   @import "news-card";
   @import "navigation-card";
-}
+  @import "recent-notifications";
 
-.banner {
-  h1 {
+  .recent-notifications {
+    background-color: $yellow-lt;
+    margin-top: -80px;
+    padding: 10px;
+    font-family: $font-secondary;
+    color: $grey;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .banner {
+    h1 {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:active,
+    a:hover {
+      color: $white;
+    }
+  }
+
+  .card {
+    a {
+      text-decoration: none;
+    }
+    a:active,
+    a:hover {
+      color: $white;
+    }
+  }
+
+  .news-card,
+  .navigation-card {
     margin: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-  a:active,
-  a:hover {
-    color: $white;
-  }
-}
 
-.card {
-  a {
-    text-decoration: none;
+    li {
+      list-style: none;
+    }
   }
-  a:active,
-  a:hover {
-    color: $white;
-  }
-}
 
-.news-card,
-.navigation-card {
-  margin: 0;
+  .wp-block-columns {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgba($smoke, 0.3);
 
-  li {
-    list-style: none;
-  }
-}
-
-.recent-notifications {
-  background-color: $yellow-lt;
-  margin-top: -80px;
-  padding: 10px;
-  font-family: $font-secondary;
-  color: $grey;
-  text-align: center;
-
-  p {
-    margin: 0;
-  }
-}
-
-.wp-block-columns {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: rgba($smoke, 0.3);
-
-  .editor-rich-text {
-    background-color: $white;
+    .editor-rich-text {
+      background-color: $white;
+    }
   }
 }

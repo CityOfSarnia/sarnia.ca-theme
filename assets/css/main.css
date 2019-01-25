@@ -445,8 +445,7 @@ main {
   @media screen and (min-width: 850px) {
     .banner {
       margin-bottom: 60px;
-      padding: 130px 20px 80px;
-      min-height: 340px; } }
+      padding: 140px 20px 60px; } }
   .banner::before {
     position: absolute;
     top: 0;
@@ -485,12 +484,6 @@ main {
   font-weight: 400;
   font-style: normal;
   color: #fff; }
-  @media screen and (min-width: 850px) {
-    .banner__headline {
-      font-size: 80px;
-      font-size: 5rem;
-      line-height: 1;
-      letter-spacing: 0px; } }
 
 .banner__byline {
   font-size: 28px;
@@ -502,18 +495,40 @@ main {
   font-weight: 300;
   font-style: normal;
   color: #fff; }
-  @media screen and (min-width: 850px) {
-    .banner__byline {
-      font-size: 44px;
-      font-size: 2.75rem;
-      line-height: 1;
-      letter-spacing: 0px; } }
 
 .banner__cta {
   margin-top: 20px; }
   @media screen and (min-width: 850px) {
     .banner__cta {
       margin-top: 60px; } }
+
+.home .banner {
+  margin-bottom: 0; }
+  @media screen and (min-width: 850px) {
+    .home .banner {
+      min-height: 600px; } }
+  .home .banner .banner__headline {
+    font-size: 50px;
+    font-size: 3.125rem;
+    line-height: 1;
+    letter-spacing: 0px; }
+    @media screen and (min-width: 850px) {
+      .home .banner .banner__headline {
+        font-size: 80px;
+        font-size: 5rem;
+        line-height: 1;
+        letter-spacing: 0px; } }
+  .home .banner .banner__byline {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1;
+    letter-spacing: 0px; }
+    @media screen and (min-width: 850px) {
+      .home .banner .banner__byline {
+        font-size: 44px;
+        font-size: 2.75rem;
+        line-height: 1;
+        letter-spacing: 0px; } }
 
 .header {
   position: relative; }
