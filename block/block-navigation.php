@@ -8,7 +8,7 @@
 
 <?php if( get_field('menu') ) { ?>
 
-  <div class="navigation-card">
+  <div class="navigation-card <?=card_colour(); ?>">
 
     <?php if( get_field('menu_image') ) { ?>
 

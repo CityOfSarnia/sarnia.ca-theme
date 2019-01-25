@@ -1,6 +1,5 @@
 <?php
 
-	
 	function card_colour()
 	{
 		global $card_count;
@@ -9,17 +8,17 @@
 
 		switch($card_count){
 			case 1 :
-				$colour = 'blue';
+				$colour = 'card--blue';
 				break;
 			case 2 :
-				$colour = 'red';
+				$colour = 'card--red';
 				break;
 			case 3 :
-				$colour = 'yellow';
-				$card_count == 0;
+				$colour = 'card--yellow';
+				$card_count = 0;
 				break;
 			default :
-				$card_count == 0;
+				$card_count = 0;
 		}
 		
 		return $colour;

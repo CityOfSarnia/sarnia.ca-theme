@@ -3,6 +3,24 @@
   border: 1px solid $smoke;
   margin: 0 -21px 30px;
 
+  &.card--blue {
+    .navigation-card__main {
+      border-top: 6px solid $blue;
+    }
+  }
+
+  &.card--red {
+    .navigation-card__main {
+      border-top: 6px solid $alert;
+    }
+  }
+
+  &.card--yellow {
+    .navigation-card__main {
+      border-top: 6px solid $yellow;
+    }
+  }
+
   @media screen and (min-width: $bp-md) {
     margin: 0 0 40px;
   }
@@ -17,7 +35,6 @@
 }
 
 .navigation-card__main {
-  border-top: 6px solid $yellow;
   padding: 20px;
 
   @media screen and (min-width: $bp-md) {

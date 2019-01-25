@@ -3,6 +3,24 @@
   border: 1px solid $smoke;
   margin: 0 -21px 30px;
 
+  &.card--blue {
+    .news-card__main {
+      border-top: 6px solid $blue;
+    }
+  }
+
+  &.card--red {
+    .news-card__main {
+      border-top: 6px solid $alert;
+    }
+  }
+
+  &.card--yellow {
+    .news-card__main {
+      border-top: 6px solid $yellow;
+    }
+  }
+
   @media screen and (min-width: $bp-md) {
     margin: 0 0 40px;
   }
@@ -17,7 +35,6 @@
 }
 
 .news-card__main {
-  border-top: 6px solid $alert;
   padding: 20px;
 
   @media screen and (min-width: $bp-md) {

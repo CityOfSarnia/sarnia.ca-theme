@@ -8,7 +8,7 @@
 
 <?php if( get_field('recent_posts_category') ) { ?>
 
-<div class="news-card">
+<div class="news-card <?=card_colour(); ?>">
 
   <?php if( get_field('recent_posts_image') ) { ?>
 

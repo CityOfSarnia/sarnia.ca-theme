@@ -41,6 +41,7 @@ p {
   }
 }
 
+h1,
 h2 {
   @include font(42, 50);
   font-family: $font-secondary;

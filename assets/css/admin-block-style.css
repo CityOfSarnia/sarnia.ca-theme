@@ -34,6 +34,7 @@
   .wp-block p em {
     font-style: italic; }
 
+.wp-block h1,
 .wp-block h2 {
   font-size: 42px;
   font-size: 2.625rem;
@@ -281,13 +282,19 @@
   .wp-block .btn.btn--center {
     margin: 0 auto; }
 
-.wp-block .card {
+.wp-block .post-card {
   background-color: #fff;
   border: 1px solid #f4f6fb;
   margin: 0 -21px 30px; }
   @media screen and (min-width: 850px) {
-    .wp-block .card {
+    .wp-block .post-card {
       margin: 0 0 40px; } }
+  .wp-block .post-card.card--blue .card__main {
+    border-top: 6px solid #4e78f3; }
+  .wp-block .post-card.card--red .card__main {
+    border-top: 6px solid #b11e3a; }
+  .wp-block .post-card.card--yellow .card__main {
+    border-top: 6px solid #ffde00; }
 
 .wp-block .card__image {
   position: relative;
@@ -344,6 +351,12 @@
   background-color: #fff;
   border: 1px solid #f4f6fb;
   margin: 0 -21px 30px; }
+  .wp-block .news-card.card--blue .news-card__main {
+    border-top: 6px solid #4e78f3; }
+  .wp-block .news-card.card--red .news-card__main {
+    border-top: 6px solid #b11e3a; }
+  .wp-block .news-card.card--yellow .news-card__main {
+    border-top: 6px solid #ffde00; }
   @media screen and (min-width: 850px) {
     .wp-block .news-card {
       margin: 0 0 40px; } }
@@ -356,7 +369,6 @@
   height: 120px; }
 
 .wp-block .news-card__main {
-  border-top: 6px solid #b11e3a;
   padding: 20px; }
   @media screen and (min-width: 850px) {
     .wp-block .news-card__main {
@@ -407,6 +419,12 @@
   background-color: #fff;
   border: 1px solid #f4f6fb;
   margin: 0 -21px 30px; }
+  .wp-block .navigation-card.card--blue .navigation-card__main {
+    border-top: 6px solid #4e78f3; }
+  .wp-block .navigation-card.card--red .navigation-card__main {
+    border-top: 6px solid #b11e3a; }
+  .wp-block .navigation-card.card--yellow .navigation-card__main {
+    border-top: 6px solid #ffde00; }
   @media screen and (min-width: 850px) {
     .wp-block .navigation-card {
       margin: 0 0 40px; } }
@@ -419,7 +437,6 @@
   height: 120px; }
 
 .wp-block .navigation-card__main {
-  border-top: 6px solid #ffde00;
   padding: 20px; }
   @media screen and (min-width: 850px) {
     .wp-block .navigation-card__main {

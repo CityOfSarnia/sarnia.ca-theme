@@ -8,7 +8,7 @@
 
 <?php if( get_field('custom_card_headline') ) { ?>
 
-  <div class="card">
+  <div class="post-card <?=card_colour(); ?>">
 
     <?php if( get_field('custom_card_image') ) { ?>
 
