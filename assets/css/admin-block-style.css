@@ -145,9 +145,9 @@
   max-width: 100vw; }
   @media screen and (min-width: 850px) {
     .wp-block .banner {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
       padding: 130px 20px 80px;
-      min-height: 400px; } }
+      min-height: 340px; } }
   .wp-block .banner::before {
     position: absolute;
     top: 0;
