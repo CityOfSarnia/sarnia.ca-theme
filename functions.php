@@ -111,7 +111,7 @@
 	add_action( 'after_setup_theme', 'sarnia_setup' );
 
 	// Limit the core blocks
-	// add_filter( 'allowed_block_types', 'sarnia_allowed_block_types' );
+	add_filter( 'allowed_block_types', 'sarnia_allowed_block_types' );
 	function sarnia_allowed_block_types( $allowed_blocks ) {
 		return array(
 			'core/image',
