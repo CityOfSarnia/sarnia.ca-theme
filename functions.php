@@ -280,6 +280,7 @@
 	function sarnia_gutenberg_scripts() {
 		wp_enqueue_style( 'sarnia-fonts', sarnia_theme_fonts_url() );
 		wp_enqueue_style( 'sarnia', get_stylesheet_directory_uri() . '/assets/css/admin-block-style.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/admin-block-style.css' ) );
+		wp_enqueue_script( 'sarnia', get_stylesheet_directory_uri() . '/assets/js/admin-block.js', array( 'jquery' ), filemtime( get_stylesheet_directory() . '/assets/js/admin-block.js' ), true );
 	}
 	add_action( 'enqueue_block_editor_assets', 'sarnia_gutenberg_scripts' );
 
