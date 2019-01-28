@@ -188,7 +188,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'id',
 				'keywords'				=> array( 'banner', 'menu', 'nav' ),
-				'supports' 				=> array( 'align' => false ),
+				'supports' 				=> array( 'align' => array( 'full' ) ),
 			));
 
 			// register a post card block
@@ -224,7 +224,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'star-filled',
 				'keywords'				=> array( 'notifications' ),
-				'supports' 				=> array( 'align' => false ),
+				'supports' 				=> array( 'align' => array( 'full' ) ),
 			));
 
 			// register a recent posts block
