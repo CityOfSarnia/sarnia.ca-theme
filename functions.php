@@ -188,6 +188,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'id',
 				'keywords'				=> array( 'banner', 'menu', 'nav' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a post card block
@@ -199,6 +200,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'media-default',
 				'keywords'				=> array( 'post', 'card' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a custom card block
@@ -210,6 +212,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'media-text',
 				'keywords'				=> array( 'custom', 'card' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a notifications block
@@ -221,6 +224,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'star-filled',
 				'keywords'				=> array( 'notifications' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a recent posts block
@@ -232,6 +236,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'admin-page',
 				'keywords'				=> array( 'recent', 'posts', 'news' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a navigation block
@@ -243,6 +248,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'list-view',
 				'keywords'				=> array( 'navigation', 'menu', 'nav' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 		}
@@ -280,6 +286,7 @@
 	function sarnia_gutenberg_scripts() {
 		wp_enqueue_style( 'sarnia-fonts', sarnia_theme_fonts_url() );
 		wp_enqueue_style( 'sarnia', get_stylesheet_directory_uri() . '/assets/css/admin-block-style.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/admin-block-style.css' ) );
+		wp_enqueue_script( 'sarnia', get_stylesheet_directory_uri() . '/assets/js/admin-block.js', array( 'jquery' ), filemtime( get_stylesheet_directory() . '/assets/js/admin-block.js' ), true );
 	}
 	add_action( 'enqueue_block_editor_assets', 'sarnia_gutenberg_scripts' );
 
