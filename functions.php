@@ -188,6 +188,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'id',
 				'keywords'				=> array( 'banner', 'menu', 'nav' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a post card block
@@ -199,6 +200,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'media-default',
 				'keywords'				=> array( 'post', 'card' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a custom card block
@@ -210,6 +212,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'media-text',
 				'keywords'				=> array( 'custom', 'card' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a notifications block
@@ -221,6 +224,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'star-filled',
 				'keywords'				=> array( 'notifications' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a recent posts block
@@ -232,6 +236,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'admin-page',
 				'keywords'				=> array( 'recent', 'posts', 'news' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 			// register a navigation block
@@ -243,6 +248,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'list-view',
 				'keywords'				=> array( 'navigation', 'menu', 'nav' ),
+				'supports' 				=> array( 'align' => false ),
 			));
 
 		}
