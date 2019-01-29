@@ -1,0 +1,1 @@
+wp.hooks.addFilter("blocks.registerBlockType","sarnia.ca-theme",function(s,a){return"core/file"===a?lodash.assign({},s,{supports:lodash.assign({},s.supports,{align:!1})}):"core/heading"===a?lodash.assign({},s,{supports:lodash.assign({},s.supports,{align:["wide"]})}):s});

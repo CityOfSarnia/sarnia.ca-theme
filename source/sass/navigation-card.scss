@@ -76,6 +76,7 @@
 
     a {
       @include font(14, 18);
+      display: block;
       margin: 0 0 10px;
       text-decoration: none;
       color: $grey;
