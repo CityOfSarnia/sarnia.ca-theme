@@ -135,7 +135,7 @@
 			'core-embed/facebook',
 			'core-embed/twitter',
 			'gravityforms/block',
-			'lwptoc/block'
+			'luckywp/tableofcontents'
 		);
 	}
 
