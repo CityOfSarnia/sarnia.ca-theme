@@ -37,6 +37,8 @@
         <div class="card__cta"><a href="<?php the_field('custom_card_cta_url');?>" class="btn btn--sm"><?php the_field('custom_card_cta_text');?></a></div>
       
       <?php } ?>
+
+    </div>
   
   </div>
 
