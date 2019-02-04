@@ -9,7 +9,7 @@
 <div class="recent-notifications">
     <div class="recent-notification-list--top">
       <div class="container recent-notification-list">
-        <div class="recent-notification-list__item">
+        <div class="recent-notification-list__item recent-notification-list--collapse">
           <a href="#" class="btn btn--outline">Subscribe</a>
         </div>
         <!-- Recent Notification Query for Headers and screen readers -->
@@ -46,7 +46,7 @@
 
     <div class="recent-notification-list--bottom" aria-hidden="true">
       <div class="container recent-notification-list ">
-        <div class="recent-notification-list__item"></div>
+        <div class="recent-notification-list__item recent-notification-list--collapse"></div>
         <!-- Recent Notification Query for Expert Only -->
         <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'posts_per_page' => 3 ) ); ?>    
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>

@@ -1141,12 +1141,18 @@ main {
   margin-left: calc(-100vw / 2 + 100% / 2);
   margin-right: calc(-100vw / 2 + 100% / 2);
   margin-bottom: 80px;
-  max-width: 100vw; }
+  max-width: 100vw;
+  overflow-x: scroll; }
 
 .recent-notification-list {
+  position: relative;
   display: grid;
-  grid-template-columns: 130px 2fr 2fr 2fr 130px;
-  gap: 40px; }
+  grid-template-columns: 80% 80% 80% 130px;
+  gap: 40px;
+  z-index: 1; }
+  @media screen and (min-width: 850px) {
+    .recent-notification-list {
+      grid-template-columns: 130px 2fr 2fr 2fr 130px; } }
 
 .recent-notification-list--top {
   background-color: #ffde00;
@@ -1158,6 +1164,12 @@ main {
 
 .recent-notification-list__item {
   display: flex; }
+
+.recent-notification-list--collapse {
+  display: none; }
+  @media screen and (min-width: 850px) {
+    .recent-notification-list--collapse {
+      display: grid; } }
 
 .recent-notification__icon {
   flex-shrink: 0;
