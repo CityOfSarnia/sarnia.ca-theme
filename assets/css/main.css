@@ -1140,9 +1140,12 @@ main {
   position: relative;
   margin-left: calc(-100vw / 2 + 100% / 2);
   margin-right: calc(-100vw / 2 + 100% / 2);
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   max-width: 100vw;
   overflow-x: scroll; }
+  @media screen and (min-width: 850px) {
+    .recent-notifications {
+      margin-bottom: 80px; } }
 
 .recent-notification-list {
   position: relative;

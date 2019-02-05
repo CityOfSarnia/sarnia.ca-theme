@@ -510,9 +510,12 @@
   position: relative;
   margin-left: calc(-100vw / 2 + 100% / 2);
   margin-right: calc(-100vw / 2 + 100% / 2);
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   max-width: 100vw;
   overflow-x: scroll; }
+  @media screen and (min-width: 850px) {
+    .wp-block .recent-notifications {
+      margin-bottom: 80px; } }
 
 .wp-block .recent-notification-list {
   position: relative;
