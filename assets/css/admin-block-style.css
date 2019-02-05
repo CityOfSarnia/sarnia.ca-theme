@@ -516,30 +516,40 @@
 
 .wp-block .recent-notification-list {
   position: relative;
-  display: grid;
-  grid-template-columns: 80% 80% 80% 130px;
-  gap: 40px;
-  z-index: 1; }
+  display: flex;
+  justify-content: space-between;
+  width: 300%; }
   @media screen and (min-width: 850px) {
     .wp-block .recent-notification-list {
-      grid-template-columns: 130px 2fr 2fr 2fr 130px; } }
+      width: 100%; } }
 
 .wp-block .recent-notification-list--top {
-  background-color: #ffde00;
-  padding: 5px 0 10px; }
+  background-color: #ffde00; }
+  .wp-block .recent-notification-list--top .recent-notification-list {
+    background-color: #ffde00; }
 
 .wp-block .recent-notification-list--bottom {
-  background-color: #fff5b2;
-  padding: 10px 0; }
+  background-color: #fff5b2; }
+  .wp-block .recent-notification-list--bottom .recent-notification-list {
+    background-color: #fff5b2; }
 
 .wp-block .recent-notification-list__item {
-  display: flex; }
+  display: flex;
+  padding: 5px 0 10px;
+  margin-right: 20px;
+  width: 100%; }
+  .wp-block .recent-notification-list__item:first-child {
+    width: 130px;
+    flex-shrink: 0; }
+  .wp-block .recent-notification-list__item:last-child {
+    width: 130px;
+    flex-shrink: 0; }
 
 .wp-block .recent-notification-list--collapse {
   display: none; }
   @media screen and (min-width: 850px) {
     .wp-block .recent-notification-list--collapse {
-      display: grid; } }
+      display: flex; } }
 
 .wp-block .recent-notification__icon {
   flex-shrink: 0;
