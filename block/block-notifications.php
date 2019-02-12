@@ -10,7 +10,7 @@
     <div class="recent-notification-list--top">
       <div class="container recent-notification-list">
         <div class="recent-notification-list__item recent-notification-list--collapse">
-          <a href="#" class="btn btn--outline">Subscribe</a>
+          <a href="https://member.everbridge.net/index/892807736721815#/login" target="_blank" rel="noopener" class="btn btn--outline">Subscribe</a>
         </div>
 
         <!-- Recent Notification Query for Headers and screen readers -->

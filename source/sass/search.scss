@@ -90,11 +90,15 @@ input.gsc-input {
   height: 20px !important;
 }
 
+.gssb_c {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
 .gsc-completion-container {
   margin: 0 !important;
-  border: 1px solid $grey-lt !important;
-  box-shadow: 0 2px 10px rgba($black, 0.1) !important;
-  height: 40px !important;
+  border: 10px solid $white !important;
+  box-shadow: 0 2px 10px rgba($black, 0.8) !important;
   font-size: 16px !important;
   line-height: 24px !important;
   font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
@@ -104,5 +108,9 @@ input.gsc-input {
 
   .gssb_a {
     padding: 2px 10px !important;
+
+    img {
+      display: inline-block !important;
+    }
   }
 }

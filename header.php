@@ -80,7 +80,8 @@
 			<div class="search-form">
 				<script>
 					(function() {
-						var cx = '011834652543007666948:m6gm5sunju8';
+						// var cx = '011834652543007666948:m6gm5sunju8';
+						var cx = '009551952413465828093:td3z1k_kybg';
 						var gcse = document.createElement('script');
 						gcse.type = 'text/javascript';
 						gcse.async = true;
