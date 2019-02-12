@@ -18,7 +18,7 @@ Template Name: Search
 			<div class="search-results">
 				<script>
 					(function() {
-						var cx = '011834652543007666948:m6gm5sunju8';
+						var cx = '<?=getenv('google.cse.cx')?>';
 						var gcse = document.createElement('script');
 						gcse.type = 'text/javascript';
 						gcse.async = true;
