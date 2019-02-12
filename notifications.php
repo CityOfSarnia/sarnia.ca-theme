@@ -14,9 +14,8 @@ Template Name: Notifications
 
 		<div class="container">
 			<?php the_content(); ?>
-			<!-- <h1><?php the_title(); ?></h1> -->
 
-			<div class="notification-btn"><a href="#" class="btn btn--center">Subscribe To Notifications</a></div>
+			<div href="https://member.everbridge.net/index/892807736721815#/login" target="_blank" rel="noopener" class="notification-btn"><a href="#" class="btn btn--center">Subscribe To Notifications</a></div>
 
 			<ul class="notification-list">
 				<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'posts_per_page' => -1 ) ); ?>        
