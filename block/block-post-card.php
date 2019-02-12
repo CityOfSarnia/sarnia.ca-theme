@@ -15,7 +15,7 @@ $post = $post_object;
 setup_postdata( $post );
 ?>
 
-<div class="post-card <?=card_colour(); ?>">
+<a href="<?php the_permalink($post->ID); ?>" class="post-card <?=card_colour(); ?>">
 
   <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'card' );?>
 
@@ -27,15 +27,15 @@ setup_postdata( $post );
 
   <div class="card__main">
 
-    <h4 class="card__headline"><a href="<?php the_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a></h4>
+    <h2 class="card__headline"><?php echo get_the_title($post->ID); ?></h2>
 
     <p class="card__text"><?php echo get_the_excerpt($post->ID); ?></p>
 
-    <div class="card__cta"><a href="<?php the_permalink($post->ID); ?>" class="btn btn--sm">Learn More</a></div>
+    <div class="card__cta"><div class="btn btn--sm">Learn More</div></div>
 
   </div>
 
-</div>
+</a>
 
 <?php wp_reset_postdata(); ?>
 
