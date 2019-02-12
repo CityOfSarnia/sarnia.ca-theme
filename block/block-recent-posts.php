@@ -23,11 +23,11 @@
 
     <?php if( get_field('recent_posts_headline') ) { ?>
 
-      <h3 class="news-card__headline"><?php the_field('recent_posts_headline');?></h3>
+      <h2 class="news-card__headline"><?php the_field('recent_posts_headline');?></h2>
 
     <?php } else { ?>
 
-      <h3 class="news-card__headline"><?php echo $catName; ?></h3>
+      <h2 class="news-card__headline"><?php echo $catName; ?></h2>
 
     <?php } ?>
 
@@ -39,7 +39,7 @@
 
         <li class="news-card-list__item">
 
-          <h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
+          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
           <?php the_excerpt(); ?>
 

@@ -5,6 +5,9 @@
 }
 
 .wp-block-column {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: 600px) {
     &:not(:first-child) {
       margin-left: 25px;

@@ -9,13 +9,13 @@
 
 <head>
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?=getenv('google.analytics.trackingID')?>"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
-	gtag('config', 'GA_TRACKING_ID');
+	gtag('config', '<?=getenv('google.analytics.trackingID')?>');
 </script>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
@@ -80,7 +80,7 @@
 			<div class="search-form">
 				<script>
 					(function() {
-						var cx = '011834652543007666948:m6gm5sunju8';
+						var cx = '<?=getenv('google.cse.cx')?>';
 						var gcse = document.createElement('script');
 						gcse.type = 'text/javascript';
 						gcse.async = true;

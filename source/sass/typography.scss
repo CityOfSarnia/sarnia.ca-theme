@@ -49,6 +49,14 @@ h2 {
   font-weight: 400;
   font-style: normal;
   margin: 0 0 10px;
+
+  strong {
+    font-weight: 400;
+  }
+
+  em {
+    font-style: normal;
+  }
 }
 
 h3 {
@@ -58,6 +66,14 @@ h3 {
   font-weight: 400;
   font-style: normal;
   margin: 0 0 10px;
+
+  strong {
+    font-weight: 400;
+  }
+
+  em {
+    font-style: normal;
+  }
 }
 
 h4 {
@@ -67,6 +83,14 @@ h4 {
   font-weight: 600;
   font-style: normal;
   margin: 0 0 10px;
+
+  strong {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: normal;
+  }
 }
 
 .wp-block-table {

@@ -2,6 +2,7 @@
   background-color: $white;
   border: 1px solid $smoke;
   margin: 0 -21px 30px;
+  height: 100%;
 
   @media screen and (min-width: 600px) {
     margin: 0 0 40px;
@@ -35,6 +36,9 @@
 }
 
 .card__main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 120px);
   padding: 20px;
 
   @media screen and (min-width: $bp-md) {
@@ -72,10 +76,11 @@
 .card__cta {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: auto;
+  padding-top: 20px;
 
   @media screen and (min-width: $bp-md) {
-    margin-top: 30px;
+    padding-top: 30px;
   }
 }
 

@@ -8,7 +8,7 @@
 
 <?php if( get_field('custom_card_headline') ) { ?>
 
-  <div class="post-card <?=card_colour(); ?>">
+  <a href="<?php the_field('custom_card_cta_url');?>" class="post-card <?=card_colour(); ?>">
 
     <?php if( get_field('custom_card_image') ) { ?>
 
@@ -20,9 +20,9 @@
 
       <?php if( get_field('custom_card_headline') ) { ?>
 
-        <h4 class="card__headline">
-          <a href="<?php the_field('custom_card_cta_url');?>"><?php the_field('custom_card_headline');?></a>
-        </h4>
+        <h2 class="card__headline">
+          <?php the_field('custom_card_headline');?>
+        </h2>
 
       <?php } ?>
 
@@ -34,13 +34,13 @@
 
       <?php if( get_field('custom_card_cta_url') ) { ?>
 
-        <div class="card__cta"><a href="<?php the_field('custom_card_cta_url');?>" class="btn btn--sm"><?php the_field('custom_card_cta_text');?></a></div>
+        <div class="card__cta"><div class="btn btn--sm"><?php the_field('custom_card_cta_text');?></div></div>
       
       <?php } ?>
 
     </div>
   
-  </div>
+  </a>
 
 <?php } else { ?>
 
