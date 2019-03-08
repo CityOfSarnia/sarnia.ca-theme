@@ -899,6 +899,12 @@ main {
     border-top: 6px solid #b11e3a; }
   .news-card.card--yellow .news-card__main {
     border-top: 6px solid #ffde00; }
+  @media screen and (min-width: 850px) {
+    .news-card.alignwide {
+      margin-left: calc(25% - 25vw);
+      margin-right: calc(25% - 25vw);
+      width: auto;
+      max-width: 1000%; } }
 
 .news-card__image {
   position: relative;

@@ -161,7 +161,6 @@
 		)
 	) );
 
-
 	// Theme Fonts URL
 	function sarnia_theme_fonts_url() {
 		$font_families = apply_filters( 'sarnia_theme_fonts', array( 'Open+Sans:300,300i,400,600|Playfair+Display' ) );
@@ -236,7 +235,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'admin-page',
 				'keywords'				=> array( 'recent', 'posts', 'news' ),
-				'supports' 				=> array( 'align' => false ),
+				'supports' 				=> array( 'align' => array( 'wide' ) ),
 			));
 
 			// register a navigation block
