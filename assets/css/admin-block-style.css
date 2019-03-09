@@ -542,7 +542,8 @@
   overflow-x: scroll; }
   @media screen and (min-width: 850px) {
     .wp-block .recent-notifications {
-      margin-bottom: 80px; } }
+      margin-bottom: 80px;
+      overflow: auto; } }
 
 .wp-block .recent-notification-list {
   position: relative;
