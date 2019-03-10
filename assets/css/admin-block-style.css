@@ -313,6 +313,7 @@
     margin: 0 auto; }
 
 .wp-block .post-card {
+  display: block;
   background-color: #fff;
   border: 1px solid #f4f6fb;
   margin: 0 -21px 30px;
@@ -333,6 +334,9 @@
   background-position: center center;
   background-size: cover;
   height: 120px; }
+  .wp-block .card__image.card__image--portrait {
+    height: auto;
+    padding-bottom: 100%; }
 
 .wp-block .card__main {
   display: flex;
@@ -369,6 +373,18 @@
   color: #333;
   font-weight: 300;
   font-style: normal; }
+  .wp-block .card__text p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.5714285714;
+    letter-spacing: 0px;
+    margin: 0 0 20px;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #333;
+    font-weight: 300;
+    font-style: normal; }
+  .wp-block .card__text > :last-child {
+    margin-bottom: 0; }
 
 .wp-block .card__cta {
   display: flex;
@@ -669,6 +685,9 @@
 .wp-block .banner a:active,
 .wp-block .banner a:hover {
   color: #fff; }
+
+.wp-block .post-card {
+  pointer-events: none; }
 
 .wp-block .card a {
   text-decoration: none; }

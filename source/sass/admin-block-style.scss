@@ -55,6 +55,10 @@ $font-secondary: "Playfair Display", Georgia, Times, serif;
     }
   }
 
+  .post-card {
+    pointer-events: none;
+  }
+
   .card {
     a {
       text-decoration: none;
