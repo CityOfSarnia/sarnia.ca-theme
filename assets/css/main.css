@@ -816,7 +816,8 @@ main {
         width: 216px; } }
 
 .post-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   border: 1px solid #f4f6fb;
   margin: 0 -21px 30px;
@@ -843,8 +844,8 @@ main {
 
 .card__main {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  height: calc(100% - 120px);
   padding: 20px; }
   @media screen and (min-width: 850px) {
     .card__main {

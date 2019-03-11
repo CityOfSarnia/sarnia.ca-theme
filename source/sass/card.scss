@@ -1,5 +1,6 @@
 .post-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: $white;
   border: 1px solid $smoke;
   margin: 0 -21px 30px;
@@ -43,8 +44,8 @@
 
 .card__main {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  height: calc(100% - 120px);
   padding: 20px;
 
   @media screen and (min-width: $bp-md) {
