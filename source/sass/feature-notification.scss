@@ -2,9 +2,6 @@
   background-color: $yellow-lt;
   border-bottom: 5px solid $yellow;
   padding: 20px 0;
-
-  @media screen and (min-width: $bp-md) {
-  }
 }
 
 .feature-notification__wrapper {
@@ -20,9 +17,6 @@
   font-weight: 600;
   font-style: normal;
   color: $grey;
-}
-
-.feature-notification__main {
 }
 
 .feature-notification__text {

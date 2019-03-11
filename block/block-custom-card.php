@@ -12,7 +12,15 @@
 
     <?php if( get_field('custom_card_image') ) { ?>
 
-      <div class="card__image" style="background-image: url('<?php $image = get_field('custom_card_image'); echo($image['sizes']['large']); ?>')" alt="<?php the_field('custom_card_headline');?>"></div>
+      <?php if( get_field('custom_card_image_size') ) { ?>
+
+        <div class="card__image card__image--portrait" style="background-image: url('<?php $image = get_field('custom_card_image'); echo($image['sizes']['large']); ?>')" alt="<?php the_field('custom_card_headline');?>"></div>
+
+      <?php } else { ?>
+
+        <div class="card__image" style="background-image: url('<?php $image = get_field('custom_card_image'); echo($image['sizes']['large']); ?>')" alt="<?php the_field('custom_card_headline');?>"></div>
+
+      <?php } ?>
 
     <?php } ?>
 		
@@ -28,7 +36,7 @@
 
       <?php if( get_field('custom_card_text') ) { ?>
 
-        <p class="card__text"><?php the_field('custom_card_text');?></p>
+        <div class="card__text"><?php the_field('custom_card_text');?></div>
 
       <?php } ?>
 

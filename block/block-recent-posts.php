@@ -8,52 +8,54 @@
 
 <?php if( get_field('recent_posts_category') ) { ?>
 
-<div class="news-card <?=card_colour(); ?>">
+  <?php $align_class = $block['align'] ? 'align' . $block['align'] : ''; ?>
 
-  <?php if( get_field('recent_posts_image') ) { ?>
+  <div class="news-card <?=card_colour(); ?> <?php echo $align_class; ?>">
 
-    <div class="news-card__image" style="background-image: url(<?php $image = get_field('recent_posts_image'); echo($image['sizes']['large']); ?>) !important;"></div>
+    <?php if( get_field('recent_posts_image') ) { ?>
 
-  <?php } ?>
-
-  <div class="news-card__main">
-
-    <?php $cat_id = get_field('recent_posts_category'); ?>
-    <?php $catName = get_cat_name( $cat_id ) ?>
-
-    <?php if( get_field('recent_posts_headline') ) { ?>
-
-      <h2 class="news-card__headline"><?php the_field('recent_posts_headline');?></h2>
-
-    <?php } else { ?>
-
-      <h2 class="news-card__headline"><?php echo $catName; ?></h2>
+      <div class="news-card__image" style="background-image: url(<?php $image = get_field('recent_posts_image'); echo($image['sizes']['large']); ?>) !important;"></div>
 
     <?php } ?>
 
-    <?php $loop = new WP_Query( array( 'post_type' => 'post', 'cat' => $cat_id, 'posts_per_page' => 3 ) ); ?>
+    <div class="news-card__main">
 
-    <ul class="news-card-list">
-        
-      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <?php $cat_id = get_field('recent_posts_category'); ?>
+      <?php $catName = get_cat_name( $cat_id ) ?>
 
-        <li class="news-card-list__item">
+      <?php if( get_field('recent_posts_headline') ) { ?>
 
-          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <h2 class="news-card__headline"><?php the_field('recent_posts_headline');?></h2>
 
-          <?php the_excerpt(); ?>
+      <?php } else { ?>
 
-        </li>
+        <h2 class="news-card__headline"><?php echo $catName; ?></h2>
 
-      <?php endwhile; ?>
+      <?php } ?>
 
-    </ul>
+      <?php $loop = new WP_Query( array( 'post_type' => 'post', 'cat' => $cat_id, 'posts_per_page' => 3 ) ); ?>
 
-    <?php wp_reset_query(); ?>
+      <ul class="news-card-list">
+          
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+          <li class="news-card-list__item">
+
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+            <?php the_excerpt(); ?>
+
+          </li>
+
+        <?php endwhile; ?>
+
+      </ul>
+
+      <?php wp_reset_query(); ?>
+
+    </div>
 
   </div>
-
-</div>
 
 <?php } else { ?>
 

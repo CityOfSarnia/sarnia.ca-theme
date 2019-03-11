@@ -313,6 +313,7 @@
     margin: 0 auto; }
 
 .wp-block .post-card {
+  display: block;
   background-color: #fff;
   border: 1px solid #f4f6fb;
   margin: 0 -21px 30px;
@@ -333,6 +334,9 @@
   background-position: center center;
   background-size: cover;
   height: 120px; }
+  .wp-block .card__image.card__image--portrait {
+    height: auto;
+    padding-bottom: 100%; }
 
 .wp-block .card__main {
   display: flex;
@@ -369,6 +373,18 @@
   color: #333;
   font-weight: 300;
   font-style: normal; }
+  .wp-block .card__text p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.5714285714;
+    letter-spacing: 0px;
+    margin: 0 0 20px;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #333;
+    font-weight: 300;
+    font-style: normal; }
+  .wp-block .card__text > :last-child {
+    margin-bottom: 0; }
 
 .wp-block .card__cta {
   display: flex;
@@ -396,6 +412,12 @@
     border-top: 6px solid #b11e3a; }
   .wp-block .news-card.card--yellow .news-card__main {
     border-top: 6px solid #ffde00; }
+  @media screen and (min-width: 850px) {
+    .wp-block .news-card.alignwide {
+      margin-left: calc(25% - 25vw);
+      margin-right: calc(25% - 25vw);
+      width: auto;
+      max-width: 1000%; } }
 
 .wp-block .news-card__image {
   position: relative;
@@ -536,7 +558,8 @@
   overflow-x: scroll; }
   @media screen and (min-width: 850px) {
     .wp-block .recent-notifications {
-      margin-bottom: 80px; } }
+      margin-bottom: 80px;
+      overflow: auto; } }
 
 .wp-block .recent-notification-list {
   position: relative;
@@ -632,6 +655,7 @@
   overflow: hidden; }
 
 .wp-block .recent-notifications {
+  position: relative;
   background-color: #fff5b2;
   margin-top: -80px;
   padding: 10px;
@@ -640,6 +664,15 @@
   text-align: center;
   margin-left: 0;
   margin-right: 0; }
+  .wp-block .recent-notifications::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; }
   .wp-block .recent-notifications p {
     margin: 0; }
 
@@ -652,6 +685,9 @@
 .wp-block .banner a:active,
 .wp-block .banner a:hover {
   color: #fff; }
+
+.wp-block .post-card {
+  pointer-events: none; }
 
 .wp-block .card a {
   text-decoration: none; }

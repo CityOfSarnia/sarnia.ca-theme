@@ -161,7 +161,6 @@
 		)
 	) );
 
-
 	// Theme Fonts URL
 	function sarnia_theme_fonts_url() {
 		$font_families = apply_filters( 'sarnia_theme_fonts', array( 'Open+Sans:300,300i,400,600|Playfair+Display' ) );
@@ -236,7 +235,7 @@
 				'category'				=> 'formatting',
 				'icon'						=> 'admin-page',
 				'keywords'				=> array( 'recent', 'posts', 'news' ),
-				'supports' 				=> array( 'align' => false ),
+				'supports' 				=> array( 'align' => array( 'wide' ) ),
 			));
 
 			// register a navigation block
@@ -542,7 +541,7 @@
 					'key' => 'field_5c0e5db9a5a5a',
 					'label' => 'Text',
 					'name' => 'custom_card_text',
-					'type' => 'textarea',
+					'type' => 'wysiwyg',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
@@ -552,10 +551,10 @@
 						'id' => '',
 					),
 					'default_value' => '',
-					'placeholder' => '',
-					'maxlength' => '',
-					'rows' => '',
-					'new_lines' => '',
+					'tabs' => 'all',
+					'toolbar' => 'basic',
+					'media_upload' => 0,
+					'delay' => 0,
 				),
 				array(
 					'key' => 'field_5c0e5df0a5a5c',
@@ -618,6 +617,30 @@
 					'max_height' => '',
 					'max_size' => '',
 					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_5c840c0e9ca96',
+					'label' => 'Image Size',
+					'name' => 'custom_card_image_size',
+					'type' => 'checkbox',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'Portrait' => 'Portrait',
+					),
+					'allow_custom' => 0,
+					'default_value' => array(
+					),
+					'layout' => 'vertical',
+					'toggle' => 0,
+					'return_format' => 'value',
+					'save_custom' => 0,
 				),
 			),
 			'location' => array(

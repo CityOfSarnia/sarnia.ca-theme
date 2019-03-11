@@ -1,4 +1,5 @@
 .post-card {
+  display: block;
   background-color: $white;
   border: 1px solid $smoke;
   margin: 0 -21px 30px;
@@ -33,6 +34,11 @@
   background-position: center center;
   background-size: cover;
   height: 120px;
+
+  &.card__image--portrait {
+    height: auto;
+    padding-bottom: 100%;
+  }
 }
 
 .card__main {
@@ -71,6 +77,19 @@
   color: $grey;
   font-weight: 300;
   font-style: normal;
+
+  p {
+    @include font(14, 22);
+    margin: 0 0 20px;
+    font-family: $font-primary;
+    color: $grey;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card__cta {

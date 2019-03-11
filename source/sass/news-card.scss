@@ -25,6 +25,15 @@
       border-top: 6px solid $yellow;
     }
   }
+
+  &.alignwide {
+    @media screen and (min-width: $bp-md) {
+      margin-left: calc(25% - 25vw);
+      margin-right: calc(25% - 25vw);
+      width: auto;
+      max-width: 1000%;
+    }
+  }
 }
 
 .news-card__image {
