@@ -345,7 +345,7 @@ main {
   .alignwide {
     margin-left: calc(25% - 25vw);
     margin-right: calc(25% - 25vw);
-    width: auto;
+    width: calc(50% + 50vw);
     max-width: 1000%; }
   .alignwide img,
   .alignfull img {
