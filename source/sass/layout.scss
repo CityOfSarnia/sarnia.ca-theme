@@ -24,7 +24,7 @@ main {
   .alignfull {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    width: auto;
+    width: 100vw;
     max-width: 1000%;
   }
 
@@ -39,5 +39,13 @@ main {
   .alignfull img {
     display: block;
     margin: 0 auto;
+  }
+
+  .wp-block-table.has-fixed-layout.alignfull {
+    width: 100vw;
+  }
+
+  .wp-block-table.has-fixed-layout.alignwide {
+    width: calc(50% + 50vw);
   }
 }
