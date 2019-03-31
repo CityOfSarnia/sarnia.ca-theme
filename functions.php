@@ -20,7 +20,7 @@
 			default :
 				$card_count = 0;
 		}
-		
+
 		return $colour;
 	}
 
@@ -29,17 +29,17 @@
 		return 20;
 	}
 	add_filter( 'excerpt_length', 'sarnia_excerpt_length' );
-	
+
 	// Define Post Thumbnails
 	add_theme_support( 'post-thumbnails');
 	add_image_size( 'home-banner', 1000, 900, true );
 	add_image_size( 'banner', 1600, 600, true );
 	add_image_size( 'card', 780, 200, true );
-			
+
 	// Add Theme Features
 	add_post_type_support( 'page', 'excerpt' );
-	
-	// Register Main Menu 
+
+	// Register Main Menu
 	add_action( 'init', 'register_my_menu' );
 
 	function register_my_menu() {
@@ -69,31 +69,31 @@
 	add_action( 'init', 'create_my_post_types' );
 
 	// Create Custom Taxonomies
-	add_action( 'init', 'build_taxonomies', 0 );  
-	
+	add_action( 'init', 'build_taxonomies', 0 );
+
 	function build_taxonomies() {
-					
-		register_taxonomy(  
-			'filter',  
-			array('notifications'),  
-			array(  
-				'hierarchical' => true,  
-				'label' => 'Filter',  
-				'query_var' => true,  
-			)  
+
+		register_taxonomy(
+			'filter',
+			array('notifications'),
+			array(
+				'hierarchical' => true,
+				'label' => 'Filter',
+				'query_var' => true,
+			)
 		);
 
-		register_taxonomy(  
-			'notification-icon',  
-			array('notifications'),  
-			array(  
-				'hierarchical' => true,  
-				'label' => 'Notification Icon',  
-				'query_var' => true,  
-			)  
+		register_taxonomy(
+			'notification-icon',
+			array('notifications'),
+			array(
+				'hierarchical' => true,
+				'label' => 'Notification Icon',
+				'query_var' => true,
+			)
 		);
 	}
-	
+
 	// Register Options Page
 	if( function_exists('acf_add_options_page') ) {
 		acf_add_options_page();
@@ -106,6 +106,8 @@
 		add_theme_support( 'disable-custom-colors' );
 		add_theme_support('disable-custom-font-sizes');
 		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'automatic-feed-links' );
+		add_filter( 'feed_links_show_comments_feed', '__return_false' );
 		remove_filter( 'the_content', 'wpautop' );
 	}
 	add_action( 'after_setup_theme', 'sarnia_setup' );
@@ -125,7 +127,7 @@
 			'core/html',
 			'acf/post-card',
 			'acf/custom-card',
-			'acf/banner',
+//			'acf/banner',
 			'acf/notifications',
 			'acf/navigation',
 			'acf/recent-posts',
@@ -174,7 +176,7 @@
 
 	add_action('acf/init', 'my_acf_init');
 	function my_acf_init() {
-		
+
 		// check function exists
 		if( function_exists('acf_register_block') ) {
 
@@ -254,10 +256,10 @@
 	}
 
 	function my_acf_block_render_callback( $block ) {
-		
+
 		// convert name ("acf/testimonial") into path friendly slug ("testimonial")
 		$slug = str_replace('acf/', '', $block['name']);
-		
+
 		// include a template part from within the "template-parts/block" folder
 		if( file_exists(STYLESHEETPATH . "/block/block-{$slug}.php") ) {
 			include( STYLESHEETPATH . "/block/block-{$slug}.php" );
@@ -414,7 +416,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0984555b0da',
 			'title' => 'Contact Information',
@@ -513,7 +515,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0d0c3ca4797',
 			'title' => 'Custom Card',
@@ -661,7 +663,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0fcf1b317fe',
 			'title' => 'Navigation',
@@ -745,7 +747,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		acf_add_local_field_group(array(
 			'key' => 'group_5c1adbf094daa',
 			'title' => 'Notification Details',
@@ -788,7 +790,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0d6a74e7cbb',
 			'title' => 'Notifications',
@@ -816,7 +818,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0c5f4d4ac4e',
 			'title' => 'Post Card',
@@ -863,7 +865,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0fcf62a7fa9',
 			'title' => 'Recent Posts',
@@ -952,7 +954,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		acf_add_local_field_group(array(
 			'key' => 'group_5c098a33e1a52',
 			'title' => 'Social',
@@ -1024,5 +1026,30 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		endif;
+
+        // Widgets
+        if ( function_exists('register_sidebar' )) {
+                function sarnia_widgets_init() {
+                        register_sidebar( array(
+                                'name' => __( 'Sidebar Widgets', 'sarnia' ),
+                                'id' => 'sidebar-primary',
+                                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                                'after_widget'  => '</div>',
+                                'before_title'  => '<h3 class="widget-title">',
+                                'after_title'   => '</h3>',
+                        ) );
+                }
+                add_action( 'widgets_init', 'sarnia_widgets_init' );
+        }
+
+add_theme_support('soil-clean-up');
+add_theme_support('soil-disable-rest-api');
+add_theme_support('soil-disable-asset-versioning');
+add_theme_support('soil-disable-trackbacks');
+add_theme_support('soil-jquery-cdn');
+add_theme_support('soil-js-to-footer');
+add_theme_support('soil-nav-walker');
+add_theme_support('soil-nice-search');
+add_theme_support('soil-relative-urls');

@@ -1,11 +1,3 @@
-<?php
-/*
-Template Name: Search
-*/
-?>
-
-<?php include(TEMPLATEPATH . '/header.php'); ?>
-
 <?php get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -14,11 +6,11 @@ Template Name: Search
 
 		<div class="container container--md">
 			<?php the_content(); ?>
-			
+
 			<div class="search-results">
 				<script>
 					(function() {
-						var cx = '<?=getenv('google.cse.cx')?>';
+						var cx = '<?=getenv('GOOGLE_CSE_CX')?>';
 						var gcse = document.createElement('script');
 						gcse.type = 'text/javascript';
 						gcse.async = true;
@@ -29,8 +21,11 @@ Template Name: Search
 				</script>
 				<gcse:searchresults-only></gcse:searchresults-only>
 			</div>
+		</div>
 	</article>
-							
+
 <?php endwhile; endif; ?>
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
