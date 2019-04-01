@@ -51,7 +51,6 @@
     "wpackagist-plugin/gravity-forms-pdf-extended": "^5.1",
     "wpackagist-plugin/wp-security-audit-log": "3.3.1.2",
     "wpackagist-plugin/broken-link-checker": "^1.11",
-    "wpackagist-plugin/redis-cache": "^1.4",
     "wpackagist-plugin/nginx-cache": "^1.0"
   },
   "require-dev": {
