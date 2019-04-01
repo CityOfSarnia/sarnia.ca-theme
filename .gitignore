@@ -33,3 +33,7 @@ wp-cli.local.yml
 # Logs
 logs/*
 !logs/.gitkeep
+
+# Cache
+cache/*
+!cache/.gitkeep
