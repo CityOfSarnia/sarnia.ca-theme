@@ -6,9 +6,13 @@ web/app/plugins/*
 !web/app/plugins/advanced-custom-fields-pro
 
 web/app/mu-plugins/*/
+
 web/app/upgrade
+
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+
+web/app/themes*
 
 # WordPress
 web/wp
@@ -24,3 +28,7 @@ web/.htaccess
 
 # WP-CLI
 wp-cli.local.yml
+
+# Logs
+logs/*
+!logs/.gitkeep
