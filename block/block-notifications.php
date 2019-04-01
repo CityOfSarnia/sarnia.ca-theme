@@ -15,10 +15,10 @@
 
         <!-- Recent Notification Query for Headers and screen readers -->
         <?php $count = 0; ?>
-        <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'sticky', 'posts_per_page' => 3 ) ); ?>  
+        <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'sticky', 'posts_per_page' => 3 ) ); ?>
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <?php
-            $terms = get_the_terms( $post->ID, 'notification-icon' );
+            $terms = get_the_terms( $loop->ID, 'notification-icon' );
             if ($terms) {
               $terms_slugs = array();
               foreach ( $terms as $term ) {
@@ -45,7 +45,7 @@
           <?php $num = 3 - $count; ?>
           <?php
           $loop = new WP_Query(
-            array( 
+            array(
               'post_type'  => 'notifications',
               'posts_per_page' => $num,
               'tax_query' => array(
@@ -61,7 +61,7 @@
           ?>
           <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <?php
-              $terms = get_the_terms( $post->ID, 'notification-icon' );
+              $terms = get_the_terms( $loop->ID, 'notification-icon' );
               if ($terms) {
                 $terms_slugs = array();
                 foreach ( $terms as $term ) {
@@ -96,7 +96,7 @@
 
         <!-- Recent Notification Query for Expert Only -->
         <?php $count = 0; ?>
-        <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'sticky', 'posts_per_page' => 3 ) ); ?>    
+        <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'sticky', 'posts_per_page' => 3 ) ); ?>
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <a href="/notifications" class="recent-notification-list__item">
             <p class="recent-notification__text"><?php echo get_the_excerpt(); ?></p>
@@ -108,7 +108,7 @@
           <?php $num = 3 - $count; ?>
           <?php
           $loop = new WP_Query(
-            array( 
+            array(
               'post_type'  => 'notifications',
               'posts_per_page' => $num,
               'tax_query' => array(
