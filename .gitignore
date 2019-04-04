@@ -37,3 +37,5 @@ logs/*
 # Cache
 cache/*
 !cache/.gitkeep
+
+web/phpmyadmin
