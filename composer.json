@@ -49,7 +49,7 @@
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^5.3",
     "wpackagist-plugin/google-sitemap-generator": "^4.1",
     "wpackagist-plugin/gravity-forms-pdf-extended": "^5.1",
-    "wpackagist-plugin/wp-security-audit-log": "3.3.1.2",
+    "wpackagist-plugin/wp-security-audit-log": "^3.4",
     "wpackagist-plugin/broken-link-checker": "^1.11",
     "wpackagist-plugin/nginx-cache": "^1.0"
   },

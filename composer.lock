@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "956e379a4f1cc26a5891c3684652c881",
+    "content-hash": "466a7404d70b8097439bdc9f0437d961",
     "packages": [
         {
             "name": "colethorsen/sarnia.ca-theme",
@@ -735,15 +735,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-security-audit-log",
-            "version": "3.3.1.2",
+            "version": "3.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-security-audit-log/",
-                "reference": "tags/3.3.1.2"
+                "reference": "tags/3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-security-audit-log.3.3.1.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-security-audit-log.3.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
