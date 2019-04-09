@@ -1,0 +1,41 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+!web/app/plugins/gravityforms
+!web/app/plugins/gravityformsgutenberg
+!web/app/plugins/advanced-custom-fields-pro
+
+web/app/mu-plugins/*/
+
+web/app/upgrade
+
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+
+web/app/themes/*
+!web/app/themes/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Cache
+cache/*
+!cache/.gitkeep
+
+web/phpmyadmin
