@@ -29,6 +29,10 @@
     {
       "type":"git",
       "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-theme.git"
+    },
+    {
+      "type":"git",
+      "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-plugin.git"
     }
   ],
   "require": {
@@ -44,6 +48,7 @@
     "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0",
     "wpackagist-plugin/luckywp-table-of-contents": "^1.0",
     "colethorsen/sarnia.ca-theme": "dev-master",
+    "cos/sarnia.ca-plugin": "dev-master",
     "wpackagist-plugin/restricted-site-access": "^7.0",
     "wpackagist-plugin/health-check": "^1.2",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^5.3",
