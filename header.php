@@ -5,45 +5,36 @@
 <!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
-<!-- the "no-js" class is for Modernizr. --> 
+<!-- the "no-js" class is for Modernizr. -->
 
 <head>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?=getenv('google.analytics.trackingID')?>"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', '<?=getenv('google.analytics.trackingID')?>');
-</script>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-    
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<?php if (is_search()) { ?>
-		<meta name="robots" content="noindex, nofollow" /> 
+		<meta name="robots" content="noindex, nofollow" />
 	<?php } ?>
 
 	<title><?php wp_title(''); ?></title>
-	
+
 	<meta name="author" content="Screenthink">
-	
+
 	<meta name="Copyright" content="Screenthink All Rights Reserved.">
-	
+
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
-	
+
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	
+
 	<?php wp_enqueue_script("jquery"); ?>
-	
+
 	<?php wp_head(); ?>
-		
+
 </head>
 
 <body <?php body_class(); ?>>
