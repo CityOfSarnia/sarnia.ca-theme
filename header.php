@@ -39,7 +39,7 @@
 
 <body <?php body_class(); ?>>
 
-	<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1 ) ); ?>        
+	<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1 ) ); ?>
 	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<?php
 			$terms = get_the_terms( $post->ID, 'notification-icon' );
@@ -62,9 +62,9 @@
 				</div>
 			</div>
 		</div>
-	<?php endwhile; ?>			
+	<?php endwhile; ?>
 	<?php wp_reset_query(); ?>
- 
+
 	<header class="header" role="banner">
 		<div class="header__wrapper">
 			<a href="/" class="logo">City of Sarnia</a>
@@ -84,5 +84,47 @@
 			</div>
 		</div>
 	</header>
-	
+
+	<div class="banner" style="background-image: url(<?php $image = get_field('header_image'); echo($image['sizes']['home-banner']); ?>) !important;">
+
+		<header class="banner__header">
+
+			<h1>
+
+				<?php if( get_field('header_byline') ) { ?>
+
+					<div class="banner__byline"><?php the_field('header_byline');?></div>
+
+				<?php } ?>
+
+				<?php if( get_field('header_headline') ) { ?>
+
+					<div class="banner__headline"><?php the_field('header_headline');?></div>
+
+				<?php } else { ?>
+
+					<?php if ( ! is_admin() ) { ?>
+
+						<div class="banner__headline"><?php the_title(); ?></div>
+
+					<?php } else { ?>
+
+						 <div class="banner__headline">Enter a title...</div>
+
+					<?php } ?>
+
+				<?php } ?>
+
+			</h1>
+
+			<?php if( get_field('header_cta_url') ) { ?>
+
+				<a href="<?php the_field('header_cta_url');?>" class="btn banner__cta"><?php the_field('header_cta_text');?></a>
+
+			<?php } ?>
+
+		</header>
+
+	</div>
+
 	<main role="main">
