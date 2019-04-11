@@ -1026,3 +1026,14 @@
 		));
 		
 		endif;
+
+function theme_slug_filter_wp_title( $title ) {
+    if ( is_404() ) {
+        $title = 'ADD 404 TITLE TEXT HERE';
+    }
+    // You can do other filtering here, or
+    // just return $title
+    return $title;
+}
+// Hook into wp_title filter hook
+add_filter( 'wp_title', 'theme_slug_filter_wp_title' );

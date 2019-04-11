@@ -21,9 +21,9 @@
 
 	<title><?php wp_title(''); ?></title>
 
-	<meta name="author" content="Screenthink">
+	<meta name="author" content="City of Sarnia">
 
-	<meta name="Copyright" content="Screenthink All Rights Reserved.">
+	<meta name="Copyright" content="(C) 2019 City of Sarnia. All rights reserved.">
 
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 
