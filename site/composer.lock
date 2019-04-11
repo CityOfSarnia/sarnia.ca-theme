@@ -4,22 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fac4659278762f33865da3a33e71d2e9",
+    "content-hash": "836f751f368092055d8f7537335fb553",
     "packages": [
-        {
-            "name": "colethorsen/sarnia.ca-theme",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-theme.git",
-                "reference": "b5b7c98733e545c590d12915d017bf3c66b3f96c"
-            },
-            "require": {
-                "composer/installers": "^1.4"
-            },
-            "type": "wordpress-theme",
-            "time": "2019-04-02T21:21:50+00:00"
-        },
         {
             "name": "composer/installers",
             "version": "v1.6.0",
@@ -146,13 +132,27 @@
             "source": {
                 "type": "git",
                 "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-plugin.git",
-                "reference": "cc2fd6e5565820164083f9553320a36ab8ff4d31"
+                "reference": "a69c5fd619a48d2e1f19ea73a003ed57cc2b77c2"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-plugin",
-            "time": "2019-04-09T16:26:47+00:00"
+            "time": "2019-04-10T20:13:03+00:00"
+        },
+        {
+            "name": "cos/sarnia.ca-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-theme.git",
+                "reference": "3a729d95c962e5d47324a2933e6141870df1bdb2"
+            },
+            "require": {
+                "composer/installers": "^1.4"
+            },
+            "type": "wordpress-theme",
+            "time": "2019-04-11T15:06:46+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -246,6 +246,127 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
+        },
+        {
+            "name": "pixelstudio/advanced-custom-fields",
+            "version": "5.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hrsetyono/advanced-custom-fields.git",
+                "reference": "5aeb3d41e517b3b364fef48af75eafb207f56011"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hrsetyono/advanced-custom-fields/zipball/5aeb3d41e517b3b364fef48af75eafb207f56011",
+                "reference": "5aeb3d41e517b3b364fef48af75eafb207f56011",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=7.0.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel Studio",
+                    "email": "info@pixelstudio.id",
+                    "homepage": "https://pixelstudio.id"
+                },
+                {
+                    "name": "Elliot Condon",
+                    "homepage": "https://www.elliotcondon.com/"
+                }
+            ],
+            "description": "Easiest way to add Custom Field to WordPress.",
+            "homepage": "https://github.com/hrsetyono/advanced-custom-fields/",
+            "keywords": [
+                "library",
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-03-20T15:41:46+00:00"
+        },
+        {
+            "name": "primetime/wp-plugin-activation-manifest",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PrimeTimeCode/wp-plugin-activation-manifest.git",
+                "reference": "caaa74914a28154ad355198e107a99ff65d1383a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PrimeTimeCode/wp-plugin-activation-manifest/zipball/caaa74914a28154ad355198e107a99ff65d1383a",
+                "reference": "caaa74914a28154ad355198e107a99ff65d1383a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "primetime/wp-plugin-control": "~0.1.0",
+                "symfony/yaml": "^3.4 || ^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PrimeTime\\WordPress\\PluginManifest\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Mattson",
+                    "email": "me@aaemnnost.tv"
+                }
+            ],
+            "description": "Simple file-based plugin activation control for WordPress",
+            "time": "2018-10-10T10:55:29+00:00"
+        },
+        {
+            "name": "primetime/wp-plugin-control",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PrimeTimeCode/wp-plugin-control.git",
+                "reference": "bbf195c68aca8cf6dd5460b28f916d591527b673"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PrimeTimeCode/wp-plugin-control/zipball/bbf195c68aca8cf6dd5460b28f916d591527b673",
+                "reference": "bbf195c68aca8cf6dd5460b28f916d591527b673",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PrimeTime\\WordPress\\PluginControl\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Mattson",
+                    "email": "me@aaemnnost.tv"
+                }
+            ],
+            "description": "Library for WordPress plugin control",
+            "time": "2015-05-08T15:48:22+00:00"
         },
         {
             "name": "roots/wordpress",
@@ -440,6 +561,48 @@
             "time": "2016-03-01T16:27:06+00:00"
         },
         {
+            "name": "roots/wp-stage-switcher",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/wp-stage-switcher.git",
+                "reference": "c8bffa5a5d757437112f32833fb9e28dcbfecafe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/wp-stage-switcher/zipball/c8bffa5a5d757437112f32833fb9e28dcbfecafe",
+                "reference": "c8bffa5a5d757437112f32833fb9e28dcbfecafe",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "WordPress plugin that allows you to switch between different environments from the admin bar",
+            "homepage": "https://roots.io/plugin/stage-switcher/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2019-03-23T20:05:36+00:00"
+        },
+        {
             "name": "symfony/polyfill-ctype",
             "version": "v1.11.0",
             "source": {
@@ -496,6 +659,65 @@
                 "portable"
             ],
             "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v4.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "6712daf03ee25b53abb14e7e8e0ede1a770efdb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/6712daf03ee25b53abb14e7e8e0ede1a770efdb1",
+                "reference": "6712daf03ee25b53abb14e7e8e0ede1a770efdb1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "symfony/console": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-03-30T15:58:42+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -568,6 +790,42 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/"
         },
         {
+            "name": "wpackagist-plugin/better-search-replace",
+            "version": "1.3.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/better-search-replace/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/better-search-replace.zip?timestamp=1551210499"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/better-search-replace/"
+        },
+        {
+            "name": "wpackagist-plugin/breadcrumb-navxt",
+            "version": "6.2.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/breadcrumb-navxt/",
+                "reference": "tags/6.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/breadcrumb-navxt.6.2.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/breadcrumb-navxt/"
+        },
+        {
             "name": "wpackagist-plugin/broken-link-checker",
             "version": "1.11.8",
             "source": {
@@ -586,22 +844,58 @@
             "homepage": "https://wordpress.org/plugins/broken-link-checker/"
         },
         {
-            "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
-            "version": "5.3.7",
+            "name": "wpackagist-plugin/duplicate-post",
+            "version": "3.2.2",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/google-analytics-dashboard-for-wp/",
-                "reference": "tags/5.3.7"
+                "url": "https://plugins.svn.wordpress.org/duplicate-post/",
+                "reference": "tags/3.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.5.3.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/google-analytics-dashboard-for-wp/"
+            "homepage": "https://wordpress.org/plugins/duplicate-post/"
+        },
+        {
+            "name": "wpackagist-plugin/easy-wp-smtp",
+            "version": "1.3.9.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/easy-wp-smtp/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/easy-wp-smtp.zip?timestamp=1552829311"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/easy-wp-smtp/"
+        },
+        {
+            "name": "wpackagist-plugin/goodbye-captcha",
+            "version": "3.1.28",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/goodbye-captcha/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/goodbye-captcha.zip?timestamp=1554687586"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/goodbye-captcha/"
         },
         {
             "name": "wpackagist-plugin/google-sitemap-generator",
@@ -658,6 +952,24 @@
             "homepage": "https://wordpress.org/plugins/health-check/"
         },
         {
+            "name": "wpackagist-plugin/imsanity",
+            "version": "2.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/imsanity/",
+                "reference": "tags/2.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/imsanity.2.4.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/imsanity/"
+        },
+        {
             "name": "wpackagist-plugin/luckywp-table-of-contents",
             "version": "1.0.4",
             "source": {
@@ -712,6 +1024,24 @@
             "homepage": "https://wordpress.org/plugins/nginx-cache/"
         },
         {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "3.3.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/3.3.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.3.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/query-monitor/"
+        },
+        {
             "name": "wpackagist-plugin/restricted-site-access",
             "version": "7.0.1",
             "source": {
@@ -730,40 +1060,58 @@
             "homepage": "https://wordpress.org/plugins/restricted-site-access/"
         },
         {
-            "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "1.4.2",
+            "name": "wpackagist-plugin/safe-svg",
+            "version": "1.9.3",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/1.4.2"
+                "url": "https://plugins.svn.wordpress.org/safe-svg/",
+                "reference": "tags/1.9.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.4.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/safe-svg.1.9.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
+            "homepage": "https://wordpress.org/plugins/safe-svg/"
         },
         {
-            "name": "wpackagist-plugin/wp-security-audit-log",
-            "version": "3.4",
+            "name": "wpackagist-plugin/simple-page-ordering",
+            "version": "2.3.2",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-security-audit-log/",
-                "reference": "tags/3.4"
+                "url": "https://plugins.svn.wordpress.org/simple-page-ordering/",
+                "reference": "tags/2.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-security-audit-log.3.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/simple-page-ordering.2.3.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-security-audit-log/"
+            "homepage": "https://wordpress.org/plugins/simple-page-ordering/"
+        },
+        {
+            "name": "wpackagist-plugin/stream",
+            "version": "3.2.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/stream/",
+                "reference": "tags/3.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/stream.3.2.3.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/stream/"
         }
     ],
     "packages-dev": [
@@ -974,16 +1322,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.4.1",
+            "version": "3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "5b4333b4010625d29580eb4a41f1e53251be6baa"
+                "reference": "b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5b4333b4010625d29580eb4a41f1e53251be6baa",
-                "reference": "5b4333b4010625d29580eb4a41f1e53251be6baa",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8",
+                "reference": "b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8",
                 "shasum": ""
             },
             "require": {
@@ -1021,13 +1369,13 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-03-19T03:22:27+00:00"
+            "time": "2019-04-10T23:49:02+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "colethorsen/sarnia.ca-theme": 20,
+        "cos/sarnia.ca-theme": 20,
         "cos/sarnia.ca-plugin": 20,
         "roave/security-advisories": 20
     },
