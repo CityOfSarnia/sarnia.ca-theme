@@ -125,7 +125,7 @@
 			'core/html',
 			'acf/post-card',
 			'acf/custom-card',
-			'acf/banner',
+//			'acf/banner',
 			'acf/notifications',
 			'acf/navigation',
 			'acf/recent-posts',
@@ -1024,16 +1024,40 @@
 			'active' => 1,
 			'description' => '',
 		));
-		
+
 		endif;
 
-function theme_slug_filter_wp_title( $title ) {
-    if ( is_404() ) {
-        $title = 'ADD 404 TITLE TEXT HERE';
-    }
-    // You can do other filtering here, or
-    // just return $title
-    return $title;
-}
-// Hook into wp_title filter hook
-add_filter( 'wp_title', 'theme_slug_filter_wp_title' );
+        // Widgets
+        if ( function_exists('register_sidebar' )) {
+                function sarnia_widgets_init() {
+                        register_sidebar( array(
+                                'name' => __( 'Sidebar Widgets', 'sarnia' ),
+                                'id' => 'sidebar-primary',
+                                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                                'after_widget'  => '</div>',
+                                'before_title'  => '<h3 class="widget-title">',
+                                'after_title'   => '</h3>',
+                        ) );
+                }
+                add_action( 'widgets_init', 'sarnia_widgets_init' );
+        }
+
+        // Navigation - update coming from twentythirteen
+        function post_navigation() {
+                echo '<div class="navigation">';
+                echo '  <div class="next-posts">'.get_next_posts_link('&laquo; Older Entries').'</div>';
+                echo '  <div class="prev-posts">'.get_previous_posts_link('Newer Entries &raquo;').'</div>';
+                echo '</div>';
+        }
+
+        // Posted On
+        function posted_on() {
+                printf( __( '<span class="sep">Posted </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a> by <span class="byline author vcard">%5$s</span>', '' ),
+                        esc_url( get_permalink() ),
+                        esc_attr( get_the_time() ),
+                        esc_attr( get_the_date( 'c' ) ),
+                        esc_html( get_the_date() ),
+                        esc_attr( get_the_author() )
+                );
+        }
+

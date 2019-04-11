@@ -84,9 +84,7 @@
 			</div>
 		</div>
 	</header>
-
 	<div class="banner" style="background-image: url(<?php $image = get_field('header_image'); echo($image['sizes']['home-banner']); ?>) !important;">
-
 		<header class="banner__header">
 
 			<h1>
@@ -126,5 +124,6 @@
 		</header>
 
 	</div>
+
 
 	<main role="main">

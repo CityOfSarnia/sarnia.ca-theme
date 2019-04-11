@@ -1,11 +1,3 @@
-<?php
-/*
-Template Name: Notifications
-*/
-?>
-
-<?php include(TEMPLATEPATH . '/header.php'); ?>
-
 <?php get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -13,9 +5,10 @@ Template Name: Notifications
 	<article>
 
 		<div class="container">
-			<?php the_content(); ?>
 
 			<div class="notification-btn"><a class="btn btn--center" href="https://member.everbridge.net/index/892807736721815#/login" target="_blank" rel="noopener">Subscribe To Notifications</a></div>
+
+			<?php the_content(); ?>
 
 			<ul class="notification-list">
 				<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'posts_per_page' => -1 ) ); ?>

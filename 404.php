@@ -1,4 +1,4 @@
-<?php include(TEMPLATEPATH . '/header.php'); ?>
+<?php get_header(); ?>
 
 <article class="page page--404">
 
@@ -11,5 +11,7 @@
 	</div>
 
 </article>
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
