@@ -62,7 +62,9 @@
 				</div>
 			</div>
 		</div>
+
 	<?php endwhile; ?>
+
 	<?php wp_reset_query(); ?>
 
 	<header class="header" role="banner">
@@ -84,7 +86,9 @@
 			</div>
 		</div>
 	</header>
+
 	<div class="banner" style="background-image: url(<?php $image = get_field('header_image'); echo($image['sizes']['home-banner']); ?>) !important;">
+
 		<header class="banner__header">
 
 			<h1>
@@ -101,13 +105,29 @@
 
 				<?php } else { ?>
 
-					<?php if ( ! is_admin() ) { ?>
+					<?php if ( is_category() ) { ?>
 
-						<div class="banner__headline"><?php the_title(); ?></div>
+						<div class="banner__headline">Archive for the &#8216;<?php echo single_cat_title(); ?>&#8217; Category</div>
+
+					<?php } elseif ( is_tag() ) { ?>
+
+						<div class="banner__headline">Posts Tagged &#8216;<?php echo single_tag_title(); ?>&#8217;</div>
+
+					<?php } elseif ( is_day() ) { ?>
+
+						<div class="banner__headline">Archive for <?php the_time('F jS, Y'); ?></div>
+
+					<?php } elseif ( is_month() ) { ?>
+
+						<div class="banner__headline">Archive for <?php the_time('F, Y'); ?></div>
+
+					<?php } elseif ( is_year() ) { ?>
+
+						<div class="banner__headline">Archive for <?php the_time('Y'); ?></div>
 
 					<?php } else { ?>
 
-						 <div class="banner__headline">Enter a title...</div>
+						<div class="banner__headline"><?php the_title(); ?></div>
 
 					<?php } ?>
 
