@@ -123,6 +123,10 @@
 
 						<div class="banner__headline">Archive for <?php the_time('Y'); ?></div>
 
+					<?php } elseif ( is_404() ) { ?>
+
+						<div class="banner__headline">404 Not Found</div>
+
 					<?php } else { ?>
 
 						<div class="banner__headline"><?php the_title(); ?></div>
