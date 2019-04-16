@@ -62,7 +62,6 @@
     "wpackagist-plugin/query-monitor": "^3.3",
     "wpackagist-plugin/stream": "^3.2",
     "wpackagist-plugin/safe-svg": "^1.9",
-    "wpackagist-plugin/goodbye-captcha": "^3.1",
     "roots/wp-stage-switcher": "^2.1",
     "primetime/wp-plugin-activation-manifest": "^1.0",
     "wpackagist-plugin/breadcrumb-navxt": "^6.2",
