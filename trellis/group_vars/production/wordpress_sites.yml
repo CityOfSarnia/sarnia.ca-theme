@@ -3,19 +3,23 @@
 # Define accompanying passwords/secrets in group_vars/production/vault.yml
 
 wordpress_sites:
-  example.com:
+  sarnia.ca:
     site_hosts:
-      - canonical: example.com
+      - canonical: beta.sarnia.ca
         redirects:
-          - www.example.com
+          - www.beta.sarnia.ca
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:example/example.com.git # replace with your Git repo URL
+    repo: https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:
       enabled: false
     ssl:
-      enabled: false
-      provider: letsencrypt
+      enabled: true
+      provider: manual
+      cert: ~/ssl/beta.sarnia.ca.crt
+      key: ~/ssl/beta.sarnia.ca.key
     cache:
-      enabled: false
+      enabled: true
+    h5bp:
+      expires: true # See https://roots.io/trellis/docs/wordpress-sites/#common and https://github.com/h5bp/server-configs-nginx
