@@ -14,7 +14,7 @@ users:
       - sudo
     keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      # - https://github.com/username.keys
+      - https://cos-gitlab-prod/zcollette.keys
 
 web_user: web
 web_group: www-data
