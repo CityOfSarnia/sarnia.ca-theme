@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7afa15eeb0a8e9b4e6107c6ed82c5646",
+    "content-hash": "963b01c9399ded0365d4220a8fa67c24",
     "packages": [
         {
             "name": "composer/installers",
@@ -132,13 +132,13 @@
             "source": {
                 "type": "git",
                 "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-plugin.git",
-                "reference": "a9d6a19f812d8b922286752fbb60a3ee6ef761f7"
+                "reference": "9f5546c11f534ef0923abeafa7bba0d9c1d414d1"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
-            "type": "wordpress-plugin",
-            "time": "2019-04-11T19:22:58+00:00"
+            "type": "mu-wordpress-plugin",
+            "time": "2019-04-16T17:53:34+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
@@ -146,13 +146,13 @@
             "source": {
                 "type": "git",
                 "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-theme.git",
-                "reference": "98605b865c458caf594b0f02efdf054cd4e1a38e"
+                "reference": "499a9e4c5b7f2a60aea1f95ddf4253edd01eb393"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-04-11T21:36:16+00:00"
+            "time": "2019-04-15T21:23:39+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -662,7 +662,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.2.5",
+            "version": "v4.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -878,24 +878,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/easy-wp-smtp/"
-        },
-        {
-            "name": "wpackagist-plugin/goodbye-captcha",
-            "version": "3.1.28",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/goodbye-captcha/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/goodbye-captcha.zip?timestamp=1554687586"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/goodbye-captcha/"
         },
         {
             "name": "wpackagist-plugin/google-sitemap-generator",
