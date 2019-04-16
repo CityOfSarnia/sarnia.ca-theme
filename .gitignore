@@ -1,7 +1,5 @@
 # Logs
 logs/*
-!logs/.gitkeep
 
 # Cache
 cache/*
-!cache/.gitkeep
