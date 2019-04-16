@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "963b01c9399ded0365d4220a8fa67c24",
+    "content-hash": "bb5cafdb00c4d990446a97698f78e6df",
     "packages": [
         {
             "name": "composer/installers",
@@ -131,7 +131,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-plugin.git",
+                "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git",
                 "reference": "9f5546c11f534ef0923abeafa7bba0d9c1d414d1"
             },
             "require": {
@@ -145,7 +145,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca-theme.git",
+                "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
                 "reference": "499a9e4c5b7f2a60aea1f95ddf4253edd01eb393"
             },
             "require": {
@@ -808,42 +808,6 @@
             "homepage": "https://wordpress.org/plugins/better-search-replace/"
         },
         {
-            "name": "wpackagist-plugin/breadcrumb-navxt",
-            "version": "6.2.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/breadcrumb-navxt/",
-                "reference": "tags/6.2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/breadcrumb-navxt.6.2.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/breadcrumb-navxt/"
-        },
-        {
-            "name": "wpackagist-plugin/broken-link-checker",
-            "version": "1.11.8",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/broken-link-checker/",
-                "reference": "tags/1.11.8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/broken-link-checker.1.11.8.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/broken-link-checker/"
-        },
-        {
             "name": "wpackagist-plugin/duplicate-post",
             "version": "3.2.2",
             "source": {
@@ -932,24 +896,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/health-check/"
-        },
-        {
-            "name": "wpackagist-plugin/imsanity",
-            "version": "2.4.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/imsanity/",
-                "reference": "tags/2.4.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/imsanity.2.4.2.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/imsanity/"
         },
         {
             "name": "wpackagist-plugin/luckywp-table-of-contents",
