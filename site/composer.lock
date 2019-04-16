@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "836f751f368092055d8f7537335fb553",
+    "content-hash": "7afa15eeb0a8e9b4e6107c6ed82c5646",
     "packages": [
         {
             "name": "composer/installers",
@@ -1006,6 +1006,24 @@
             "homepage": "https://wordpress.org/plugins/members/"
         },
         {
+            "name": "wpackagist-plugin/next-active-directory-integration",
+            "version": "2.1.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/next-active-directory-integration/",
+                "reference": "tags/2.1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/next-active-directory-integration.2.1.8.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/next-active-directory-integration/"
+        },
+        {
             "name": "wpackagist-plugin/nginx-cache",
             "version": "1.0.4",
             "source": {
@@ -1058,6 +1076,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/restricted-site-access/"
+        },
+        {
+            "name": "wpackagist-plugin/safe-redirect-manager",
+            "version": "1.9.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/safe-redirect-manager/",
+                "reference": "tags/1.9.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/safe-redirect-manager.1.9.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/safe-redirect-manager/"
         },
         {
             "name": "wpackagist-plugin/safe-svg",
