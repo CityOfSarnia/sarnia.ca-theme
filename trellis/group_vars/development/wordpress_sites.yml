@@ -15,3 +15,9 @@ wordpress_sites:
       provider: self-signed
     cache:
       enabled: false
+    env:
+      wp_home: https://dev.sarnia.cos.city.sarnia.on.ca
+      wp_siteurl: https://dev.sarnia.cos.city.sarnia.on.ca/wp
+      db_name: dev_sarnia_ca_wp
+      db_user: wp_dev
+      db_host: localhost
