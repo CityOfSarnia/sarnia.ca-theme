@@ -21,3 +21,5 @@ wordpress_sites:
       db_name: dev_sarnia_ca_wp
       db_user: wp_dev
       db_host: localhost
+      google_analytics_trackingID: UA-45028636-13
+      google_cse_cx: 005949542510458416255:ngjhi177cs8
