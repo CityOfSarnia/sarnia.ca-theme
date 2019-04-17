@@ -145,13 +145,13 @@
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git",
-                "reference": "11c52395ad839b6e012bca0fcd39947f3fa725bd"
+                "reference": "b3432aceb33c8f246d973ab6acc55f9908a520fc"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
-            "type": "wordpress-muplugin",
-            "time": "2019-04-17T13:32:19+00:00"
+            "type": "wordpress-plugin",
+            "time": "2019-04-17T18:52:31+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
@@ -1104,49 +1104,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "pixelstudio/advanced-custom-fields",
-            "version": "5.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hrsetyono/advanced-custom-fields.git",
-                "reference": "5aeb3d41e517b3b364fef48af75eafb207f56011"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hrsetyono/advanced-custom-fields/zipball/5aeb3d41e517b3b364fef48af75eafb207f56011",
-                "reference": "5aeb3d41e517b3b364fef48af75eafb207f56011",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=7.0.0"
-            },
-            "type": "wordpress-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Pixel Studio",
-                    "email": "info@pixelstudio.id",
-                    "homepage": "https://pixelstudio.id"
-                },
-                {
-                    "name": "Elliot Condon",
-                    "homepage": "https://www.elliotcondon.com/"
-                }
-            ],
-            "description": "Easiest way to add Custom Field to WordPress.",
-            "homepage": "https://github.com/hrsetyono/advanced-custom-fields/",
-            "keywords": [
-                "library",
-                "plugin",
-                "wordpress"
-            ],
-            "time": "2019-03-20T15:41:46+00:00"
-        },
         {
             "name": "roave/security-advisories",
             "version": "dev-master",
