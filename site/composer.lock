@@ -132,13 +132,13 @@
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git",
-                "reference": "9f5546c11f534ef0923abeafa7bba0d9c1d414d1"
+                "reference": "11c52395ad839b6e012bca0fcd39947f3fa725bd"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
-            "type": "mu-wordpress-plugin",
-            "time": "2019-04-16T17:53:34+00:00"
+            "type": "wordpress-muplugin",
+            "time": "2019-04-17T13:32:19+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
@@ -146,13 +146,13 @@
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "499a9e4c5b7f2a60aea1f95ddf4253edd01eb393"
+                "reference": "f387e7bbe8af0d8dbdba70d361ae906250c584d2"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-04-15T21:23:39+00:00"
+            "time": "2019-04-17T13:05:53+00:00"
         },
         {
             "name": "oscarotero/env",
