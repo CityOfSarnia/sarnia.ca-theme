@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d73208b34837da5da7a7fe187a0c7705",
+    "content-hash": "576be3ea61cc4bc04e0bff287507919f",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -159,13 +159,13 @@
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "f387e7bbe8af0d8dbdba70d361ae906250c584d2"
+                "reference": "e87b031002d3b503c22b87cd561902cefd5ba24b"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-04-17T13:05:53+00:00"
+            "time": "2019-04-17T21:09:24+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -876,24 +876,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/duplicate-post/"
-        },
-        {
-            "name": "wpackagist-plugin/easy-wp-smtp",
-            "version": "1.3.9.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/easy-wp-smtp/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/easy-wp-smtp.zip?timestamp=1552829311"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/easy-wp-smtp/"
         },
         {
             "name": "wpackagist-plugin/google-sitemap-generator",
