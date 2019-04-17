@@ -11,7 +11,7 @@
             "version": "5.8.0-RC2",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0-RC2"
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0-RC2#v5.8.0-RC2"
             },
             "require": {
                 "composer/installers": "^1.4",
