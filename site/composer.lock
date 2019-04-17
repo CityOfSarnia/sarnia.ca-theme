@@ -4,8 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb5cafdb00c4d990446a97698f78e6df",
+    "content-hash": "ec1f2944027d205bec42ade4da0b94b4",
     "packages": [
+        {
+            "name": "advanced-custom-fields/advanced-custom-fields-pro",
+            "version": "5.8.0-RC2",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0-RC2"
+            },
+            "require": {
+                "composer/installers": "^1.4",
+                "ffraenz/private-composer-installer": "^2.0"
+            },
+            "type": "wordpress-muplugin"
+        },
         {
             "name": "composer/installers",
             "version": "v1.6.0",
@@ -155,6 +168,61 @@
             "time": "2019-04-17T13:05:53+00:00"
         },
         {
+            "name": "ffraenz/private-composer-installer",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ffraenz/private-composer-installer.git",
+                "reference": "dc54b0200952f8c03a08b5593a933c308343a2a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ffraenz/private-composer-installer/zipball/dc54b0200952f8c03a08b5593a933c308343a2a9",
+                "reference": "dc54b0200952f8c03a08b5593a933c308343a2a9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0.0",
+                "php": "^5.6 || ^7.0",
+                "vlucas/phpdotenv": "^3.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*",
+                "phpunit/phpunit": "5.7.* || ^6.3",
+                "zendframework/zend-coding-standard": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "FFraenz\\PrivateComposerInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "FFraenz\\PrivateComposerInstaller\\": "src/PrivateComposerInstaller"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fränz Friederes",
+                    "email": "fraenz@frieder.es",
+                    "homepage": "https://fraenz.frieder.es"
+                }
+            ],
+            "description": "A composer install helper for private packages",
+            "keywords": [
+                "composer",
+                "env",
+                "plugin",
+                "private",
+                "wordpress",
+                "wp"
+            ],
+            "time": "2019-01-30T21:44:48+00:00"
+        },
+        {
             "name": "oscarotero/env",
             "version": "v1.2.0",
             "source": {
@@ -246,49 +314,6 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
-        },
-        {
-            "name": "pixelstudio/advanced-custom-fields",
-            "version": "5.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hrsetyono/advanced-custom-fields.git",
-                "reference": "5aeb3d41e517b3b364fef48af75eafb207f56011"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hrsetyono/advanced-custom-fields/zipball/5aeb3d41e517b3b364fef48af75eafb207f56011",
-                "reference": "5aeb3d41e517b3b364fef48af75eafb207f56011",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=7.0.0"
-            },
-            "type": "wordpress-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Pixel Studio",
-                    "email": "info@pixelstudio.id",
-                    "homepage": "https://pixelstudio.id"
-                },
-                {
-                    "name": "Elliot Condon",
-                    "homepage": "https://www.elliotcondon.com/"
-                }
-            ],
-            "description": "Easiest way to add Custom Field to WordPress.",
-            "homepage": "https://github.com/hrsetyono/advanced-custom-fields/",
-            "keywords": [
-                "library",
-                "plugin",
-                "wordpress"
-            ],
-            "time": "2019-03-20T15:41:46+00:00"
         },
         {
             "name": "primetime/wp-plugin-activation-manifest",
@@ -662,7 +687,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -935,15 +960,15 @@
         },
         {
             "name": "wpackagist-plugin/next-active-directory-integration",
-            "version": "2.1.8",
+            "version": "2.1.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/next-active-directory-integration/",
-                "reference": "tags/2.1.8"
+                "reference": "tags/2.1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/next-active-directory-integration.2.1.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/next-active-directory-integration.2.1.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1079,6 +1104,49 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "pixelstudio/advanced-custom-fields",
+            "version": "5.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hrsetyono/advanced-custom-fields.git",
+                "reference": "5aeb3d41e517b3b364fef48af75eafb207f56011"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hrsetyono/advanced-custom-fields/zipball/5aeb3d41e517b3b364fef48af75eafb207f56011",
+                "reference": "5aeb3d41e517b3b364fef48af75eafb207f56011",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=7.0.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel Studio",
+                    "email": "info@pixelstudio.id",
+                    "homepage": "https://pixelstudio.id"
+                },
+                {
+                    "name": "Elliot Condon",
+                    "homepage": "https://www.elliotcondon.com/"
+                }
+            ],
+            "description": "Easiest way to add Custom Field to WordPress.",
+            "homepage": "https://github.com/hrsetyono/advanced-custom-fields/",
+            "keywords": [
+                "library",
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2019-03-20T15:41:46+00:00"
+        },
         {
             "name": "roave/security-advisories",
             "version": "dev-master",
@@ -1341,6 +1409,7 @@
     "stability-flags": {
         "cos/sarnia.ca-theme": 20,
         "cos/sarnia.ca-plugin": 20,
+        "advanced-custom-fields/advanced-custom-fields-pro": 5,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

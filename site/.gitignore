@@ -3,7 +3,6 @@ web/app/plugins/*
 !web/app/plugins/.gitkeep
 !web/app/plugins/gravityforms
 !web/app/plugins/gravityformsgutenberg
-!web/app/plugins/advanced-custom-fields-pro
 
 web/app/mu-plugins/*/
 
