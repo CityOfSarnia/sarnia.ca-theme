@@ -71,7 +71,7 @@
 			<div class="search-form">
 				<script>
 					(function() {
-						var cx = '<?=getenv('google.cse.cx')?>';
+						var cx = '<?=getenv('GOOGLE_CSE_CX')?>';
 						var gcse = document.createElement('script');
 						gcse.type = 'text/javascript';
 						gcse.async = true;
