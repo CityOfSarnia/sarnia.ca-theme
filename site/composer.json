@@ -1,14 +1,19 @@
 {
-  "name": "it/sarnia.ca",
+  "name": "roots/bedrock",
   "type": "project",
   "license": "MIT",
-  "description": "City of Sarnia webpage",
-  "homepage": "https://sarnia.ca/",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "homepage": "https://roots.io/bedrock/",
   "authors": [
     {
-      "name": "City of Sarnia IT Department",
-      "email": "it@sarnia.ca",
-      "homepage": "https://sarnia.ca"
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
     }
   ],
   "keywords": [
@@ -59,6 +64,7 @@
     "roots/wordpress": "5.1.1",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
+    "roots/soil": "^3.7",
     "cos/sarnia.ca-theme": "dev-master",
     "cos/sarnia.ca-plugin": "dev-master",
     "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0",
