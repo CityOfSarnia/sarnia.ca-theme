@@ -1,25 +1,31 @@
-# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
 # `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
 # Define accompanying passwords/secrets in group_vars/development/vault.yml
 
 wordpress_sites:
   sarnia.ca:
     site_hosts:
-      - canonical: dev.sarnia.cos.city.sarnia.on.ca
+      - canonical: dev.sarnia.ca
+        # redirects:
+        #   - otherdomain.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: zachary.collette@sarnia.ca
+    repo: git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca.git # replace with your Git repo URL
+    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    branch: master
     multisite:
       enabled: false
     ssl:
       enabled: true
-      provider: self-signed
+      provider: manual
+      cert: ~/ssl/300us18-web007.crt
+      key: ~/ssl/300us18-web007.key
     cache:
       enabled: false
     env:
-      wp_home: https://dev.sarnia.cos.city.sarnia.on.ca
-      wp_siteurl: https://dev.sarnia.cos.city.sarnia.on.ca/wp
-      db_name: dev_sarnia_ca_wp
-      db_user: wp_dev
+      wp_home: https://dev.sarnia.ca
+      wp_siteurl: https://dev.sarnia.ca/wp
+      db_name: sarnia_ca_development
+      db_user: sarnia_ca_development
       db_host: localhost
-      google_analytics_trackingID: UA-45028636-13
-      google_cse_cx: 005949542510458416255:ngjhi177cs8
+      google_analytics_trackingID: "UA-45028636-13"
+      google_cse_cx: "005949542510458416255:ngjhi177cs8"
