@@ -5,7 +5,7 @@
 wordpress_sites:
   sarnia.ca:
     site_hosts:
-      - canonical: dev.sarnia.ca
+      - canonical: 300us18-web007.bhs7.cos.city.sarnia.on.ca
         # redirects:
         #   - otherdomain.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
