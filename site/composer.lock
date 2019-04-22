@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fd4f723017ec99284480d12ce6262ce",
+    "content-hash": "7a84d5f930bb906f99f98bbcbdaa6d03",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -155,17 +155,17 @@
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "dev-master",
+            "version": "v1.0.0-beta11",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "e87b031002d3b503c22b87cd561902cefd5ba24b"
+                "reference": "162b2f4d78402b676267ef2fa3ab73d67a452bef"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-04-17T21:09:24+00:00"
+            "time": "2019-04-22T20:05:27+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -1355,7 +1355,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "cos/sarnia.ca-theme": 20,
+        "cos/sarnia.ca-theme": 10,
         "cos/sarnia.ca-plugin": 20,
         "advanced-custom-fields/advanced-custom-fields-pro": 5,
         "roave/security-advisories": 20
