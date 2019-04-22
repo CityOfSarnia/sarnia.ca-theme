@@ -711,6 +711,9 @@ main {
 
 .footer-menu__container {
   max-width: 500px; }
+  @media screen and (min-width: 850px) {
+    .footer-menu__container {
+      max-width: none; } }
 
 .social-links {
   display: flex;
