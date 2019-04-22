@@ -166,4 +166,8 @@
 
 .footer-menu__container {
   max-width: 500px;
+
+  @media screen and (min-width: $bp-md) {
+    max-width: none;
+  }
 }

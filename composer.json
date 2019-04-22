@@ -2,6 +2,6 @@
   "name": "cos/sarnia.ca-theme",
   "type": "wordpress-theme",
   "require": {
-    "composer/installers": "^1.4"
+  "composer/installers": "^1.4"
   }
 }
