@@ -65,7 +65,7 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/soil": "^3.7",
-    "cos/sarnia.ca-theme": "1.0.0-beta11",
+    "cos/sarnia.ca-theme": "dev-master",
     "cos/sarnia.ca-plugin": "dev-master",
     "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0",
     "wpackagist-plugin/members": "^2.1",

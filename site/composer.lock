@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a84d5f930bb906f99f98bbcbdaa6d03",
+    "content-hash": "5fd4f723017ec99284480d12ce6262ce",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -155,17 +155,17 @@
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "v1.0.0-beta11",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "162b2f4d78402b676267ef2fa3ab73d67a452bef"
+                "reference": "ab569127fe992afa84c61a6d013b02a8170aca6e"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-04-22T20:05:27+00:00"
+            "time": "2019-04-23T17:19:26+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -915,15 +915,15 @@
         },
         {
             "name": "wpackagist-plugin/luckywp-table-of-contents",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/luckywp-table-of-contents/",
-                "reference": "tags/1.1.1"
+                "reference": "tags/1.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.1.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.2.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1355,7 +1355,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "cos/sarnia.ca-theme": 10,
+        "cos/sarnia.ca-theme": 20,
         "cos/sarnia.ca-plugin": 20,
         "advanced-custom-fields/advanced-custom-fields-pro": 5,
         "roave/security-advisories": 20
