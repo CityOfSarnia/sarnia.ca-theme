@@ -25,8 +25,6 @@
 
 	<meta name="Copyright" content="(C) 2019 City of Sarnia. All rights reserved.">
 
-	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
-
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 	<?php wp_enqueue_script("jquery"); ?>
