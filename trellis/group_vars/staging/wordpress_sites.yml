@@ -5,13 +5,14 @@
 wordpress_sites:
   sarnia.ca:
     site_hosts:
-      - canonical: 300us18-web007.bhs7.cos.city.sarnia.on.ca
+      - canonical: 300us18-web006.bhs7.cos.city.sarnia.on.ca
         # redirects:
         #   - otherdomain.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: https://cos-gitlab-prod.cos.city.sarnia.on.ca/it/sarnia.ca.git # replace with your Git repo URL
+    repo: git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: master
+    db_create: false
     multisite:
       enabled: false
     ssl:
@@ -21,3 +22,11 @@ wordpress_sites:
       key: ~/ssl/300us18-web006.key
     cache:
       enabled: false
+    env:
+      wp_home: https://staging.sarnia.ca
+      wp_siteurl: https://staging.sarnia.ca/wp
+      db_name: sarnia_ca_staging
+      db_user: sarnia_ca_staging
+      db_host: 10.30.1.50
+      google_analytics_trackingID: "UA-45028636-13"
+      google_cse_cx: "005949542510458416255:ngjhi177cs8"
