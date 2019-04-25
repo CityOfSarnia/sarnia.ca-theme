@@ -74,7 +74,6 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/soil": "^3.7",
     "cos/sarnia.ca-theme": "dev-master",
-    "cos/sarnia.ca-plugin": "dev-master",
     "cos/gravityforms": "2.4.8",
     "cos/gravityformsgutenberg": "1.0-rc-1.2",
     "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0",
