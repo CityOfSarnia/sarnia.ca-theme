@@ -5,7 +5,7 @@
 wordpress_sites:
   sarnia.ca:
     site_hosts:
-      - canonical: staging.sarnia.ca
+      - canonical: 300us18-web007.bhs7.cos.city.sarnia.on.ca
         # redirects:
         #   - otherdomain.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
@@ -17,7 +17,7 @@ wordpress_sites:
     ssl:
       enabled: true
       provider: manual
-      cert: ~/ssl/staging.sarnia.ca.crt
-      key: ~/ssl/staging.sarnia.ca.key
+      cert: ~/ssl/300us18-web006.crt
+      key: ~/ssl/300us18-web006.key
     cache:
       enabled: false

@@ -42,7 +42,7 @@ define('WP_ENV', env('WP_ENV') ?: 'production');
 $envs = [
   'development' => 'https://dev.sarnia.ca',
   'staging'     => 'https://staging.sarnia.ca',
-  'production'  => 'https://beta.sarnia.ca'
+  'production'  => 'https://admin.sarnia.ca'
 ];
 define('ENVIRONMENTS', $envs);
 
