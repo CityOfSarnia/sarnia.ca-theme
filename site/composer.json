@@ -40,6 +40,14 @@
       "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git"
     },
     {
+      "type":"git",
+      "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/gravityforms.git"
+    },
+    {
+      "type":"git",
+      "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/gravityformsgutenberg.git"
+    },
+    {
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -67,6 +75,8 @@
     "roots/soil": "^3.7",
     "cos/sarnia.ca-theme": "dev-master",
     "cos/sarnia.ca-plugin": "dev-master",
+    "cos/gravityforms": "2.4.8",
+    "cos/gravityformsgutenberg": "1.0-rc-1.2",
     "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0",
     "wpackagist-plugin/members": "^2.1",
     "wpackagist-plugin/luckywp-table-of-contents": "^1.0",

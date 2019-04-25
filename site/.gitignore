@@ -1,8 +1,6 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-!web/app/plugins/gravityforms
-!web/app/plugins/gravityformsgutenberg
 
 web/app/mu-plugins/*/
 
