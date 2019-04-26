@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a0f67eb4417b13c2f9ca38487f14fc2",
+    "content-hash": "9f9b8a1491756de4c894160b637024e8",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -974,24 +974,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/next-active-directory-integration/"
-        },
-        {
-            "name": "wpackagist-plugin/nginx-cache",
-            "version": "1.0.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/nginx-cache/",
-                "reference": "tags/1.0.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/nginx-cache.1.0.4.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/nginx-cache/"
         },
         {
             "name": "wpackagist-plugin/query-monitor",

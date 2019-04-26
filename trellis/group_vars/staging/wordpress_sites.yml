@@ -21,7 +21,7 @@ wordpress_sites:
       cert: ~/ssl/300us18-web006.crt
       key: ~/ssl/300us18-web006.key
     cache:
-      enabled: false
+      enabled: true
     env:
       wp_home: https://staging.sarnia.ca
       wp_siteurl: https://staging.sarnia.ca/wp

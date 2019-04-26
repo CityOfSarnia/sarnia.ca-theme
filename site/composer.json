@@ -82,7 +82,6 @@
     "wpackagist-plugin/restricted-site-access": "^7.0",
     "wpackagist-plugin/google-sitemap-generator": "^4.1",
     "wpackagist-plugin/gravity-forms-pdf-extended": "^5.1",
-    "wpackagist-plugin/nginx-cache": "^1.0",
     "wpackagist-plugin/duplicate-post": "^3.2",
     "wpackagist-plugin/query-monitor": "^3.3",
     "wpackagist-plugin/stream": "^3.2",

@@ -40,6 +40,7 @@ if (file_exists($root_dir . '/.env')) {
 define('WP_ENV', env('WP_ENV') ?: 'production');
 
 $envs = [
+  'local'       => 'https://local.sarnia.ca',
   'development' => 'https://dev.sarnia.ca',
   'staging'     => 'https://staging.sarnia.ca',
   'production'  => 'https://admin.sarnia.ca'
@@ -97,9 +98,9 @@ Config::define('NONCE_SALT', env('NONCE_SALT'));
 Config::define('AUTOMATIC_UPDATER_DISABLED', true);
 Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 // Disable the plugin and theme file editor in the admin
-Config::define('DISALLOW_FILE_EDIT', false);
+Config::define('DISALLOW_FILE_EDIT', true);
 // Disable plugin and theme updates and installation from the admin
-Config::define('DISALLOW_FILE_MODS', false);
+Config::define('DISALLOW_FILE_MODS', true);
 
 /**
  * Debugging Settings
