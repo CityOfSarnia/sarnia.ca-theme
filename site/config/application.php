@@ -40,10 +40,10 @@ if (file_exists($root_dir . '/.env')) {
 define('WP_ENV', env('WP_ENV') ?: 'production');
 
 $envs = [
-  'local'       => 'https://local.sarnia.ca',
-  'development' => 'https://dev.sarnia.ca',
+  'admin'       => 'https://admin.sarnia.ca',
   'staging'     => 'https://staging.sarnia.ca',
-  'production'  => 'https://admin.sarnia.ca'
+  'development' => 'https://dev.sarnia.ca',
+  'local'       => 'https://local.sarnia.ca'
 ];
 define('ENVIRONMENTS', $envs);
 

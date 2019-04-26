@@ -2,7 +2,9 @@
 # List each machine only once per [group], even if it will host multiple sites.
 
 [production]
-your_server_hostname
+300us18-web001.bhs7.cos.city.sarnia.on.ca
+300us18-web002.bhs7.cos.city.sarnia.on.ca
 
 [web]
-your_server_hostname
+300us18-web001.bhs7.cos.city.sarnia.on.ca
+300us18-web002.bhs7.cos.city.sarnia.on.ca
