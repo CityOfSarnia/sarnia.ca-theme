@@ -5,7 +5,7 @@
 wordpress_sites:
   sarnia.ca:
     site_hosts:
-      - canonical: dev.sarnia.cos.city.sarnia.on.ca
+      - canonical: local.sarnia.ca
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     admin_user: cosadmin
     admin_email: it@sarnia.ca
@@ -17,8 +17,8 @@ wordpress_sites:
     cache:
       enabled: false
     env:
-      wp_home: https://dev.sarnia.cos.city.sarnia.on.ca
-      wp_siteurl: https://dev.sarnia.cos.city.sarnia.on.ca/wp
+      wp_home: https://local.sarnia.ca
+      wp_siteurl: https://local.sarnia.ca/wp
       db_name: dev_sarnia_ca_wp
       db_user: wp_dev
       db_host: localhost
