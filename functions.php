@@ -1,5 +1,16 @@
 <?php
 
+	use function \Sober\Intervention\intervention;
+
+	if (function_exists('\Sober\Intervention\intervention')) {
+		// now you can use the function to call the required modules and their params
+		intervention('remove-menu-items', ['themes', 'plugins'], ['editor', 'author']);
+		//intervention('remove-menu-items', 'plugins', 'all');
+		intervention('remove-emoji');
+		// Removes howdy and replaces with Hello.
+		intervention('remove-howdy', 'Hello');
+	}
+
 	function card_colour()
 	{
 		global $card_count;
