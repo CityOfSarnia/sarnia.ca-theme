@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7609c9a382c35325188c3aa0116fd5f",
+    "content-hash": "1135c43976dd7dcc644f3ab81d36c56b",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -185,13 +185,13 @@
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "61545220da629438b11475b8f643d1a6dfc76204"
+                "reference": "b55409042db9dc20a4f7749111182d42abb0f4a3"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-04-29T17:32:23+00:00"
+            "time": "2019-04-30T17:21:31+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -746,6 +746,55 @@
             "time": "2019-03-23T20:05:36+00:00"
         },
         {
+            "name": "soberwp/intervention",
+            "version": "1.2.0-p",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soberwp/intervention.git",
+                "reference": "1698e51efe696c5867fb78ef7c5d2efff9b79260"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soberwp/intervention/zipball/1698e51efe696c5867fb78ef7c5d2efff9b79260",
+                "reference": "1698e51efe696c5867fb78ef7c5d2efff9b79260",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Sober\\Intervention\\": "src/",
+                    "Sober\\Intervention\\Module\\": "src/modules/"
+                },
+                "files": [
+                    "intervention.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Darren Jacoby",
+                    "email": "darren@jacoby.co.za",
+                    "homepage": "https://twitter.com/withjacoby"
+                }
+            ],
+            "description": "WordPress plugin containing modules to cleanup and customize wp-admin.",
+            "homepage": "https://github.com/soberwp",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-08-26T12:21:27+00:00"
+        },
+        {
             "name": "symfony/polyfill-ctype",
             "version": "v1.11.0",
             "source": {
@@ -1097,12 +1146,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "1b329f4f2d9a0a3981fd79dbfe37754bedd383e2"
+                "reference": "1dfa887a7e87ba9b7c635299462554b9ad241d5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/1b329f4f2d9a0a3981fd79dbfe37754bedd383e2",
-                "reference": "1b329f4f2d9a0a3981fd79dbfe37754bedd383e2",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/1dfa887a7e87ba9b7c635299462554b9ad241d5b",
+                "reference": "1dfa887a7e87ba9b7c635299462554b9ad241d5b",
                 "shasum": ""
             },
             "conflict": {
@@ -1123,7 +1172,7 @@
                 "composer/composer": "<=1.0.0-alpha11",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
                 "contao/core": ">=2,<3.5.39",
-                "contao/core-bundle": ">=4,<4.4.37|>=4.5,<4.7.3",
+                "contao/core-bundle": ">=4,<4.4.39|>=4.5,<4.7.5",
                 "contao/listing-bundle": ">=4,<4.4.8",
                 "contao/newsletter-bundle": ">=4,<4.1",
                 "david-garcia/phpwhois": "<=4.3.1",
@@ -1297,7 +1346,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-04-24T06:22:37+00:00"
+            "time": "2019-04-30T09:56:45+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
