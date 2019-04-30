@@ -44,7 +44,7 @@ define('WP_ENV', env('WP_ENV') ?: 'production');
  * Set up links to our various environments, required for wp-stage-switcher plugin
  */
 $envs = [
-  'production'  => 'https://beta.sarnia.ca',
+  'edit'        => 'https://beta.sarnia.ca',
   'staging'     => 'https://staging.sarnia.ca',
   'development' => 'https://dev.sarnia.ca',
   'local'       => 'https://local.sarnia.ca'
