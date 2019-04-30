@@ -39,8 +39,12 @@ if (file_exists($root_dir . '/.env')) {
  */
 define('WP_ENV', env('WP_ENV') ?: 'production');
 
+
+/**
+ * Set up links to our various environments, required for wp-stage-switcher plugin
+ */
 $envs = [
-  'edit'       => 'https://beta.sarnia.ca',
+  'production'  => 'https://beta.sarnia.ca',
   'staging'     => 'https://staging.sarnia.ca',
   'development' => 'https://dev.sarnia.ca',
   'local'       => 'https://local.sarnia.ca'
