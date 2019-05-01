@@ -143,6 +143,7 @@
 			'acf/navigation',
 			'acf/recent-posts',
 			'core/video',
+			'core/seperator',
 			'core-embed/youtube',
 			'core-embed/vimeo',
 			'core-embed/facebook',
