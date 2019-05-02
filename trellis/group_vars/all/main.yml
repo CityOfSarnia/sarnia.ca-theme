@@ -25,3 +25,7 @@ raw_vars:
 
 ntp_servers:
   - "10.30.0.1 iburst"
+
+php_extensions_custom:
+  php-bcmath: "{{ apt_package_state }}"
+  php-imagick: "{{ apt_package_state }}"
