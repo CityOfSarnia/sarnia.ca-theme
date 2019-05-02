@@ -1,6 +1,6 @@
 # Documentation: https://roots.io/trellis/docs/mail/
-mail_smtp_server: smtp.mailgun.org:587
-mail_admin: wordpress@mail.dev.sarnia.ca
+mail_smtp_server: mail.sarnia.ca:587
+mail_admin: wordpress@sarnia.ca
 mail_hostname: sarnia.ca
-mail_user: postmaster@mail.dev.sarnia.ca
+mail_user: sarnia_ca_wordpress@cos.city.sarnia.on.ca
 mail_password: "{{ vault_mail_password }}" # Define this variable in group_vars/all/vault.yml
