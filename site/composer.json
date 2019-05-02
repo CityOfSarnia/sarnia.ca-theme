@@ -96,7 +96,8 @@
     "wpackagist-plugin/next-active-directory-integration": "^2.1",
     "wpackagist-plugin/safe-redirect-manager": "^1.9",
     "cos/nadiext-custom-role-management": "1.0.4",
-    "soberwp/intervention": "^1.2"
+    "soberwp/intervention": "^1.2",
+    "solarissmoke/disable-comments-mu": "^1.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
