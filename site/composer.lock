@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a016684f48fed954ba3c713ab69671f7",
+    "content-hash": "6e7819865496d2c1da52efbadc5a302c",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -884,6 +884,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/gravity-forms-pdf-extended/"
+        },
+        {
+            "name": "wpackagist-plugin/health-check",
+            "version": "1.2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/health-check/",
+                "reference": "tags/1.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/health-check.1.2.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/health-check/"
         },
         {
             "name": "wpackagist-plugin/luckywp-table-of-contents",
