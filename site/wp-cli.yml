@@ -1,7 +1,9 @@
 path: web/wp
 
-@development:
+@local:
   ssh: vagrant@local.sarnia.ca/srv/www/sarnia.ca/current
+@development:
+  ssh: web@300us18-web007.bhs7.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
 @staging:
   ssh: web@300us18-web006.bhs7.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
 @production:
