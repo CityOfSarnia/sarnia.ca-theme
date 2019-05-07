@@ -29,3 +29,5 @@ ntp_servers:
 php_extensions_custom:
   php-bcmath: "{{ apt_package_state }}"
   php-imagick: "{{ apt_package_state }}"
+
+php_memory_limit: 512M
