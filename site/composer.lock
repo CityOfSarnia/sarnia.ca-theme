@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e5a858bea04280e58f58c0d0eed7487",
+    "content-hash": "3b58943e6e76ca7cd9902414af4dfefc",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.8.0-RC2",
+            "version": "5.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0-RC2",
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0",
                 "reference": null,
                 "shasum": null
             },
@@ -1333,7 +1333,6 @@
     "stability-flags": {
         "cos/sarnia.ca-theme": 20,
         "cos/gravityformsgutenberg": 5,
-        "advanced-custom-fields/advanced-custom-fields-pro": 5,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
