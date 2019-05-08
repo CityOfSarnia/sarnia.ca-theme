@@ -1,17 +1,17 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e5a858bea04280e58f58c0d0eed7487",
+    "content-hash": "a016684f48fed954ba3c713ab69671f7",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.0-RC2",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0-RC2#v5.8.0-RC2",
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0-RC2",
                 "reference": null,
                 "shasum": null
             },
@@ -372,16 +372,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.2",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.2"
+                "reference": "5.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.2",
-                "reference": "5.2",
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.1.1",
+                "reference": "5.1.1",
                 "shasum": null
             },
             "require": {
@@ -406,7 +406,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-05-07T21:16:12+00:00"
+            "time": "2019-03-13T14:18:06+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
