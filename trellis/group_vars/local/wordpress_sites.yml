@@ -19,8 +19,8 @@ wordpress_sites:
     env:
       wp_home: https://local.sarnia.ca
       wp_siteurl: https://local.sarnia.ca/wp
-      db_name: dev_sarnia_ca_wp
-      db_user: wp_dev
+      db_name: sarnia_ca_local
+      db_user: sarnia_ca_local
       db_host: localhost
       google_analytics_trackingID: UA-45028636-13
       google_cse_cx: 005949542510458416255:ngjhi177cs8
