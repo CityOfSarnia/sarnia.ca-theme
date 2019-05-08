@@ -25,7 +25,7 @@ web/.htaccess
 /vendor
 
 # WP-CLI
-*_development*.sql
+*_local*.sql
 wp-cli.local.yml
 
 # phpMyAdmin

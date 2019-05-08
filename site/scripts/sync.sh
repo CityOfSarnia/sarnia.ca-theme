@@ -4,11 +4,11 @@
 # Version 1.1.0
 # Copyright (c) Ben Word
 
-LOCALDIR="web/app/uploads/"
-LOCALSITE="https://local.sarnia.ca"
+DEVDIR="web/app/uploads/"
+DEVSITE="https://local.sarnia.ca"
 
-DEVDIR="web@300US18-WEB007.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
-DEVSITE="https://dev.sarnia.ca"
+#DEVDIR="web@300US18-WEB007.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
+#DEVSITE="https://dev.sarnia.ca"
 
 PRODDIR="web@300US18-WEB003.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
 PRODSITE="https://beta.sarnia.ca"
