@@ -4,14 +4,14 @@
 # Version 1.1.0
 # Copyright (c) Ben Word
 
-DEVDIR="web/app/uploads/"
-DEVSITE="https://local.sarnia.ca"
+LOCALDIR="web/app/uploads/"
+LOCALSITE="https://local.sarnia.ca"
 
-#DEVDIR="web@300US18-WEB007.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
-#DEVSITE="https://dev.sarnia.ca"
+DEVDIR="web@300US18-WEB007.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
+DEVSITE="https://dev.sarnia.ca"
 
-PRODDIR="web@300US18-WEB003.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
-PRODSITE="https://beta.sarnia.ca"
+EDITDIR="web@300US18-WEB003.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
+EDITSITE="https://beta.sarnia.ca"
 
 STAGDIR="web@300US18-WEB006.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
 STAGSITE="https://staging.sarnia.ca"
@@ -28,13 +28,13 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 case "$1-$2" in
-  production-development) DIR="down ⬇️ "          FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
-  staging-development)    DIR="down ⬇️ "          FROMSITE=$STAGSITE; FROMDIR=$STAGDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
-  development-production) DIR="up ⬆️ "            FROMSITE=$DEVSITE;  FROMDIR=$DEVDIR;  TOSITE=$PRODSITE; TODIR=$PRODDIR; ;;
-  development-staging)    DIR="up ⬆️ "            FROMSITE=$DEVSITE;  FROMDIR=$DEVDIR;  TOSITE=$STAGSITE; TODIR=$STAGDIR; ;;
-  production-staging)     DIR="horizontally ↔️ ";  FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$STAGSITE; TODIR=$STAGDIR; ;;
-  staging-production)     DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE; FROMDIR=$STAGDIR; TOSITE=$PRODSITE; TODIR=$PRODDIR; ;;
-  *) echo "usage: $0 production development | staging development | development staging | development production | staging production | production staging" && exit 1 ;;
+  edit-local) DIR="down ⬇️ "          FROMSITE=$EDITSITE; FROMDIR=$EDITDIR; TOSITE=$LOCALSITE;  TODIR=$LOCALDIR; ;;
+  staging-local)    DIR="down ⬇️ "          FROMSITE=$STAGSITE; FROMDIR=$STAGDIR; TOSITE=$LOCALSITE;  TODIR=$LOCALDIR; ;;
+  local-edit) DIR="up ⬆️ "            FROMSITE=$LOCALSITE;  FROMDIR=$LOCALDIR;  TOSITE=$EDITSITE; TODIR=$EDITDIR; ;;
+  local-staging)    DIR="up ⬆️ "            FROMSITE=$LOCALSITE;  FROMDIR=$LOCALDIR;  TOSITE=$STAGSITE; TODIR=$STAGDIR; ;;
+  edit-staging)     DIR="horizontally ↔️ ";  FROMSITE=$EDITSITE; FROMDIR=$EDITDIR; TOSITE=$STAGSITE; TODIR=$STAGDIR; ;;
+  staging-edit)     DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE; FROMDIR=$STAGDIR; TOSITE=$EDITSITE; TODIR=$EDITDIR; ;;
+  *) echo "usage: $0 edit local | staging local | local staging | local edit | staging edit | edit staging" && exit 1 ;;
 esac
 
 read -r -p "
@@ -50,7 +50,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   availfrom() {
     local AVAILFROM
 
-    if [[ "$LOCAL" = true && $FROM == "development" ]]; then
+    if [[ "$LOCAL" = true && $FROM == "local" ]]; then
       AVAILFROM=$(wp option get home 2>&1)
     else
       AVAILFROM=$(wp "@$FROM" option get home 2>&1)
@@ -66,7 +66,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 
   availto() {
     local AVAILTO
-    if [[ "$LOCAL" = true && $TO == "development" ]]; then
+    if [[ "$LOCAL" = true && $TO == "local" ]]; then
       AVAILTO=$(wp option get home 2>&1)
     else
       AVAILTO=$(wp "@$TO" option get home 2>&1)
@@ -83,12 +83,12 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   echo
 
   # Export/import database, run search & replace
-  if [[ "$LOCAL" = true && $TO == "development" ]]; then
+  if [[ "$LOCAL" = true && $TO == "local" ]]; then
     wp db export &&
     wp db reset --yes &&
     wp "@$FROM" db export - | wp db import - &&
     wp search-replace "$FROMSITE" "$TOSITE"
-  elif [[ "$LOCAL" = true && $FROM == "development" ]]; then
+  elif [[ "$LOCAL" = true && $FROM == "local" ]]; then
     wp "@$TO" db export &&
     wp "@$TO" db reset --yes &&
     wp db export - | wp "@$TO" db import - &&
