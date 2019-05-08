@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e7819865496d2c1da52efbadc5a302c",
+    "content-hash": "5e5a858bea04280e58f58c0d0eed7487",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -372,16 +372,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.1.1",
+            "version": "5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.1.1"
+                "reference": "5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.1.1",
-                "reference": "5.1.1",
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.2",
+                "reference": "5.2",
                 "shasum": null
             },
             "require": {
@@ -406,7 +406,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-03-13T14:18:06+00:00"
+            "time": "2019-05-07T21:16:12+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -884,26 +884,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/gravity-forms-pdf-extended/"
-        },
-        {
-            "name": "wpackagist-plugin/health-check",
-            "version": "1.2.6",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/health-check/",
-                "reference": "tags/1.2.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/health-check.1.2.6.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/health-check/"
         },
         {
             "name": "wpackagist-plugin/luckywp-table-of-contents",
