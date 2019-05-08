@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b58943e6e76ca7cd9902414af4dfefc",
+    "content-hash": "8b55f2a098d9d47836985bd7bbed44c4",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -143,14 +143,14 @@
         },
         {
             "name": "cos/gravityforms",
-            "version": "2.4.8",
+            "version": "2.4.9",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/gravityforms.git",
-                "reference": "8d8bc66283f437beb1a612c2780dde59ca2f396d"
+                "reference": "1799d58b37754cae2b6b1a2bb3181ae212287c94"
             },
             "type": "wordpress-plugin",
-            "time": "2019-04-25T15:23:54+00:00"
+            "time": "2019-05-08T15:27:41+00:00"
         },
         {
             "name": "cos/gravityformsgutenberg",
