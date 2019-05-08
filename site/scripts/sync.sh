@@ -28,13 +28,19 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 case "$1-$2" in
-  edit-local) DIR="down ⬇️ "          FROMSITE=$EDITSITE; FROMDIR=$EDITDIR; TOSITE=$LOCALSITE;  TODIR=$LOCALDIR; ;;
-  staging-local)    DIR="down ⬇️ "          FROMSITE=$STAGSITE; FROMDIR=$STAGDIR; TOSITE=$LOCALSITE;  TODIR=$LOCALDIR; ;;
-  local-edit) DIR="up ⬆️ "            FROMSITE=$LOCALSITE;  FROMDIR=$LOCALDIR;  TOSITE=$EDITSITE; TODIR=$EDITDIR; ;;
-  local-staging)    DIR="up ⬆️ "            FROMSITE=$LOCALSITE;  FROMDIR=$LOCALDIR;  TOSITE=$STAGSITE; TODIR=$STAGDIR; ;;
-  edit-staging)     DIR="horizontally ↔️ ";  FROMSITE=$EDITSITE; FROMDIR=$EDITDIR; TOSITE=$STAGSITE; TODIR=$STAGDIR; ;;
-  staging-edit)     DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE; FROMDIR=$STAGDIR; TOSITE=$EDITSITE; TODIR=$EDITDIR; ;;
-  *) echo "usage: $0 edit local | staging local | local staging | local edit | staging edit | edit staging" && exit 1 ;;
+  edit-local)          DIR="down ⬇️ "           FROMSITE=$EDITSITE;  FROMDIR=$EDITDIR;  TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
+  staging-local)       DIR="down ⬇️ "           FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
+  development-local)   DIR="down ⬇️ "           FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
+  local-edit)          DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$EDITSITE;  TODIR=$EDITDIR; ;;
+  local-staging)       DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
+  local-development)   DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
+  edit-staging)        DIR="horizontally ↔️ ";  FROMSITE=$EDITSITE;  FROMDIR=$EDITDIR;  TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
+  edit-development)    DIR="horizontally ↔️ ";  FROMSITE=$EDITSITE;  FROMDIR=$EDITDIR;  TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
+  staging-edit)        DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$EDITSITE;  TODIR=$EDITDIR; ;;
+  staging-development) DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
+  development-staging) DIR="horizontally ↔️ ";  FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
+  development-edit)    DIR="horizontally ↔️ ";  FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$EDITSITE;  TODIR=$EDITDIR; ;;
+  *) echo "usage: $0 edit local | staging local | development local | local edit | local staging | local development | edit staging | edit development | staging edit | staging development | development staging | development edit" && exit 1 ;;
 esac
 
 read -r -p "
