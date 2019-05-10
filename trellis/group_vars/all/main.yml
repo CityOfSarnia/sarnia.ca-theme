@@ -27,8 +27,8 @@ ntp_servers:
   - "10.30.0.1 iburst"
 
 php_extensions_custom:
-  php-bcmath: "{{ apt_package_state }}"
-  php-imagick: "{{ apt_package_state }}"
-  php-ldap: "{{ apt_package_state }}"
+  php7.3-bcmath: "{{ apt_package_state }}"
+  php7.3-imagick: "{{ apt_package_state }}"
+  php7.3-ldap: "{{ apt_package_state }}"
 
 php_memory_limit: 256M
