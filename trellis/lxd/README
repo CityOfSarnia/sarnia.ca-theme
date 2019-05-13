@@ -6,5 +6,5 @@ before creating your container, be sure that the root user is able to remap the 
 sudo echo 'root:1000:1' | sudo tee -a /etc/subuid /etc/subgid
 
 when creating container, use the '-p' switch to specify the correct config profile, ex
-lxc launch -p username -p sarnia-ca ubuntu:bionic local-sarnia-ca
+lxc launch -p cosadmin -p sarnia-ca ubuntu:bionic local-sarnia-ca
 

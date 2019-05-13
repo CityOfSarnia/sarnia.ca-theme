@@ -1,7 +1,7 @@
 config:
   raw.idmap: |
-    uid 1000 1000
-    gid 1000 1000
+    uid 1000 1001
+    gid 1000 33
   user.vendor-data: |
     #cloud-config
     users:
