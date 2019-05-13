@@ -9,10 +9,11 @@
 - name: "WordPress Server: Install LEMP Stack with PHP 7.3 and MariaDB MySQL"
   hosts: web:&local
   become: yes
-  remote_user: vagrant
+  remote_user: web
 
   roles:
     - { role: common, tags: [common] }
+    - { role: ca-certificates, tags: [ca-certificates] }
     - { role: fail2ban, tags: [fail2ban] }
     - { role: ferm, tags: [ferm] }
     - { role: ntp, tags: [ntp] }
