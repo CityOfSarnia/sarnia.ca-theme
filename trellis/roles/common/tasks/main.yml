@@ -137,11 +137,11 @@
     regexp: ^(hosts\:((?!myhostname).)*)$
     state: present
 
-#- name: Generate SSH key for vagrant user
-#  user:
-#    name: vagrant
-#    generate_ssh_key: yes
-#  when: env == 'local'
+- name: Generate SSH key for web user
+  user:
+    name: web
+    generate_ssh_key: yes
+  when: env == 'local'
 
 - name: Retrieve SSH client IP
   ipify_facts:
