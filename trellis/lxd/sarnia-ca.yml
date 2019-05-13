@@ -1,0 +1,27 @@
+config:
+  user.user-data: |
+    #cloud-config
+    package_upgrade: true
+    hostname: local.sarnia.ca
+    mangage_etc_hosts: true
+    packages:
+      - python-minimal
+      - python-software-properties
+      - build-essential
+      - git
+      - python-mysqldb
+      - libnss-myhostname
+      - dbus
+      - python-pycurl
+      - curl
+    timezone: Etc/UTC
+description: sarnia.ca local profile
+devices:
+  root:
+    path: /
+    pool: default
+    type: disk
+  webroot:
+    path: /srv/www/sarnia.ca/current
+    source: /home/zcollette/wordpress/sites/sarnia.ca/site
+    type: disk

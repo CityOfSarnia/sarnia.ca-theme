@@ -1,0 +1,23 @@
+config:
+  raw.idmap: |
+    uid 1000 1000
+    gid 1000 1000
+  user.vendor-data: |
+    #cloud-config
+    users:
+      - name: cosadmin
+        groups: sudo
+        shell: /bin/bash
+        sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    # ensure users shell is installed
+        packages:
+          - bash
+        ssh_authorized_keys:
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyMMmAwnu3OBf7HbmV7xa+wWfgef2cnIjrNxyFveMEXz5vTp2bjt7EZ5t2crOeba4aI/Q5UbWq/yQpjJftQRPgVw474XgjA3eeqfM9IBQGsnkr6nX5wXgDRMkwA32+IQxnztxVsJ1IlPBaagC3WlnPJZSVtJWEz3GTlnJLCjGckcx0nkTS0aEouu5GBfCgJltgnf+6WczX9aUCocHs4PJVCM+nIarX1OLYCbuFUhGzN+2dLIxlA8ZSpmT2Ia/D3NrB0oQyTbkC8rnLsOznmIYIFqg76QILtofEra/uAk1RDL6IOpDyXOjcszqVodcxsxfxJa5LS9ijRiLdzBsJlPPdbiL9rtCF7vuUVueeEc+9DXl8xLmPtoUbFdhAhHSYF8pdLgrWwUrQkaidq6YhqcpIw8qUm23pnCHrE3UV+EsYTyXySdvvrildZE8rE+gsY0wo3QF2xL4LEree+y8njo3RABKnbBb6Sig/vTQmbGAkGMQWTKK4ZYEYJ+H9CING4FM+UQLH1tpQRnb4n2jIoGG0cSC9BcJzvFb32KOe405TG6O2kMEeOnxNpnXSGCYCwpXyO6i1lQe4ok7eTql/RhosFjpXpaB1e4fZnt79X4Mf473GPwrUrcmQm8EWqB2EFjUzsYfe8ASGnQZgpLVkVGDfb2EcuvPoudWUC1HzFYsPrw== openpgp:0xF5F79AAB
+description: users w-ssh +bridge
+devices:
+  eth0:
+    name: eth0
+    nictype: bridged
+    parent: lxdbr0
+    type: nic

@@ -1,0 +1,10 @@
+after customizing the contents of these .yml files, copy them into lxc configuration profiles using the command
+lxc profile create 'profilename'
+lxc profile edit 'profilename'
+
+before creating your container, be sure that the root user is able to remap the uid and gid of the local filesystem to the container:
+sudo echo 'root:1000:1' | sudo tee -a /etc/subuid /etc/subgid
+
+when creating container, use the '-p' switch to specify the correct config profile, ex
+lxc launch -p username -p sarnia-ca ubuntu:bionic local-sarnia-ca
+
