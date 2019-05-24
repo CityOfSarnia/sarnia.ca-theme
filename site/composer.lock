@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2172835f759ba9272f05b360bba2bac",
+    "content-hash": "c9897e36bd2149f7280198a1bcdde874",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -162,6 +162,20 @@
             },
             "type": "wordpress-plugin",
             "time": "2019-04-25T15:31:14+00:00"
+        },
+        {
+            "name": "cos/sarnia.ca-plugin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git",
+                "reference": "e0178f4713510c2ed05d31ea31a209ae2281afef"
+            },
+            "require": {
+                "composer/installers": "^1.4"
+            },
+            "type": "wordpress-plugin",
+            "time": "2019-05-24T12:54:26+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
@@ -327,16 +341,16 @@
         },
         {
             "name": "roots/soil",
-            "version": "3.7.3",
+            "version": "3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/soil.git",
-                "reference": "d0e409e70dafff4ceeaa8ef941ee319e350317dd"
+                "reference": "7920eb22bb434c1b86ff3d4d7dc318498de0c675"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/soil/zipball/d0e409e70dafff4ceeaa8ef941ee319e350317dd",
-                "reference": "d0e409e70dafff4ceeaa8ef941ee319e350317dd",
+                "url": "https://api.github.com/repos/roots/soil/zipball/7920eb22bb434c1b86ff3d4d7dc318498de0c675",
+                "reference": "7920eb22bb434c1b86ff3d4d7dc318498de0c675",
                 "shasum": ""
             },
             "require": {
@@ -368,7 +382,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-08-14T01:36:41+00:00"
+            "time": "2019-05-23T21:45:50+00:00"
         },
         {
             "name": "roots/wordpress",
@@ -1073,12 +1087,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "89f6e0f30ef66bfb06008d6d6ae6e7cc66a2e0f5"
+                "reference": "4c0ba8a35f1f12dd9236452e9fae4346b0bf2a56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/89f6e0f30ef66bfb06008d6d6ae6e7cc66a2e0f5",
-                "reference": "89f6e0f30ef66bfb06008d6d6ae6e7cc66a2e0f5",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/4c0ba8a35f1f12dd9236452e9fae4346b0bf2a56",
+                "reference": "4c0ba8a35f1f12dd9236452e9fae4346b0bf2a56",
                 "shasum": ""
             },
             "conflict": {
@@ -1276,7 +1290,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-05-22T09:34:58+00:00"
+            "time": "2019-05-23T20:42:12+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1334,6 +1348,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "cos/sarnia.ca-theme": 20,
+        "cos/sarnia.ca-plugin": 20,
         "cos/gravityformsgutenberg": 5,
         "roave/security-advisories": 20
     },
