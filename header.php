@@ -135,11 +135,7 @@
 
 			</h1>
 
-			<?php if( get_field('header_cta_url') ) { ?>
-
-				<a href="<?php the_field('header_cta_url');?>" class="btn banner__cta"><?php the_field('header_cta_text');?></a>
-
-			<?php } ?>
+			<a href="/" class="btn banner__cta">Back to Home</a>
 
 		</header>
 
