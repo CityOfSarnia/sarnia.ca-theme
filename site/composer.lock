@@ -169,13 +169,13 @@
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git",
-                "reference": "e0178f4713510c2ed05d31ea31a209ae2281afef"
+                "reference": "3de64fc39d83d837ebbb66e7a0291cac769332fa"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-plugin",
-            "time": "2019-05-24T12:54:26+00:00"
+            "time": "2019-05-27T13:41:22+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
