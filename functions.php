@@ -1060,7 +1060,7 @@
  * @link https://roots.io/plugins/soil/
  */
 add_theme_support('soil-clean-up');
-add_theme_support('soil-disable-rest-api');
+//add_theme_support('soil-disable-rest-api');
 add_theme_support('soil-disable-asset-versioning');
 add_theme_support('soil-disable-trackbacks');
 //add_theme_support('soil-google-analytics', env('GOOGLE_ANALYTICS_TRACKINGID'));
