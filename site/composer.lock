@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "01b423de780c2158c0e6c01fcd314809",
+    "content-hash": "0bb1ad64d3f7042d59b1e07a9fcf9b9d",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -192,6 +192,132 @@
             "time": "2019-05-28T16:35:30+00:00"
         },
         {
+            "name": "dimadin/backdrop",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dimadin/Backdrop.git",
+                "reference": "6d35ece19db224f189e6ef5371ffffef537c247a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dimadin/Backdrop/zipball/6d35ece19db224f189e6ef5371ffffef537c247a",
+                "reference": "6d35ece19db224f189e6ef5371ffffef537c247a",
+                "shasum": ""
+            },
+            "require": {
+                "dimadin/wp-temporary": "^1.0",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "dimadin\\WP\\Library\\Backdrop\\": "inc/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Milan Dinić",
+                    "email": "milan@srpski.biz",
+                    "homepage": "https://milandinic.com/"
+                }
+            ],
+            "description": "Backdrop",
+            "homepage": "https://github.com/dimadin/Backdrop",
+            "time": "2018-09-14T15:45:30+00:00"
+        },
+        {
+            "name": "dimadin/commonwp",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dimadin/commonWP.git",
+                "reference": "e7bde0de064147e7cb490343eeba89d379ffdea9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dimadin/commonWP/zipball/e7bde0de064147e7cb490343eeba89d379ffdea9",
+                "reference": "e7bde0de064147e7cb490343eeba89d379ffdea9",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "dimadin/backdrop": "^1.0",
+                "dimadin/wp-temporary": "^1.0",
+                "php": ">=5.4"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "dimadin\\WP\\Plugin\\commonWP\\": "inc/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Milan Dinić",
+                    "email": "milan@srpski.biz",
+                    "homepage": "https://milandinic.com/"
+                }
+            ],
+            "description": "Offload open source static assets to the free, public CDN",
+            "homepage": "https://milandinic.com/wordpress/plugins/commonwp/",
+            "keywords": [
+                "cdn",
+                "jsDelivr"
+            ],
+            "time": "2018-12-27T19:46:31+00:00"
+        },
+        {
+            "name": "dimadin/wp-temporary",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dimadin/wp-temporary.git",
+                "reference": "193994a6f88b1d2980ac3408025d0fd476556ee1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dimadin/wp-temporary/zipball/193994a6f88b1d2980ac3408025d0fd476556ee1",
+                "reference": "193994a6f88b1d2980ac3408025d0fd476556ee1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class-wp-temporary.php",
+                    "cli/Temporary_Command.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Milan Dinić",
+                    "email": "milan@srpski.biz",
+                    "homepage": "https://milandinic.com/"
+                }
+            ],
+            "description": "WordPress library to cache data to the database. Like transients without object cache.",
+            "homepage": "https://github.com/dimadin/wp-temporary",
+            "keywords": [
+                "cache"
+            ],
+            "time": "2018-09-14T14:53:09+00:00"
+        },
+        {
             "name": "ffraenz/private-composer-installer",
             "version": "v2.0.0",
             "source": {
@@ -341,16 +467,16 @@
         },
         {
             "name": "roots/soil",
-            "version": "3.7.3",
+            "version": "3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/soil.git",
-                "reference": "d0e409e70dafff4ceeaa8ef941ee319e350317dd"
+                "reference": "7920eb22bb434c1b86ff3d4d7dc318498de0c675"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/soil/zipball/d0e409e70dafff4ceeaa8ef941ee319e350317dd",
-                "reference": "d0e409e70dafff4ceeaa8ef941ee319e350317dd",
+                "url": "https://api.github.com/repos/roots/soil/zipball/7920eb22bb434c1b86ff3d4d7dc318498de0c675",
+                "reference": "7920eb22bb434c1b86ff3d4d7dc318498de0c675",
                 "shasum": ""
             },
             "require": {
@@ -382,7 +508,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-08-14T01:36:41+00:00"
+            "time": "2019-05-23T21:45:50+00:00"
         },
         {
             "name": "roots/wordpress",
