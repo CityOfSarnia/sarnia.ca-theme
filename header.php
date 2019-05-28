@@ -135,7 +135,11 @@
 
 			</h1>
 
-			<a href="/" class="btn banner__cta">Back to Home</a>
+			<?php if(!is_front_page()) { ?>
+			
+			    <a href="/" class="btn banner__cta">Back to Home</a>
+			    
+			<?php } ?>
 
 		</header>
 
