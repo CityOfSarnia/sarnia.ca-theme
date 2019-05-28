@@ -183,13 +183,13 @@
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "99ede47adf5dea6915a449dde721608aea0a33c0"
+                "reference": "bd6da7f4cfed92e7d6523bd8d33f4641d82357bd"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-05-28T16:35:30+00:00"
+            "time": "2019-05-28T17:37:56+00:00"
         },
         {
             "name": "dimadin/backdrop",
