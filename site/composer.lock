@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "986383687cb2145e8565d7f3577e7fdd",
+    "content-hash": "d7ef4571e53f5eda64e086f042871ec2",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -190,132 +190,6 @@
             },
             "type": "wordpress-theme",
             "time": "2019-05-28T17:37:56+00:00"
-        },
-        {
-            "name": "dimadin/backdrop",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dimadin/Backdrop.git",
-                "reference": "6d35ece19db224f189e6ef5371ffffef537c247a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dimadin/Backdrop/zipball/6d35ece19db224f189e6ef5371ffffef537c247a",
-                "reference": "6d35ece19db224f189e6ef5371ffffef537c247a",
-                "shasum": ""
-            },
-            "require": {
-                "dimadin/wp-temporary": "^1.0",
-                "php": ">=5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "dimadin\\WP\\Library\\Backdrop\\": "inc/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Milan Dinić",
-                    "email": "milan@srpski.biz",
-                    "homepage": "https://milandinic.com/"
-                }
-            ],
-            "description": "Backdrop",
-            "homepage": "https://github.com/dimadin/Backdrop",
-            "time": "2018-09-14T15:45:30+00:00"
-        },
-        {
-            "name": "dimadin/commonwp",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dimadin/commonWP.git",
-                "reference": "e7bde0de064147e7cb490343eeba89d379ffdea9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dimadin/commonWP/zipball/e7bde0de064147e7cb490343eeba89d379ffdea9",
-                "reference": "e7bde0de064147e7cb490343eeba89d379ffdea9",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "dimadin/backdrop": "^1.0",
-                "dimadin/wp-temporary": "^1.0",
-                "php": ">=5.4"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "dimadin\\WP\\Plugin\\commonWP\\": "inc/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Milan Dinić",
-                    "email": "milan@srpski.biz",
-                    "homepage": "https://milandinic.com/"
-                }
-            ],
-            "description": "Offload open source static assets to the free, public CDN",
-            "homepage": "https://milandinic.com/wordpress/plugins/commonwp/",
-            "keywords": [
-                "cdn",
-                "jsDelivr"
-            ],
-            "time": "2018-12-27T19:46:31+00:00"
-        },
-        {
-            "name": "dimadin/wp-temporary",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dimadin/wp-temporary.git",
-                "reference": "193994a6f88b1d2980ac3408025d0fd476556ee1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dimadin/wp-temporary/zipball/193994a6f88b1d2980ac3408025d0fd476556ee1",
-                "reference": "193994a6f88b1d2980ac3408025d0fd476556ee1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "class-wp-temporary.php",
-                    "cli/Temporary_Command.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Milan Dinić",
-                    "email": "milan@srpski.biz",
-                    "homepage": "https://milandinic.com/"
-                }
-            ],
-            "description": "WordPress library to cache data to the database. Like transients without object cache.",
-            "homepage": "https://github.com/dimadin/wp-temporary",
-            "keywords": [
-                "cache"
-            ],
-            "time": "2018-09-14T14:53:09+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -966,26 +840,6 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/"
         },
         {
-            "name": "wpackagist-plugin/complete-open-graph",
-            "version": "3.4.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/complete-open-graph/",
-                "reference": "tags/3.4.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/complete-open-graph.3.4.5.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/complete-open-graph/"
-        },
-        {
             "name": "wpackagist-plugin/duplicate-post",
             "version": "3.2.2",
             "source": {
@@ -1126,26 +980,6 @@
             "homepage": "https://wordpress.org/plugins/query-monitor/"
         },
         {
-            "name": "wpackagist-plugin/restricted-site-access",
-            "version": "7.1.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/restricted-site-access/",
-                "reference": "tags/7.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/restricted-site-access.7.1.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/restricted-site-access/"
-        },
-        {
             "name": "wpackagist-plugin/safe-redirect-manager",
             "version": "1.9.2",
             "source": {
@@ -1224,6 +1058,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/stream/"
+        },
+        {
+            "name": "wpackagist-plugin/wonderm00ns-simple-facebook-open-graph-tags",
+            "version": "2.2.6.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wonderm00ns-simple-facebook-open-graph-tags/",
+                "reference": "tags/2.2.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wonderm00ns-simple-facebook-open-graph-tags.2.2.6.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wonderm00ns-simple-facebook-open-graph-tags/"
         }
     ],
     "packages-dev": [
