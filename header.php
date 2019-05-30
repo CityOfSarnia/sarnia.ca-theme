@@ -19,8 +19,6 @@
 		<meta name="robots" content="noindex, nofollow" />
 	<?php } ?>
 
-	<title><?php wp_title(''); ?></title>
-
 	<meta name="author" content="City of Sarnia">
 
 	<meta name="Copyright" content="(C) 2019 City of Sarnia. All rights reserved.">
