@@ -1068,3 +1068,11 @@ add_theme_support('soil-disable-trackbacks');
 add_theme_support('soil-nav-walker');
 add_theme_support('soil-nice-search');
 add_theme_support('soil-relative-urls');
+
+/*
+ * Let WordPress manage the document title.
+ * By adding theme support, we declare that this theme does not use a
+ * hard-coded <title> tag in the document head, and expect WordPress to
+ * provide it for us.
+ */
+add_theme_support( 'title-tag' );
