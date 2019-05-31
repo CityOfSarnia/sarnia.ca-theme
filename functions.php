@@ -1076,3 +1076,12 @@ add_theme_support('soil-relative-urls');
  * provide it for us.
  */
 add_theme_support( 'title-tag' );
+
+function my_acf_post_id() {
+	if ( is_admin() && function_exists( 'acf_maybe_get_POST' ) ) :
+		return intval( acf_maybe_get_POST( 'post_id' ) );
+	else :
+		global $post;
+		return $post->ID;
+	endif;
+}
