@@ -1,63 +1,69 @@
-<?php
-/**
- * @package WordPress
- * @subpackage HTML5-Reset-Wordpress-Theme
- * @since HTML5 Reset 2.0
- */
- get_header(); ?>
+<?php get_header(); ?>
 
-		<?php if (have_posts()) : ?>
+<article class="posts">
 
- 			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
+	<div class="container container--min">
 
-			<?php /* If this is a category archive */ if (is_category()) { ?>
-				<h2>Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h2>
+		<div class="post-list">
 
-			<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-				<h2>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h2>
+			<?php if ( have_posts() ):
 
-			<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-				<h2>Archive for <?php the_time('F jS, Y'); ?></h2>
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-				<h2>Archive for <?php the_time('F, Y'); ?></h2>
+				if (is_day()):
+					$currYear = get_the_time('Y');
+					$currMonth = get_the_time('m');
+					$currDay = get_the_time('d');
+					$wp_query = new WP_Query();
+					$wp_query->query('year=' . $currYear . '&monthnum=' . $currMonth . '&day=' . $currDay . '&post_type=post&paged=' . $paged);
+				elseif (is_month()):
+					$currYear = get_the_time('Y');
+					$currMonth = get_the_time('m');
+					$wp_query = new WP_Query();
+					$wp_query->query('year=' . $currYear . '&monthnum=' . $currMonth . '&post_type=post&paged=' . $paged);
+				elseif (is_year()):
+					$currYear = get_the_time('Y');
+					$wp_query = new WP_Query();
+					$wp_query->query('year=' . $currYear . '&post_type=post&paged=' . $paged);
 
-			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-				<h2 class="pagetitle">Archive for <?php the_time('Y'); ?></h2>
+				endif;
+				while ($wp_query->have_posts()) : $wp_query->the_post();
+			?>
 
-			<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-				<h2 class="pagetitle">Author Archive</h2>
+			<div class="post-list__item">
 
-			<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-				<h2 class="pagetitle">Blog Archives</h2>
-			
-			<?php } ?>
+				<h3 class="post-list__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-			<?php post_navigation(); ?>
+				<p class="post-list__excerpt"><?php echo get_the_excerpt(); ?></p>
 
-			<?php while (have_posts()) : the_post(); ?>
-			
-				<article <?php post_class() ?>>
-				
-						<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					
-						<?php posted_on(); ?>
+			</div>
 
-						<div class="entry">
-							<?php the_content(); ?>
-						</div>
+			<?php
+				endwhile;
+				wp_reset_postdata();
+			endif; ?>
 
-				</article>
+		</div>
 
-			<?php endwhile; ?>
+		<?php
+			global $wp_query;
 
-			<?php post_navigation(); ?>
-			
-	<?php else : ?>
+			$big = 999999999;
+			echo '<div class="paginate-links">';
+				echo paginate_links( array(
+				'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				'format' => '?paged=%#%',
+				'prev_text' => __('<<'),
+				'next_text' => __('>>'),
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $wp_query->max_num_pages
+				) );
+			echo '</div>';
+		?>
 
-		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
+	</div>
 
-	<?php endif; ?>
+</article>
 
 <?php get_sidebar(); ?>
 
