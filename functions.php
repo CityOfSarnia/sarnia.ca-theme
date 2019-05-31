@@ -47,6 +47,20 @@
 		register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
 	}
 
+	// Add toggle button when 2nd level navigation exists
+	class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
+	{
+		function start_lvl( &$output, $depth = 0, $args = array() ) {
+			$indent = str_repeat("\t", $depth);
+			$output .= "\n$indent<button type='button' class='toggle-sub-menu'>
+			</button><ul class='sub-menu'>\n";
+		}
+		function end_lvl( &$output, $depth = 0, $args = array() ) {
+			$indent = str_repeat("\t", $depth);
+			$output .= "$indent</ul>\n";
+		}
+	}
+
 	function create_my_post_types() {
 		register_post_type( 'notifications',
 				array(

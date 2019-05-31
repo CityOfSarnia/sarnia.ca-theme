@@ -77,6 +77,13 @@
 	<header class="header" role="banner">
 		<div class="header__wrapper">
 			<a href="/" class="logo">City of Sarnia</a>
+			<nav class="primary-menu" role="navigation">
+				<?php wp_nav_menu( array(
+					'theme_location' => 'primary-menu',
+					'container_class' => 'primary-menu__container',
+					'walker' => new Add_button_of_Sublevel_Walker
+				)); ?>
+			</nav>
 			<div class="search-form">
 				<script>
 					(function() {
