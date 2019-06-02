@@ -308,130 +308,6 @@
 	if( function_exists('acf_add_local_field_group') ):
 
 		acf_add_local_field_group(array(
-			'key' => 'group_5c0956344ffff',
-			'title' => 'Banner',
-			'fields' => array(
-				array(
-					'key' => 'field_5c0d23865eabe',
-					'label' => 'Byline',
-					'name' => 'banner_byline',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5c095a8b398c9',
-					'label' => 'Headline',
-					'name' => 'banner_headline',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5c0d23915eabf',
-					'label' => 'CTA Text',
-					'name' => 'banner_cta_text',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5c0d23b25eac0',
-					'label' => 'CTA URL',
-					'name' => 'banner_cta_url',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5c0d329b138af',
-					'label' => 'Image',
-					'name' => 'banner_image',
-					'type' => 'image',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'return_format' => 'array',
-					'preview_size' => 'thumbnail',
-					'library' => 'all',
-					'min_width' => '',
-					'min_height' => '',
-					'min_size' => '',
-					'max_width' => '',
-					'max_height' => '',
-					'max_size' => '',
-					'mime_types' => '',
-				),
-			),
-			'location' => array(
-				array(
-					array(
-						'param' => 'block',
-						'operator' => '==',
-						'value' => 'acf/banner',
-					),
-				),
-			),
-			'menu_order' => 0,
-			'position' => 'acf_after_title',
-			'style' => 'seamless',
-			'label_placement' => 'top',
-			'instruction_placement' => 'label',
-			'hide_on_screen' => '',
-			'active' => 1,
-			'description' => '',
-		));
-
-		acf_add_local_field_group(array(
 			'key' => 'group_5c0984555b0da',
 			'title' => 'Contact Information',
 			'fields' => array(
@@ -529,7 +405,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-
+		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0d0c3ca4797',
 			'title' => 'Custom Card',
@@ -677,7 +553,157 @@
 			'active' => 1,
 			'description' => '',
 		));
-
+		
+		acf_add_local_field_group(array(
+			'key' => 'group_5c0956344ffff',
+			'title' => 'Header',
+			'fields' => array(
+				array(
+					'key' => 'field_5c095a8b398c9',
+					'label' => 'Headline',
+					'name' => 'header_headline',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c0d23865eabe',
+					'label' => 'Byline',
+					'name' => 'header_byline',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5cf15cd71a963',
+					'label' => 'Header Orientation',
+					'name' => 'header_orientation',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => 'Reverse',
+					'default_value' => 0,
+					'ui' => 0,
+					'ui_on_text' => '',
+					'ui_off_text' => '',
+				),
+				array(
+					'key' => 'field_5c0d23915eabf',
+					'label' => 'CTA Text',
+					'name' => 'header_cta_text',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c0d23b25eac0',
+					'label' => 'CTA URL',
+					'name' => 'header_cta_url',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c0d329b138af',
+					'label' => 'Image',
+					'name' => 'header_image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'page',
+					),
+				),
+				array(
+					array(
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'post',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'acf_after_title',
+			'style' => 'seamless',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => '',
+			'active' => 1,
+			'description' => '',
+		));
+		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0fcf1b317fe',
 			'title' => 'Navigation',
@@ -761,7 +787,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-
+		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c1adbf094daa',
 			'title' => 'Notification Details',
@@ -804,7 +830,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-
+		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0d6a74e7cbb',
 			'title' => 'Notifications',
@@ -832,7 +858,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-
+		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0c5f4d4ac4e',
 			'title' => 'Post Card',
@@ -879,7 +905,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-
+		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0fcf62a7fa9',
 			'title' => 'Recent Posts',
@@ -968,7 +994,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-
+		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c098a33e1a52',
 			'title' => 'Social',
@@ -1040,7 +1066,7 @@
 			'active' => 1,
 			'description' => '',
 		));
-
+		
 		endif;
 
         // Widgets

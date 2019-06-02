@@ -35,6 +35,10 @@
 
 <body <?php body_class(); ?>>
 
+
+
+	<div class="wrap">
+
 	<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1 ) ); ?>
 	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<?php
@@ -65,18 +69,16 @@
 
 	<header class="header" role="banner">
 		<div class="header__wrapper">
+			
+			<button class="primary-menu__toggle js-primary-menu__toggle">Toggle Menu</button>
+
 			<a href="/" class="logo">City of Sarnia</a>
-			<nav class="primary-menu" role="navigation">
-				<?php wp_nav_menu( array(
-					'theme_location' => 'primary-menu',
-					'container_class' => 'primary-menu__container',
-					'walker' => new Add_button_of_Sublevel_Walker
-				)); ?>
-			</nav>
+
 			<div class="search-form">
 				<script>
 					(function() {
-						var cx = '<?=getenv('GOOGLE_CSE_CX')?>';
+						// var cx = '<?=getenv('GOOGLE_CSE_CX')?>';
+						var cx = '009551952413465828093:td3z1k_kybg';
 						var gcse = document.createElement('script');
 						gcse.type = 'text/javascript';
 						gcse.async = true;
@@ -87,6 +89,15 @@
 				</script>
 				<gcse:searchbox-only resultsUrl="/search"></gcse:searchbox-only>
 			</div>
+
+			<nav class="primary-menu" role="navigation">
+				<?php wp_nav_menu( array(
+					'theme_location' => 'primary-menu',
+					'container_class' => 'primary-menu__container',
+					'walker' => new Add_button_of_Sublevel_Walker
+				)); ?>
+			</nav>
+
 		</div>
 	</header>
 
@@ -94,7 +105,7 @@
 
 		<header class="banner__header">
 
-			<h1>
+			<h1 class="<?php echo get_field('header_orientation') ? 'reverse' : ''; ?>">
 
 				<?php if( get_field('header_byline') ) { ?>
 

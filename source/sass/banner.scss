@@ -52,9 +52,20 @@
 .banner__header {
   position: relative;
   z-index: 1;
-  text-align: center;
 
-  @media screen and (min-width: $bp-md) {
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.reverse {
+      .banner__headline {
+        order: 1;
+      }
+      .banner__byline {
+        order: 2;
+      }
+    }
   }
 }
 

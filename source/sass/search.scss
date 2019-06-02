@@ -1,10 +1,18 @@
 .search-form {
   width: 100%;
   max-width: 440px;
+  order: 1;
 
   @media screen and (min-width: $bp-md) {
     width: auto;
     min-width: 440px;
+  }
+}
+
+.home {
+  .search-form {
+    order: 2;
+    align-self: center;
   }
 }
 
