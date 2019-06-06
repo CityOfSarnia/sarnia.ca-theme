@@ -1,4 +1,6 @@
 path: web/wp
+server:
+  docroot: web
 
 @local:
   ssh: web@local.sarnia.ca/srv/www/sarnia.ca/current
