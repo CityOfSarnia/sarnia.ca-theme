@@ -187,15 +187,8 @@
 
 .wp-block .banner__header {
   position: relative;
-  z-index: 1; }
-  .wp-block .banner__header h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .wp-block .banner__header h1.reverse .banner__headline {
-      order: 1; }
-    .wp-block .banner__header h1.reverse .banner__byline {
-      order: 2; }
+  z-index: 1;
+  text-align: center; }
 
 .wp-block .banner__headline {
   font-size: 50px;
@@ -206,8 +199,7 @@
   font-family: "Playfair Display", Georgia, Times, serif;
   font-weight: 400;
   font-style: normal;
-  color: #fff;
-  text-align: center; }
+  color: #fff; }
 
 .wp-block .banner__byline {
   font-size: 28px;
@@ -218,8 +210,7 @@
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
-  color: #fff;
-  text-align: center; }
+  color: #fff; }
 
 .wp-block .banner__cta {
   margin-top: 20px; }

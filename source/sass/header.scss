@@ -10,11 +10,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 30px 20px;
   z-index: 1;
 
   @media screen and (min-width: $bp-md) {
-    align-items: flex-end;
-    padding: 20px 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 60px;
   }
 }
