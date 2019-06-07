@@ -29,7 +29,7 @@
 								<p class="contact-item__text"><?php the_field('address', 'option'); ?></p>
 							<?php } ?>
 						</div>
-						
+
 						<div class="contact-list__item contact-item">
 							<?php if( get_field('hours', 'option') ) { ?>
 								<p class="contact-item__headline">Hours</p>
@@ -85,6 +85,8 @@
 	</div>
 
 </footer>
+
+</div>
 
 <?php wp_footer(); ?>
 

@@ -20,7 +20,7 @@
 			default :
 				$card_count = 0;
 		}
-		
+
 		return $colour;
 	}
 
@@ -29,22 +29,36 @@
 		return 20;
 	}
 	add_filter( 'excerpt_length', 'sarnia_excerpt_length' );
-	
+
 	// Define Post Thumbnails
 	add_theme_support( 'post-thumbnails');
 	add_image_size( 'home-banner', 1000, 900, true );
 	add_image_size( 'banner', 1600, 600, true );
 	add_image_size( 'card', 780, 200, true );
-			
+
 	// Add Theme Features
 	add_post_type_support( 'page', 'excerpt' );
-	
-	// Register Main Menu 
+
+	// Register Main Menu
 	add_action( 'init', 'register_my_menu' );
 
 	function register_my_menu() {
 		register_nav_menu( 'primary-menu', __( 'Primary Menu' ) );
 		register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
+	}
+
+	// Add toggle button when 2nd level navigation exists
+	class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
+	{
+		function start_lvl( &$output, $depth = 0, $args = array() ) {
+			$indent = str_repeat("\t", $depth);
+			$output .= "\n$indent<button type='button' class='toggle-sub-menu'>
+			</button><ul class='sub-menu'>\n";
+		}
+		function end_lvl( &$output, $depth = 0, $args = array() ) {
+			$indent = str_repeat("\t", $depth);
+			$output .= "$indent</ul>\n";
+		}
 	}
 
 	function create_my_post_types() {
@@ -69,31 +83,31 @@
 	add_action( 'init', 'create_my_post_types' );
 
 	// Create Custom Taxonomies
-	add_action( 'init', 'build_taxonomies', 0 );  
-	
+	add_action( 'init', 'build_taxonomies', 0 );
+
 	function build_taxonomies() {
-					
-		register_taxonomy(  
-			'filter',  
-			array('notifications'),  
-			array(  
-				'hierarchical' => true,  
-				'label' => 'Filter',  
-				'query_var' => true,  
-			)  
+
+		register_taxonomy(
+			'filter',
+			array('notifications'),
+			array(
+				'hierarchical' => true,
+				'label' => 'Filter',
+				'query_var' => true,
+			)
 		);
 
-		register_taxonomy(  
-			'notification-icon',  
-			array('notifications'),  
-			array(  
-				'hierarchical' => true,  
-				'label' => 'Notification Icon',  
-				'query_var' => true,  
-			)  
+		register_taxonomy(
+			'notification-icon',
+			array('notifications'),
+			array(
+				'hierarchical' => true,
+				'label' => 'Notification Icon',
+				'query_var' => true,
+			)
 		);
 	}
-	
+
 	// Register Options Page
 	if( function_exists('acf_add_options_page') ) {
 		acf_add_options_page();
@@ -106,6 +120,8 @@
 		add_theme_support( 'disable-custom-colors' );
 		add_theme_support('disable-custom-font-sizes');
 		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'automatic-feed-links' );
+		add_filter( 'feed_links_show_comments_feed', '__return_false' );
 		remove_filter( 'the_content', 'wpautop' );
 	}
 	add_action( 'after_setup_theme', 'sarnia_setup' );
@@ -125,7 +141,7 @@
 			'core/html',
 			'acf/post-card',
 			'acf/custom-card',
-			'acf/banner',
+//			'acf/banner',
 			'acf/notifications',
 			'acf/navigation',
 			'acf/recent-posts',
@@ -174,7 +190,7 @@
 
 	add_action('acf/init', 'my_acf_init');
 	function my_acf_init() {
-		
+
 		// check function exists
 		if( function_exists('acf_register_block') ) {
 
@@ -254,10 +270,10 @@
 	}
 
 	function my_acf_block_render_callback( $block ) {
-		
+
 		// convert name ("acf/testimonial") into path friendly slug ("testimonial")
 		$slug = str_replace('acf/', '', $block['name']);
-		
+
 		// include a template part from within the "template-parts/block" folder
 		if( file_exists(STYLESHEETPATH . "/block/block-{$slug}.php") ) {
 			include( STYLESHEETPATH . "/block/block-{$slug}.php" );
@@ -291,130 +307,6 @@
 
 	if( function_exists('acf_add_local_field_group') ):
 
-		acf_add_local_field_group(array(
-			'key' => 'group_5c0956344ffff',
-			'title' => 'Banner',
-			'fields' => array(
-				array(
-					'key' => 'field_5c0d23865eabe',
-					'label' => 'Byline',
-					'name' => 'banner_byline',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5c095a8b398c9',
-					'label' => 'Headline',
-					'name' => 'banner_headline',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5c0d23915eabf',
-					'label' => 'CTA Text',
-					'name' => 'banner_cta_text',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5c0d23b25eac0',
-					'label' => 'CTA URL',
-					'name' => 'banner_cta_url',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5c0d329b138af',
-					'label' => 'Image',
-					'name' => 'banner_image',
-					'type' => 'image',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'return_format' => 'array',
-					'preview_size' => 'thumbnail',
-					'library' => 'all',
-					'min_width' => '',
-					'min_height' => '',
-					'min_size' => '',
-					'max_width' => '',
-					'max_height' => '',
-					'max_size' => '',
-					'mime_types' => '',
-				),
-			),
-			'location' => array(
-				array(
-					array(
-						'param' => 'block',
-						'operator' => '==',
-						'value' => 'acf/banner',
-					),
-				),
-			),
-			'menu_order' => 0,
-			'position' => 'acf_after_title',
-			'style' => 'seamless',
-			'label_placement' => 'top',
-			'instruction_placement' => 'label',
-			'hide_on_screen' => '',
-			'active' => 1,
-			'description' => '',
-		));
-		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0984555b0da',
 			'title' => 'Contact Information',
@@ -655,6 +547,156 @@
 			'menu_order' => 0,
 			'position' => 'normal',
 			'style' => 'default',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => '',
+			'active' => 1,
+			'description' => '',
+		));
+		
+		acf_add_local_field_group(array(
+			'key' => 'group_5c0956344ffff',
+			'title' => 'Header',
+			'fields' => array(
+				array(
+					'key' => 'field_5c095a8b398c9',
+					'label' => 'Headline',
+					'name' => 'header_headline',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c0d23865eabe',
+					'label' => 'Byline',
+					'name' => 'header_byline',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5cf15cd71a963',
+					'label' => 'Header Orientation',
+					'name' => 'header_orientation',
+					'type' => 'true_false',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => 'Reverse',
+					'default_value' => 0,
+					'ui' => 0,
+					'ui_on_text' => '',
+					'ui_off_text' => '',
+				),
+				array(
+					'key' => 'field_5c0d23915eabf',
+					'label' => 'CTA Text',
+					'name' => 'header_cta_text',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c0d23b25eac0',
+					'label' => 'CTA URL',
+					'name' => 'header_cta_url',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5c0d329b138af',
+					'label' => 'Image',
+					'name' => 'header_image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'page',
+					),
+				),
+				array(
+					array(
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'post',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'acf_after_title',
+			'style' => 'seamless',
 			'label_placement' => 'top',
 			'instruction_placement' => 'label',
 			'hide_on_screen' => '',
@@ -1026,3 +1068,28 @@
 		));
 		
 		endif;
+
+        // Widgets
+        if ( function_exists('register_sidebar' )) {
+                function sarnia_widgets_init() {
+                        register_sidebar( array(
+                                'name' => __( 'Sidebar Widgets', 'sarnia' ),
+                                'id' => 'sidebar-primary',
+                                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                                'after_widget'  => '</div>',
+                                'before_title'  => '<h3 class="widget-title">',
+                                'after_title'   => '</h3>',
+                        ) );
+                }
+                add_action( 'widgets_init', 'sarnia_widgets_init' );
+        }
+
+add_theme_support('soil-clean-up');
+add_theme_support('soil-disable-rest-api');
+add_theme_support('soil-disable-asset-versioning');
+add_theme_support('soil-disable-trackbacks');
+add_theme_support('soil-jquery-cdn');
+add_theme_support('soil-js-to-footer');
+add_theme_support('soil-nav-walker');
+add_theme_support('soil-nice-search');
+add_theme_support('soil-relative-urls');
