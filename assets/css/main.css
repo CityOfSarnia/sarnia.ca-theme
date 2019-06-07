@@ -509,7 +509,8 @@ main {
   font-family: "Playfair Display", Georgia, Times, serif;
   font-weight: 400;
   font-style: normal;
-  color: #fff; }
+  color: #fff;
+  text-align: center; }
 
 .banner__byline {
   font-size: 28px;
@@ -520,7 +521,8 @@ main {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
-  color: #fff; }
+  color: #fff;
+  text-align: center; }
 
 .banner__cta {
   margin-top: 20px; }
@@ -808,6 +810,7 @@ main {
 
 .logo {
   display: block;
+  align-self: flex-start;
   background-image: url("../img/sarnia-logo.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -839,24 +842,37 @@ main {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: red; }
+  background-color: #213367;
+  width: 250px;
+  height: 100vh;
+  z-index: -1; }
   @media screen and (min-width: 850px) {
     .primary-menu {
       display: block;
       position: relative;
-      order: 2;
-      margin-right: -25px; } }
+      margin-top: -50px;
+      margin-right: 35px;
+      top: 120px;
+      height: auto;
+      width: auto;
+      background-color: transparent;
+      pointer-events: none; } }
   .primary-menu .menu {
-    display: flex;
     list-style: none;
     margin: 0;
     padding: 0; }
+    @media screen and (min-width: 850px) {
+      .primary-menu .menu {
+        display: flex;
+        justify-content: flex-end; } }
     .primary-menu .menu li {
       margin: 0;
       padding: 0; }
       .primary-menu .menu li a {
-        display: block;
-        padding: 20px 25px;
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        height: 50px;
         font-size: 18px;
         font-size: 1.125rem;
         line-height: 1;
@@ -864,19 +880,14 @@ main {
         font-family: "Open Sans", Helvetica, Arial, sans-serif;
         color: #fff;
         font-weight: 300;
-        font-style: normal; }
+        font-style: normal;
+        pointer-events: auto; }
     .primary-menu .menu li::before {
       display: none; }
 
-@media screen and (min-width: 850px) {
-  .home .primary-menu {
-    order: 1;
-    margin-top: 50px;
-    margin-bottom: 25px; } }
-
 .primary-menu__toggle {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
   width: 40px;
   height: 25px;
@@ -903,7 +914,11 @@ main {
   transition: transform 0.25s ease 0s;
   position: relative;
   z-index: 2;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); }
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0); }
+  @media screen and (min-width: 850px) {
+    .wrap {
+      z-index: 1; } }
   .wrap.js-nav_is_open {
     transform: translate3d(-250px, 0, 0); }
     @media screen and (min-width: 850px) {
@@ -914,6 +929,21 @@ main {
   @media screen and (min-width: 850px) {
     .wrap {
       box-shadow: none; } }
+
+.top {
+  position: relative;
+  z-index: 1; }
+  @media screen and (min-width: 850px) {
+    .top {
+      z-index: 2; } }
+
+.feature-notification {
+  transition: transform 0.25s ease 0s; }
+  .feature-notification.js-nav_is_open {
+    transform: translate3d(-250px, 0, 0); }
+    @media screen and (min-width: 850px) {
+      .feature-notification.js-nav_is_open {
+        transform: translate3d(0, 0, 0); } }
 
 .post-card {
   display: flex;
@@ -1578,8 +1608,10 @@ main {
       min-width: 440px; } }
 
 .home .search-form {
-  order: 2;
   align-self: center; }
+  @media screen and (min-width: 850px) {
+    .home .search-form {
+      margin-top: 150px; } }
 
 form.gsc-search-box {
   margin: 0 !important;
