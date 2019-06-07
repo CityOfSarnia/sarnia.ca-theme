@@ -33,37 +33,52 @@
 
 <body <?php body_class(); ?>>
 
-	<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1 ) ); ?>
-	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-		<?php
-			$terms = get_the_terms( $post->ID, 'notification-icon' );
-			if ($terms) {
-				$terms_slugs = array();
-				foreach ( $terms as $term ) {
-						$terms_slugs[] = $term->slug;
+	<div class="top">
+		<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1 ) ); ?>
+		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+			<?php
+				$terms = get_the_terms( $post->ID, 'notification-icon' );
+				if ($terms) {
+					$terms_slugs = array();
+					foreach ( $terms as $term ) {
+							$terms_slugs[] = $term->slug;
+					}
+					$icon = $terms_slugs[0];
+				} else {
+					$icon = 'default-notification';
 				}
-				$icon = $terms_slugs[0];
-			} else {
-				$icon = 'default-notification';
-			}
-		?>
-		<div class="feature-notification">
-			<div class="container feature-notification__wrapper">
-				<div class="feature-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
-				<div class="feature-notification__main">
-					<h4 class="feature-notification__headline"><?php the_title(); ?></h4>
-					<p class="feature-notification__text"><?php echo get_the_content(); ?></p>
+			?>
+			<div class="feature-notification">
+				<div class="container feature-notification__wrapper">
+					<div class="feature-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
+					<div class="feature-notification__main">
+						<h4 class="feature-notification__headline"><?php the_title(); ?></h4>
+						<p class="feature-notification__text"><?php echo get_the_content(); ?></p>
+					</div>
 				</div>
 			</div>
-		</div>
 
-	<?php endwhile; ?>
+		<?php endwhile; ?>
+		<?php wp_reset_query(); ?>
 
-	<?php wp_reset_query(); ?>
+		<nav class="primary-menu" role="navigation">
+			<?php wp_nav_menu( array(
+				'theme_location' => 'primary-menu',
+				'container_class' => 'primary-menu__container',
+				'walker' => new Add_button_of_Sublevel_Walker
+			)); ?>
+		</nav>
+	</div>
+
+	<div class="wrap">
 
 	<header class="header" role="banner">
 		<div class="header__wrapper">
+
+			<button class="primary-menu__toggle js-primary-menu__toggle">Toggle Menu</button>
+
 			<a href="/" class="logo">City of Sarnia</a>
+
 			<div class="search-form">
 				<script>
 					(function() {
@@ -78,6 +93,7 @@
 				</script>
 				<gcse:searchbox-only resultsUrl="/search"></gcse:searchbox-only>
 			</div>
+
 		</div>
 	</header>
 
@@ -85,7 +101,7 @@
 
 		<header class="banner__header">
 
-			<h1>
+			<h1 class="<?php echo get_field('header_orientation') ? 'reverse' : ''; ?>">
 
 				<?php if( get_field('header_byline') ) { ?>
 
@@ -133,10 +149,10 @@
 
 			</h1>
 
-			<?php if(!is_front_page()) { ?>
-			
-			    <a href="/" class="btn banner__cta">Back to Home</a>
-			    
+			<?php if( get_field('header_cta_url') ) { ?>
+
+				<a href="<?php the_field('header_cta_url');?>" class="btn banner__cta"><?php the_field('header_cta_text');?></a>
+
 			<?php } ?>
 
 		</header>
