@@ -1,3 +1,1 @@
-!function(n){n(document).ready(function(){
-// something interactive...
-})}(window.jQuery);
+!function(s){s(document).ready(function(){var n=s(".wrap"),i=s(".feature-notification"),e;s(".js-primary-menu__toggle").on("click",function(){n.hasClass("js-nav_is_open")?setTimeout(function(){n.removeClass("js-nav_is_visible")},1e3):n.addClass("js-nav_is_visible"),n.toggleClass("js-nav_is_open"),i.toggleClass("js-nav_is_open")})})}(window.jQuery);
