@@ -52,20 +52,9 @@
 .banner__header {
   position: relative;
   z-index: 1;
+  text-align: center;
 
-  h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &.reverse {
-      .banner__headline {
-        order: 1;
-      }
-      .banner__byline {
-        order: 2;
-      }
-    }
+  @media screen and (min-width: $bp-md) {
   }
 }
 
@@ -76,7 +65,6 @@
   font-weight: 400;
   font-style: normal;
   color: $white;
-  text-align: center;
 }
 
 .banner__byline {
@@ -86,7 +74,6 @@
   font-weight: 300;
   font-style: normal;
   color: $white;
-  text-align: center;
 }
 
 .banner__cta {
