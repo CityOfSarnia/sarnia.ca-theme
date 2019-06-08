@@ -1077,11 +1077,6 @@
 			'active' => 1,
 			'description' => '',
 		));
-<<<<<<< HEAD
-
-=======
-		
->>>>>>> f1866fdaaf092aa4dab99b8dfc07c404e9c358aa
 		endif;
 
         // Widgets
