@@ -6,6 +6,7 @@ wordpress_sites:
   sarnia.ca:
     site_hosts:
       - canonical: 300us18-web007.bhs7.cos.city.sarnia.on.ca
+      - canonical: 300us18-web008.bhs7.cos.city.sarnia.on.ca
         # redirects:
         #   - otherdomain.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
@@ -18,8 +19,8 @@ wordpress_sites:
     ssl:
       enabled: true
       provider: manual
-      cert: ~/ssl/300us18-web007.crt
-      key: ~/ssl/300us18-web007.key
+      cert: ~/ssl/development.sarnia.crt
+      key: ~/ssl/development.sarnia.key
     cache:
       enabled: false
     env:
@@ -30,4 +31,3 @@ wordpress_sites:
       db_host: 10.30.1.50
       google_analytics_trackingID: "UA-45028636-13"
       google_cse_cx: "005949542510458416255:ngjhi177cs8"
-    deploy_keep_releases: 3
