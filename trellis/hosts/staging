@@ -2,7 +2,9 @@
 # List each machine only once per [group], even if it will host multiple sites.
 
 [staging]
+300US18-WEB005.bhs7.cos.city.sarnia.on.ca
 300US18-WEB006.bhs7.cos.city.sarnia.on.ca
 
 [web]
+300US18-WEB005.bhs7.cos.city.sarnia.on.ca
 300US18-WEB006.bhs7.cos.city.sarnia.on.ca
