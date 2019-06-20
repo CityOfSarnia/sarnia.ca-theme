@@ -162,6 +162,7 @@
 			'core-embed/facebook',
 			'core-embed/twitter',
 			'gravityforms/block',
+			'gravityforms/form',
 			'luckywp/tableofcontents'
 		);
 	}
