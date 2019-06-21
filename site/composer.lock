@@ -172,13 +172,13 @@
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "90714645150e3e82dc1608453bcacd96137a2910"
+                "reference": "16f31a70c242404e63fa6a10abab160bbb8d7696"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-06-20T21:50:35+00:00"
+            "time": "2019-06-21T17:49:07+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
