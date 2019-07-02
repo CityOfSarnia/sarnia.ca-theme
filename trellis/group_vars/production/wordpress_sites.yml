@@ -23,8 +23,8 @@ wordpress_sites:
     h5bp:
       expires: true # See https://roots.io/trellis/docs/wordpress-sites/#common and https://github.com/h5bp/server-configs-nginx
     env:
-      wp_home: https://beta.sarnia.ca
-      wp_siteurl: https://beta.sarnia.ca/wp
+      wp_home: https://www.sarnia.ca
+      wp_siteurl: https://www.sarnia.ca/wp
       db_name: sarnia_ca_production
       db_user: sarnia_ca_production_ro
       db_host: 10.30.1.50
