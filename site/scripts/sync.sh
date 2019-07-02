@@ -11,7 +11,7 @@ DEVDIR="web@300US18-WEB007.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/
 DEVSITE="https://dev.sarnia.ca"
 
 EDITDIR="web@300US18-WEB003.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
-EDITSITE="https://beta.sarnia.ca"
+EDITSITE="https://www.sarnia.ca"
 
 STAGDIR="web@300US18-WEB005.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
 STAGSITE="https://staging.sarnia.ca"
