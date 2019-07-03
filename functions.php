@@ -161,7 +161,7 @@
 			'core-embed/vimeo',
 			'core-embed/facebook',
 			'core-embed/twitter',
-			'gravityforms/block',
+//			'gravityforms/block',
 			'gravityforms/form',
 			'luckywp/tableofcontents'
 		);
@@ -943,6 +943,26 @@
 					'load_terms' => 0,
 					'return_format' => 'id',
 					'multiple' => 0,
+				),
+				array(
+					'key' => 'field_5d1cc1d0380bb',
+					'label' => 'Recent Posts Count',
+					'name' => 'recent_posts_count',
+					'type' => 'range',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'min' => 3,
+					'max' => 6,
+					'step' => '',
+					'prepend' => '',
+					'append' => '',
 				),
 				array(
 					'key' => 'field_5c16f929e1ffd',

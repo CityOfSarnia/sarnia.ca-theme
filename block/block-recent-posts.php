@@ -33,7 +33,7 @@
 
       <?php } ?>
 
-      <?php $loop = new WP_Query( array( 'post_type' => 'post', 'cat' => $cat_id, 'posts_per_page' => 3 ) ); ?>
+      <?php $loop = new WP_Query( array( 'post_type' => 'post', 'cat' => $cat_id, 'posts_per_page' => get_field('recent_posts_count') ) ); ?>
 
       <ul class="news-card-list">
           
