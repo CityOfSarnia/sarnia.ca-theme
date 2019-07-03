@@ -33,10 +33,12 @@
 
       <?php } ?>
 
-      <?php $loop = new WP_Query( array( 'post_type' => 'post', 'cat' => $cat_id, 'posts_per_page' => get_field('recent_posts_count') ) ); ?>
+      <?php $post_count = (get_field('recent_posts_count') ? get_field('recent_posts_count') : 3) ; ?>
+
+      <?php $loop = new WP_Query( array( 'post_type' => 'post', 'cat' => $cat_id, 'posts_per_page' => $post_count ) ); ?>
 
       <ul class="news-card-list">
-          
+
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
           <li class="news-card-list__item">
