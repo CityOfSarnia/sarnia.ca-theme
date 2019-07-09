@@ -21,3 +21,7 @@
 - name: ca-certificates
   src: bdellegrazie.ca-certificates
   version: v2.1.1
+
+- name: elasticsearch
+  src: geerlingguy.elasticsearch
+  version: 3.0.1
