@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "441fd673d0c8921b7fbc2a90c9fd3a39",
+    "content-hash": "759c71b0f9ed130a243102ca29640e27",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -154,17 +154,17 @@
         },
         {
             "name": "cos/sarnia.ca-plugin",
-            "version": "v0.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git",
-                "reference": "994c2aa15cb079e825b2cc4aadab5b9534dcb473"
+                "reference": "46232fcdfe4bd5ccf3277b8a6f3ac63b9e98c18e"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
-            "type": "wordpress-plugin",
-            "time": "2019-06-21T13:32:06+00:00"
+            "type": "wordpress-muplugin",
+            "time": "2019-07-10T19:56:53+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
@@ -850,15 +850,15 @@
         },
         {
             "name": "wpackagist-plugin/duplicate-post",
-            "version": "3.2.2",
+            "version": "3.2.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/duplicate-post/",
-                "reference": "tags/3.2.2"
+                "reference": "tags/3.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -930,15 +930,15 @@
         },
         {
             "name": "wpackagist-plugin/luckywp-table-of-contents",
-            "version": "1.5.6",
+            "version": "1.5.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/luckywp-table-of-contents/",
-                "reference": "tags/1.5.6"
+                "reference": "tags/1.5.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.5.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.5.7.zip",
                 "reference": null,
                 "shasum": null
             },

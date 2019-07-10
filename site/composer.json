@@ -79,7 +79,7 @@
     "roots/soil": "^3.8.1",
     "roots/wp-stage-switcher": "^2.1",
     "cos/sarnia.ca-theme": "dev-master",
-    "cos/sarnia.ca-plugin": "^0.3.0",
+    "cos/sarnia.ca-plugin": "^1.0.0",
     "cos/gravityforms": "2.4.10.7",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.8.0",
     "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0",
