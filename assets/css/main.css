@@ -1960,12 +1960,16 @@ ol.commentlist li.parent {
 }
 .header__wrapper .searchform input[type="text"] { border-color: #fff; }
 
-.searchform input[type="submit"] {
+.searchform button {
   background-color: #466af7;
   border: none;
   border-radius: 0 8px 8px 0;
-  color: #fff;
   height: 50px;
   margin: 0;
-  padding: 10px 10px;
+  padding: 10px 20px;
+}
+.searchform button svg { 
+  fill: #fff;
+  height: 20px;
+  width: 20px;
 }
