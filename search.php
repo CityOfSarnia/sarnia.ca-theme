@@ -8,31 +8,27 @@ Template Name: Search
 
 <?php get_header(); ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+<?php if (have_posts()): ?>
 	<article>
-
 		<div class="container container--md">
-			<?php the_content(); ?>
-
 			<div class="search-results">
-				<script>
-					(function() {
-						var cx = '<?=env('GOOGLE_CSE_CX')?>';
-						var gcse = document.createElement('script');
-						gcse.type = 'text/javascript';
-						gcse.async = true;
-						gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-						var s = document.getElementsByTagName('script')[0];
-						s.parentNode.insertBefore(gcse, s);
-					})();
-				</script>
-				<gcse:searchresults-only></gcse:searchresults-only>
+				<?php while (have_posts()) {
+					the_post();
+					get_template_part( 'partials/content/content', 'excerpt' );
+				}
+				
+				the_posts_pagination(array(
+					'mid_size'  => 2,
+					'prev_text' => '&lsaquo; <span class="nav-prev-text">Newer posts</span>',
+					'next_text' => '<span class="nav-next-text">Older posts</span> &rsaquo;',
+				));
+				?>
 			</div>
 		</div>
 	</article>
-
-<?php endwhile; endif; ?>
+<?php else: ?>
+	<?php get_template_part( 'partials/content/content', 'none' ); ?>
+<?php endif ?>
 
 <?php get_sidebar(); ?>
 

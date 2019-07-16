@@ -1,0 +1,137 @@
+
+
+/* pulled from 2019 theme */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+  word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
+}
+
+.search-result {
+  background: #fff;
+  border: 1px solid rgb(244, 246, 251);
+  color: #000;
+  margin-bottom: 25px;
+  padding: 30px;
+}
+
+.search-result__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Playfair Display", Georgia, Times, serif;
+  font-weight: 400;
+  color: #333;
+  text-decoration: none;
+
+  .search-result__highlight { color: #466af7 }
+
+  a { color: #000; }
+}
+
+.search-result__url {
+  color: #b11e3a;
+  display: block;
+  font-size: 13px;
+  padding-bottom: 2px;
+}
+
+.search-result__excerpt {
+  margin-top: 1px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300 ;
+  font-style: normal;
+  color: #333;
+
+  p:last-child { margin-bottom: 0; }
+
+  .search-result__highlight { font-weight: bold; } 
+}
+
+.pagination .nav-links {
+  text-align : center;
+}
+
+.search-form {
+  width: 100%;
+  max-width: 440px;
+
+  @media screen and (min-width: 850px) {
+    width: auto;
+    min-width: 440px;
+  }
+
+  .home & {
+    align-self: center;
+
+    @media screen and (min-width: 850px) {
+      margin-top: 150px;
+    }
+  }
+}
+
+.searchform {
+  div {
+    display: flex;
+  }
+
+  input[type="text"] {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #466af7;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    color: #333;
+    flex: 1 1 auto;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    height: 50px;
+    line-height: 24px;
+    margin: 0;
+    padding: 10px 20px;
+
+    .header__wrapper & { border-color: #fff; }
+  }
+
+  button {
+    background-color: #466af7;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    height: 50px;
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  button svg { 
+    fill: #fff;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+ul.ui-autocomplete {
+  z-index: 1000;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 10px;
+
+  li:before { display: none; }
+
+  .ui-state-focus { 
+    border: none;
+    background: #466af7;
+    font-weight: normal;
+    color: #fff;
+  }  
+}

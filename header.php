@@ -80,18 +80,7 @@
 			<a href="/" class="logo">City of Sarnia</a>
 
 			<div class="search-form">
-				<script>
-					(function() {
-						var cx = '<?=env('GOOGLE_CSE_CX')?>';
-						var gcse = document.createElement('script');
-						gcse.type = 'text/javascript';
-						gcse.async = true;
-						gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-						var s = document.getElementsByTagName('script')[0];
-						s.parentNode.insertBefore(gcse, s);
-					})();
-				</script>
-				<gcse:searchbox-only resultsUrl="/search"></gcse:searchbox-only>
+				<?php get_search_form() ?>
 			</div>
 
 		</div>
@@ -134,6 +123,10 @@
 					<?php } elseif ( is_year() ) { ?>
 
 						<div class="banner__headline">Archive for <?php the_time('Y'); ?></div>
+
+					<?php } elseif ( is_search() ) { ?>
+
+						<div class="banner__headline">Search Results for &ldquo;<?php echo get_query_var('s'); ?>&rdquo;</div>
 
 					<?php } elseif ( is_404() ) { ?>
 
