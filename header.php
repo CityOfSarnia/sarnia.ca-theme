@@ -79,6 +79,10 @@
 
 			<a href="/" class="logo">City of Sarnia</a>
 
+			<div class="search-form">
+				<?php get_search_form() ?>
+			</div>
+
 		</div>
 	</header>
 
