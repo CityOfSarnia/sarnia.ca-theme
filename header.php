@@ -120,6 +120,10 @@
 
 						<div class="banner__headline">Archive for <?php the_time('Y'); ?></div>
 
+					<?php } elseif ( is_search() ) { ?>
+
+						<div class="banner__headline">Search Results for &ldquo;<?php echo get_query_var('s'); ?>&rdquo;</div>
+
 					<?php } elseif ( is_404() ) { ?>
 
 						<div class="banner__headline">404 Not Found</div>
