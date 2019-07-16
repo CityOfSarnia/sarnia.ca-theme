@@ -168,17 +168,17 @@
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "5124532ec3a7c051900936b3642c27f5567d7ea4"
+                "reference": "bda19eca765c2d4370cea0c78281aeae98f2690f"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-07-15T14:38:40+00:00"
+            "time": "2019-07-16T18:50:10+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
