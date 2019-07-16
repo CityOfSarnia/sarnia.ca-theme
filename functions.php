@@ -309,7 +309,7 @@
 
 		// for search
 		wp_enqueue_script( 'jquery-ui-autocomplete' );
-		wp_register_style( 'jquery-ui-styles','http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' );
+		wp_register_style( 'jquery-ui-styles','//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' );
 		wp_enqueue_style( 'jquery-ui-styles' );
 		wp_register_script( 'sarnia-search-autocomplete', get_template_directory_uri() . '/assets/js/search-autocomplete.js', array( 'jquery', 'jquery-ui-autocomplete' ), '1.0', false );
 		wp_localize_script( 'sarnia-search-autocomplete', 'SarniaSearchAutocomplete', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
