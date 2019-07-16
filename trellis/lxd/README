@@ -1,6 +1,10 @@
-after customizing the contents of these .yml files, copy them into lxc configuration profiles using the command
-lxc profile create 'profilename'
-lxc profile edit 'profilename'
+after customizing the contents of these .yml files, copy them into lxc configuration profiles using the following command example:
+
+lxc profile create cosadmin
+cat cosadmin.yml | lxc profile edit cosadmin
+lxc profile show cosadmin
+
+repeat this for every profile you want to create.
 
 before creating your container, be sure that the root user is able to remap the uid and gid of the local filesystem to the container:
 sudo echo 'root:1000:1' | sudo tee -a /etc/subuid /etc/subgid
