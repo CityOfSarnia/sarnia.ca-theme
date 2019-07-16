@@ -8,16 +8,21 @@ Template Name: Search
 
 <?php get_header(); ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+<?php if (have_posts()): ?>
 	<article>
-
 		<div class="container container--md">
-			<?php the_content(); ?>
+			<div class="search-results">
+				<?php while (have_posts()) {
+					the_post();
+					the_title('<div>', '</div>');
+					the_excerpt();
+				}
+				// todo: paginate
+				?>
+			</div>
 		</div>
 	</article>
-
-<?php endwhile; endif; ?>
+<?php endif ?>
 
 <?php get_sidebar(); ?>
 
