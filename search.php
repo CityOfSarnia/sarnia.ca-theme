@@ -14,8 +14,7 @@ Template Name: Search
 			<div class="search-results">
 				<?php while (have_posts()) {
 					the_post();
-					the_title('<div>', '</div>');
-					the_excerpt();
+					get_template_part( 'partials/content/content', 'excerpt' );
 				}
 				
 				the_posts_pagination(array(
