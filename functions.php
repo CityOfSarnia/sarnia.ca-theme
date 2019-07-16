@@ -306,6 +306,14 @@
 			wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
 			wp_enqueue_script( 'jquery' );
 		}
+
+		// for search
+		wp_enqueue_script( 'jquery-ui-autocomplete' );
+		wp_register_style( 'jquery-ui-styles','http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' );
+		wp_enqueue_style( 'jquery-ui-styles' );
+		wp_register_script( 'sarnia-search-autocomplete', get_template_directory_uri() . '/assets/js/search-autocomplete.js', array( 'jquery', 'jquery-ui-autocomplete' ), '1.0', false );
+		wp_localize_script( 'sarnia-search-autocomplete', 'SarniaSearchAutocomplete', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
+		wp_enqueue_script( 'sarnia-search-autocomplete' );
 	}
 	add_action( 'wp_enqueue_scripts', 'sarnia_scripts' );
 
@@ -1154,6 +1162,27 @@ function sarnia_highlight_results($text){
 
 	return $text;
 }
-
 add_filter('the_excerpt', 'sarnia_highlight_results');
 add_filter('the_title', 'sarnia_highlight_results');
+
+function sarnia_auto_search() {
+	$term = strtolower( $_GET['term'] );
+	$suggestions = array();
+	$loop = new WP_Query( 's=' . $term );
+	
+	while( $loop->have_posts() ) {
+		$loop->the_post();
+		$suggestion = array();
+		$suggestion['label'] = get_the_title();
+		$suggestion['link'] = get_permalink();
+		
+		$suggestions[] = $suggestion;
+	}
+	wp_reset_query();
+		
+	$response = json_encode( $suggestions );
+	echo $response;
+	exit();
+}
+add_action('wp_ajax_auto_search', 'sarnia_auto_search');
+add_action('wp_ajax_nopriv_auto_search', 'sarnia_auto_search');

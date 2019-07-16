@@ -1973,3 +1973,18 @@ ol.commentlist li.parent {
   height: 20px;
   width: 20px;
 }
+
+
+ul.ui-autocomplete {
+  z-index: 1000;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 10px;
+}
+ul.ui-autocomplete li:before { display: none; }
+ul.ui-autocomplete .ui-state-focus { 
+  border: none;
+  background: #466af7;
+  font-weight: normal;
+  color: #fff;
+}
