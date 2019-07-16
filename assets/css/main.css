@@ -1887,6 +1887,20 @@ ol.commentlist li.parent {
   padding: 30px;
 }
 
+/* pulled from 2019 theme */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
 .search-result__title {
   margin: 0;
   font-size: 24px;
@@ -1918,3 +1932,40 @@ ol.commentlist li.parent {
 }
 .search-result__excerpt p:last-child { margin-bottom: 0; }
 .search-result__excerpt .search-result__highlight { font-weight: bold; } 
+
+.pagination .nav-links {
+  text-align : center;
+}
+
+.searchform div {
+  display: flex;
+}
+
+.searchform input[type="text"] {
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 1px solid #466af7;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  color: #333;
+  flex: 1 1 auto;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  height: 50px;
+  line-height: 24px;
+  margin: 0;
+  padding: 10px 20px;
+}
+.header__wrapper .searchform input[type="text"] { border-color: #fff; }
+
+.searchform input[type="submit"] {
+  background-color: #466af7;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  color: #fff;
+  height: 50px;
+  margin: 0;
+  padding: 10px 10px;
+}
