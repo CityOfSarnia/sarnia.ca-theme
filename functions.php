@@ -1144,3 +1144,16 @@ function my_acf_post_id() {
 		return $post->ID;
 	endif;
 }
+
+/* search functions */
+function sarnia_highlight_results($text){
+	if(is_search()){
+		$search = get_query_var('s');
+		$text = preg_replace('/('. $search .')/iu', '<span class="search-result__highlight">$1</span>', $text);
+	}
+
+	return $text;
+}
+
+add_filter('the_excerpt', 'sarnia_highlight_results');
+add_filter('the_title', 'sarnia_highlight_results');

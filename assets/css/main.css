@@ -1896,6 +1896,7 @@ ol.commentlist li.parent {
   color: #333;
   text-decoration: none;
 }
+.search-result__title .search-result__highlight { color: #466af7 }
 
 .search-result__title a { color: #000; }
 
@@ -1916,3 +1917,4 @@ ol.commentlist li.parent {
   color: #333;
 }
 .search-result__excerpt p:last-child { margin-bottom: 0; }
+.search-result__excerpt .search-result__highlight { font-weight: bold; } 
