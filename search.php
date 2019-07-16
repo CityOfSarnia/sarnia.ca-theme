@@ -26,6 +26,8 @@ Template Name: Search
 			</div>
 		</div>
 	</article>
+<?php else: ?>
+	<?php get_template_part( 'partials/content/content', 'none' ); ?>
 <?php endif ?>
 
 <?php get_sidebar(); ?>
