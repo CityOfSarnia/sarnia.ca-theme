@@ -17,7 +17,12 @@ Template Name: Search
 					the_title('<div>', '</div>');
 					the_excerpt();
 				}
-				// todo: paginate
+				
+				the_posts_pagination(array(
+					'mid_size'  => 2,
+					'prev_text' => '&lsaquo; <span class="nav-prev-text">Newer posts</span>',
+					'next_text' => '<span class="nav-next-text">Older posts</span> &rsaquo;',
+				));
 				?>
 			</div>
 		</div>
