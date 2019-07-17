@@ -8,12 +8,17 @@ $font-secondary: "Playfair Display", Georgia, Times, serif;
 
 .wp-block {
   @import "typography";
+  @import "accordion";
   @import "banner";
   @import "btn";
   @import "card";
   @import "news-card";
   @import "navigation-card";
   @import "recent-notifications";
+
+  .accordion__content {
+    display: block;
+  }
 
   .recent-notifications {
     position: relative;

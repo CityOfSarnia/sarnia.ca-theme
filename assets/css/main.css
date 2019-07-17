@@ -944,6 +944,68 @@ main {
       .feature-notification.js-nav_is_open {
         transform: translate3d(0, 0, 0); } }
 
+.accordion {
+  margin-bottom: 30px;
+  border: 1px solid #f4f6fb;
+  background-color: #fff;
+  cursor: pointer; }
+  @media screen and (min-width: 850px) {
+    .accordion {
+      margin-bottom: 20px; } }
+
+.accordion__header {
+  position: relative;
+  padding: 20px; }
+
+.accordion__toggle {
+  transition: all .25s ease 0s;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -10px;
+  height: 21px;
+  width: 21px; }
+  .accordion__toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 1px;
+    height: 100%;
+    background-color: #466af7; }
+  .accordion__toggle::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #466af7; }
+
+.accordion__headline {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: 0px;
+  margin: 0;
+  padding-right: 61px;
+  font-family: "Playfair Display", Georgia, Times, serif;
+  color: #333;
+  font-weight: 300;
+  font-style: normal; }
+
+.accordion__content {
+  display: none;
+  padding: 0 20px 20px 20px; }
+  .accordion__content > :last-child {
+    margin-bottom: 0; }
+
+.js-accordion__toggle.js-active .accordion__toggle {
+  transform: rotate(45deg); }
+
+.js-accordion__toggle.js-active .accordion__content {
+  display: block; }
+
 .post-card {
   display: flex;
   flex-direction: column;
