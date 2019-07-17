@@ -113,6 +113,21 @@
 		acf_add_options_page();
 	}
 
+	// Numbered Pagination
+	function sarnia_number_pagination() {
+		global $wp_query;
+		$big = 9999999;
+		echo "<div class='pagination'>";
+		echo paginate_links( array(
+		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'format' => '?paged=%#%',
+		'prev_text' => __('Previous'),
+		'next_text' => __('Next'),
+		'current' => max( 1, get_query_var('paged') ),
+		'total' => $wp_query->max_num_pages) );
+		echo "</div>";
+	}
+
 	// Add theme support for wide content alignment
 	function sarnia_setup() {
 		add_theme_support( 'align-wide' );

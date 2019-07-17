@@ -1807,6 +1807,26 @@ input.gsc-input {
 .post-list__excerpt {
   margin: 0; }
 
+.pagination {
+  display: flex;
+  justify-content: center; }
+  .pagination .page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    padding: 0 10px;
+    border: 1px solid #466af7;
+    height: 40px;
+    width: 40px; }
+    .pagination .page-numbers.current {
+      border: 1px solid #182754;
+      color: #182754; }
+  .pagination .prev {
+    width: auto; }
+  .pagination .next {
+    width: auto; }
+
 @media (min-width: 600px) {
   .wp-block-columns {
     flex-wrap: nowrap; } }

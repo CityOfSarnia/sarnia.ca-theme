@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  .page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    padding: 0 10px;
+    border: 1px solid $blue;
+    height: 40px;
+    width: 40px;
+
+    &.current {
+      border: 1px solid $blue-dk;
+      color: $blue-dk;
+    }
+  }
+
+  .prev {
+    width: auto;
+  }
+
+  .next  {
+    width: auto;
+  }
+}
