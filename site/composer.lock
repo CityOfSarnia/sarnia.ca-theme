@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "887db40bbfe594143ed603c90b9b61d6",
+    "content-hash": "191386ed030a1dd03cdc64573e002b6c",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -154,17 +154,17 @@
         },
         {
             "name": "cos/sarnia.ca-plugin",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git",
-                "reference": "7d0037c0525d230f37ddb9dca2af1d6cdb7dcbe3"
+                "reference": "b3f5051bae8dc39a47a0a15b6429bdc5f0cc218c"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-muplugin",
-            "time": "2019-07-10T22:06:02+00:00"
+            "time": "2019-07-17T16:26:03+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
@@ -809,6 +809,25 @@
             "time": "2019-06-15T22:40:20+00:00"
         },
         {
+            "name": "wp-api/basic-auth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WP-API/Basic-Auth.git",
+                "reference": "9e9d5267c7805c024f141d115b224cdee5a10008"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WP-API/Basic-Auth/zipball/9e9d5267c7805c024f141d115b224cdee5a10008",
+                "reference": "9e9d5267c7805c024f141d115b224cdee5a10008",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Basic Authentication handler for the JSON API, used for development and debugging purposes",
+            "time": "2017-12-03T21:39:01+00:00"
+        },
+        {
             "name": "wpackagist-plugin/advanced-custom-fields-nav-menu-field",
             "version": "2.0.0",
             "source": {
@@ -1360,6 +1379,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "wp-api/basic-auth": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
