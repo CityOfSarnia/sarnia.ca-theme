@@ -1155,7 +1155,7 @@ function my_acf_post_id() {
 
 /* search functions */
 function sarnia_highlight_results($text){
-	if(is_search()){
+	if(is_search() && in_the_loop() ){
 		$search = get_query_var('s');
 		$text = preg_replace('/('. $search .')/iu', '<span class="search-result__highlight">$1</span>', $text);
 	}
