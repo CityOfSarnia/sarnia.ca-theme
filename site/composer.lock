@@ -11,7 +11,7 @@
             "version": "5.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0#v5.8.0",
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0",
                 "reference": null,
                 "shasum": null
             },
@@ -168,17 +168,17 @@
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "55d32804d197d0327be50121a28a999f20fbbb47"
+                "reference": "6df1c5a640ecb3490ed2d57d1900374603dfeef4"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-07-18T17:57:04+00:00"
+            "time": "2019-07-18T19:28:39+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
