@@ -113,6 +113,21 @@
 		acf_add_options_page();
 	}
 
+	// Numbered Pagination
+	function sarnia_number_pagination() {
+		global $wp_query;
+		$big = 9999999;
+		echo "<div class='pagination'>";
+		echo paginate_links( array(
+		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'format' => '?paged=%#%',
+		'prev_text' => __('Previous'),
+		'next_text' => __('Next'),
+		'current' => max( 1, get_query_var('paged') ),
+		'total' => $wp_query->max_num_pages) );
+		echo "</div>";
+	}
+
 	// Add theme support for wide content alignment
 	function sarnia_setup() {
 		add_theme_support( 'align-wide' );
@@ -139,6 +154,7 @@
 			'core/columns',
 			'core/file',
 			'core/html',
+			'acf/accordion',
 			'acf/post-card',
 			'acf/custom-card',
 //			'acf/banner',
@@ -266,6 +282,17 @@
 				'supports' 				=> array( 'align' => false ),
 			));
 
+			// register an accordion block
+			acf_register_block(array(
+				'name'						=> 'accordion',
+				'title'						=> __('Accordion'),
+				'description'			=> __('An accordion block.'),
+				'render_callback'	=> 'my_acf_block_render_callback',
+				'category'				=> 'formatting',
+				'icon'						=> 'plus',
+				'keywords'				=> array( 'accordion', 'toggle', 'dropdown' ),
+				'supports' 				=> array( 'align' => false ),
+			));
 		}
 	}
 
@@ -307,6 +334,68 @@
 
 	if( function_exists('acf_add_local_field_group') ):
 
+		acf_add_local_field_group(array(
+			'key' => 'group_5d2f73ee89cc8',
+			'title' => 'Accordion',
+			'fields' => array(
+				array(
+					'key' => 'field_5d2f73ff07796',
+					'label' => 'Accordion Headline',
+					'name' => 'accordion_headline',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5d2f740a07797',
+					'label' => 'Accordion Content',
+					'name' => 'accordion_content',
+					'type' => 'wysiwyg',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'tabs' => 'all',
+					'toolbar' => 'basic',
+					'media_upload' => 0,
+					'delay' => 0,
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'block',
+						'operator' => '==',
+						'value' => 'acf/accordion',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'normal',
+			'style' => 'default',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => '',
+			'active' => 1,
+			'description' => '',
+		));
+		
 		acf_add_local_field_group(array(
 			'key' => 'group_5c0984555b0da',
 			'title' => 'Contact Information',
