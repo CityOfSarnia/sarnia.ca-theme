@@ -7,6 +7,6 @@ server:
 @development:
   ssh: web@300us18-web007.bhs7.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
 @staging:
-  ssh: web@300us18-web006.bhs7.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
+  ssh: web@300us18-web005.bhs7.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
 @edit:
   ssh: web@300us18-web003.bhs7.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
