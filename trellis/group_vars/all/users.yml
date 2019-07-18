@@ -9,12 +9,14 @@ users:
     keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
       - https://cos-gitlab-prod.cos.city.sarnia.on.ca/zcollette.keys
+      - https://cos-gitlab-prod.cos.city.sarnia.on.ca/douglas.keys
   - name: "{{ admin_user }}"
     groups:
       - sudo
     keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
       - https://cos-gitlab-prod.cos.city.sarnia.on.ca/zcollette.keys
+      - https://cos-gitlab-prod.cos.city.sarnia.on.ca/douglas.keys
 
 web_user: web
 web_group: www-data
