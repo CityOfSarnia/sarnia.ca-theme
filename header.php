@@ -89,16 +89,19 @@
 	<div class="banner" style="background-image: url(<?php $image = get_field('header_image'); echo($image['sizes']['home-banner']); ?>) !important;">
 
 		<header class="banner__header">
-
+			<?php if(!is_search() ) { ?>
 			<h1 class="<?php echo get_field('header_orientation') ? 'reverse' : ''; ?>">
 
-				<?php if( get_field('header_byline') ) { ?>
+				<?php }  if( get_field('header_byline') && !is_search() ) { ?>
 
 					<div class="banner__byline"><?php the_field('header_byline');?></div>
 
-				<?php } ?>
+				<?php } if ( is_search() ) { ?>
 
-				<?php if( get_field('header_headline') ) { ?>
+					<div class="banner__byline">Search Results for</div>
+					<div class="banner__headline"><?php echo get_query_var('s');?></div>
+
+				<?php } elseif( get_field('header_headline') ) { ?>
 
 					<div class="banner__headline"><?php the_field('header_headline');?></div>
 
@@ -123,10 +126,6 @@
 					<?php } elseif ( is_year() ) { ?>
 
 						<div class="banner__headline">Archive for <?php the_time('Y'); ?></div>
-
-					<?php } elseif ( is_search() ) { ?>
-
-						<div class="banner__headline">Search Results for &ldquo;<?php echo get_query_var('s'); ?>&rdquo;</div>
 
 					<?php } elseif ( is_404() ) { ?>
 
