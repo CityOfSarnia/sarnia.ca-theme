@@ -3,6 +3,11 @@
     var wrap = $(".wrap");
     var notification = $(".feature-notification");
     var navToggle = $(".js-primary-menu__toggle");
+    var accordionToggle = $(".js-accordion__toggle");
+
+    accordionToggle.on("click", function() {
+      $(this).toggleClass("js-active");
+    });
 
     navToggle.on("click", function() {
       if (wrap.hasClass("js-nav_is_open")) {

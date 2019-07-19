@@ -99,6 +99,23 @@ function create_my_post_types()
 
 add_action('init', 'create_my_post_types');
 
+// Numbered Pagination
+function sarnia_number_pagination()
+{
+	global $wp_query;
+	$big = 9999999;
+	echo "<div class='pagination'>";
+	echo paginate_links(array(
+		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+		'format' => '?paged=%#%',
+		'prev_text' => __('Previous'),
+		'next_text' => __('Next'),
+		'current' => max(1, get_query_var('paged')),
+		'total' => $wp_query->max_num_pages
+	));
+	echo "</div>";
+}
+
 // Create Custom Taxonomies
 add_action('init', 'build_taxonomies', 0);
 
@@ -159,9 +176,9 @@ function sarnia_allowed_block_types($allowed_blocks)
 		'core/columns',
 		'core/file',
 		'core/html',
+		'acf/accordion',
 		'acf/post-card',
 		'acf/custom-card',
-		//			'acf/banner',
 		'acf/notifications',
 		'acf/navigation',
 		'acf/recent-posts',
@@ -170,7 +187,6 @@ function sarnia_allowed_block_types($allowed_blocks)
 		'core-embed/vimeo',
 		'core-embed/facebook',
 		'core-embed/twitter',
-		//			'gravityforms/block',
 		'gravityforms/form',
 		'luckywp/tableofcontents'
 	);
@@ -250,6 +266,18 @@ function my_acf_init()
 			'category'				=> 'formatting',
 			'icon'						=> 'media-text',
 			'keywords'				=> array('custom', 'card'),
+			'supports' 				=> array('align' => false),
+		));
+
+		// register an accordion block
+		acf_register_block(array(
+			'name'						=> 'accordion',
+			'title'						=> __('Accordion'),
+			'description'			=> __('An accordion block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'				=> 'formatting',
+			'icon'						=> 'plus',
+			'keywords'				=> array('accordion', 'toggle', 'dropdown'),
 			'supports' 				=> array('align' => false),
 		));
 
@@ -344,7 +372,7 @@ function my_acf_json_load_point($paths)
 	unset($paths[0]);
 	$paths[] = get_stylesheet_directory() . '/assets/acf-json';
 
-	return $paths;
+	return   $paths;
 }
 add_filter('acf/settings/load_json', 'my_acf_json_load_point');
 
@@ -355,7 +383,7 @@ if (function_exists('register_sidebar')) {
 		register_sidebar(array(
 			'name' => __('Sidebar Widgets', 'sarnia'),
 			'id' => 'sidebar-primary',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'before_widget' => '<div id="%1  $s" class="widget %2  $s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
@@ -390,8 +418,8 @@ function my_acf_post_id()
 	if (is_admin() && function_exists('acf_maybe_get_POST')) :
 		return intval(acf_maybe_get_POST('post_id'));
 	else :
-		global $post;
-		return $post->ID;
+		global   $post;
+		return   $post->ID;
 	endif;
 }
 
@@ -400,10 +428,10 @@ function sarnia_highlight_results($text)
 {
 	if (in_the_loop() && is_search()) {
 		$search = preg_quote(get_query_var('s'));
-		$text = preg_replace('/(' . $search . ')/iu', '<span class="search-result__highlight">$1</span>', $text);
+		$text = preg_replace('/(' .   $search . ')/iu', '<span class="search-result__highlight">$1</span>',   $text);
 	}
 
-	return $text;
+	return   $text;
 }
 add_filter('the_excerpt', 'sarnia_highlight_results');
 add_filter('the_title', 'sarnia_highlight_results');
@@ -412,7 +440,7 @@ function sarnia_auto_search()
 {
 	$term = strtolower($_GET['term']);
 	$suggestions = array();
-	$loop = new WP_Query('s=' . $term);
+	$loop = new WP_Query('s=' .   $term);
 
 	while ($loop->have_posts()) {
 		$loop->the_post();
@@ -420,12 +448,12 @@ function sarnia_auto_search()
 		$suggestion['label'] = get_the_title();
 		$suggestion['link'] = get_permalink();
 
-		$suggestions[] = $suggestion;
+		$suggestions[] =   $suggestion;
 	}
 	wp_reset_query();
 
 	$response = json_encode($suggestions);
-	echo $response;
+	echo   $response;
 	exit();
 }
 add_action('wp_ajax_auto_search', 'sarnia_auto_search');
