@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "191386ed030a1dd03cdc64573e002b6c",
@@ -168,17 +168,17 @@
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "e4372704a8af285262f20d36f28712ceb4197a78"
+                "reference": "ea4d3f05a0385efa45bfabc3ccd1665bcd23324b"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-07-19T16:05:11+00:00"
+            "time": "2019-07-19T20:31:25+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
