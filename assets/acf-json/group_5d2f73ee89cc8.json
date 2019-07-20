@@ -1,0 +1,62 @@
+{
+    "key": "group_5d2f73ee89cc8",
+    "title": "Accordion",
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/accordion"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "fields": {
+        "field_5d2f73ff07796": {
+            "key": "field_5d2f73ff07796",
+            "name": "accordion_headline",
+            "type": "text",
+            "label": "Accordion Headline",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        "field_5d2f740a07797": {
+            "key": "field_5d2f740a07797",
+            "name": "accordion_content",
+            "type": "wysiwyg",
+            "label": "Accordion Content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    },
+    "modified": false
+}
