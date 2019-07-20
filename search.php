@@ -16,12 +16,7 @@ Template Name: Search
 					the_post();
 					get_template_part( 'partials/content/content', 'excerpt' );
 				}
-				
-				the_posts_pagination(array(
-					'mid_size'  => 2,
-					'prev_text' => '&lsaquo; <span class="nav-prev-text">Newer posts</span>',
-					'next_text' => '<span class="nav-next-text">Older posts</span> &rsaquo;',
-				));
+		                sarnia_number_pagination();
 				?>
 			</div>
 		</div>
