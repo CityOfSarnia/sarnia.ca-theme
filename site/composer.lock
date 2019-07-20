@@ -168,17 +168,17 @@
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "v1.4.0",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "ea4d3f05a0385efa45bfabc3ccd1665bcd23324b"
+                "reference": "ac39b5f6f88740b211b397d9b68b2cfc3dd48a11"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-07-19T20:31:25+00:00"
+            "time": "2019-07-20T16:13:01+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -949,15 +949,15 @@
         },
         {
             "name": "wpackagist-plugin/members",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/members/",
-                "reference": "tags/2.1.0"
+                "reference": "tags/2.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/members.2.1.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/members.2.2.0.zip",
                 "reference": null,
                 "shasum": null
             },
