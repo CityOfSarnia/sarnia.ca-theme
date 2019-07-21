@@ -143,26 +143,6 @@ function build_taxonomies()
 	);
 }
 
-function sarnia_request($query_string )
-{
-    if( isset( $query_string['page'] ) ) {
-        if( ''!=$query_string['page'] ) {
-            if( isset( $query_string['name'] ) ) {
-                unset( $query_string['name'] );
-            }
-        }
-    }
-    return $query_string;
-}
-add_filter('request', 'sarnia_request');
-
-add_action('pre_get_posts','sarnia_pre_get_posts');
-function sarnia_pre_get_posts( $query ) {
-    if( $query->is_main_query() && !$query->is_feed() && !is_admin() ) {
-        $query->set( 'paged', str_replace( '/', '', get_query_var( 'page' ) ) );
-    }
-}
-
 // Register Options Page
 if (function_exists('acf_add_options_page')) {
 	acf_add_options_page();
