@@ -154,31 +154,31 @@
         },
         {
             "name": "cos/sarnia.ca-plugin",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git",
-                "reference": "6a698d9dcc66ee2694ea7d6d2c82565b95ae8df6"
+                "reference": "d436165827a1efa1ac2e8e1df971b0aba54f78d3"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-muplugin",
-            "time": "2019-07-18T21:36:35+00:00"
+            "time": "2019-07-21T21:50:09+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "v1.4.2",
+            "version": "v1.4.4",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "ac39b5f6f88740b211b397d9b68b2cfc3dd48a11"
+                "reference": "b3b463cdb353c21e28a7bbb8c9f8cb78199f8579"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-07-20T16:13:01+00:00"
+            "time": "2019-07-21T21:47:32+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
