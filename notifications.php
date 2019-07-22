@@ -14,24 +14,24 @@ Template Name: Notifications
 
 		<div class="container">
 
-			<div class="notification-btn"><a class="btn btn--center" href="https://member.everbridge.net/index/892807736721815#/login" target="_blank" rel="noopener">Subscribe To Notifications</a></div>
-
 			<?php the_content(); ?>
 
+			<div class="notification-btn"><a class="btn btn--center" href="https://member.everbridge.net/index/892807736721815#/login" target="_blank" rel="noopener">Sign up today!</a></div>
+
 			<ul class="notification-list">
-				<?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'posts_per_page' => -1 ) ); ?>
-				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php $loop = new WP_Query(array('post_type' => 'notifications', 'posts_per_page' => -1)); ?>
+				<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 					<?php
-						$terms = get_the_terms( $post->ID, 'notification-icon' );
-						if ($terms) {
-							$terms_slugs = array();
-							foreach ( $terms as $term ) {
-									$terms_slugs[] = $term->slug;
-							}
-							$icon = $terms_slugs[0];
-						} else {
-							$icon = 'default-notification';
+					$terms = get_the_terms($post->ID, 'notification-icon');
+					if ($terms) {
+						$terms_slugs = array();
+						foreach ($terms as $term) {
+							$terms_slugs[] = $term->slug;
 						}
+						$icon = $terms_slugs[0];
+					} else {
+						$icon = 'default-notification';
+					}
 					?>
 					<li class="notification-list__item">
 						<div class="notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
@@ -48,6 +48,7 @@ Template Name: Notifications
 
 	</article>
 
-<?php endwhile; endif; ?>
+	<?php endwhile;
+endif; ?>
 
 <?php get_footer(); ?>
