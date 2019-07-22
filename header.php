@@ -113,7 +113,8 @@
 
 						<?php if (is_category()) { ?>
 
-							<div class="banner__headline">Archive for the &#8216;<?php echo single_cat_title(); ?>&#8217; Category</div>
+							<div class="banner__byline">Archive for Category:</div>
+							<div class="banner__headline">&#8216;<?php echo single_cat_title(); ?>&#8217;</div>
 
 						<?php } elseif (is_tag()) { ?>
 
