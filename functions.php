@@ -376,6 +376,16 @@ function my_acf_json_load_point($paths)
 }
 add_filter('acf/settings/load_json', 'my_acf_json_load_point');
 
+function my_acf_json_save_point($path)
+{
+	// update path
+	$path = get_stylesheet_directory() . '/assets/acf-json';
+
+	// return
+	return $path;
+}
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+
 // Widgets
 if (function_exists('register_sidebar')) {
 	function sarnia_widgets_init()
