@@ -12,7 +12,9 @@
 
     <header class="accordion__header">
 
-      <<?php the_field('accordion_heading_level'); ?> class="accordion__headline"><?php the_field('accordion_heading_text'); ?></<?php the_field('accordion_level'); ?>>
+      <?php $accordion_heading_level = (get_field('accordion_heading_level') ? get_field('accordion_heading_level') : 'h2') ; ?>
+      
+      <h2 class="accordion__headline"><?php the_field('accordion_heading_text'); ?></h2>
 
       <div class="accordion__toggle"></div>
 
