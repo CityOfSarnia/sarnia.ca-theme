@@ -342,14 +342,15 @@ function sarnia_scripts()
 		$manifest = json_decode(file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest.json'), true);
 		$legacy_manifest = json_decode(file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest-legacy.json'), true);
 
-		// css is loaded vs js
+		// css is loaded via js
+		// wp_enqueue_style('sarnia-style-css', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), $legacy_manifest['styles.css']);
 		wp_enqueue_script('sarnia-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/global-min.js'), true);
 		wp_enqueue_script('sarnia-js', $manifest['app.js'], array('jquery'), $manifest['app.js'], true);
 	} else {
 		$manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest.json'), true);
 		$legacy_manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest-legacy.json'), true);
 		
-		wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets' . $legacy_manifest['styles.css'], array(), $legacy_manifest['styles.css']);
+		wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets' . $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
 		wp_enqueue_script('sarnia-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/global-min.js'), true);
 		wp_enqueue_script('sarnia-js', get_stylesheet_directory_uri() . '/assets' . $manifest['app.js'], array('jquery'), $manifest['app.js'], true);
 	}

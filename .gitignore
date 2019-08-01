@@ -7,3 +7,5 @@ node_modules
 
 #Keep .gitkeep files
 !*.gitkeep
+/assets/dist/report-legacy.html
+/assets/dist/report-modern.html

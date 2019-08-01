@@ -67,18 +67,18 @@ const configureImageLoader = (buildType) => {
     }
 };
 
-// Configure the Postcss loader
-const configurePostcssLoader = (buildType) => {
+// Configure the SASS loader
+const configureSassLoader = (buildType) => {
     // Don't generate CSS for the legacy config in development
     if (buildType === LEGACY_CONFIG) {
         return {
-            test: /\.(pcss|css)$/,
+            test: /\.(sass|scss)$/,
             loader: 'ignore-loader'
         };
     }
     if (buildType === MODERN_CONFIG) {
         return {
-            test: /\.(pcss|css)$/,
+            test: /\.(sass|scss)$/,
             use: [
                 {
                     loader: 'style-loader',
@@ -94,13 +94,7 @@ const configurePostcssLoader = (buildType) => {
                     }
                 },
                 {
-                    loader: 'resolve-url-loader'
-                },
-                {
-                    loader: 'postcss-loader',
-                    options: {
-                        sourceMap: true
-                    }
+                    loader: 'sass-loader'
                 }
             ]
         };
@@ -121,7 +115,8 @@ module.exports = [
             devServer: configureDevServer(LEGACY_CONFIG),
             module: {
                 rules: [
-                    configurePostcssLoader(LEGACY_CONFIG),
+                    // configurePostcssLoader(LEGACY_CONFIG),
+                    configureSassLoader(LEGACY_CONFIG),
                     configureImageLoader(LEGACY_CONFIG),
                 ],
             },
@@ -142,7 +137,8 @@ module.exports = [
             devServer: configureDevServer(MODERN_CONFIG),
             module: {
                 rules: [
-                    configurePostcssLoader(MODERN_CONFIG),
+                    // configurePostcssLoader(MODERN_CONFIG),
+                    configureSassLoader(MODERN_CONFIG),
                     configureImageLoader(MODERN_CONFIG),
                 ],
             },

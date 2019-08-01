@@ -224,11 +224,11 @@ const configureOptimization = (buildType) => {
     }
 };
 
-// Configure Postcss loader
-const configurePostcssLoader = (buildType) => {
+// Configure SASS loader
+const configureSassLoader = (buildType) => {
     if (buildType === LEGACY_CONFIG) {
         return {
-            test: /\.(pcss|css)$/,
+            test: /\.(sass|scss)$/,
             use: [
                 MiniCssExtractPlugin.loader,
                 {
@@ -242,10 +242,7 @@ const configurePostcssLoader = (buildType) => {
                     loader: 'resolve-url-loader'
                 },
                 {
-                    loader: 'postcss-loader',
-                    options: {
-                        sourceMap: true
-                    }
+                    loader: 'sass-loader'
                 }
             ]
         };
@@ -253,7 +250,7 @@ const configurePostcssLoader = (buildType) => {
     // Don't generate CSS for the modern config in production
     if (buildType === MODERN_CONFIG) {
         return {
-            test: /\.(pcss|css)$/,
+            test: /\.(sass|scss)$/,
             loader: 'ignore-loader'
         };
     }
@@ -302,7 +299,8 @@ module.exports = [
             optimization: configureOptimization(LEGACY_CONFIG),
             module: {
                 rules: [
-                    configurePostcssLoader(LEGACY_CONFIG),
+                    // configurePostcssLoader(LEGACY_CONFIG),
+                    configureSassLoader(LEGACY_CONFIG),
                     configureImageLoader(LEGACY_CONFIG),
                 ],
             },
@@ -343,7 +341,8 @@ module.exports = [
             optimization: configureOptimization(MODERN_CONFIG),
             module: {
                 rules: [
-                    configurePostcssLoader(MODERN_CONFIG),
+                    // configurePostcssLoader(MODERN_CONFIG),
+                    configureSassLoader(MODERN_CONFIG),
                     configureImageLoader(MODERN_CONFIG),
                 ],
             },
