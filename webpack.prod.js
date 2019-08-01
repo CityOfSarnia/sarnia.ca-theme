@@ -322,9 +322,9 @@ module.exports = [
                 new CompressionPlugin(
                     configureCompression()
                 ),
-                new BundleAnalyzerPlugin(
-                    configureBundleAnalyzer(LEGACY_CONFIG),
-                ),
+                // new BundleAnalyzerPlugin(
+                //     configureBundleAnalyzer(LEGACY_CONFIG),
+                // ),
             ].concat(
                 configureCriticalCss()
             )
@@ -357,9 +357,9 @@ module.exports = [
                 new CompressionPlugin(
                     configureCompression()
                 ),
-                new BundleAnalyzerPlugin(
-                    configureBundleAnalyzer(MODERN_CONFIG),
-                ),
+                // new BundleAnalyzerPlugin(
+                //     configureBundleAnalyzer(MODERN_CONFIG),
+                // ),
             ]
         }
     ),
