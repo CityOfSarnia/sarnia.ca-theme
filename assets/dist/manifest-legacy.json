@@ -1,7 +1,8 @@
 {
-  "app.css": "/dist/css/app.0556febc4d46d2300f57.css",
-  "app.js": "/dist/js/app-legacy.0556febc4d46d2300f57.js",
-  "app.js.map": "/dist/js/app-legacy.0556febc4d46d2300f57.js.map",
-  "css/app.0556febc4d46d2300f57.css.gz": "/dist/css/app.0556febc4d46d2300f57.css.gz",
-  "css/app.0556febc4d46d2300f57.css.map": "/dist/css/app.0556febc4d46d2300f57.css.map"
+  "app.css": "/dist/css/app.737daa44b58b129e50ef.css",
+  "app.js": "/dist/js/app-legacy.737daa44b58b129e50ef.js",
+  "app.js.map": "/dist/js/app-legacy.737daa44b58b129e50ef.js.map",
+  "css/app.737daa44b58b129e50ef.css.gz": "/dist/css/app.737daa44b58b129e50ef.css.gz",
+  "css/app.737daa44b58b129e50ef.css.map": "/dist/css/app.737daa44b58b129e50ef.css.map",
+  "js/app-legacy.737daa44b58b129e50ef.js.gz": "/dist/js/app-legacy.737daa44b58b129e50ef.js.gz"
 }
