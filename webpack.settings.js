@@ -35,12 +35,7 @@ module.exports = {
             /(node_modules|bower_components)/
         ],
     },
-    copyWebpackConfig: [
-        {
-            from: "./src/js/workbox-catch-handler.js",
-            to: "js/[name].[ext]"
-        }
-    ],
+    copyWebpackConfig: [],
     criticalCssConfig: {
         base: "./assets/",
         suffix: "_critical.min.css",
@@ -93,39 +88,5 @@ module.exports = {
         //     origin: "img/favicons/favicon.ico",
         //     symlink: "../favicon.ico"
         // }
-    ],
-    webappConfig: {
-        logo: "./source/img/favicon-src.png",
-        prefix: "img/favicons/"
-    },
-    workboxConfig: {
-        swDest: "../sw.js",
-        precacheManifestFilename: "js/precache-manifest.[manifestHash].js",
-        importScripts: [
-            "/assets/js/workbox-catch-handler.js"
-        ],
-        exclude: [
-            /\.(png|jpe?g|gif|svg|webp)$/i,
-            /\.map$/,
-            /^manifest.*\\.js(?:on)?$/,
-        ],
-        globDirectory: "./web/",
-        globPatterns: [
-            "offline.html",
-            "offline.svg"
-        ],
-        offlineGoogleAnalytics: true,
-        runtimeCaching: [
-            {
-                urlPattern: /\.(?:png|jpg|jpeg|svg|webp)$/,
-                handler: "cacheFirst",
-                options: {
-                    cacheName: "images",
-                    expiration: {
-                        maxEntries: 20
-                    }
-                }
-            }
-        ]
-    }
+    ]
 };

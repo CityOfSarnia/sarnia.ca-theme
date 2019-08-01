@@ -23,9 +23,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const SaveRemoteFilePlugin = require('save-remote-file-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const WebappWebpackPlugin = require('webapp-webpack-plugin');
 const WhitelisterPlugin = require('purgecss-whitelister');
-const WorkboxPlugin = require('workbox-webpack-plugin');
 const zopfli = require('@gfx/zopfli');
 
 // config files
@@ -302,30 +300,6 @@ const configureTerser = () => {
     };
 };
 
-// Configure Webapp webpack
-const configureWebapp = () => {
-    return {
-        logo: settings.webappConfig.logo,
-        prefix: settings.webappConfig.prefix,
-        cache: false,
-        inject: 'force',
-        favicons: {
-            appName: pkg.name,
-            appDescription: pkg.description,
-            developerName: pkg.author.name,
-            developerURL: pkg.author.url,
-            path: settings.paths.dist.base,
-        }
-    };
-};
-
-// Configure Workbox service worker
-const configureWorkbox = () => {
-    let config = settings.workboxConfig;
-
-    return config;
-};
-
 // Production module exports
 module.exports = [
     merge(
@@ -356,9 +330,6 @@ module.exports = [
                 ),
                 new HtmlWebpackPlugin(
                     configureHtml()
-                ),
-                new WebappWebpackPlugin(
-                    configureWebapp()
                 ),
                 new CreateSymlinkPlugin(
                     settings.createSymlinkConfig,
@@ -401,9 +372,6 @@ module.exports = [
                     configureBanner()
                 ),
                 new ImageminWebpWebpackPlugin(),
-                new WorkboxPlugin.GenerateSW(
-                    configureWorkbox()
-                ),
                 new CompressionPlugin(
                     configureCompression()
                 ),
