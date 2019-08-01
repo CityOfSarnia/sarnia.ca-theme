@@ -1,5 +1,5 @@
 // Import our CSS
-import styles from '../sass/main.css';
+import '../sass/main.css';
 
 // javascript entry point
 // import x from 'y';

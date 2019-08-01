@@ -16,12 +16,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CreateSymlinkPlugin = require('create-symlink-webpack-plugin');
 const CriticalCssPlugin = require('critical-css-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
-const SaveRemoteFilePlugin = require('save-remote-file-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const WhitelisterPlugin = require('purgecss-whitelister');
 const zopfli = require('@gfx/zopfli');
@@ -127,15 +125,6 @@ const configureCleanWebpack = () => {
         cleanOnceBeforeBuildPatterns: settings.paths.dist.clean,
         verbose: true,
         dry: false
-    };
-};
-
-// Configure Html webpack
-const configureHtml = () => {
-    return {
-        templateContent: '',
-        filename: 'webapp.html',
-        inject: false,
     };
 };
 
@@ -328,15 +317,9 @@ module.exports = [
                 new webpack.BannerPlugin(
                     configureBanner()
                 ),
-                new HtmlWebpackPlugin(
-                    configureHtml()
-                ),
                 new CreateSymlinkPlugin(
                     settings.createSymlinkConfig,
                     true
-                ),
-                new SaveRemoteFilePlugin(
-                    settings.saveRemoteFileConfig
                 ),
                 new CompressionPlugin(
                     configureCompression()

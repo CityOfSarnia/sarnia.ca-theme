@@ -11,7 +11,7 @@ module.exports = {
             js: "./source/js/"
         },
         dist: {
-            base: "./dist",
+            base: "./assets/dist",
             clean: [
                 '**/*',
             ]
@@ -77,12 +77,6 @@ module.exports = {
             "vue"
         ]
     },
-    saveRemoteFileConfig: [
-        // {
-        //     url: "https://www.google-analytics.com/analytics.js",
-        //     filepath: "js/analytics.js"
-        // }
-    ],
     createSymlinkConfig: [
         // {
         //     origin: "img/favicons/favicon.ico",
