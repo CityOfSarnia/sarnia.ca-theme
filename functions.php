@@ -336,9 +336,25 @@ add_post_type_support('page', 'excerpt');
 
 function sarnia_scripts()
 {
+	$is_hot = getenv('WP_ENV') == 'development';
+
+	if ($is_hot) {
+		$manifest = json_decode(file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest.json'), true);
+		$legacy_manifest = json_decode(file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest-legacy.json'), true);
+
+		// css is loaded vs js
+		wp_enqueue_script('sarnia-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/global-min.js'), true);
+		wp_enqueue_script('sarnia-js', $manifest['app.js'], array('jquery'), $manifest['app.js'], true);
+	} else {
+		$manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest.json'), true);
+		$legacy_manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest-legacy.json'), true);
+		
+		wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets' . $legacy_manifest['styles.css'], array(), $legacy_manifest['styles.css']);
+		wp_enqueue_script('sarnia-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/global-min.js'), true);
+		wp_enqueue_script('sarnia-js', get_stylesheet_directory_uri() . '/assets' . $manifest['app.js'], array('jquery'), $manifest['app.js'], true);
+	}
+
 	wp_enqueue_style('sarnia-fonts', sarnia_theme_fonts_url());
-	wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/main.css'));
-	wp_enqueue_script('sarnia-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/global-min.js'), true);
 
 	// Move jQuery to footer
 	if (!is_admin()) {
