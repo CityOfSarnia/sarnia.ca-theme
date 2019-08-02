@@ -29,7 +29,7 @@ const configureBabelLoader = (browserList) => {
                     [
                         '@babel/preset-env', {
                             modules: false,
-                            corejs:  {
+                            corejs: {
                                 version: 3,
                                 proposals: true
                             },
@@ -114,7 +114,7 @@ const baseConfig = {
         ],
     },
     plugins: [
-        new WebpackNotifierPlugin({title: 'Webpack', excludeWarnings: true, alwaysNotify: true}),
+        new WebpackNotifierPlugin({ title: 'Webpack', excludeWarnings: true, alwaysNotify: true }),
         new VueLoaderPlugin(),
     ]
 };
@@ -151,7 +151,6 @@ const modernConfig = {
 };
 
 // Common module exports
-// noinspection WebpackConfigHighlighting
 module.exports = {
     'legacyConfig': merge.strategy({
         module: 'prepend',
