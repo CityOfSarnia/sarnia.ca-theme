@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "8a7f50331d0caa690d9bebf3d4167270",
@@ -11,9 +11,7 @@
             "version": "5.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0",
-                "reference": null,
-                "shasum": null
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.0"
             },
             "require": {
                 "composer/installers": "^1.4",
@@ -168,17 +166,17 @@
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "v1.4.6",
+            "version": "v1.4.7",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "365b8b3f0ad08976a884ccc8d86408c372929098"
+                "reference": "255441f41c584a9f9e4df890d7614f6c9013140a"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-07-22T18:02:12+00:00"
+            "time": "2019-08-02T15:49:47+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -384,8 +382,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.2.2",
-                "reference": "5.2.2",
-                "shasum": null
+                "reference": "5.2.2"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -837,9 +834,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields-nav-menu-field.2.0.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields-nav-menu-field.2.0.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -857,9 +852,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/broken-link-checker.1.11.8.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/broken-link-checker.1.11.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -877,9 +870,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/content-expiration.zip?timestamp=1552913881",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/content-expiration.zip?timestamp=1552913881"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -897,9 +888,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -917,9 +906,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elasticpress.3.1.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/elasticpress.3.1.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -937,9 +924,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-sitemap-generator.4.1.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/google-sitemap-generator.4.1.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -957,9 +942,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.8.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -977,9 +960,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/members.2.2.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/members.2.2.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -997,9 +978,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/next-active-directory-integration.2.1.9.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/next-active-directory-integration.2.1.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1017,9 +996,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.3.7.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.3.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1037,9 +1014,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/safe-redirect-manager.1.9.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/safe-redirect-manager.1.9.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1057,9 +1032,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/safe-svg.1.9.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/safe-svg.1.9.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1077,9 +1050,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/simple-page-ordering.2.3.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/simple-page-ordering.2.3.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1097,9 +1068,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/stream.3.4.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/stream.3.4.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1117,9 +1086,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wonderm00ns-simple-facebook-open-graph-tags.2.2.6.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wonderm00ns-simple-facebook-open-graph-tags.2.2.6.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
