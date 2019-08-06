@@ -1,7 +1,7 @@
 {
   "name": "sarnia.ca-theme",
-  "version": "1.4.6",
-  "description": "sarnia.ca theem",
+  "version": "2.0.0",
+  "description": "sarnia.ca theme",
   "keywords": [
     "wordpress",
     "theme"
@@ -10,8 +10,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "author": {
     "name": "IT Support",
-    "email": "finance@sarnia.ca",
-    "url": "https://sarnia.ca"
+    "email": "it@sarnia.ca",
+    "url": "https://www.sarnia.ca"
   },
   "repository": {
     "type": "git",
