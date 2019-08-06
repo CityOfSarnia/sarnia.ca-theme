@@ -340,7 +340,7 @@ function sarnia_scripts()
 	wp_enqueue_script('jquery-ui-autocomplete');
 	wp_enqueue_style('jquery-ui-styles', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
 
-	$is_hot = getenv('WP_ENV') == 'development';
+	$is_hot = getenv('WP_ENV') == 'local';
 	if ($is_hot) {
 		if (getenv('DEVSERVER_IGNORE_SSL_ERRORS')) {
 			// this ignores SSL errors, only use in dev, here be dragons!
@@ -349,7 +349,7 @@ function sarnia_scripts()
 						"verify_peer" => false,
 						"verify_peer_name" => false,
 				),
-			);  
+			);
 		} else {
 			$context_options = array();
 		}
@@ -361,7 +361,7 @@ function sarnia_scripts()
 	} else {
 		$manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest.json'), true);
 		$legacy_manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest-legacy.json'), true);
-		
+
 		wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets' . $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
 		wp_register_script('sarnia-js', get_stylesheet_directory_uri() . '/assets' . $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
 	}
@@ -374,7 +374,7 @@ function sarnia_scripts()
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, NULL, true);
 		wp_enqueue_script('jquery');
-	}	
+	}
 }
 add_action('wp_enqueue_scripts', 'sarnia_scripts');
 
