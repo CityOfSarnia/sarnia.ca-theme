@@ -2,6 +2,7 @@
 *.DS_Store
 *.phpintel
 config.codekit3
+.vscode/*
 
 #Keep .gitkeep files
 !*.gitkeep
