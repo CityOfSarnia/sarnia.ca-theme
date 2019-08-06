@@ -342,7 +342,19 @@ function sarnia_scripts()
 
 	$is_hot = getenv('WP_ENV') == 'development';
 	if ($is_hot) {
-		$manifest = json_decode(file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest.json'), true);
+		if (getenv('DEVSERVER_IGNORE_SSL_ERRORS')) {
+			// this ignores SSL errors, only use in dev, here be dragons!
+			$context_options = array(
+				"ssl" => array(
+						"verify_peer" => false,
+						"verify_peer_name" => false,
+				),
+			);  
+		} else {
+			$context_options = array();
+		}
+		$manifest_json = file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest.json', false, stream_context_create($context_options));
+		$manifest = json_decode($manifest_json, true);
 
 		// css is loaded via js
 		wp_register_script('sarnia-js', $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
