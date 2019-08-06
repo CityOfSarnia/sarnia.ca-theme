@@ -23,7 +23,7 @@ module.exports = {
         live: "https://sarnia.ca/",
         local: "http://sarnia.local/",
         critical: "http://sarnia.ca/",
-        publicPath: () => process.env.PUBLIC_PATH || "/assets/",
+        publicPath: () => process.env.PUBLIC_PATH || "/app/themes/sarnia.ca-theme/assets/dist/",
     },
     vars: {
         cssName: "styles"
