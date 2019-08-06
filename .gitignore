@@ -3,6 +3,13 @@
 *.phpintel
 config.codekit3
 .vscode/*
+.env
+
 
 #Keep .gitkeep files
 !*.gitkeep
+
+# Ignore node modules and build reports
+/assets/dist/report-legacy.html
+/assets/dist/report-modern.html
+node_modules/*

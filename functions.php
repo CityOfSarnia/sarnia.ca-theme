@@ -337,23 +337,44 @@ add_post_type_support('page', 'excerpt');
 function sarnia_scripts()
 {
 	wp_enqueue_style('sarnia-fonts', sarnia_theme_fonts_url());
-	wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/main.css'));
-	wp_enqueue_script('sarnia-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/global-min.js'), true);
+	wp_enqueue_script('jquery-ui-autocomplete');
+	wp_enqueue_style('jquery-ui-styles', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
+
+	$is_hot = getenv('WP_ENV') == 'development';
+	if ($is_hot) {
+		if (getenv('DEVSERVER_IGNORE_SSL_ERRORS')) {
+			// this ignores SSL errors, only use in dev, here be dragons!
+			$context_options = array(
+				"ssl" => array(
+						"verify_peer" => false,
+						"verify_peer_name" => false,
+				),
+			);  
+		} else {
+			$context_options = array();
+		}
+		$manifest_json = file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest.json', false, stream_context_create($context_options));
+		$manifest = json_decode($manifest_json, true);
+
+		// css is loaded via js
+		wp_register_script('sarnia-js', $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
+	} else {
+		$manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest.json'), true);
+		$legacy_manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest-legacy.json'), true);
+		
+		wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets' . $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
+		wp_register_script('sarnia-js', get_stylesheet_directory_uri() . '/assets' . $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
+	}
+
+	wp_localize_script('sarnia-js', 'SarniaSearchAutocomplete', array('url' => admin_url('admin-ajax.php')));
+	wp_enqueue_script('sarnia-js');
 
 	// Move jQuery to footer
 	if (!is_admin()) {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, NULL, true);
 		wp_enqueue_script('jquery');
-	}
-
-	// for search
-	wp_enqueue_script('jquery-ui-autocomplete');
-	wp_register_style('jquery-ui-styles', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
-	wp_enqueue_style('jquery-ui-styles');
-	wp_register_script('sarnia-search-autocomplete', get_template_directory_uri() . '/assets/js/search-autocomplete.js', array('jquery', 'jquery-ui-autocomplete'), '1.0', false);
-	wp_localize_script('sarnia-search-autocomplete', 'SarniaSearchAutocomplete', array('url' => admin_url('admin-ajax.php')));
-	wp_enqueue_script('sarnia-search-autocomplete');
+	}	
 }
 add_action('wp_enqueue_scripts', 'sarnia_scripts');
 
