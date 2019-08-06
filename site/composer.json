@@ -78,7 +78,7 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/soil": "^3.8.1",
     "roots/wp-stage-switcher": "^2.1",
-    "cos/sarnia.ca-theme": "^1.0.0",
+    "cos/sarnia.ca-theme": "^2.0.0",
     "cos/sarnia.ca-plugin": "^1.0.0",
     "cos/gravityforms": "^2.4.11.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.8.0",
