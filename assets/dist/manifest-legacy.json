@@ -1,10 +1,10 @@
 {
-  "app.css": "/dist/css/app.6779ee4dbb967ffcda0c.css",
-  "app.js": "/dist/js/app-legacy.6779ee4dbb967ffcda0c.js",
-  "app.js.map": "/dist/js/app-legacy.6779ee4dbb967ffcda0c.js.map",
-  "css/app.6779ee4dbb967ffcda0c.css.gz": "/dist/css/app.6779ee4dbb967ffcda0c.css.gz",
-  "css/app.6779ee4dbb967ffcda0c.css.map": "/dist/css/app.6779ee4dbb967ffcda0c.css.map",
-  "img/main.scss": "/dist/img/sarnia-logo.8c165046f49252bcf0d1ab0593b00f28.svg",
-  "img/sarnia-logo.svg.gz": "/dist/img/sarnia-logo.8c165046f49252bcf0d1ab0593b00f28.svg.gz",
-  "js/app-legacy.6779ee4dbb967ffcda0c.js.gz": "/dist/js/app-legacy.6779ee4dbb967ffcda0c.js.gz"
+  "app.css": "/app/themes/sarnia.ca-theme/assets/dist/css/app.ec9085df24d75e650cfe.css",
+  "app.js": "/app/themes/sarnia.ca-theme/assets/dist/js/app-legacy.ec9085df24d75e650cfe.js",
+  "app.js.map": "/app/themes/sarnia.ca-theme/assets/dist/js/app-legacy.ec9085df24d75e650cfe.js.map",
+  "css/app.ec9085df24d75e650cfe.css.gz": "/app/themes/sarnia.ca-theme/assets/dist/css/app.ec9085df24d75e650cfe.css.gz",
+  "css/app.ec9085df24d75e650cfe.css.map": "/app/themes/sarnia.ca-theme/assets/dist/css/app.ec9085df24d75e650cfe.css.map",
+  "img/main.scss": "/app/themes/sarnia.ca-theme/assets/dist/img/sarnia-logo.8c165046f49252bcf0d1ab0593b00f28.svg",
+  "img/sarnia-logo.svg.gz": "/app/themes/sarnia.ca-theme/assets/dist/img/sarnia-logo.8c165046f49252bcf0d1ab0593b00f28.svg.gz",
+  "js/app-legacy.ec9085df24d75e650cfe.js.gz": "/app/themes/sarnia.ca-theme/assets/dist/js/app-legacy.ec9085df24d75e650cfe.js.gz"
 }
