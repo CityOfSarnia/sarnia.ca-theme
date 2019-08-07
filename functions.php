@@ -362,8 +362,8 @@ function sarnia_scripts()
 		$manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest.json'), true);
 		$legacy_manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest-legacy.json'), true);
 
-		wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets' . $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
-		wp_register_script('sarnia-js', get_stylesheet_directory_uri() . '/assets' . $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
+		wp_enqueue_style('sarnia-style', $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
+		wp_register_script('sarnia-js', $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
 	}
 
 	wp_localize_script('sarnia-js', 'SarniaSearchAutocomplete', array('url' => admin_url('admin-ajax.php')));
