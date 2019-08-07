@@ -29,6 +29,4 @@ wordpress_sites:
       db_name: sarnia_ca_development
       db_user: sarnia_ca_development
       db_host: 10.30.1.50
-      google_analytics_trackingID: "UA-45028636-13"
-      google_cse_cx: "005949542510458416255:ngjhi177cs8"
       gf_recaptcha_public_key: "6Lfpw6UUAAAAAI9HS0ZfsD5g2U27XWgymQibrhY-"
