@@ -22,5 +22,3 @@ wordpress_sites:
       db_name: sarnia_ca_local
       db_user: sarnia_ca_local
       db_host: localhost
-      google_analytics_trackingID: UA-45028636-13
-      google_cse_cx: 005949542510458416255:ngjhi177cs8

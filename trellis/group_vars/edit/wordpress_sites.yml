@@ -29,4 +29,3 @@ wordpress_sites:
       db_user: sarnia_ca_production
       db_host: 10.30.1.50
       google_analytics_trackingID: "UA-45028636-12"
-      google_cse_cx: "005949542510458416255:n-8u7akj0pu"
