@@ -8,6 +8,7 @@
 
 <!-- the "no-js" class is for Modernizr. -->
 
+<html lang="en-US">
 <head>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
