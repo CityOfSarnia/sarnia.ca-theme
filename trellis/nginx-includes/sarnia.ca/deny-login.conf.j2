@@ -1,4 +1,4 @@
-{% if env == 'staging' -%}
+{% if env == 'production' -%}
 
 location ~ (^/wp/wp-admin(?!/admin-ajax\.php)|^/wp/wp-login\.php) {
   try_files $uri $uri/ /index.php?$args;
@@ -6,4 +6,5 @@ location ~ (^/wp/wp-admin(?!/admin-ajax\.php)|^/wp/wp-login\.php) {
   deny all;
   error_page 403 =404 /404;
 }
+
 {% endif -%}
