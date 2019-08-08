@@ -340,14 +340,14 @@ function sarnia_scripts()
 	wp_enqueue_script('jquery-ui-autocomplete');
 	wp_enqueue_style('jquery-ui-styles', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
 
-	$is_hot = getenv('WP_ENV') == 'local';
+	$is_hot = (WP_ENV == 'local');
 	if ($is_hot) {
 		if (getenv('DEVSERVER_IGNORE_SSL_ERRORS')) {
 			// this ignores SSL errors, only use in dev, here be dragons!
 			$context_options = array(
 				"ssl" => array(
-						"verify_peer" => false,
-						"verify_peer_name" => false,
+					"verify_peer" => false,
+					"verify_peer_name" => false,
 				),
 			);
 		} else {
@@ -362,8 +362,8 @@ function sarnia_scripts()
 		$manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest.json'), true);
 		$legacy_manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest-legacy.json'), true);
 
-		wp_enqueue_style('sarnia-style', '/..' . $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
-		wp_register_script('sarnia-js', '/..' . $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
+		wp_enqueue_style('sarnia-style', WP_HOME . $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
+		wp_register_script('sarnia-js', WP_HOME . $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
 	}
 
 	wp_localize_script('sarnia-js', 'SarniaSearchAutocomplete', array('url' => admin_url('admin-ajax.php')));
