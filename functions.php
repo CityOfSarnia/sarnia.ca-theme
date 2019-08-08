@@ -342,7 +342,7 @@ function sarnia_scripts()
 
 	$is_hot = (WP_ENV == 'local');
 	if ($is_hot) {
-		if (getenv('DEVSERVER_IGNORE_SSL_ERRORS')) {
+		if (env('DEVSERVER_IGNORE_SSL_ERRORS')) {
 			// this ignores SSL errors, only use in dev, here be dragons!
 			$context_options = array(
 				"ssl" => array(
