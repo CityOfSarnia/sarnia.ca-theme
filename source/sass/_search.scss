@@ -1,16 +1,14 @@
-
-
 /* pulled from 2019 theme */
 .screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
   word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
 }
 
@@ -31,9 +29,13 @@
   color: #333;
   text-decoration: none;
 
-  .search-result__highlight { color: #466af7 }
+  .search-result__highlight {
+    color: #466af7
+  }
 
-  a { color: #000; }
+  a {
+    color: #000;
+  }
 }
 
 .search-result__url {
@@ -48,17 +50,21 @@
   font-size: 16px;
   line-height: 24px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300 ;
+  font-weight: 300;
   font-style: normal;
   color: #333;
 
-  p:last-child { margin-bottom: 0; }
+  p:last-child {
+    margin-bottom: 0;
+  }
 
-  .search-result__highlight { font-weight: bold; } 
+  .search-result__highlight {
+    font-weight: bold;
+  }
 }
 
 .pagination .nav-links {
-  text-align : center;
+  text-align: center;
 }
 
 .search-form {
@@ -84,7 +90,7 @@
     display: flex;
   }
 
-  input[type="text"] {
+  input[type="search"] {
     -webkit-appearance: none;
     background-color: #fff;
     border: 1px solid #466af7;
@@ -101,22 +107,22 @@
     margin: 0;
     padding: 10px 20px;
 
-    .header__wrapper & { border-color: #fff; }
+    .header__wrapper & {
+      border-color: #fff;
+    }
   }
 
-  button {
-    background-color: #466af7;
-    border: none;
-    border-radius: 0 8px 8px 0;
-    height: 50px;
-    margin: 0;
-    padding: 10px 20px;
+  input[type="submit"] {
+    display: none
   }
 
-  button svg { 
+  svg {
     fill: #fff;
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 60px;
+    background-color: #466af7;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 20px;
   }
 }
 
@@ -126,12 +132,14 @@ ul.ui-autocomplete {
   border-radius: 8px;
   padding: 10px;
 
-  li:before { display: none; }
+  li:before {
+    display: none;
+  }
 
-  .ui-state-focus { 
+  .ui-state-focus {
     border: none;
     background: #466af7;
     font-weight: normal;
     color: #fff;
-  }  
+  }
 }
