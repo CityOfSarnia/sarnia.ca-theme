@@ -8,154 +8,146 @@
 
 <!-- the "no-js" class is for Modernizr. -->
 
-<html lang="en-US">
+<html <?php language_attributes(); ?>>
+
 <head>
 
-	<meta charset="<?php bloginfo('charset'); ?>">
+  <meta charset="<?php bloginfo('charset'); ?>">
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />'; ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="City of Sarnia">
+  <meta name="Copyright" content="(C) 2019 City of Sarnia. All rights reserved.">
 
-	<?php if (is_search()) { ?>
-		<meta name="robots" content="noindex, nofollow" />
-	<?php } ?>
+  <?php wp_enqueue_script("jquery"); ?>
 
-	<meta name="author" content="City of Sarnia">
-
-	<meta name="Copyright" content="(C) 2019 City of Sarnia. All rights reserved.">
-
-	<?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>
-
-	<?php wp_enqueue_script("jquery"); ?>
-
-	<?php wp_head(); ?>
+  <?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 
-	<div class="top">
-		<?php $loop = new WP_Query(array('post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1)); ?>
-		<?php while ($loop->have_posts()) : $loop->the_post(); ?>
-			<?php
-			$terms = get_the_terms($post->ID, 'notification-icon');
-			if ($terms) {
-				$terms_slugs = array();
-				foreach ($terms as $term) {
-					$terms_slugs[] = $term->slug;
-				}
-				$icon = $terms_slugs[0];
-			} else {
-				$icon = 'default-notification';
-			}
-			?>
-			<div class="feature-notification">
-				<div class="container feature-notification__wrapper">
-					<div class="feature-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
-					<div class="feature-notification__main">
-						<h4 class="feature-notification__headline"><?php the_title(); ?></h4>
-						<p class="feature-notification__text"><?php echo get_the_content(); ?></p>
-					</div>
-				</div>
-			</div>
+  <div class="top">
+    <?php $loop = new WP_Query(array('post_type' => 'notifications', 'filter' => 'feature', 'posts_per_page' => 1)); ?>
+    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+      <?php
+      $terms = get_the_terms($post->ID, 'notification-icon');
+      if ($terms) {
+        $terms_slugs = array();
+        foreach ($terms as $term) {
+          $terms_slugs[] = $term->slug;
+        }
+        $icon = $terms_slugs[0];
+      } else {
+        $icon = 'default-notification';
+      }
+      ?>
+      <div class="feature-notification">
+        <div class="container feature-notification__wrapper">
+          <div class="feature-notification__icon">
+            <?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
+          <div class="feature-notification__main">
+            <h4 class="feature-notification__headline"><?php the_title(); ?></h4>
+            <p class="feature-notification__text"><?php echo get_the_content(); ?></p>
+          </div>
+        </div>
+      </div>
 
-		<?php endwhile; ?>
-		<?php wp_reset_query(); ?>
+    <?php endwhile; ?>
+    <?php wp_reset_query(); ?>
 
-		<nav class="primary-menu" role="navigation">
-			<?php wp_nav_menu(array(
-				'theme_location' => 'primary-menu',
-				'container_class' => 'primary-menu__container',
-				'walker' => new Add_button_of_Sublevel_Walker
-			)); ?>
-		</nav>
-	</div>
+    <nav class="primary-menu" role="navigation">
+      <?php wp_nav_menu(array(
+        'theme_location' => 'primary-menu',
+        'container_class' => 'primary-menu__container',
+        'walker' => new Add_button_of_Sublevel_Walker
+      )); ?>
+    </nav>
+  </div>
 
-	<div class="wrap">
+  <div class="wrap">
 
-		<header class="header" role="banner">
-			<div class="header__wrapper">
+    <header class="header" role="banner">
+      <div class="header__wrapper">
+        <button class="primary-menu__toggle js-primary-menu__toggle">Toggle Menu</button>
+        <a href="/" class="logo">City of Sarnia</a>
+        <div class="search-form">
+          <?php get_search_form() ?>
+        </div>
+      </div>
+    </header>
 
-				<button class="primary-menu__toggle js-primary-menu__toggle">Toggle Menu</button>
+    <div class="banner" 
+    
+    style="background-image: url(<?php echo get_field('header_image')['sizes']['home-banner']; ?>) !important;">
 
-				<a href="/" class="logo">City of Sarnia</a>
+      <header class="banner__header">
+        <?php if (!is_search()) { ?>
+          <h1 class="<?php echo get_field('header_orientation') ? 'reverse' : ''; ?>">
 
-				<div class="search-form">
-					<?php get_search_form() ?>
-				</div>
+          <?php }
+          if (get_field('header_byline') && !is_search()) { ?>
 
-			</div>
-		</header>
+            <div class="banner__byline"><?php the_field('header_byline'); ?></div>
 
-		<div class="banner" style="background-image: url(<?php $image = get_field('header_image');
-															echo ($image['sizes']['home-banner']); ?>) !important;">
+          <?php }
+          if (is_search()) { ?>
 
-			<header class="banner__header">
-				<?php if (!is_search()) { ?>
-					<h1 class="<?php echo get_field('header_orientation') ? 'reverse' : ''; ?>">
+            <div class="banner__byline">Search Results for:</div>
+            <div class="banner__headline">&#8216;<?php echo get_query_var('s'); ?>&#8217; </div>
 
-					<?php }
-					if (get_field('header_byline') && !is_search()) { ?>
+          <?php } elseif (get_field('header_headline')) { ?>
 
-						<div class="banner__byline"><?php the_field('header_byline'); ?></div>
+            <div class="banner__headline"><?php the_field('header_headline'); ?></div>
 
-					<?php }
-					if (is_search()) { ?>
+          <?php } else { ?>
 
-						<div class="banner__byline">Search Results for:</div>
-						<div class="banner__headline">&#8216;<?php echo get_query_var('s'); ?>&#8217; </div>
+            <?php if (is_category()) { ?>
 
-					<?php } elseif (get_field('header_headline')) { ?>
+              <div class="banner__byline">Archive for Category:</div>
+              <div class="banner__headline">&#8216;<?php echo single_cat_title(); ?>&#8217;</div>
 
-						<div class="banner__headline"><?php the_field('header_headline'); ?></div>
+            <?php } elseif (is_tag()) { ?>
 
-					<?php } else { ?>
+              <div class="banner__headline">Posts Tagged &#8216;<?php echo single_tag_title(); ?>&#8217;</div>
 
-						<?php if (is_category()) { ?>
+            <?php } elseif (is_day()) { ?>
 
-							<div class="banner__byline">Archive for Category:</div>
-							<div class="banner__headline">&#8216;<?php echo single_cat_title(); ?>&#8217;</div>
+              <div class="banner__headline">Archive for <?php the_time('F jS, Y'); ?></div>
 
-						<?php } elseif (is_tag()) { ?>
+            <?php } elseif (is_month()) { ?>
 
-							<div class="banner__headline">Posts Tagged &#8216;<?php echo single_tag_title(); ?>&#8217;</div>
+              <div class="banner__headline">Archive for <?php the_time('F, Y'); ?></div>
 
-						<?php } elseif (is_day()) { ?>
+            <?php } elseif (is_year()) { ?>
 
-							<div class="banner__headline">Archive for <?php the_time('F jS, Y'); ?></div>
+              <div class="banner__headline">Archive for <?php the_time('Y'); ?></div>
 
-						<?php } elseif (is_month()) { ?>
+            <?php } elseif (is_404()) { ?>
 
-							<div class="banner__headline">Archive for <?php the_time('F, Y'); ?></div>
+              <div class="banner__headline">404 Not Found</div>
 
-						<?php } elseif (is_year()) { ?>
+            <?php } else { ?>
 
-							<div class="banner__headline">Archive for <?php the_time('Y'); ?></div>
+              <div class="banner__headline"><?php the_title(); ?></div>
 
-						<?php } elseif (is_404()) { ?>
+            <?php } ?>
 
-							<div class="banner__headline">404 Not Found</div>
+          <?php } ?>
 
-						<?php } else { ?>
+        </h1>
 
-							<div class="banner__headline"><?php the_title(); ?></div>
+        <?php if (get_field('header_cta_url') && !is_search()) { ?>
 
-						<?php } ?>
+          <a href="<?php the_field('header_cta_url'); ?>" class="btn banner__cta"><?php the_field('header_cta_text'); ?></a>
 
-					<?php } ?>
+        <?php } ?>
 
-				</h1>
+      </header>
 
-				<?php if (get_field('header_cta_url') && !is_search()) { ?>
-
-					<a href="<?php the_field('header_cta_url'); ?>" class="btn banner__cta"><?php the_field('header_cta_text'); ?></a>
-
-				<?php } ?>
-
-			</header>
-
-		</div>
+    </div>
 
 
-		<main role="main">
+    <main role="main">
