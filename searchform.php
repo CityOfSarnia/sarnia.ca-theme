@@ -1,8 +1,10 @@
 <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
   <div>
     <label class="screen-reader-text" for="s"><?php echo _x( 'Search for:', 'label' ) ?></label>
-    <input type="search" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
-      value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+    <input type="search"
+      placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+      value="<?php echo get_search_query() ?>" name="s"
+      title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" required/>
     <label>
       <input type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
       <svg width="13" height="13" viewBox="0 0 13 13">
