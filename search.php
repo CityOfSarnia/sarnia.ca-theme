@@ -8,7 +8,8 @@ Template Name: Search
 
 <?php get_header(); ?>
 
-<?php if (have_posts()): ?>
+<?php if (have_posts() && get_search_query()): ?>
+
 	<article>
 		<div class="container container--md">
 			<div class="search-results">
