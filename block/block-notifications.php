@@ -31,7 +31,7 @@
             $post_id = get_the_ID();
           ?>
           <a href="/notifications" class="recent-notification-list__item">
-            <div class="recent-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
+            <div class="recent-notification__icon"><?php get_template_part('/assets/img/icons/inline', $icon . '.svg'); ?></div>
             <div class="recent-notification__header">
               <div class="recent-notification__headline"><?php the_title(); ?></div>
               <p class="recent-notification__date"><?php the_field('notification_date', $post_id); ?></p>
@@ -74,7 +74,7 @@
               $post_id = get_the_ID();
             ?>
             <a href="/notifications" class="recent-notification-list__item">
-              <div class="recent-notification__icon"><?php include(TEMPLATEPATH . '/assets/img/icons/' . $icon . '.svg'); ?></div>
+              <div class="recent-notification__icon"><?php get_template_part('/assets/img/icons/inline', $icon . '.svg'); ?></div>
               <div class="recent-notification__header">
                 <div class="recent-notification__headline"><?php the_title(); ?></div>
                 <p class="recent-notification__date"><?php the_field('notification_date', $post_id); ?></p>
