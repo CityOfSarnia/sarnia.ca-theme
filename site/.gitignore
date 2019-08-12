@@ -12,6 +12,8 @@ web/app/uploads/*
 web/app/themes/*
 !web/app/themes/.gitkeep
 
+web/app/languages/*
+
 # WordPress
 web/wp
 web/.htaccess

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "872a497832cad72080b36c30b0005f0b",
+    "content-hash": "e56b73c2c41af3dc2b8fbf42d23db8d8",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -21,16 +21,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
+                "reference": "141b272484481432cda342727a427dc1e206bfa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
-                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
+                "reference": "141b272484481432cda342727a427dc1e206bfa0",
                 "shasum": ""
             },
             "require": {
@@ -86,6 +86,7 @@
                 "RadPHP",
                 "SMF",
                 "Thelia",
+                "Whmcs",
                 "WolfCMS",
                 "agl",
                 "aimeos",
@@ -108,6 +109,7 @@
                 "installer",
                 "itop",
                 "joomla",
+                "known",
                 "kohana",
                 "laravel",
                 "lavalite",
@@ -137,7 +139,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-08-27T06:10:37+00:00"
+            "time": "2019-08-12T15:00:31+00:00"
         },
         {
             "name": "cos/gravityforms",
@@ -166,17 +168,17 @@
         },
         {
             "name": "cos/sarnia.ca-theme",
-            "version": "v2.4.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git",
-                "reference": "c6e14b6a8dd248b720ef256cd44f040127bcf47e"
+                "reference": "b8222f4260d8b0d0853bedd8dd8b91414a8d782e"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-theme",
-            "time": "2019-08-09T20:26:10+00:00"
+            "time": "2019-08-12T16:13:09+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -232,6 +234,509 @@
                 "wp"
             ],
             "time": "2019-01-30T21:44:48+00:00"
+        },
+        {
+            "name": "koodimonni-language/en_ca",
+            "version": "5.2.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/core/5.2.2/en_CA.zip"
+            },
+            "require": {
+                "koodimonni-plugin-language/akismet-en_ca": "*",
+                "koodimonni-plugin-language/bbpress-en_ca": "*",
+                "koodimonni-plugin-language/woocommerce-en_ca": "*",
+                "koodimonni-plugin-language/wordpress-importer-en_ca": "*",
+                "koodimonni-theme-language/twentyeleven-en_ca": "*",
+                "koodimonni-theme-language/twentyfifteen-en_ca": "*",
+                "koodimonni-theme-language/twentyfourteen-en_ca": "*",
+                "koodimonni-theme-language/twentysixteen-en_ca": "*",
+                "koodimonni-theme-language/twentyten-en_ca": "*",
+                "koodimonni-theme-language/twentythirteen-en_ca": "*",
+                "koodimonni-theme-language/twentytwelve-en_ca": "*",
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Full Wordpress translation (including themes and core plugins) for English (Canada) - en_ca",
+            "keywords": [
+                "Full-Package",
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "twentysixteen"
+            ]
+        },
+        {
+            "name": "koodimonni-language/fr_ca",
+            "version": "5.2.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/core/5.2.2/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni-plugin-language/akismet-fr_ca": "*",
+                "koodimonni-plugin-language/woocommerce-fr_ca": "*",
+                "koodimonni-plugin-language/wordpress-importer-fr_ca": "*",
+                "koodimonni-theme-language/twentyeleven-fr_ca": "*",
+                "koodimonni-theme-language/twentyfifteen-fr_ca": "*",
+                "koodimonni-theme-language/twentyfourteen-fr_ca": "*",
+                "koodimonni-theme-language/twentysixteen-fr_ca": "*",
+                "koodimonni-theme-language/twentyten-fr_ca": "*",
+                "koodimonni-theme-language/twentythirteen-fr_ca": "*",
+                "koodimonni-theme-language/twentytwelve-fr_ca": "*",
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Full Wordpress translation (including themes and core plugins) for fr_ca",
+            "keywords": [
+                "Full-Package",
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "twentysixteen"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/akismet-en_ca",
+            "version": "4.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.2/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress akismet translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "akismet",
+                "en_ca"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/akismet-fr_ca",
+            "version": "4.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.2/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress akismet translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "akismet",
+                "fr_ca"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/bbpress-en_ca",
+            "version": "2.5.14",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.14/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress bbpress translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "bbpress",
+                "en_ca"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/woocommerce-en_ca",
+            "version": "3.6.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.6.5/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress woocommerce translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "woocommerce"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/woocommerce-fr_ca",
+            "version": "3.6.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.6.5/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress woocommerce translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "woocommerce"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/wordpress-importer-en_ca",
+            "version": "0.6.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/wordpress-importer/0.6.4/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress wordpress-importer translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "wordpress-importer"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/wordpress-importer-fr_ca",
+            "version": "0.6.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/wordpress-importer/0.6.4/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress wordpress-importer translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "wordpress-importer"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyeleven-en_ca",
+            "version": "3.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyeleven/3.3/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyeleven translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "twentyeleven"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyeleven-fr_ca",
+            "version": "3.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyeleven/3.3/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyeleven translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "twentyeleven"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyfifteen-en_ca",
+            "version": "2.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyfifteen/2.5/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyfifteen translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "twentyfifteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyfifteen-fr_ca",
+            "version": "2.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyfifteen/2.5/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyfifteen translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "twentyfifteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyfourteen-en_ca",
+            "version": "2.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyfourteen/2.7/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyfourteen translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "twentyfourteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyfourteen-fr_ca",
+            "version": "2.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyfourteen/2.7/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyfourteen translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "twentyfourteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentysixteen-en_ca",
+            "version": "2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentysixteen/2.0/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentysixteen translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "twentysixteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentysixteen-fr_ca",
+            "version": "2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentysixteen/2.0/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentysixteen translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "twentysixteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyten-en_ca",
+            "version": "2.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyten/2.9/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyten translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "twentyten"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyten-fr_ca",
+            "version": "2.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyten/2.9/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyten translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "twentyten"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentythirteen-en_ca",
+            "version": "2.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentythirteen/2.9/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentythirteen translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "twentythirteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentythirteen-fr_ca",
+            "version": "2.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentythirteen/2.9/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentythirteen translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "twentythirteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentytwelve-en_ca",
+            "version": "3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentytwelve/3.0/en_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentytwelve translation for English (Canada) - en_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "en_ca",
+                "twentytwelve"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentytwelve-fr_ca",
+            "version": "3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentytwelve/3.0/fr_CA.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentytwelve translation for  - fr_ca",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "fr_ca",
+                "twentytwelve"
+            ]
+        },
+        {
+            "name": "koodimonni/composer-dropin-installer",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Koodimonni/Composer-Dropin-Installer.git",
+                "reference": "a749f19e3a3bc05529190961ed7529592b20138e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/a749f19e3a3bc05529190961ed7529592b20138e",
+                "reference": "a749f19e3a3bc05529190961ed7529592b20138e",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*-dev"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Koodimonni\\Composer\\Dropin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Koodimonni\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Onni Hakala",
+                    "role": "Developer",
+                    "email": "onni@koodimonni.fi"
+                }
+            ],
+            "description": "Install packages or a few files from packages into custom paths without overwriting existing stuff.",
+            "time": "2018-02-04T10:52:01+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -934,15 +1439,15 @@
         },
         {
             "name": "wpackagist-plugin/luckywp-table-of-contents",
-            "version": "1.9.1",
+            "version": "1.9.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/luckywp-table-of-contents/",
-                "reference": "tags/1.9.1"
+                "reference": "tags/1.9.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.9.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.9.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
