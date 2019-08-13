@@ -4,8 +4,6 @@
  */
 ?>
 
-<?php include TEMPLATEPATH . '/header.php';?>
-
 <?php get_header();?>
 
 <?php if (have_posts() && get_search_query()): ?>
