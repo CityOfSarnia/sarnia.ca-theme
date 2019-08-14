@@ -105,7 +105,9 @@
     "wp-api/basic-auth": "dev-master",
     "wpackagist-plugin/broken-link-checker": "^1.11.8",
     "koodimonni-language/en_ca": "*",
-    "koodimonni-language/fr_ca": "*"
+    "koodimonni-language/fr_ca": "*",
+    "wpackagist-plugin/theme-check": "20190801.1",
+    "wpackagist-plugin/theme-sniffer": "^1.1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
