@@ -1,8 +1,4 @@
-<?php
-/*
- * Template Name: Notifications
- */
-?>
+<?php /* Template Name: Notifications */ ?>
 
 <?php get_header(); ?>
 
