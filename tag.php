@@ -1,41 +1,31 @@
 <?php get_header(); ?>
 
-<article>
+<article class="posts">
 
-	<div class="section-header">
+	<div class="container container--min">
 
-		<div class="section-header-top"></div>
+		<div class="post-list">
 
-		<h1><?php single_tag_title(); ?></h1>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div class="section-header-bottom"></div>
+				<div class="post-list__item">
 
-	</div>
+					<h3 class="post-list__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-	<div class="excerpt-block clearfix">
-
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-			<div class="excerpt">
-
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('excerpt-thumb', array('alt' => ''.get_the_title().'', 'title' => ''.get_the_title().''));?></a>
-
-				<div class="excerpt-content">
-
-					<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-
-					<div class="excerpt-header-line"></div>
-
-					<h3><?php the_time('F j, Y'); ?></h3>
+					<p class="post-list__excerpt"><?php echo get_the_excerpt(); ?></p>
 
 				</div>
 
-			</div>
+			<?php endwhile; endif; ?>
 
-		<?php endwhile; endif; ?>
+		</div>
+
+		<?php sarnia_number_pagination(); ?>
 
 	</div>
 
 </article>
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
