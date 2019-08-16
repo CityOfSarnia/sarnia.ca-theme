@@ -1,10 +1,4 @@
-<?php
-/*
- * Template Name: Search
- */
-?>
-
-<?php include TEMPLATEPATH . '/header.php';?>
+<?php /* Template Name: Search */ ?>
 
 <?php get_header();?>
 

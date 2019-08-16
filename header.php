@@ -67,7 +67,7 @@
         </nav>
     </div>
 
-    <div class="wrap">
+    <div id="page" class="wrap">
 
         <header class="header" role="banner">
             <div class="header__wrapper">
