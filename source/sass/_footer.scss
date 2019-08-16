@@ -33,16 +33,18 @@
   @media screen and (min-width: $bp-md) {
     justify-self: end;
     order: 1;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .logo {
     margin: 0;
   }
+
 }
 
 .footer__contact {
   order: 1;
+
   @media screen and (min-width: $bp-md) {
     order: 2;
   }
@@ -85,6 +87,17 @@
   font-weight: 600;
   font-style: normal;
   color: $white;
+}
+
+.logo-copyright__text {
+  @include font(14, 20);
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.700rem;
+  color: $white;
+  text-align: right;
 }
 
 .contact-item__text {
