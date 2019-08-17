@@ -1,21 +1,25 @@
 <?php /* Template Name: Search */ ?>
 
-<?php get_header();?>
-<?php if (have_posts() && get_search_query()): ?>
-<article>
-    <div class="container container--md">
-        <div class="search-results">
-<?php 
-while (have_posts()):
-    the_post();
-    get_template_part('template-parts/content/search', 'excerpt');
-endwhile;
-sarnia_number_pagination();
+<?php
+get_header();
+if (have_posts() && get_search_query()) :
 ?>
-        </div><!-- .search-results -->
-    </div><!-- .container container--md -->
-</article>
-<?php else: ?>
-<?php get_template_part('template-parts/content/search', 'none');?>
-<?php endif; ?>
-<?php get_footer();?>
+                <article class="posts">
+                    <div class="container container--md">
+                        <div class="search-results">
+<?php 
+    while (have_posts()):
+        the_post();
+        get_template_part('template-parts/content/search', 'excerpt');
+    endwhile;
+    sarnia_number_pagination();
+?>
+                        </div><!-- .search-results -->
+                    </div><!-- .container.container--md -->
+                </article><!-- .posts -->
+<?php 
+else:
+    get_template_part('template-parts/content/search', 'none');
+endif;
+get_footer();
+?>
