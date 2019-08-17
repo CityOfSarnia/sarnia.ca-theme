@@ -9,22 +9,24 @@
 <!-- the "no-js" class is for Modernizr. -->
 
 <html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-    <?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />'; ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="City of Sarnia">
-    <meta name="Copyright" content="(C) 2019 City of Sarnia. All rights reserved.">
-    <?php wp_enqueue_script("jquery"); ?>
-    <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-    <div class="top">
+    <head>
+        <meta charset="<?php bloginfo('charset'); ?>">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="City of Sarnia">
+        <meta name="Copyright" content="(C) 2019 City of Sarnia. All rights reserved.">
+<?php if (is_search()) : ?>
+        <meta name="robots" content="noindex, nofollow" />
+<?php endif; ?>
+<?php wp_enqueue_script("jquery"); ?>
+<?php wp_head(); ?>
+    </head>
+    <body <?php body_class(); ?>>
+        <div class="top">
 <?php get_template_part('template-parts/header/notification'); ?>
 <?php get_template_part('template-parts/header/navigation'); ?>
-    </div><!-- .top -->
-    <div id="page" class="wrap">
+        </div><!-- .top -->
+        <div id="page" class="wrap">
 <?php get_template_part('template-parts/header/header'); ?>
 <?php get_template_part('template-parts/header/banner'); ?>
-        <main role="main">
+            <main role="main">
