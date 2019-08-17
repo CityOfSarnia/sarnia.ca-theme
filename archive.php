@@ -35,5 +35,4 @@ endif; ?>
 <?php sarnia_number_pagination(); ?>
 	</div><!-- .container.container--min -->
 </article>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

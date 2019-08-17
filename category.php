@@ -17,5 +17,4 @@
 <?php sarnia_number_pagination(); ?>
 	</div><!-- container.container--min -->
 </article><!-- .posts -->
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
