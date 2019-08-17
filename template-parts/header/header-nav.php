@@ -4,4 +4,5 @@
     'container_class' => 'primary-menu__container',
     'walker' => new Add_button_of_Sublevel_Walker
 )); ?>
+
 </nav><!-- .primary-menu -->
