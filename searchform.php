@@ -1,4 +1,4 @@
-<form role="search" method="get" id="searchform" class="searchform" action="<?=home_url('/');?>">
+<form id="searchform" role="search" method="get" class="searchform" action="<?=home_url('/');?>">
     <div id="search">
         <label class="screen-reader-text" for="s"><?=_x('Search for:', 'label')?></label>
         <input type="search" placeholder="<?=esc_attr_x('Search …', 'placeholder')?>" value="<?=get_search_query()?>" name="s" title="<?=esc_attr_x('Search for:', 'label')?>" required>
@@ -10,4 +10,4 @@
             </svg>
         </label>
     </div><!-- #search -->
-</form>
+</form><!-- #searchform -->
