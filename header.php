@@ -21,10 +21,10 @@
 </head>
 <body <?php body_class(); ?>>
     <div class="top">
-<?php get_template_part('template-parts/header/header', 'notification'); ?>
-<?php get_template_part('template-parts/header/header', 'nav'); ?>
+<?php get_template_part('template-parts/header/notification'); ?>
+<?php get_template_part('template-parts/header/navigation'); ?>
     </div><!-- .top -->
     <div id="page" class="wrap">
-<?php get_template_part('template-parts/header/header', 'header'); ?>
-<?php get_template_part('template-parts/header/header', 'banner'); ?>
+<?php get_template_part('template-parts/header/header'); ?>
+<?php get_template_part('template-parts/header/banner'); ?>
         <main role="main">
