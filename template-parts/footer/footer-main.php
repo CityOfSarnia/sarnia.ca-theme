@@ -31,7 +31,8 @@
                         <p class="contact-item__headline">Email</p>
                         <p class="contact-item__text">
                             <a href="mailto:<?php the_field('email', 'option'); ?>">
-<?php the_field('email', 'option'); ?>
+                                <?php the_field('email', 'option'); ?>
+
                             </a>
                         </p>
 <?php endif; ?>
