@@ -8,7 +8,7 @@
 <?php 
 while (have_posts()):
     the_post();
-    get_template_part('template-parts/content/content', 'excerpt');
+    get_template_part('template-parts/content/search', 'excerpt');
 endwhile;
 sarnia_number_pagination();
 ?>
@@ -16,7 +16,6 @@ sarnia_number_pagination();
     </div><!-- .container container--md -->
 </article>
 <?php else: ?>
-<?php get_template_part('template-parts/content/content', 'none');?>
-<?php endif?>
-<?php get_sidebar();?>
+<?php get_template_part('template-parts/content/search', 'none');?>
+<?php endif; ?>
 <?php get_footer();?>
