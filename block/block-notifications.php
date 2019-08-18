@@ -36,7 +36,7 @@
               <div class="recent-notification__headline"><?php the_title(); ?></div>
               <p class="recent-notification__date"><?php the_field('notification_date', $post_id); ?></p>
             </div>
-            <p class="recent-notification__text hidden"><?php echo get_the_excerpt(); ?></p>
+            <p class="recent-notification__text hidden"><?= get_the_excerpt(); ?></p>
           </a>
           <?php $count++ ?>
         <?php endwhile; ?>
@@ -79,7 +79,7 @@
                 <div class="recent-notification__headline"><?php the_title(); ?></div>
                 <p class="recent-notification__date"><?php the_field('notification_date', $post_id); ?></p>
               </div>
-              <p class="recent-notification__text hidden"><?php echo get_the_excerpt(); ?></p>
+              <p class="recent-notification__text hidden"><?= get_the_excerpt(); ?></p>
             </a>
           <?php endwhile; ?>
         <?php } ?>
@@ -99,7 +99,7 @@
         <?php $loop = new WP_Query( array( 'post_type' => 'notifications', 'filter' => 'sticky', 'posts_per_page' => 3 ) ); ?>
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <a href="/notifications" class="recent-notification-list__item">
-            <p class="recent-notification__text"><?php echo get_the_excerpt(); ?></p>
+            <p class="recent-notification__text"><?= get_the_excerpt(); ?></p>
           </a>
           <?php $count++ ?>
         <?php endwhile; ?>
@@ -124,7 +124,7 @@
           ?>
           <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <a href="/notifications" class="recent-notification-list__item">
-              <p class="recent-notification__text"><?php echo get_the_excerpt(); ?></p>
+              <p class="recent-notification__text"><?= get_the_excerpt(); ?></p>
             </a>
           <?php endwhile; ?>
         <?php } ?>

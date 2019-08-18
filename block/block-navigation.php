@@ -30,7 +30,7 @@
 
       <?php } else { ?>
 
-        <h2 class="navigation-card__headline"><?php echo $menu_name ?></h2>
+        <h2 class="navigation-card__headline"><?= $menu_name ?></h2>
 
       <?php } ?>
 
@@ -58,7 +58,7 @@
 
       <?php } else { ?>
 
-        <h2 class="navigation-card__headline"><?php echo "Navigation" ?></h2>
+        <h2 class="navigation-card__headline"><?= "Navigation" ?></h2>
 
       <?php } ?>
 

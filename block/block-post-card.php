@@ -21,15 +21,15 @@ setup_postdata( $post );
 
   <?php if ( has_post_thumbnail($post->ID) ) { ?>
 
-    <div class="card__image" style="background-image: url('<?php echo $thumb['0'];?>')"></div>
+    <div class="card__image" style="background-image: url('<?= $thumb['0'];?>')"></div>
 
   <?php } ?>
 
   <div class="card__main">
 
-    <h2 class="card__headline"><?php echo get_the_title($post->ID); ?></h2>
+    <h2 class="card__headline"><?= get_the_title($post->ID); ?></h2>
 
-    <p class="card__text"><?php echo get_the_excerpt($post->ID); ?></p>
+    <p class="card__text"><?= get_the_excerpt($post->ID); ?></p>
 
     <div class="card__cta"><div class="btn btn--sm">Learn More</div></div>
 

@@ -3,7 +3,7 @@
         <div class="footer__columns">
             <div class="footer__logo">
                 <a href="/" class="logo">City of Sarnia</a>
-                <p class="logo-copyright__text">&copy;<?php echo date("Y"); echo " "; echo bloginfo('name'); ?></p>
+                <p class="logo-copyright__text">&copy;<?= date("Y"); echo " "; echo bloginfo('name'); ?></p>
             </div><!-- .footer__logo -->
             <div class="footer__contact">
                 <div class="contact-list">
