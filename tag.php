@@ -17,7 +17,7 @@ if (have_posts()) :
 				</article><!-- .posts -->
 <?php
 else:
-	get_template_part('template-parts/content/search', 'none');
+	get_template_part('template-parts/content/post', 'none');
 endif;
 get_footer();
 ?>
