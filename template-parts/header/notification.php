@@ -15,7 +15,7 @@ while ($loop->have_posts()): $loop->the_post();
 <div class="feature-notification">
     <div class="container feature-notification__wrapper">
         <div class="feature-notification__icon">
-<?php get_template_part('/assets/img/icons/inline/notifications', $icon . '.svg');?>
+<?php get_template_part('/assets/img/icons/notifications/inline', $icon . '.svg');?>
         </div><!-- .feature-notification__icon -->
         <div class="feature-notification__main">
             <h4 class="feature-notification__headline"><?php the_title();?></h4>

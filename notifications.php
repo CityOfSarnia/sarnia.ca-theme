@@ -31,7 +31,7 @@ while ($loop->have_posts()) : $loop->the_post();
 ?>
                         <li id="post-<?php the_ID();?>" class="notification-list__item">
                             <div class="notification__icon">
-<?php get_template_part('/assets/img/icons/inline/notifications', $icon . '.svg'); ?>
+<?php get_template_part('/assets/img/icons/notifications/inline', $icon . '.svg'); ?>
                             </div>
                             <header class="notification__header">
                                 <h2 class="notification__headline"><?php the_title(); ?></h2>
