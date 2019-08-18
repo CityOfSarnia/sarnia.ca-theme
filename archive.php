@@ -1,8 +1,9 @@
 <?php get_header(); ?>
-<article class="posts">
-	<div class="container container--min">
-		<div class="post-list">
-<?php if ( have_posts() ):
+				<article class="posts">
+					<div class="container container--min">
+						<div class="post-list">
+<?php
+if ( have_posts() ):
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	if (is_day()):
 		$currYear = get_the_time('Y');
@@ -19,20 +20,20 @@
 		$currYear = get_the_time('Y');
 		$wp_query = new WP_Query();
 		$wp_query->query('year=' . $currYear . '&post_type=post&paged=' . $paged);
-endif;
-while ($wp_query->have_posts()) : $wp_query->the_post();
-?>
-			<div id="post-<?php the_ID();?>" class="post-list__item">
-				<h3 class="post-list__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<p class="post-list__excerpt"><?=get_the_excerpt(); ?></p>
-			</div><!-- #post-<?php the_ID();?> -->
-
-<?php
+	endif;
+	while ($wp_query->have_posts()) : 
+		$wp_query->the_post();
+		get_template_part('template-parts/content/post', 'excerpt');
 	endwhile;
 	wp_reset_postdata();
-endif; ?>
-		</div><!-- .post-list -->
-<?php sarnia_number_pagination(); ?>
-	</div><!-- .container.container--min -->
-</article>
-<?php get_footer(); ?>
+	sarnia_number_pagination();
+?>
+						</div><!-- .post-list -->
+					</div><!-- .container.container--min -->
+				</article><!-- .posts -->
+<?php
+else:
+	get_template_part('template-parts/content/post', 'none');
+endif;
+get_footer();
+?>
