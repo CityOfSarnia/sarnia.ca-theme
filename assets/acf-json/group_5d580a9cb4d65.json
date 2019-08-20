@@ -17,6 +17,27 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5d5c344cad8d3",
+            "label": "Notifications Page",
+            "name": "notifications_page",
+            "type": "page_link",
+            "instructions": "Select page used for notifications",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 0,
+            "multiple": 0
         }
     ],
     "location": [
@@ -36,5 +57,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1566320059
+    "modified": 1566324375
 }
