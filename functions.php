@@ -91,7 +91,7 @@ function create_my_post_types()
 			'exclude_from_search' => true,
 			'show_in_admin_bar'   => false,
 			'show_in_nav_menus'   => false,
-			'publicly_queryable'  => false,
+			'publicly_queryable'  => true,
 			'query_var'           => false,
 		)
 	);
@@ -232,18 +232,6 @@ function my_acf_init()
 
 	// check function exists
 	if (function_exists('acf_register_block')) {
-
-		// register a banner block
-		acf_register_block(array(
-			'name'						=> 'banner',
-			'title'						=> __('Banner'),
-			'description'			=> __('A banner block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'				=> 'formatting',
-			'icon'						=> 'id',
-			'keywords'				=> array('banner', 'menu', 'nav'),
-			'supports' 				=> array('align' => array('full')),
-		));
 
 		// register a post card block
 		acf_register_block(array(
