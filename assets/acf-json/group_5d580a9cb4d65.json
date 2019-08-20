@@ -1,6 +1,6 @@
 {
     "key": "group_5d580a9cb4d65",
-    "title": "Notifications",
+    "title": "Notifications Config",
     "fields": [
         {
             "key": "field_5d580a9cc489d",
@@ -36,5 +36,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1566051055
+    "modified": 1566320059
 }
