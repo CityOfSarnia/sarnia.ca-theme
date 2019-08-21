@@ -91,7 +91,7 @@ function create_my_post_types()
 			'exclude_from_search' => true,
 			'show_in_admin_bar'   => false,
 			'show_in_nav_menus'   => false,
-			'publicly_queryable'  => false,
+			'publicly_queryable'  => true,
 			'query_var'           => false,
 		)
 	);
@@ -233,18 +233,6 @@ function my_acf_init()
 	// check function exists
 	if (function_exists('acf_register_block')) {
 
-		// register a banner block
-		acf_register_block(array(
-			'name'						=> 'banner',
-			'title'						=> __('Banner'),
-			'description'			=> __('A banner block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'				=> 'formatting',
-			'icon'						=> 'id',
-			'keywords'				=> array('banner', 'menu', 'nav'),
-			'supports' 				=> array('align' => array('full')),
-		));
-
 		// register a post card block
 		acf_register_block(array(
 			'name'						=> 'post-card',
@@ -337,8 +325,37 @@ add_post_type_support('page', 'excerpt');
 function sarnia_scripts()
 {
 	wp_enqueue_style('sarnia-fonts', sarnia_theme_fonts_url());
-	wp_enqueue_style('sarnia-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/main.css'));
-	wp_enqueue_script('sarnia-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/global-min.js'), true);
+	wp_enqueue_script('jquery-ui-autocomplete');
+	wp_enqueue_style('jquery-ui-styles', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
+
+	$is_hot = (WP_ENV == 'local');
+	if ($is_hot) {
+		if (env('DEVSERVER_IGNORE_SSL_ERRORS')) {
+			// this ignores SSL errors, only use in dev, here be dragons!
+			$context_options = array(
+				"ssl" => array(
+					"verify_peer" => false,
+					"verify_peer_name" => false,
+				),
+			);
+		} else {
+			$context_options = array();
+		}
+		$manifest_json = file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest.json', false, stream_context_create($context_options));
+		$manifest = json_decode($manifest_json, true);
+
+		// css is loaded via js
+		wp_register_script('sarnia-js', $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
+	} else {
+		$manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest.json'), true);
+		$legacy_manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest-legacy.json'), true);
+
+		wp_enqueue_style('sarnia-style', WP_HOME . $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
+		wp_register_script('sarnia-js', WP_HOME . $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
+	}
+
+	wp_localize_script('sarnia-js', 'SarniaSearchAutocomplete', array('url' => admin_url('admin-ajax.php')));
+	wp_enqueue_script('sarnia-js');
 
 	// Move jQuery to footer
 	if (!is_admin()) {
@@ -346,14 +363,6 @@ function sarnia_scripts()
 		wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, NULL, true);
 		wp_enqueue_script('jquery');
 	}
-
-	// for search
-	wp_enqueue_script('jquery-ui-autocomplete');
-	wp_register_style('jquery-ui-styles', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
-	wp_enqueue_style('jquery-ui-styles');
-	wp_register_script('sarnia-search-autocomplete', get_template_directory_uri() . '/assets/js/search-autocomplete.js', array('jquery', 'jquery-ui-autocomplete'), '1.0', false);
-	wp_localize_script('sarnia-search-autocomplete', 'SarniaSearchAutocomplete', array('url' => admin_url('admin-ajax.php')));
-	wp_enqueue_script('sarnia-search-autocomplete');
 }
 add_action('wp_enqueue_scripts', 'sarnia_scripts');
 
@@ -407,10 +416,10 @@ if (function_exists('register_sidebar')) {
  * @link https://roots.io/plugins/soil/
  */
 add_theme_support('soil-clean-up');
-//add_theme_support('soil-disable-rest-api');
 add_theme_support('soil-disable-asset-versioning');
 add_theme_support('soil-disable-trackbacks');
-//add_theme_support('soil-js-to-footer');
+add_theme_support('soil-google-analytics', env('GOOGLE_ANALYTICS_TRACKINGID'));
+add_theme_support('soil-js-to-footer');
 add_theme_support('soil-nav-walker');
 add_theme_support('soil-nice-search');
 add_theme_support('soil-relative-urls');

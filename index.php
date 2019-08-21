@@ -1,27 +1,9 @@
-<?php
-/*
-Template Name: Home
-*/
-?>
-
-<?php include(TEMPLATEPATH . '/header.php'); ?>
-
 <?php get_header(); ?>
-
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-	<article>
-
-		<div class="container container--min">
-
-			<?php the_content(); ?>
-
-		</div>
-
-	</article>
-
+	<article id="post-<?php the_ID();?>">
+		<div class="container container--min content">
+<?php the_content(); ?>
+		</div><!-- .container.container--min.content -->
+	</article><!-- #post-<?php the_ID();?> -->
 <?php endwhile; endif; ?>
-
-<?php get_sidebar(); ?>
-
 <?php get_footer(); ?>

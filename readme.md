@@ -2,14 +2,11 @@
 
 *A custom theme based on HTML5 Reset*
 
-### HTML5 Reset brings to the table:
+## Setup
 
-1. A style sheet designed to strip initial files from browsers, meaning you start off with a blank slate.
-2. Easy to customize -- remove whatever you don't need, keep what you do.
-3. Analytics and jQuery snippets in place
-4. Meta tags ready for population
-5. Empty mobile and print style sheets, including blocks for device orientation
-6. Modernizr.js [http://www.modernizr.com/](http://www.modernizr.com/) enables HTML5 compatibility with IE (and a dozen other great features)
-7. IE-specific classes for simple CSS-targeting
-8. iPhone/iPad/iTouch icon snippets 
-9. Lots of other keen stuff...
+1. clone the repo
+2. run `npm install` to get build dependencies
+3. setup environment variables, see example.env
+4. run `npm run dev` to start the webpack dev server
+5. update css and js files in the source directory, front end with hot reload
+6. run `npm run build` to compile final, production ready assets, ensure these are committed to the repository

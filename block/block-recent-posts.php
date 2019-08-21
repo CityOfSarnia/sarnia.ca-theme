@@ -10,7 +10,7 @@
 
   <?php $align_class = $block['align'] ? 'align' . $block['align'] : ''; ?>
 
-  <div class="news-card <?=card_colour(); ?> <?php echo $align_class; ?>">
+  <div class="news-card <?=card_colour(); ?> <?= $align_class; ?>">
 
     <?php if( get_field('recent_posts_image') ) { ?>
 
@@ -29,7 +29,7 @@
 
       <?php } else { ?>
 
-        <h2 class="news-card__headline"><?php echo $catName; ?></h2>
+        <h2 class="news-card__headline"><?= $catName; ?></h2>
 
       <?php } ?>
 
