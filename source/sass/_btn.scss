@@ -51,6 +51,7 @@
   }
 
   &.btn--outline {
+    @include vertical-align();
     @include font(14, 14);
     // font-weight: 400;
     background-color: transparent;

@@ -1,0 +1,10 @@
+/* The vertical-align mixin */
+/* @include to vertically align an element i.e btn */
+
+@mixin vertical-align() {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
