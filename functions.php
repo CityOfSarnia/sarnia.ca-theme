@@ -1,40 +1,5 @@
 <?php
 
-use function \Sober\Intervention\intervention;
-
-if (function_exists('\Sober\Intervention\intervention')) {
-	// now you can use the function to call the required modules and their params
-	intervention('remove-menu-items', 'plugins', ['editor', 'author']);
-	//intervention('remove-menu-items', 'plugins', 'all');
-	intervention('remove-emoji');
-	// Removes howdy and replaces with Hello.
-	intervention('remove-howdy', 'Hello');
-}
-
-function card_colour()
-{
-	global $card_count;
-
-	$card_count++;
-
-	switch ($card_count) {
-		case 1:
-			$colour = 'card--blue';
-			break;
-		case 2:
-			$colour = 'card--red';
-			break;
-		case 3:
-			$colour = 'card--yellow';
-			$card_count = 0;
-			break;
-		default:
-			$card_count = 0;
-	}
-
-	return $colour;
-}
-
 // Custom Except Length
 function sarnia_excerpt_length($length)
 {
@@ -43,13 +8,9 @@ function sarnia_excerpt_length($length)
 add_filter('excerpt_length', 'sarnia_excerpt_length');
 
 // Define Post Thumbnails
-add_theme_support('post-thumbnails');
-add_image_size('home-banner', 1000, 900, true);
-add_image_size('banner', 1600, 600, true);
-add_image_size('card', 780, 200, true);
-
-// Add Theme Features
-add_post_type_support('page', 'excerpt');
+if (function_exists('add_theme_support')) {
+	add_theme_support('post-thumbnails');
+}
 
 // Register Main Menu
 add_action('init', 'register_my_menu');
@@ -76,29 +37,6 @@ class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
 	}
 }
 
-function create_my_post_types()
-{
-	register_post_type(
-		'notifications',
-		array(
-			'labels' => array(
-				'name' => __('Notifications'),
-				'singular_name' => __('Notification')
-			),
-			'public' => true,
-			'menu_icon' => 'dashicons-star-filled',
-			'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
-			'exclude_from_search' => true,
-			'show_in_admin_bar'   => false,
-			'show_in_nav_menus'   => false,
-			'publicly_queryable'  => true,
-			'query_var'           => false,
-		)
-	);
-}
-
-add_action('init', 'create_my_post_types');
-
 // Numbered Pagination
 function sarnia_number_pagination()
 {
@@ -114,38 +52,6 @@ function sarnia_number_pagination()
 		'total' => $wp_query->max_num_pages
 	));
 	echo "</div>";
-}
-
-// Create Custom Taxonomies
-add_action('init', 'build_taxonomies', 0);
-
-function build_taxonomies()
-{
-
-	register_taxonomy(
-		'filter',
-		array('notifications'),
-		array(
-			'hierarchical' => true,
-			'label' => 'Filter',
-			'query_var' => true,
-		)
-	);
-
-	register_taxonomy(
-		'notification-icon',
-		array('notifications'),
-		array(
-			'hierarchical' => true,
-			'label' => 'Notification Icon',
-			'query_var' => true,
-		)
-	);
-}
-
-// Register Options Page
-if (function_exists('acf_add_options_page')) {
-	acf_add_options_page();
 }
 
 // Add theme support for wide content alignment
@@ -226,102 +132,6 @@ function sarnia_theme_fonts_url()
 	return esc_url_raw($fonts_url);
 }
 
-add_action('acf/init', 'my_acf_init');
-function my_acf_init()
-{
-
-	// check function exists
-	if (function_exists('acf_register_block')) {
-
-		// register a post card block
-		acf_register_block(array(
-			'name'						=> 'post-card',
-			'title'						=> __('Post Card'),
-			'description'			=> __('A post or page card block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'				=> 'formatting',
-			'icon'						=> 'media-default',
-			'keywords'				=> array('post', 'card'),
-			'supports' 				=> array('align' => false),
-		));
-
-		// register a custom card block
-		acf_register_block(array(
-			'name'						=> 'custom-card',
-			'title'						=> __('Custom Card'),
-			'description'			=> __('A custom card block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'				=> 'formatting',
-			'icon'						=> 'media-text',
-			'keywords'				=> array('custom', 'card'),
-			'supports' 				=> array('align' => false),
-		));
-
-		// register an accordion block
-		acf_register_block(array(
-			'name'						=> 'accordion',
-			'title'						=> __('Accordion'),
-			'description'			=> __('An accordion block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'				=> 'formatting',
-			'icon'						=> 'plus',
-			'keywords'				=> array('accordion', 'toggle', 'dropdown'),
-			'supports' 				=> array('align' => false),
-		));
-
-		// register a notifications block
-		acf_register_block(array(
-			'name'						=> 'notifications',
-			'title'						=> __('Notifications'),
-			'description'			=> __('A notifications block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'				=> 'formatting',
-			'icon'						=> 'star-filled',
-			'keywords'				=> array('notifications'),
-			'supports' 				=> array('align' => array('full')),
-		));
-
-		// register a recent posts block
-		acf_register_block(array(
-			'name'						=> 'recent-posts',
-			'title'						=> __('Recent Posts'),
-			'description'			=> __('Recent posts by category block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'				=> 'formatting',
-			'icon'						=> 'admin-page',
-			'keywords'				=> array('recent', 'posts', 'news'),
-			'supports' 				=> array('align' => array('wide')),
-		));
-
-		// register a navigation block
-		acf_register_block(array(
-			'name'						=> 'navigation',
-			'title'						=> __('Navigation'),
-			'description'			=> __('A navigation block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'				=> 'formatting',
-			'icon'						=> 'list-view',
-			'keywords'				=> array('navigation', 'menu', 'nav'),
-			'supports' 				=> array('align' => false),
-		));
-	}
-}
-
-function my_acf_block_render_callback($block)
-{
-
-	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
-	$slug = str_replace('acf/', '', $block['name']);
-
-	// include a template part from within the "template-parts/block" folder
-	if (file_exists(STYLESHEETPATH . "/block/block-{$slug}.php")) {
-		include(STYLESHEETPATH . "/block/block-{$slug}.php");
-	}
-}
-
-// Add support for page excerpts
-add_post_type_support('page', 'excerpt');
-
 function sarnia_scripts()
 {
 	wp_enqueue_style('sarnia-fonts', sarnia_theme_fonts_url());
@@ -375,26 +185,6 @@ function sarnia_gutenberg_scripts()
 }
 add_action('enqueue_block_editor_assets', 'sarnia_gutenberg_scripts');
 
-function my_acf_json_load_point($paths)
-{
-	// remove original path (optional)
-	unset($paths[0]);
-	$paths[] = get_stylesheet_directory() . '/assets/acf-json';
-
-	return   $paths;
-}
-add_filter('acf/settings/load_json', 'my_acf_json_load_point');
-
-function my_acf_json_save_point($path)
-{
-	// update path
-	$path = get_stylesheet_directory() . '/assets/acf-json';
-
-	// return
-	return $path;
-}
-add_filter('acf/settings/save_json', 'my_acf_json_save_point');
-
 // Widgets
 if (function_exists('register_sidebar')) {
 	function sarnia_widgets_init()
@@ -431,16 +221,6 @@ add_theme_support('soil-relative-urls');
  * provide it for us.
  */
 add_theme_support('title-tag');
-
-function my_acf_post_id()
-{
-	if (is_admin() && function_exists('acf_maybe_get_POST')) :
-		return intval(acf_maybe_get_POST('post_id'));
-	else :
-		global   $post;
-		return   $post->ID;
-	endif;
-}
 
 /* search functions */
 function sarnia_highlight_results($text)
