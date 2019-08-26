@@ -13,3 +13,4 @@ config.codekit3
 /assets/dist/report-legacy.html
 /assets/dist/report-modern.html
 node_modules/*
+npm-debug.log
