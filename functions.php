@@ -7,20 +7,6 @@ function sarnia_excerpt_length($length)
 }
 add_filter('excerpt_length', 'sarnia_excerpt_length');
 
-// Define Post Thumbnails
-if (function_exists('add_theme_support')) {
-	add_theme_support('post-thumbnails');
-}
-
-// Register Main Menu
-add_action('init', 'register_my_menu');
-
-function register_my_menu()
-{
-	register_nav_menu('primary-menu', __('Primary Menu'));
-	register_nav_menu('footer-menu', __('Footer Menu'));
-}
-
 // Add toggle button when 2nd level navigation exists
 class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
 {
@@ -54,18 +40,88 @@ function sarnia_number_pagination()
 	echo "</div>";
 }
 
-// Add theme support for wide content alignment
+if (!function_exists('sarnia_setup')) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 *
+	 */
 function sarnia_setup()
 {
+	// Add theme support for wide content alignment
 	add_theme_support('align-wide');
 	add_theme_support('editor-color-palette');
 	add_theme_support('disable-custom-colors');
 	add_theme_support('disable-custom-font-sizes');
 	add_theme_support('responsive-embeds');
+
+	// Add default posts and comments RSS feed links to head.
 	add_theme_support('automatic-feed-links');
+
+	/*
+	* Let WordPress manage the document title.
+	* By adding theme support, we declare that this theme does not use a
+	* hard-coded <title> tag in the document head, and expect WordPress to
+	* provide it for us.
+	*/
+	add_theme_support('title-tag');
+	
+    /*
+     * Enable support for Post Thumbnails on posts and pages.
+     *
+     * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+     */
+	add_theme_support('post-thumbnails');
+	
+    // This theme uses wp_nav_menu() in two locations.
+    register_nav_menus( array(
+        'primary-menu' => __( 'Primary Menu', 'sarnia' ),
+        'footer-menu'  => __( 'Footer Menu',  'sarnia' ),
+	));
+
+	// Edit the editor font sizes
+	add_theme_support('editor-font-sizes', array(
+		array(
+			'name'      => __('small', 'sarnia'),
+			'shortName' => __('S', 'sarnia'),
+			'size'      => 14,
+			'slug'      => 'small'
+		),
+		array(
+			'name'      => __('regular', 'sarnia'),
+			'shortName' => __('M', 'sarnia'),
+			'size'      => 16,
+			'slug'      => 'regular'
+		),
+		array(
+			'name'      => __('large', 'sarnia'),
+			'shortName' => __('L', 'sarnia'),
+			'size'      => 20,
+			'slug'      => 'large'
+		)
+	));
+
 	add_filter('feed_links_show_comments_feed', '__return_false');
 	remove_filter('the_content', 'wpautop');
+
+	/**
+	 * Enable features from Soil when plugin is activated
+	 * @link https://roots.io/plugins/soil/
+	 */
+	add_theme_support('soil-clean-up');
+	add_theme_support('soil-disable-asset-versioning');
+	add_theme_support('soil-disable-trackbacks');
+	add_theme_support('soil-google-analytics', env('GOOGLE_ANALYTICS_TRACKINGID'));
+	add_theme_support('soil-js-to-footer');
+	add_theme_support('soil-nav-walker');
+	add_theme_support('soil-nice-search');
+	add_theme_support('soil-relative-urls');
+
 }
+endif; // sarnia_setup
 add_action('after_setup_theme', 'sarnia_setup');
 
 // Limit the core blocks
@@ -97,28 +153,6 @@ function sarnia_allowed_block_types($allowed_blocks)
 		'luckywp/tableofcontents'
 	);
 }
-
-// Edit the editor font sizes
-add_theme_support('editor-font-sizes', array(
-	array(
-		'name'      => __('small', 'sarnia'),
-		'shortName' => __('S', 'sarnia'),
-		'size'      => 14,
-		'slug'      => 'small'
-	),
-	array(
-		'name'      => __('regular', 'sarnia'),
-		'shortName' => __('M', 'sarnia'),
-		'size'      => 16,
-		'slug'      => 'regular'
-	),
-	array(
-		'name'      => __('large', 'sarnia'),
-		'shortName' => __('L', 'sarnia'),
-		'size'      => 20,
-		'slug'      => 'large'
-	)
-));
 
 // Theme Fonts URL
 function sarnia_theme_fonts_url()
@@ -200,27 +234,6 @@ if (function_exists('register_sidebar')) {
 	}
 	add_action('widgets_init', 'sarnia_widgets_init');
 }
-
-/**
- * Enable features from Soil when plugin is activated
- * @link https://roots.io/plugins/soil/
- */
-add_theme_support('soil-clean-up');
-add_theme_support('soil-disable-asset-versioning');
-add_theme_support('soil-disable-trackbacks');
-add_theme_support('soil-google-analytics', env('GOOGLE_ANALYTICS_TRACKINGID'));
-add_theme_support('soil-js-to-footer');
-add_theme_support('soil-nav-walker');
-add_theme_support('soil-nice-search');
-add_theme_support('soil-relative-urls');
-
-/*
- * Let WordPress manage the document title.
- * By adding theme support, we declare that this theme does not use a
- * hard-coded <title> tag in the document head, and expect WordPress to
- * provide it for us.
- */
-add_theme_support('title-tag');
 
 /* search functions */
 function sarnia_highlight_results($text)
