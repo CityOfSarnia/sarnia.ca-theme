@@ -5,7 +5,6 @@ function sarnia_excerpt_length($length)
 {
 	return 20;
 }
-add_filter('excerpt_length', 'sarnia_excerpt_length');
 
 // Add toggle button when 2nd level navigation exists
 class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
@@ -49,83 +48,91 @@ if (!function_exists('sarnia_setup')) :
 	 * as indicating support for post thumbnails.
 	 *
 	 */
-function sarnia_setup()
-{
-	// Add theme support for wide content alignment
-	add_theme_support('align-wide');
-	add_theme_support('editor-color-palette');
-	add_theme_support('disable-custom-colors');
-	add_theme_support('disable-custom-font-sizes');
-	add_theme_support('responsive-embeds');
+	function sarnia_setup()
+	{
+		// Add theme support for wide content alignment
+		add_theme_support('align-wide');
+		add_theme_support('editor-color-palette');
+		add_theme_support('disable-custom-colors');
+		add_theme_support('disable-custom-font-sizes');
+		add_theme_support('responsive-embeds');
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support('automatic-feed-links');
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support('automatic-feed-links');
 
-	/*
-	* Let WordPress manage the document title.
-	* By adding theme support, we declare that this theme does not use a
-	* hard-coded <title> tag in the document head, and expect WordPress to
-	* provide it for us.
-	*/
-	add_theme_support('title-tag');
-	
-    /*
-     * Enable support for Post Thumbnails on posts and pages.
-     *
-     * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-     */
-	add_theme_support('post-thumbnails');
-	
-    // This theme uses wp_nav_menu() in two locations.
-    register_nav_menus( array(
-        'primary-menu' => __( 'Primary Menu', 'sarnia' ),
-        'footer-menu'  => __( 'Footer Menu',  'sarnia' ),
-	));
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support('title-tag');
 
-	// Edit the editor font sizes
-	add_theme_support('editor-font-sizes', array(
-		array(
-			'name'      => __('small', 'sarnia'),
-			'shortName' => __('S', 'sarnia'),
-			'size'      => 14,
-			'slug'      => 'small'
-		),
-		array(
-			'name'      => __('regular', 'sarnia'),
-			'shortName' => __('M', 'sarnia'),
-			'size'      => 16,
-			'slug'      => 'regular'
-		),
-		array(
-			'name'      => __('large', 'sarnia'),
-			'shortName' => __('L', 'sarnia'),
-			'size'      => 20,
-			'slug'      => 'large'
-		)
-	));
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 */
+		add_theme_support('post-thumbnails');
 
-	add_filter('feed_links_show_comments_feed', '__return_false');
-	remove_filter('the_content', 'wpautop');
+		// This theme uses wp_nav_menu() in two locations.
+		register_nav_menus(array(
+			'primary-menu' => __('Primary Menu', 'sarnia'),
+			'footer-menu'  => __('Footer Menu',  'sarnia'),
+		));
 
-	/**
-	 * Enable features from Soil when plugin is activated
-	 * @link https://roots.io/plugins/soil/
-	 */
-	add_theme_support('soil-clean-up');
-	add_theme_support('soil-disable-asset-versioning');
-	add_theme_support('soil-disable-trackbacks');
-	add_theme_support('soil-google-analytics', env('GOOGLE_ANALYTICS_TRACKINGID'));
-	add_theme_support('soil-js-to-footer');
-	add_theme_support('soil-nav-walker');
-	add_theme_support('soil-nice-search');
-	add_theme_support('soil-relative-urls');
+		// Edit the editor font sizes
+		add_theme_support('editor-font-sizes', array(
+			array(
+				'name'      => __('small', 'sarnia'),
+				'shortName' => __('S', 'sarnia'),
+				'size'      => 14,
+				'slug'      => 'small'
+			),
+			array(
+				'name'      => __('regular', 'sarnia'),
+				'shortName' => __('M', 'sarnia'),
+				'size'      => 16,
+				'slug'      => 'regular'
+			),
+			array(
+				'name'      => __('large', 'sarnia'),
+				'shortName' => __('L', 'sarnia'),
+				'size'      => 20,
+				'slug'      => 'large'
+			)
+		));
 
-}
+		add_action('wp_enqueue_scripts', 'sarnia_scripts');
+		add_action('enqueue_block_editor_assets', 'sarnia_gutenberg_scripts');
+		add_action('wp_ajax_auto_search', 'sarnia_auto_search');
+		add_action('wp_ajax_nopriv_auto_search', 'sarnia_auto_search');
+
+		add_filter('feed_links_show_comments_feed', '__return_false');
+		add_filter('allowed_block_types', 'sarnia_allowed_block_types');
+		add_filter('excerpt_length', 'sarnia_excerpt_length');
+		add_filter('the_excerpt', 'sarnia_highlight_results');
+		add_filter('the_title', 'sarnia_highlight_results');
+
+		remove_filter('the_content', 'wpautop');
+
+		/**
+		 * Enable features from Soil when plugin is activated
+		 * @link https://roots.io/plugins/soil/
+		 */
+		add_theme_support('soil-clean-up');
+		add_theme_support('soil-disable-asset-versioning');
+		add_theme_support('soil-disable-trackbacks');
+		add_theme_support('soil-google-analytics', env('GOOGLE_ANALYTICS_TRACKINGID'));
+		add_theme_support('soil-js-to-footer');
+		add_theme_support('soil-nav-walker');
+		add_theme_support('soil-nice-search');
+		add_theme_support('soil-relative-urls');
+	}
 endif; // sarnia_setup
 add_action('after_setup_theme', 'sarnia_setup');
 
 // Limit the core blocks
-add_filter('allowed_block_types', 'sarnia_allowed_block_types');
 function sarnia_allowed_block_types($allowed_blocks)
 {
 	return array(
@@ -208,16 +215,13 @@ function sarnia_scripts()
 		wp_enqueue_script('jquery');
 	}
 }
-add_action('wp_enqueue_scripts', 'sarnia_scripts');
 
 // Gutenberg scripts and styles
 function sarnia_gutenberg_scripts()
 {
-	wp_enqueue_style('sarnia-fonts', sarnia_theme_fonts_url());
 	wp_enqueue_style('sarnia', get_stylesheet_directory_uri() . '/assets/css/admin-block-style.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/admin-block-style.css'));
 	wp_enqueue_script('sarnia', get_stylesheet_directory_uri() . '/assets/js/admin-block.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/admin-block.js'), true);
 }
-add_action('enqueue_block_editor_assets', 'sarnia_gutenberg_scripts');
 
 // Widgets
 if (function_exists('register_sidebar')) {
@@ -245,8 +249,6 @@ function sarnia_highlight_results($text)
 
 	return   $text;
 }
-add_filter('the_excerpt', 'sarnia_highlight_results');
-add_filter('the_title', 'sarnia_highlight_results');
 
 function sarnia_auto_search()
 {
@@ -268,5 +270,3 @@ function sarnia_auto_search()
 	echo   $response;
 	exit();
 }
-add_action('wp_ajax_auto_search', 'sarnia_auto_search');
-add_action('wp_ajax_nopriv_auto_search', 'sarnia_auto_search');
