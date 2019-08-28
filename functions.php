@@ -9,13 +9,13 @@ function sarnia_excerpt_length($length)
 // Add toggle button when 2nd level navigation exists
 class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
 {
-	function start_lvl(&$output, $depth = 0, $args = array())
+	function start_lvl(&$output, $depth = 0, $args = [])
 	{
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<button type='button' class='toggle-sub-menu'>
 			</button><ul class='sub-menu'>\n";
 	}
-	function end_lvl(&$output, $depth = 0, $args = array())
+	function end_lvl(&$output, $depth = 0, $args = [])
 	{
 		$indent = str_repeat("\t", $depth);
 		$output .= "$indent</ul>\n";
@@ -28,14 +28,14 @@ function sarnia_number_pagination()
 	global $wp_query;
 	$big = 9999999;
 	echo "<div class='pagination'>";
-	echo paginate_links(array(
+	echo paginate_links([
 		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
 		'format' => '?paged=%#%',
 		'prev_text' => __('Previous'),
 		'next_text' => __('Next'),
 		'current' => max(1, get_query_var('paged')),
 		'total' => $wp_query->max_num_pages
-	));
+	]);
 	echo "</div>";
 }
 
@@ -76,32 +76,32 @@ if (!function_exists('sarnia_setup')) :
 		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in two locations.
-		register_nav_menus(array(
+		register_nav_menus([
 			'primary-menu' => __('Primary Menu', 'sarnia'),
 			'footer-menu'  => __('Footer Menu',  'sarnia'),
-		));
+		]);
 
 		// Edit the editor font sizes
-		add_theme_support('editor-font-sizes', array(
-			array(
+		add_theme_support('editor-font-sizes', [
+			[
 				'name'      => __('small', 'sarnia'),
 				'shortName' => __('S', 'sarnia'),
 				'size'      => 14,
 				'slug'      => 'small'
-			),
-			array(
+			],
+			[
 				'name'      => __('regular', 'sarnia'),
 				'shortName' => __('M', 'sarnia'),
 				'size'      => 16,
 				'slug'      => 'regular'
-			),
-			array(
+			],
+			[
 				'name'      => __('large', 'sarnia'),
 				'shortName' => __('L', 'sarnia'),
 				'size'      => 20,
 				'slug'      => 'large'
-			)
-		));
+			]
+		]);
 
 		add_action('wp_enqueue_scripts', 'sarnia_scripts');
 		add_action('enqueue_block_editor_assets', 'sarnia_gutenberg_scripts');
@@ -135,7 +135,7 @@ add_action('after_setup_theme', 'sarnia_setup');
 // Limit the core blocks
 function sarnia_allowed_block_types($allowed_blocks)
 {
-	return array(
+	return [
 		'core/image',
 		'core/paragraph',
 		'core/heading',
@@ -158,17 +158,17 @@ function sarnia_allowed_block_types($allowed_blocks)
 		'core-embed/twitter',
 		'gravityforms/form',
 		'luckywp/tableofcontents'
-	);
+	];
 }
 
 // Theme Fonts URL
 function sarnia_theme_fonts_url()
 {
-	$font_families = apply_filters('sarnia_theme_fonts', array('Open+Sans:300,300i,400,600|Playfair+Display'));
-	$query_args = array(
+	$font_families = apply_filters('sarnia_theme_fonts', ['Open+Sans:300,300i,400,600|Playfair+Display']);
+	$query_args = [
 		'family' => implode('|', $font_families),
 		'subset' => 'latin,latin-ext',
-	);
+	];
 	$fonts_url = add_query_arg($query_args, 'https://fonts.googleapis.com/css');
 	return esc_url_raw($fonts_url);
 }
@@ -183,29 +183,29 @@ function sarnia_scripts()
 	if ($is_hot) {
 		if (env('DEVSERVER_IGNORE_SSL_ERRORS')) {
 			// this ignores SSL errors, only use in dev, here be dragons!
-			$context_options = array(
-				"ssl" => array(
+			$context_options = [
+				"ssl" => [
 					"verify_peer" => false,
 					"verify_peer_name" => false,
-				),
-			);
+				],
+			];
 		} else {
-			$context_options = array();
+			$context_options = [];
 		}
 		$manifest_json = file_get_contents(getenv('DEVSERVER_PUBLIC') . '/manifest.json', false, stream_context_create($context_options));
 		$manifest = json_decode($manifest_json, true);
 
 		// css is loaded via js
-		wp_register_script('sarnia-js', $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
+		wp_register_script('sarnia-js', $manifest['app.js'], ['jquery', 'jquery-ui-autocomplete'], $manifest['app.js'], true);
 	} else {
 		$manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest.json'), true);
 		$legacy_manifest = json_decode(file_get_contents(get_stylesheet_directory() . '/assets/dist/manifest-legacy.json'), true);
 
-		wp_enqueue_style('sarnia-style', WP_HOME . $legacy_manifest['app.css'], array(), $legacy_manifest['app.css']);
-		wp_register_script('sarnia-js', WP_HOME . $manifest['app.js'], array('jquery', 'jquery-ui-autocomplete'), $manifest['app.js'], true);
+		wp_enqueue_style('sarnia-style', WP_HOME . $legacy_manifest['app.css'], [], $legacy_manifest['app.css']);
+		wp_register_script('sarnia-js', WP_HOME . $manifest['app.js'], ['jquery', 'jquery-ui-autocomplete'], $manifest['app.js'], true);
 	}
 
-	wp_localize_script('sarnia-js', 'SarniaSearchAutocomplete', array('url' => admin_url('admin-ajax.php')));
+	wp_localize_script('sarnia-js', 'SarniaSearchAutocomplete', ['url' => admin_url('admin-ajax.php')]);
 	wp_enqueue_script('sarnia-js');
 
 	// Move jQuery to footer
@@ -219,22 +219,22 @@ function sarnia_scripts()
 // Gutenberg scripts and styles
 function sarnia_gutenberg_scripts()
 {
-	wp_enqueue_style('sarnia', get_stylesheet_directory_uri() . '/assets/css/admin-block-style.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/admin-block-style.css'));
-	wp_enqueue_script('sarnia', get_stylesheet_directory_uri() . '/assets/js/admin-block.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/js/admin-block.js'), true);
+	wp_enqueue_style('sarnia', get_stylesheet_directory_uri() . '/assets/css/admin-block-style.css', [], filemtime(get_stylesheet_directory() . '/assets/css/admin-block-style.css'));
+	wp_enqueue_script('sarnia', get_stylesheet_directory_uri() . '/assets/js/admin-block.js', ['jquery'], filemtime(get_stylesheet_directory() . '/assets/js/admin-block.js'), true);
 }
 
 // Widgets
 if (function_exists('register_sidebar')) {
 	function sarnia_widgets_init()
 	{
-		register_sidebar(array(
+		register_sidebar([
 			'name' => __('Sidebar Widgets', 'sarnia'),
 			'id' => 'sidebar-primary',
 			'before_widget' => '<div id="%1  $s" class="widget %2  $s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
-		));
+		]);
 	}
 	add_action('widgets_init', 'sarnia_widgets_init');
 }
@@ -253,12 +253,12 @@ function sarnia_highlight_results($text)
 function sarnia_auto_search()
 {
 	$term = strtolower($_GET['term']);
-	$suggestions = array();
+	$suggestions = [];
 	$loop = new WP_Query('s=' .   $term);
 
 	while ($loop->have_posts()) {
 		$loop->the_post();
-		$suggestion = array();
+		$suggestion = [];
 		$suggestion['label'] = get_the_title();
 		$suggestion['link'] = get_permalink();
 
