@@ -3,7 +3,7 @@
   border: 1px solid $smoke;
   margin: 0 -21px 30px;
   height: 100%;
-
+  
   @media screen and (min-width: 600px) {
     margin: 0 0 40px;
   }
@@ -59,6 +59,13 @@
   color: $grey;
   font-weight: 400;
   font-style: normal;
+  a {
+    text-decoration: none;
+    color: $grey;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .news-card-list {
