@@ -1,6 +1,6 @@
 ntp_timezone: Etc/UTC
 
-env_groups: "{{ ['local', 'development', 'staging', 'edit', 'production'] | intersect(group_names) }}"
+env_groups: "{{ ['local', 'development', 'staging', 'edit', 'production', 'backup'] | intersect(group_names) }}"
 
 envs_with_wp_sites: "{{
   lookup('filetree', playbook_dir + '/group_vars') |
