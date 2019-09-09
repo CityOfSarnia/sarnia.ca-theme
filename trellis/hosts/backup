@@ -1,8 +1,10 @@
 # Add each host to the [backup] group and to a "type" group such as [web] or [db].
 # List each machine only once per [group], even if it will host multiple sites.
 
-[production]
+[backup]
 ec2-99-79-193-116.ca-central-1.compute.amazonaws.com
+ec2-35-182-28-230.ca-central-1.compute.amazonaws.com
 
 [web]
 ec2-99-79-193-116.ca-central-1.compute.amazonaws.com
+ec2-35-182-28-230.ca-central-1.compute.amazonaws.com

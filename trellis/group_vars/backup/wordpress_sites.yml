@@ -6,10 +6,12 @@ wordpress_sites:
   sarnia.ca:
     site_hosts:
       - canonical: ec2-99-79-193-116.ca-central-1.compute.amazonaws.com
+      - canonical: ec2-35-182-28-230.ca-central-1.compute.amazonaws.com
         # redirects:
         #   - otherdomain.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca.git # replace with your Git repo URL
+    repo: ssh://APKA5EN4PAENC65JR5XR@git-codecommit.ca-central-1.amazonaws.com/v1/repos/sarnia.ca
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: master
     db_create: false
@@ -27,4 +29,4 @@ wordpress_sites:
       wp_siteurl: https://www.sarnia.ca/wp
       db_name: sarnia_ca_backup
       db_user: sarnia_ca_backup
-      db_host: 10.30.1.50
+      db_host: database-1.cq21knrlnmdp.ca-central-1.rds.amazonaws.com
