@@ -37,23 +37,15 @@
     },
     {
       "type":"git",
-      "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-theme.git"
+      "url": "git@github.com:CityOfSarnia/sarnia.ca-theme.git"
     },
     {
       "type":"git",
-      "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/sarnia.ca-plugin.git"
+      "url": "git@github.com:CityOfSarnia/sarnia.ca-plugin.git"
     },
     {
       "type":"git",
       "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/gravityforms.git"
-    },
-    {
-      "type":"git",
-      "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/gravityformsgutenberg.git"
-    },
-    {
-      "type":"git",
-      "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/nadiext-custom-role-management.git"
     },
     {
       "type": "package",
