@@ -13,7 +13,9 @@ wordpress_sites:
       enabled: false
     ssl:
       enabled: true
-      provider: self-signed
+      provider: manual
+      cert: ~/ssl/local-sarnia-internal.crt
+      key: ~/ssl/local-sarnia-internal.key
     cache:
       enabled: false
     env:
