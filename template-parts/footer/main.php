@@ -8,28 +8,28 @@
             <div class="footer__contact">
                 <div class="contact-list">
                     <h2 class="contact-list__headline">Contact the City</h2>
-                    <div class="contact-list__item contact-item">
 <?php if ($phone_option = get_field('phone', 'option')): ?>
+                    <div class="contact-list__item contact-item">
                         <p class="contact-item__headline">Phone</p>
                         <p class="contact-item__text">
                             <a href="tel:+1-<?=$phone_option;?>"><?=$phone_option?></a>
-<?php endif;?>
                     </div><!-- .contact-list__item contact-item -->
-                    <div class="contact-list__item contact-item">
+<?php endif;?>
 <?php if ($tollFree_option = get_field('tollFree', 'option')): ?>
+                    <div class="contact-list__item contact-item">
                         <p class="contact-item__headline">Toll Free</p>
                         <p class="contact-item__text">
                             <a href="tel:+<?=$tollFree_option;?>"><?=$tollFree_option?></a>
-<?php endif;?>
                     </div><!-- .contact-list__item contact-item -->
-                    <div class="contact-list__item contact-item">
+<?php endif;?>
 <?php if ($address_option = get_field('address', 'option')): ?>
+                    <div class="contact-list__item contact-item">
                         <p class="contact-item__headline">Address</p>
                         <p class="contact-item__text"><?=$address_option;?></p>
-<?php endif;?>
                     </div><!-- .contact-list__item contact-item -->
-                    <div class="contact-list__item contact-item">
+<?php endif;?>
 <?php if ($hours_option = get_field('hours', 'option')): ?>
+                    <div class="contact-list__item contact-item">
                         <p class="contact-item__headline">Hours</p>
                         <p class="contact-item__text"><?=$hours_option;?></p>
 <?php endif;?>
@@ -40,8 +40,8 @@
                         <p class="contact-item__text">
                             <a href="mailto:<?=$email_option;?>"><?=$email_option;?></a>
                         </p>
-<?php endif;?>
                     </div><!-- .contact-list__item contact-item -->
+<?php endif;?>
                 </div><!-- .contact-list -->
                 <div class="footer-social">
 <?php if ($twitter_option = get_field('twitter', 'option')): ?>
