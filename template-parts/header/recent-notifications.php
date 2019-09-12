@@ -1,12 +1,3 @@
-<?php
-
-/**
- * Block Name: Notifications
- *
- * This is the template that displays the notifications block.
- */
-?>
-
 <div class="recent-notifications">
     <div class="recent-notification-list--top">
         <div class="container recent-notification-list">

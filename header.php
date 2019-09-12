@@ -23,10 +23,15 @@
     </head>
     <body <?php body_class(); ?>>
         <div class="top">
-<?php get_template_part('template-parts/header/notification'); ?>
+<?php get_template_part('template-parts/header/feature-notification'); ?>
 <?php get_template_part('template-parts/header/navigation'); ?>
         </div><!-- .top -->
         <div id="page" class="wrap">
-<?php get_template_part('template-parts/header/header'); ?>
-<?php get_template_part('template-parts/header/banner'); ?>
+<?php 
+get_template_part('template-parts/header/header'); 
+get_template_part('template-parts/header/banner');
+if (is_front_page() && get_field('show_recent_notifications', 'option')) :
+        get_template_part('template-parts/header/recent-notifications');
+endif;
+?>
             <main role="main">
