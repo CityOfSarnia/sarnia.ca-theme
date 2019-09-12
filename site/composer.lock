@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fef426161dcd0ae6c5ac2a188e8f129",
+    "content-hash": "fed3c42f8e1638b40d1d510d7d906c44",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -156,17 +156,17 @@
         },
         {
             "name": "cos/sarnia.ca-plugin",
-            "version": "v1.12.0",
+            "version": "v2.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:CityOfSarnia/sarnia.ca-plugin.git",
-                "reference": "46d288e672d5a1805b3eb154d1aed6f8b04369c8"
+                "reference": "f60f921958af4187b28ef97f7848f8df4781667d"
             },
             "require": {
                 "composer/installers": "^1.4"
             },
             "type": "wordpress-muplugin",
-            "time": "2019-08-06T21:49:56+00:00"
+            "time": "2019-09-12T19:41:07+00:00"
         },
         {
             "name": "cos/sarnia.ca-theme",
