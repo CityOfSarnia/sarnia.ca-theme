@@ -69,6 +69,11 @@
 <?php get_template_part('/assets/img/icons/social/inline', 'instagram.svg');?>
                     </a><!-- .social-links__icon -->
 <?php endif;?>
+<?php if ($vimeo_option = get_field('vimeo', 'option')): ?>
+                    <a href="<?=$vimeo_option;?>" class="social-links__icon" aria-label="Visit Vimeo">
+<?php get_template_part('/assets/img/icons/social/inline', 'vimeo.svg');?>
+                    </a><!-- .social-links__icon -->
+<?php endif;?>
                 </div><!-- .footer-social -->
             </div><!-- .footer__contact -->
         </div><!-- .footer__columns -->
