@@ -76,7 +76,7 @@
     "roots/wp-stage-switcher": "^2.1",
     "cos/sarnia.ca-theme": "^2.0.0",
     "cos/sarnia.ca-plugin": "^2.0.0",
-    "cos/gravityforms": "2.4.12.4",
+    "cos/gravityforms": "^2.4",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.8.0",
     "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0",
     "wpackagist-plugin/members": "^2.1",
