@@ -17,10 +17,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed theme package versions to align with semantic versioning
 
-[Unreleased]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/master...HEAD
-[v2.8]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.7...v2.8
-
 ## [v2.7] - 2019/09/12
+### Added
+- Formatted date published section to post-excerpt and search-excerpt
+- Additional logic to control rendering on front page only
+- New contact acf field to footer rendering with URI for toll free
+
+### Changed
+- Moved core website functionality out of the theme and into the plugin.  This gives more
+  flexibility in the future, and content will still be visible if the theme is changed
+- Theme metadata updated
+- Moved notifications-bar back to theme
+- Moved php code in functions.php to setup function
+- Updated npm packages used by webpacker
+- changed php code to use short array syntax
+- Used colour variable set, overwrote <a> for news-card__headline
+- Changed conditional statement order in footer needed to move the if statement checking for the
+  field to be outside the div html statement.
+
+### Fixed
+- Vertical centering for buttons on recent-notifications now works
+
+### Removed
+
 ## [v2.6.0] - 2019/08/21
 ## [v2.5.0] - 2019/08/12
 ## [v2.4.0] - 2019/08/09
@@ -49,6 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v1.0.0] - 2019/07/15
 ## [v1.0.0-beta10] - 2019/03/29
 
+[Unreleased]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/master...HEAD
 [v2.8]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.7...v2.8
 [v2.7]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.6.0...v2.7
 [v2.6.0]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.5.0...v2.6.0
