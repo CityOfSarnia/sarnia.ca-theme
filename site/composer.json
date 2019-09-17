@@ -45,7 +45,7 @@
     },
     {
       "type":"git",
-      "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:it/gravityforms.git"
+      "url": "git@cos-gitlab-prod.cos.city.sarnia.on.ca:sarnia-website/gravityforms.git"
     },
     {
       "type": "package",
