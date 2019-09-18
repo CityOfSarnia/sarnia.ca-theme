@@ -4,9 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Unreleased]
-- change repository urls for sarnia.ca project and gravityforms plugin
+
+## [1.4] - 2019-09-18
+### Added
 - add CHANGELOG to project
+
+### Changed
+- change repository urls for sarnia.ca project and gravityforms plugin
 - update backup environment hosts
 
 ## [1.3] - 2019-09-16
@@ -28,7 +34,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Version tracking begins (albeit a bit late in the process)
 
-[Unreleased]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.3...develop
+[Unreleased]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4...develop
+[1.4]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.3...v1.4
 [1.3]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.2...v1.3
 [1.2]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.1...v1.2
 [1.1]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.0...v1.1
