@@ -26,4 +26,4 @@ wordpress_sites:
       wp_siteurl: https://www.sarnia.ca/wp
       db_name: sarnia_ca_backup
       db_user: sarnia_ca_backup
-      db_host: database-1.cq21knrlnmdp.ca-central-1.rds.amazonaws.com
+      db_host: databaseinstance0.cq21knrlnmdp.ca-central-1.rds.amazonaws.com
