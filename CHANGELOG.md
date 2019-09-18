@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - change repository urls for sarnia.ca project and gravityforms plugin
 - add CHANGELOG to project
+- update backup environment hosts
 
 ## [1.3] - 2019-09-16
 ### Changed
