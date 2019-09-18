@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2019-09-18
+### Fixed
+- updated mysql server location for backup environment
+
 ## [1.4] - 2019-09-18
 ### Added
 - add CHANGELOG to project
@@ -34,7 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Version tracking begins (albeit a bit late in the process)
 
-[Unreleased]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4...develop
+[Unreleased]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4.1...develop
+[1.4.1]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4...v1.4.1
 [1.4]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.3...v1.4
 [1.3]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.2...v1.3
 [1.2]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.1...v1.2
