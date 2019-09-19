@@ -16,6 +16,9 @@ EDITSITE="https://www.sarnia.ca"
 STAGDIR="web@300US18-WEB005.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
 STAGSITE="https://staging.sarnia.ca"
 
+BACKUPDIR="web@ip-10-137-11-43.ca-central-1.compute.internal:/srv/www/sarnia.ca/shared/uploads/"
+BACKUPSITE="https://www.sarnia.ca"
+
 FROM=$1
 TO=$2
 LOCAL=false
@@ -34,6 +37,7 @@ case "$1-$2" in
   local-edit)          DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$EDITSITE;  TODIR=$EDITDIR; ;;
   local-staging)       DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
   local-development)   DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
+  local-backup)        DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$BACKUPSITE;TODIR=$BACKUPDIR; ;;
   edit-staging)        DIR="horizontally ↔️ ";  FROMSITE=$EDITSITE;  FROMDIR=$EDITDIR;  TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
   edit-development)    DIR="horizontally ↔️ ";  FROMSITE=$EDITSITE;  FROMDIR=$EDITDIR;  TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
   staging-edit)        DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$EDITSITE;  TODIR=$EDITDIR; ;;
