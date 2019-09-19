@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Reworked banner header rendering to reduce max width on desktops and large screens
+- Updated npm packages for webpacker and dependencies
 
 ## [v2.8] - 2019/09/13
 ### Added
