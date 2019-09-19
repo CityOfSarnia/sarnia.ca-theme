@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- Added backup environment to sync script
 
 ## [1.4.1] - 2019-09-18
 ### Fixed
