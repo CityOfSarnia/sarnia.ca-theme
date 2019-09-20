@@ -1,0 +1,44 @@
+.shortcut-menu {
+    background-color: $white;
+    border: 1px solid $smoke;
+    height: 100%;
+    
+    &.alignwide {
+      @media screen and (min-width: $bp-md) {
+        margin-left: calc(25% - 25vw);
+        margin-right: calc(25% - 25vw);
+        width: auto;
+        max-width: 1000%;
+        border-top: 6px solid $alert;
+      }
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &::before {
+          position: relative;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+    }
+    .caption{
+      display: block;
+    }
+}
+
+    
+
+   
+  
