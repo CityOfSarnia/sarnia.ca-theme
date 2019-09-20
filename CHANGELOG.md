@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reworked banner header rendering to reduce max width on desktops and large screens
 - Updated npm packages for webpacker and dependencies
 
+## Fixed
+- Fixed column block spacing for middle children
+
 ## [v2.8] - 2019/09/13
 ### Added
 - Vimeo link and SVG in the social media section of the footer
