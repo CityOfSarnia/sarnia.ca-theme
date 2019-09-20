@@ -11,10 +11,12 @@
   @media (min-width: 600px) {
     &:not(:first-child) {
       margin-left: 25px;
+
     }
 
     &:nth-child(odd) {
-      margin-left: 25px;
+      margin-left: 0 auto;
+      
     }
 
     &:not(:last-child) {
