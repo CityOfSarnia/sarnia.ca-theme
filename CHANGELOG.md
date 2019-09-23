@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [v2.9.0] - 2019/09/23
 ### Added
 - This changelog :)
 
@@ -12,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reworked banner header rendering to reduce max width on desktops and large screens
 - Updated npm packages for webpacker and dependencies
 
-## Fixed
+### Fixed
 - Fixed column block spacing for middle children
 
 ## [v2.8] - 2019/09/13
@@ -121,6 +123,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added version information and tagged releases for deployment process
 
 [Unreleased]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/master...HEAD
+[v2.9.0]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.8...v2.9.0
 [v2.8]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.7...v2.8
 [v2.7]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.6.0...v2.7
 [v2.6.0]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.5.0...v2.6.0
