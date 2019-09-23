@@ -1,6 +1,5 @@
 admin_user: ubuntu
 
-mysql_client_flags: "MYSQLI_CLIENT_SSL"
 mysql_root_password: "{{ vault_mysql_root_password }}" # Define this variable in group_vars/development/vault.yml
 
 ntp_servers:
