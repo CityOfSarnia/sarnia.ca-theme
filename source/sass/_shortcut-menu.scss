@@ -1,8 +1,10 @@
 .shortcut-menu {
     background-color: $white;
-    border: 1px solid $smoke;
     height: 100%;
     margin: 25px 25px;
+    border-top: 6px solid;
+    border-image: linear-gradient(to right, blue 33.33%, $alert 33.33%, $alert 66.66%, $yellow 66.66%, $yellow 100%, $blue 100%) 1; 
+    outline: 1px solid $smoke;
 
     &.alignwide {
       @media screen and (min-width: $bp-md) {
@@ -10,11 +12,7 @@
         margin-right: calc(25% - 25vw);
         width: auto;
         max-width: 1000%;
-        border-top: 6px solid;
-        border-bottom: 0px;
-        border-left: 0px;
-        border-right: 0px;
-        border-image: linear-gradient(to right, blue 33.33%, $alert 33.33%, $alert 66.66%, $yellow 66.66%, $yellow 100%, $blue 100%) 3;
+        
       }
     }
 
