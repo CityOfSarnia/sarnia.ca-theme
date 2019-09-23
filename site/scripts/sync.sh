@@ -7,7 +7,7 @@
 LOCALDIR="web/app/uploads/"
 LOCALSITE="https://local.sarnia.ca"
 
-DEVDIR="web@300US18-WEB007.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
+DEVDIR="web@ip-10-30-17-40.ca-central-1.compute.internal:/srv/www/sarnia.ca/shared/uploads/"
 DEVSITE="https://dev.sarnia.ca"
 
 EDITDIR="web@300US18-WEB003.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
