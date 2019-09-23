@@ -1,0 +1,54 @@
+.shortcut-menu {
+    background-color: $white;
+    height: 100%;
+    margin: 25px 25px;
+    border-top: 6px solid;
+    border-image: linear-gradient(to right, blue 33.33%, $alert 33.33%, $alert 66.66%, $yellow 66.66%, $yellow 100%, $blue 100%) 1; 
+    outline: 1px solid $smoke;
+
+    &.alignwide {
+      @media screen and (min-width: $bp-md) {
+        margin-left: calc(25% - 25vw);
+        margin-right: calc(25% - 25vw);
+        width: auto;
+        max-width: 1000%;
+        
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: justify;
+      justify-content: center;
+      
+      li {
+        display: inline-block;
+        align-items: center;
+        padding: 0px 12.5px 12.5px 12.5px;
+        text-align: center;
+        margin-block: auto;
+        max-width: 150px;
+        word-wrap: break-word;
+        
+
+        &::before {
+          position: relative;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+    }
+    .caption{
+      display: block;
+    }
+}
+
+    
+
+   
+  
