@@ -85,6 +85,8 @@ if (env('DATABASE_URL')) {
     Config::define('DB_HOST', isset($dsn->port) ? "{$dsn->host}:{$dsn->port}" : $dsn->host);
 }
 
+if (env('MYSQL_CLIENT_FLAGS') == 'MYSQLI_CLIENT_SSL') Config::define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
+
 /**
  * Authentication Unique Keys and Salts
  */
