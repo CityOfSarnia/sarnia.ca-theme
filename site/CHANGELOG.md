@@ -1,3 +1,8 @@
+###Unreleased
+##Changed
+* Updating cos/sarnia.ca-theme (v2.8 => v2.9.0):
+* Updating cos/sarnia.ca-plugin (v2.0 => v2.1.0): 
+
 ### 1.12.6: 2019-05-21
 
 * Update to WordPress 5.2.1 ([#436](https://github.com/roots/bedrock/pull/436))
