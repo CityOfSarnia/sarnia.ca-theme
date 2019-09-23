@@ -151,6 +151,7 @@ function sarnia_allowed_block_types($allowed_blocks)
 		'acf/notifications',
 		'acf/navigation',
 		'acf/recent-posts',
+		'acf/shortcut-menu',
 		'core/video',
 		'core-embed/youtube',
 		'core-embed/vimeo',

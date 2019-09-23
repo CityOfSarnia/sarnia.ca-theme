@@ -46,6 +46,10 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  @media only screen and (min-width: 768px){
+    width: 65%;
+  }
+  
 
   h1 {
     display: flex;
