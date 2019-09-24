@@ -13,7 +13,7 @@ DEVSITE="https://dev.sarnia.ca"
 EDITDIR="web@300US18-WEB003.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
 EDITSITE="https://www.sarnia.ca"
 
-STAGDIR="web@300US18-WEB005.bhs7.cos.city.sarnia.on.ca:/srv/www/sarnia.ca/shared/uploads/"
+STAGDIR="web@ip-10-30-14-118.ca-central-1.compute.internal:/srv/www/sarnia.ca/shared/uploads/"
 STAGSITE="https://staging.sarnia.ca"
 
 BACKUPDIR="web@ip-10-137-11-43.ca-central-1.compute.internal:/srv/www/sarnia.ca/shared/uploads/"
