@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added support for MySQL client connections using SSL
 
 ### Changed
+- Upgrade bedrock to 1.12.8
 - Updated wpackagist-plugin/stream (3.4.1 => 3.4.2)  
 - Updated roave/security-advisories (dev-master ea693fa => dev-master 99b60dd)
 - Version bumps for ansible-galaxy roles
