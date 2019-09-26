@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added backup environment to sync script
 
+### Changed
+- Updated staging and develop environments for hosting at AWS
+- Updated cos/sarnia.ca-theme (v2.8 => v2.9.0):
+- Updated cos/sarnia.ca-plugin (v2.0 => v2.1.0): 
+- Upgrade Trellis to v1.1.0
+
 ## [1.4.1] - 2019-09-18
 ### Fixed
 - updated mysql server location for backup environment
