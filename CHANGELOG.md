@@ -11,11 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added support for MySQL client connections using SSL
 
 ### Changed
+- Updated wpackagist-plugin/stream (3.4.1 => 3.4.2)  
+- Updated roave/security-advisories (dev-master ea693fa => dev-master 99b60dd)
+- Version bumps for ansible-galaxy roles
+- Upgrade Trellis to v1.1.0
 - Updated staging and develop environments for hosting at AWS
 - Updated cos/sarnia.ca-theme (v2.8 => v2.9.0):
 - Updated cos/sarnia.ca-plugin (v2.0 => v2.1.0): 
-- Upgrade Trellis to v1.1.0
-- Version bumps for ansible-galaxy roles
 
 ## [1.4.1] - 2019-09-18
 ### Fixed
