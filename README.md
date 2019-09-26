@@ -4,10 +4,19 @@ This repository is used as a storage location for the project, integrating and u
 
 * [Bedrock](https://github.com/roots/bedrock)
 * [Trellis](https://github.com/roots/trellis)
+* [sarnia.ca-theme](https://github.com/CityOfSarnia/sarnia.ca-theme)
+* [sarnia.ca-plugin](https://github.com/CityOfSarnia/sarnia.ca-plugin)
 
-This project is a complete working website.
+This project is a complete collection of working websites.
 
-You can view it at https://www.sarnia.ca/.
+| Location                   | Environment | Type   |
+| -------------------------- |------------ | ------ |
+| https://www.sarnia.ca/     | Production  | Remote |
+| https://staging.sarnia.ca/ | Staging     | Remote |
+| https://dev.sarnia.ca/     | Development | Remote |
+| https://local.sarnia.ca/   | Local       | VM     |
+ 
+ 
 
 ## Requirements
 
