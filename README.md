@@ -35,7 +35,7 @@ See Roots.io's [Getting Started docs](https://roots.io/getting-started/docs/deve
 
 ## Instructions
 
-Here's how this example project was created:
+Here's how this project was created:
 
 1. Create a new project directory: `$ mkdir sarnia.ca && cd sarnia.ca`
 2. Clone Trellis: `$ git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git`
