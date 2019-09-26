@@ -1,3 +1,8 @@
+### HEAD
+* Bump galaxy dependency versions ([#1105](https://github.com/roots/trellis/pull/1105))
+* Fix issues with Vagrant ansible_local provisioner ([#1104](https://github.com/roots/trellis/pull/1104))
+* Bump ansible requirement to 2.7.12([#1102](https://github.com/roots/trellis/pull/1102))
+
 ### 1.1.0: September 1st, 2019
 * Update swapfile role to v2.0.22 ([#1101](https://github.com/roots/trellis/pull/1101))
 * Add pip `requirements.txt` and rename `requirements.yml` to `galaxy.yml` ([#1100](https://github.com/roots/trellis/pull/1100))
