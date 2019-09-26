@@ -18,6 +18,9 @@ web/app/languages/*
 web/wp
 web/.htaccess
 
+# Logs
+*.log
+
 # Dotenv
 .env
 .env.*
