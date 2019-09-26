@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated cos/sarnia.ca-theme (v2.8 => v2.9.0):
 - Updated cos/sarnia.ca-plugin (v2.0 => v2.1.0): 
 - Upgrade Trellis to v1.1.0
+- Version bumps for ansible-galaxy roles
 
 ## [1.4.1] - 2019-09-18
 ### Fixed
