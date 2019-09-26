@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Added backup environment to sync script
+- Added support for MySQL client connections using SSL
 
 ### Changed
 - Updated staging and develop environments for hosting at AWS
