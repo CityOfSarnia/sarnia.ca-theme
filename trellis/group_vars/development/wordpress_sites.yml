@@ -5,8 +5,7 @@
 wordpress_sites:
   sarnia.ca:
     site_hosts:
-      - canonical: ip-10-30-17-40.ca-central-1.compute.internal
-      - canonical: ip-10-30-17-170.ca-central-1.compute.internal
+      - canonical: dev.sarnia.ca
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@cos-gitlab-prod.cos.city.sarnia.on.ca:sarnia-website/sarnia.ca.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
@@ -17,6 +16,9 @@ wordpress_sites:
     ssl:
       enabled: true
       provider: self-signed
+      hsts_max_age: 31536000
+      hsts_include_subdomains: false
+      hsts_preload: false
     cache:
       enabled: false
     env:
