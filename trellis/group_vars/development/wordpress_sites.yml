@@ -17,7 +17,7 @@ wordpress_sites:
       enabled: true
       provider: self-signed
       hsts_max_age: 31536000
-      hsts_include_subdomains: true
+      hsts_include_subdomains: false
       hsts_preload: false
     cache:
       enabled: false
