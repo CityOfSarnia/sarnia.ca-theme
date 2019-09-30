@@ -78,9 +78,8 @@ server {
   ssl_dhparam /etc/nginx/ssl/dhparams.pem;
   ssl_buffer_size 1400; # 1400 bytes to fit in one MTU
 
-  {% if item.value.ssl.provider | default('manual') != 'self-signed' -%}
+  # This configuration assumes this host is behind a reverse proxy or load balancer.  Use caution if you are using a self-signed certificate.
   add_header Strict-Transport-Security "max-age={{ [hsts_max_age, hsts_include_subdomains, hsts_preload] | reject('none') | join('; ') }}";
-  {% endif -%}
 
   {% if item.value.ssl.client_cert_url is defined -%}
   ssl_verify_client       on;
