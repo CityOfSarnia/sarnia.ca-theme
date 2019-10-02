@@ -8,7 +8,7 @@ server:
   ssh: web@ip-10-30-17-40.ca-central-1.compute.internal/srv/www/sarnia.ca/current
 @staging:
   ssh: web@ip-10-30-14-118.ca-central-1.compute.internal/srv/www/sarnia.ca/current
-@edit:
-  ssh: web@300us18-web003.bhs7.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
+@eproduction:
+  ssh: web@ip-10-30-11-8.ca-central-1.compute.internal/srv/www/sarnia.ca/current
 @backup:
   ssh: web@ip-10-137-11-43.ca-central-1.compute.internal/srv/www/sarnia.ca/current
