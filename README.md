@@ -6,6 +6,7 @@ This repository is used as a storage location for the project, integrating and u
 * [Trellis](https://github.com/roots/trellis)
 * [sarnia.ca-theme](https://github.com/CityOfSarnia/sarnia.ca-theme)
 * [sarnia.ca-plugin](https://github.com/CityOfSarnia/sarnia.ca-plugin)
+* [Gravity Forms](https://cos-gitlab-prod.cos.city.sarnia.on.ca/sarnia-website/gravityforms)
 
 This project is a complete collection of working websites.
 
