@@ -24,7 +24,7 @@ Make sure you have installed all of the dependencies for [Trellis](https://githu
 
 At a minimum you need to have:
 
-* [Ansible](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip) 2.5.3-2.7.5
+* [Ansible](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip) 2.7.12-2.8.4
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads) >= 4.3.10
 * [Vagrant](https://www.vagrantup.com/downloads.html) >= 2.1.0
 
