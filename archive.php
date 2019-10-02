@@ -26,7 +26,7 @@ if ( have_posts() ):
 		get_template_part('template-parts/content/post', 'excerpt');
 	endwhile;
 	wp_reset_postdata();
-	sarnia_number_pagination();
+	sarnia_number_pagination($wp_query);
 ?>
 						</div><!-- .post-list -->
 					</div><!-- .container.container--min -->

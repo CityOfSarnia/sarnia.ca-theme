@@ -23,20 +23,22 @@ class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
 }
 
 // Numbered Pagination
-function sarnia_number_pagination()
+function sarnia_number_pagination($the_query)
 {
-	global $wp_query;
 	$big = 9999999;
-	echo "<div class='pagination'>";
+
+	echo "<div class='pagination'>\n";
 	echo paginate_links([
 		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
 		'format' => '?paged=%#%',
+		'mid_size' => 1,
 		'prev_text' => __('Previous'),
 		'next_text' => __('Next'),
 		'current' => max(1, get_query_var('paged')),
-		'total' => $wp_query->max_num_pages
+		'total' => $the_query->max_num_pages,
+		'before_page_number' => '<span class="screen-reader-text">Page </span>'
 	]);
-	echo "</div>";
+	echo "\n</div><!-- .pagination -->\n";
 }
 
 if (!function_exists('sarnia_setup')) :
