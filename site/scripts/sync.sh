@@ -31,20 +31,20 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 case "$1-$2" in
-  prod-local)          DIR="down ⬇️ "           FROMSITE=$PRODSITE;  FROMDIR=$PRODDIR;  TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
-  staging-local)       DIR="down ⬇️ "           FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
-  development-local)   DIR="down ⬇️ "           FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
-  local-prod)          DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
-  local-staging)       DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
-  local-development)   DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
-  local-backup)        DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$BACKUPSITE;TODIR=$BACKUPDIR; ;;
-  prod-staging)        DIR="horizontally ↔️ ";  FROMSITE=$PRODSITE;  FROMDIR=$PRODDIR;  TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
-  prod-development)    DIR="horizontally ↔️ ";  FROMSITE=$PRODSITE;  FROMDIR=$PRODDIR;  TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
-  staging-prod)        DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
-  staging-development) DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
-  development-staging) DIR="horizontally ↔️ ";  FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
-  development-prod)    DIR="horizontally ↔️ ";  FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
-  *) echo "usage: $0 prod local | staging local | development local | local prod | local staging | local development | prod staging | prod development | staging prod | staging development | development staging | development prod" && exit 1 ;;
+  production-local)       DIR="down ⬇️ "           FROMSITE=$PRODSITE;  FROMDIR=$PRODDIR;  TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
+  staging-local)          DIR="down ⬇️ "           FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
+  development-local)      DIR="down ⬇️ "           FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$LOCALSITE; TODIR=$LOCALDIR; ;;
+  local-production)       DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
+  local-staging)          DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
+  local-development)      DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
+  local-backup)           DIR="up ⬆️ "             FROMSITE=$LOCALSITE; FROMDIR=$LOCALDIR; TOSITE=$BACKUPSITE;TODIR=$BACKUPDIR; ;;
+  production-staging)     DIR="horizontally ↔️ ";  FROMSITE=$PRODSITE;  FROMDIR=$PRODDIR;  TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
+  production-development) DIR="horizontally ↔️ ";  FROMSITE=$PRODSITE;  FROMDIR=$PRODDIR;  TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
+  staging-production)     DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
+  staging-development)    DIR="horizontally ↔️ ";  FROMSITE=$STAGSITE;  FROMDIR=$STAGDIR;  TOSITE=$DEVSITE;   TODIR=$DEVDIR; ;;
+  development-staging)    DIR="horizontally ↔️ ";  FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$STAGSITE;  TODIR=$STAGDIR; ;;
+  development-production) DIR="horizontally ↔️ ";  FROMSITE=$DEVSITE;   FROMDIR=$DEVDIR;   TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
+  *) echo "usage: $0 production local | staging local | development local | local production | local staging | local development | production staging | production development | staging production | staging development | development staging | development production" && exit 1 ;;
 esac
 
 read -r -p "
