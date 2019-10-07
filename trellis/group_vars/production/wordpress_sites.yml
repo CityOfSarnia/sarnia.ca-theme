@@ -9,7 +9,7 @@ wordpress_sites:
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@cos-gitlab-prod.cos.city.sarnia.on.ca:sarnia-website/sarnia.ca.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
-    branch: develop
+    branch: master
     multisite:
       enabled: false
     ssl:
