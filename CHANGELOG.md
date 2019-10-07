@@ -6,12 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+
+## [1.5.0] - 2019-10-07
 ### Added
 - Added http2 support to nginx templates
 - Added backup environment to sync script
 - Added support for MySQL client connections using SSL
 
 ### Changed
+- Moved production environment to AWS
+- Removed edit environment
 - Updated cos/gravityforms (2.4.12 => 2.4.14)
 - Updated squizlabs/php_codesniffer (3.4.2 => 3.5.0)
 - Change logic to always include transport-security
@@ -60,7 +65,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Version tracking begins (albeit a bit late in the process)
 
-[Unreleased]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4.2...develop
+[Unreleased]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.5.0...develop
+[1.5.0]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4.2...v1.5.0
 [1.4.2]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4.1...v1.4.2
 [1.4.1]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4...v1.4.1
 [1.4]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.3...v1.4
