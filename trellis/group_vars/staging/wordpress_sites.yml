@@ -5,10 +5,7 @@
 wordpress_sites:
   sarnia.ca:
     site_hosts:
-      - canonical: 300us18-web005.bhs7.cos.city.sarnia.on.ca
-      - canonical: 300us18-web006.bhs7.cos.city.sarnia.on.ca
-        # redirects:
-        #   - otherdomain.com
+      - canonical: staging.sarnia.ca
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@cos-gitlab-prod.cos.city.sarnia.on.ca:sarnia-website/sarnia.ca.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
@@ -18,14 +15,16 @@ wordpress_sites:
       enabled: false
     ssl:
       enabled: true
-      provider: manual
-      cert: ~/ssl/staging.sarnia.crt
-      key: ~/ssl/staging.sarnia.key
+      provider: self-signed
     cache:
       enabled: true
+    h5bp:
+      expires: true # See https://roots.io/trellis/docs/wordpress-sites/#common and https://github.com/h5bp/server-configs-nginx
     env:
       wp_home: https://staging.sarnia.ca
       wp_siteurl: https://staging.sarnia.ca/wp
       db_name: sarnia_ca_staging
       db_user: sarnia_ca_staging
-      db_host: 10.30.1.50
+      db_host: a301us18-sql003.cq21knrlnmdp.ca-central-1.rds.amazonaws.com
+      mysql_client_flags: "MYSQLI_CLIENT_SSL"
+

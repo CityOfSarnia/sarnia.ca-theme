@@ -4,10 +4,20 @@ This repository is used as a storage location for the project, integrating and u
 
 * [Bedrock](https://github.com/roots/bedrock)
 * [Trellis](https://github.com/roots/trellis)
+* [sarnia.ca-theme](https://github.com/CityOfSarnia/sarnia.ca-theme)
+* [sarnia.ca-plugin](https://github.com/CityOfSarnia/sarnia.ca-plugin)
+* [Gravity Forms](https://cos-gitlab-prod.cos.city.sarnia.on.ca/sarnia-website/gravityforms)
 
-This project is a complete working website.
+This project is a complete collection of working websites.
 
-You can view it at https://www.sarnia.ca/.
+| Location                   | Environment | Type   |
+| -------------------------- |------------ | ------ |
+| https://www.sarnia.ca/     | Production  | Remote |
+| https://staging.sarnia.ca/ | Staging     | Remote |
+| https://dev.sarnia.ca/     | Development | Remote |
+| https://local.sarnia.ca/   | Local       | VM     |
+ 
+ 
 
 ## Requirements
 
@@ -15,7 +25,7 @@ Make sure you have installed all of the dependencies for [Trellis](https://githu
 
 At a minimum you need to have:
 
-* [Ansible](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip) 2.5.3-2.7.5
+* [Ansible](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip) 2.7.12-2.8.4
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads) >= 4.3.10
 * [Vagrant](https://www.vagrantup.com/downloads.html) >= 2.1.0
 
@@ -35,14 +45,14 @@ See Roots.io's [Getting Started docs](https://roots.io/getting-started/docs/deve
 
 ## Instructions
 
-Here's how this example project was created:
+Here's how this project was created:
 
-1. Create a new project directory: `$ mkdir example.com && cd example.com`
+1. Create a new project directory: `$ mkdir sarnia.ca && cd sarnia.ca`
 2. Clone Trellis: `$ git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git`
 3. Clone Bedrock: `$ composer create-project roots/bedrock site`
 
 ```shell
-example.com/      # → Root folder for the project
+sarnia.ca/      # → Root folder for the project
 ├── trellis/      # → System management & deployment
 └── site/         # → A Bedrock-based WordPress site
     └── web/

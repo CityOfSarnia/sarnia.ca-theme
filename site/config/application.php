@@ -44,7 +44,7 @@ define('WP_ENV', env('WP_ENV') ?: 'production');
  * Set up links to our various environments, required for wp-stage-switcher plugin
  */
 $envs = [
-  'edit'        => 'https://www.sarnia.ca',
+  'production'  => 'https://www.sarnia.ca',
   'staging'     => 'https://staging.sarnia.ca',
   'development' => 'https://dev.sarnia.ca',
   'local'       => 'https://local.sarnia.ca'
@@ -85,6 +85,8 @@ if (env('DATABASE_URL')) {
     Config::define('DB_HOST', isset($dsn->port) ? "{$dsn->host}:{$dsn->port}" : $dsn->host);
 }
 
+if (env('MYSQL_CLIENT_FLAGS') == 'MYSQLI_CLIENT_SSL') Config::define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
+
 /**
  * Authentication Unique Keys and Salts
  */
@@ -112,7 +114,7 @@ Config::define('DISALLOW_FILE_MODS', true);
  */
 Config::define('WP_DEBUG_DISPLAY', false);
 Config::define('SCRIPT_DEBUG', false);
-ini_set('display_errors', 0);
+ini_set('display_errors', '0');
 
 /**
  * Allow WordPress to detect HTTPS when used behind a reverse proxy or a load balancer
