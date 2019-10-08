@@ -3,6 +3,9 @@ ferm_input_list:
     dport: [http, https]
     filename: nginx_accept
   - type: dport_accept
+    dport: [6556]
+    filename: check_mk_accept
+  - type: dport_accept
     dport: [ssh]
     saddr: "{{ ip_whitelist }}"
   - type: dport_limit
