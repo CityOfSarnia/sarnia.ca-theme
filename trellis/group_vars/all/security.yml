@@ -4,6 +4,7 @@ ferm_input_list:
     filename: nginx_accept
   - type: dport_accept
     dport: [6556]
+    saddr: "{{ check_mk_host }}"
     filename: check_mk_accept
   - type: dport_accept
     dport: [ssh]
@@ -16,5 +17,5 @@ ferm_input_list:
 # Documentation: https://roots.io/trellis/docs/security/
 # If sshd_permit_root_login: false, admin_user must be in 'users' (`group_vars/all/users.yml`) with sudo group
 # and in 'vault_users' (`group_vars/staging/vault.yml`, `group_vars/production/vault.yml`)
-sshd_permit_root_login: true
+sshd_permit_root_login: false
 sshd_password_authentication: false
