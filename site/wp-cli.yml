@@ -5,10 +5,10 @@ server:
 @local:
   ssh: web@local.sarnia.ca/srv/www/sarnia.ca/current
 @development:
-  ssh: web@ip-10-30-17-40.ca-central-1.compute.internal/srv/www/sarnia.ca/current
+  ssh: web@301us18-web005.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
 @staging:
-  ssh: web@ip-10-30-14-118.ca-central-1.compute.internal/srv/www/sarnia.ca/current
+  ssh: web@301us18-web003.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
 @production:
-  ssh: web@ip-10-30-11-8.ca-central-1.compute.internal/srv/www/sarnia.ca/current
+  ssh: web@301us18-web001.cos.city.sarnia.on.ca/srv/www/sarnia.ca/current
 @backup:
   ssh: web@ip-10-137-11-43.ca-central-1.compute.internal/srv/www/sarnia.ca/current

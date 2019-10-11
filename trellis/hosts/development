@@ -2,9 +2,9 @@
 # List each machine only once per [group], even if it will host multiple sites.
 
 [development]
-ip-10-30-17-40.ca-central-1.compute.internal
-ip-10-30-17-170.ca-central-1.compute.internal
+301us18-web005.cos.city.sarnia.on.ca
+301us18-web006.cos.city.sarnia.on.ca
 
 [web]
-ip-10-30-17-40.ca-central-1.compute.internal
-ip-10-30-17-170.ca-central-1.compute.internal
+301us18-web005.cos.city.sarnia.on.ca
+301us18-web006.cos.city.sarnia.on.ca
