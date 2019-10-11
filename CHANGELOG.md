@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- nginx-include for nginx_status location block (needed for check_mk plugin)
 - Location Block for excluding logging of health checks from Application Load Balancer
 - Destination port settings to allow Check_MK logging
 - Common SSH key for admin_user and web_user (ubuntu.pub it@sarnia.ca), shared in Keepass
@@ -16,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Redundant variable definitions in environment config files
 
 ### Changed
+- Hosts are now defined using CNAMES making then easier to read/understand
 - admin_user is now 'ubuntu' globally rather than 'cosadmin'
 - ntp_servers is now '169.254.169.123' (Amazon Time Sync Service)
 
