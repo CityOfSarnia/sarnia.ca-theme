@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Location Block for excluding logging of health checks from Application Load Balancer
 - Destination port settings to allow Check_MK logging
+- Common SSH key for admin_user and web_user (ubuntu.pub it@sarnia.ca), shared in Keepass
 - MYSQL Encryption flag for production environment
 
 ### Removed
@@ -17,6 +18,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - admin_user is now 'ubuntu' globally rather than 'cosadmin'
 - ntp_servers is now '169.254.169.123' (Amazon Time Sync Service)
+
+### Updated
+- wpackagist-plugin/luckywp-table-of-contents (1.9.4 => 1.9.6)
+- wpackagist-plugin/query-monitor (3.3.7 => 3.4.0)
+- wpackagist-plugin/elasticpress (3.1.4 => 3.2)
+- koodimonni-plugin-language/woocommerce-en_ca (3.7.0 => 3.7.1)
+- koodimonni-plugin-language/woocommerce-fr_ca (3.7.0 => 3.7.1)
 
 ## [1.5.0] - 2019-10-07
 ### Added
