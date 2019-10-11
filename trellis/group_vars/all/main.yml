@@ -71,7 +71,7 @@ raw_vars:
   - vault_wordpress_sites
 
 ntp_servers:
-  - "10.30.0.1 iburst"
+  - "169.254.169.123 iburst"
 
 php_extensions_custom:
   php7.3-bcmath: "{{ apt_package_state }}"
