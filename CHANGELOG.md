@@ -6,7 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- Location Block for excluding logging of health checks from Application Load Balancer
+- Destination port settings to allow Check_MK logging
+- MYSQL Encryption flag for production environment
 
+### Removed
+- Redundant variable definitions in environment config files
+
+### Changed
+- admin_user is now 'ubuntu' globally rather than 'cosadmin'
+- ntp_servers is now '169.254.169.123' (Amazon Time Sync Service)
 
 ## [1.5.0] - 2019-10-07
 ### Added
