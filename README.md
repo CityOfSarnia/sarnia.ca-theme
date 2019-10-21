@@ -1,3 +1,13 @@
+- [Sarnia.ca Project](#sarniaca-project)
+  - [Requirements](#requirements)
+  - [Instructions](#instructions)
+  - [Local development setup](#local-development-setup)
+  - [Remote server setup (staging/production)](#remote-server-setup-stagingproduction)
+    - [Provision server:](#provision-server)
+    - [Deploy:](#deploy)
+  - [Contributing](#contributing)
+  - [Community](#community)
+
 # Sarnia.ca Project
 
 This repository is used as a storage location for the project, integrating and using the following projects:
