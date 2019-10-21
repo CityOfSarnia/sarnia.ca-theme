@@ -1,15 +1,17 @@
-- [Sarnia.ca Project](#sarniaca-project)
-  - [Requirements](#requirements)
-  - [Instructions](#instructions)
-  - [Local development setup](#local-development-setup)
-  - [Remote server setup (staging/production)](#remote-server-setup-stagingproduction)
-    - [Provision server:](#provision-server)
-    - [Deploy:](#deploy)
-    - [Rollback a deploy:](#rollback-a-deploy)
-  - [Contributing](#contributing)
-  - [Community](#community)
-
 # Sarnia.ca Project
+
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Instructions](#instructions)
+- [Local development setup](#local-development-setup)
+- [Remote server setup (staging/production)](#remote-server-setup-stagingproduction)
+  - [Provision server](#provision-server)
+  - [Deploy](#deploy)
+  - [Rollback a deploy](#rollback-a-deploy)
+- [Contributing](#contributing)
+- [Community](#community)
+
+## Introduction
 
 This repository is used as a storage location for the project, integrating and using the following projects:
 
