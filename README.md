@@ -5,6 +5,7 @@
   - [Remote server setup (staging/production)](#remote-server-setup-stagingproduction)
     - [Provision server:](#provision-server)
     - [Deploy:](#deploy)
+    - [Rollback a deploy:](#rollback-a-deploy)
   - [Contributing](#contributing)
   - [Community](#community)
 
@@ -103,7 +104,7 @@ $ ansible-playbook server.yml -e env=<environment>
 ansible-playbook deploy.yml -e "site=sarnia.ca env=<environment>"
 ```
 
-**To rollback a deploy:**
+### Rollback a deploy:
 ```shell
 ansible-playbook rollback.yml -e "site=sarnia.ca env=<environment>"
 ```
