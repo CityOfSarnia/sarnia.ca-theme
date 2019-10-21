@@ -8,8 +8,6 @@
   - [Provision server](#provision-server)
   - [Deploy](#deploy)
   - [Rollback a deploy](#rollback-a-deploy)
-- [Contributing](#contributing)
-- [Community](#community)
 
 ## Introduction
 
@@ -110,14 +108,3 @@ ansible-playbook deploy.yml -e "site=sarnia.ca env=<environment>"
 ```shell
 ansible-playbook rollback.yml -e "site=sarnia.ca env=<environment>"
 ```
-
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
-
-## Community
-
-Keep track of development and community news.
-
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
