@@ -55,6 +55,8 @@ ntp_manage_config: true
 www_root: /srv/www
 ip_whitelist:
   - "{{ (env == 'local') | ternary(ansible_default_ipv4.gateway, ipify_public_ip | default('')) }}"
+check_mk_host:
+  - "watcher.cos.city.sarnia.on.ca"
 
 # Values of raw_vars will be wrapped in `{% raw %}` to avoid templating problems if values include `{%` and `{{`.
 # Will recurse dicts/lists. `*` is wildcard for one or more dict keys, list indices, or strings. Example:
@@ -69,7 +71,7 @@ raw_vars:
   - vault_wordpress_sites
 
 ntp_servers:
-  - "10.30.0.1 iburst"
+  - "169.254.169.123 iburst"
 
 php_extensions_custom:
   php7.3-bcmath: "{{ apt_package_state }}"

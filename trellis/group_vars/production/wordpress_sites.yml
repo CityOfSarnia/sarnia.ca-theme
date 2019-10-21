@@ -26,3 +26,4 @@ wordpress_sites:
       db_user: sarnia_ca_production
       db_host: a301us18-sql001.cq21knrlnmdp.ca-central-1.rds.amazonaws.com
       google_analytics_trackingID: "UA-45028636-12"
+      mysql_client_flags: "MYSQLI_CLIENT_SSL"
