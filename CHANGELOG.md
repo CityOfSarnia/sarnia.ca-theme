@@ -6,7 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [1.6.0] - 2019-10-21
 ### Added
+- Ansible logging, helpful for provision and deploy troubleshooting
 - nginx-include for nginx_status location block (needed for check_mk plugin)
 - Location Block for excluding logging of health checks from Application Load Balancer
 - Destination port settings to allow Check_MK logging
@@ -22,11 +25,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ntp_servers is now '169.254.169.123' (Amazon Time Sync Service)
 
 ### Updated
-- wpackagist-plugin/luckywp-table-of-contents (1.9.4 => 1.9.6)
+- roots/wordpress (5.2.3 => 5.2.4)
+- koodimonni-language/en_ca (5.2.3 => 5.2.4)
+- koodimonni-language/fr_ca (5.2.3 => 5.2.4)
+- wpackagist-plugin/luckywp-table-of-contents (1.9.4 => 1.9.7)
 - wpackagist-plugin/query-monitor (3.3.7 => 3.4.0)
-- wpackagist-plugin/elasticpress (3.1.4 => 3.2)
+- wpackagist-plugin/elasticpress (3.1.4 => 3.2.1)
 - koodimonni-plugin-language/woocommerce-en_ca (3.7.0 => 3.7.1)
 - koodimonni-plugin-language/woocommerce-fr_ca (3.7.0 => 3.7.1)
+- squizlabs/php_codesniffer (3.5.0 => 3.5.1)
+
+### Fixed
+- Include changes from upstream trellis project, that fix self-signed certs for Ansible 2.8
 
 ## [1.5.0] - 2019-10-07
 ### Added
@@ -85,7 +95,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Version tracking begins (albeit a bit late in the process)
 
-[Unreleased]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.5.0...develop
+[Unreleased]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.6.0...develop
+[1.6.0]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.5.0...v1.6.0
 [1.5.0]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4.2...v1.5.0
 [1.4.2]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4.1...v1.4.2
 [1.4.1]: https://cos-gitlab-prod/sarnia-website/sarnia.ca/compare/v1.4...v1.4.1
