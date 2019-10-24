@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Change Pagination arguments for better accessibility.
 
+###Fixed
+- Fixed double scrollbar bug on IE11
+- Fixed whitespace overflow on footer for IE11
+
 ## [v2.9.0] - 2019/09/23
 ### Added
 - This changelog :)
