@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9504d2b0b01be6d47a5b3f8cde690414",
+    "content-hash": "43ed1d68cac9b083081cd859de4380f3",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -298,10 +298,10 @@
         },
         {
             "name": "koodimonni-plugin-language/akismet-en_ca",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.2/en_CA.zip"
+                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.3/en_CA.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -317,10 +317,10 @@
         },
         {
             "name": "koodimonni-plugin-language/akismet-fr_ca",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.2/fr_CA.zip"
+                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.3/fr_CA.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -830,6 +830,52 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
+        },
+        {
+            "name": "pixelstudio/google-site-kit",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hrsetyono/google-site-kit.git",
+                "reference": "45f0e1fa5cde2813126748dcabd6e342d941ce37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hrsetyono/google-site-kit/zipball/45f0e1fa5cde2813126748dcabd6e342d941ce37",
+                "reference": "45f0e1fa5cde2813126748dcabd6e342d941ce37",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=7.0.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Google",
+                    "homepage": "https://opensource.google.com"
+                },
+                {
+                    "name": "Pixel Studio",
+                    "email": "info@pixelstudio.id",
+                    "homepage": "https://pixelstudio.id"
+                }
+            ],
+            "description": "Site Kit is a one-stop solution for WordPress users to use everything Google has to offer to make them successful on the web",
+            "homepage": "https://github.com/hrsetyono/google-site-kit/",
+            "keywords": [
+                "adsense",
+                "analytics",
+                "google",
+                "plugin",
+                "search-console",
+                "wordpress"
+            ],
+            "time": "2019-10-07T09:20:52+00:00"
         },
         {
             "name": "roots/soil",
@@ -1407,24 +1453,6 @@
             "homepage": "https://wordpress.org/plugins/duplicate-post/"
         },
         {
-            "name": "wpackagist-plugin/elasticpress",
-            "version": "3.2.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/elasticpress/",
-                "reference": "tags/3.2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elasticpress.3.2.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/elasticpress/"
-        },
-        {
             "name": "wpackagist-plugin/google-sitemap-generator",
             "version": "4.1.0",
             "source": {
@@ -1444,15 +1472,15 @@
         },
         {
             "name": "wpackagist-plugin/luckywp-table-of-contents",
-            "version": "1.9.7",
+            "version": "1.9.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/luckywp-table-of-contents/",
-                "reference": "tags/1.9.7"
+                "reference": "tags/1.9.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.9.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/luckywp-table-of-contents.1.9.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1587,42 +1615,6 @@
             "homepage": "https://wordpress.org/plugins/stream/"
         },
         {
-            "name": "wpackagist-plugin/theme-check",
-            "version": "20190801.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/theme-check/",
-                "reference": "tags/20190801.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/theme-check.20190801.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/theme-check/"
-        },
-        {
-            "name": "wpackagist-plugin/theme-sniffer",
-            "version": "1.1.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/theme-sniffer/",
-                "reference": "tags/1.1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/theme-sniffer.1.1.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/theme-sniffer/"
-        },
-        {
             "name": "wpackagist-plugin/wonderm00ns-simple-facebook-open-graph-tags",
             "version": "2.2.7.1",
             "source": {
@@ -1648,12 +1640,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "eb59d9f35a47f567ae15e7179d7c666489cd4b85"
+                "reference": "f8c8349a4b12a26edfa8b21d07d3dbeb6dcedcfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/eb59d9f35a47f567ae15e7179d7c666489cd4b85",
-                "reference": "eb59d9f35a47f567ae15e7179d7c666489cd4b85",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f8c8349a4b12a26edfa8b21d07d3dbeb6dcedcfa",
+                "reference": "f8c8349a4b12a26edfa8b21d07d3dbeb6dcedcfa",
                 "shasum": ""
             },
             "conflict": {
@@ -1856,20 +1848,20 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-10-09T14:04:58+00:00"
+            "time": "2019-10-29T22:11:03+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.1",
+            "version": "3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "82cd0f854ceca17731d6d019c7098e3755c45060"
+                "reference": "65b12cdeaaa6cd276d4c3033a95b9b88b12701e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/82cd0f854ceca17731d6d019c7098e3755c45060",
-                "reference": "82cd0f854ceca17731d6d019c7098e3755c45060",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/65b12cdeaaa6cd276d4c3033a95b9b88b12701e7",
+                "reference": "65b12cdeaaa6cd276d4c3033a95b9b88b12701e7",
                 "shasum": ""
             },
             "require": {
@@ -1907,7 +1899,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-10-16T21:14:26+00:00"
+            "time": "2019-10-28T04:36:32+00:00"
         }
     ],
     "aliases": [],
