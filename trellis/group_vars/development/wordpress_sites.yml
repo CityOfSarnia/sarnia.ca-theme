@@ -25,4 +25,5 @@ wordpress_sites:
       db_user: sarnia_ca_development
       db_host: a301us18-sql005.cq21knrlnmdp.ca-central-1.rds.amazonaws.com
       gf_recaptcha_public_key: "6Lfpw6UUAAAAAI9HS0ZfsD5g2U27XWgymQibrhY-"
+      google_analytics_trackingID: "UA-45028636-13"
       mysql_client_flags: "MYSQLI_CLIENT_SSL"

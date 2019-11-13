@@ -1,5 +1,16 @@
 # Sarnia.ca Project
 
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Instructions](#instructions)
+- [Local development setup](#local-development-setup)
+- [Remote server setup (staging/production)](#remote-server-setup-stagingproduction)
+  - [Provision server](#provision-server)
+  - [Deploy](#deploy)
+  - [Rollback a deploy](#rollback-a-deploy)
+
+## Introduction
+
 This repository is used as a storage location for the project, integrating and using the following projects:
 
 * [Bedrock](https://github.com/roots/bedrock)
@@ -93,18 +104,7 @@ $ ansible-playbook server.yml -e env=<environment>
 ansible-playbook deploy.yml -e "site=sarnia.ca env=<environment>"
 ```
 
-**To rollback a deploy:**
+### Rollback a deploy:
 ```shell
 ansible-playbook rollback.yml -e "site=sarnia.ca env=<environment>"
 ```
-
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
-
-## Community
-
-Keep track of development and community news.
-
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)

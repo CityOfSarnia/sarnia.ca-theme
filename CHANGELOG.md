@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- Installing pixelstudio/google-site-kit (1.0.7)
+
+### Removed
+- Removing wpackagist-plugin/theme-sniffer (1.1.1)
+- Removing wpackagist-plugin/theme-check (20190801.1)
+- Removing wpackagist-plugin/elasticpress (3.2.1)
+
+### Changed
+- Updating wpackagist-plugin/luckywp-table-of-contents (1.9.7 => 1.9.8)
+- Updating squizlabs/php_codesniffer (3.5.1 => 3.5.2)
+- Updating koodimonni-plugin-language/akismet-en_ca (4.1.2 => 4.1.3)
+- Updating koodimonni-plugin-language/akismet-fr_ca (4.1.2 => 4.1.3)
+- Updating roave/security-advisories (dev-master eb59d9f => dev-master f8c8349)
+
 
 ## [1.6.0] - 2019-10-21
 ### Added
