@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Change Pagination arguments for better accessibility.
+- Margins on recent notifications to be a bit cleaner on desktop
 
-###Fixed
+### Fixed
 - Fixed double scrollbar bug on IE11
 - Fixed whitespace overflow on footer for IE11
+
+### Removed
+- Bottom part of recent notifications block, tentatively reworked in future feature release
 
 ## [v2.9.0] - 2019/09/23
 ### Added
