@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.10.0] - 2019/11/13
+### Changed
+- Change Pagination arguments for better accessibility.
+- Margins on recent notifications to be a bit cleaner on desktop
+
+### Fixed
+- Fixed double scrollbar bug on IE11
+- Fixed whitespace overflow on footer for IE11
+
+### Removed
+- Bottom part of recent notifications block, tentatively reworked in future feature release
+
 ## [v2.9.0] - 2019/09/23
 ### Added
 - This changelog :)
@@ -123,6 +135,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added version information and tagged releases for deployment process
 
 [Unreleased]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/master...HEAD
+[v2.10.0]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.9.0...v2.10.0
 [v2.9.0]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.8...v2.9.0
 [v2.8]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.7...v2.8
 [v2.7]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.6.0...v2.7

@@ -12,7 +12,7 @@ if (have_posts() && get_search_query()) :
         the_post();
         get_template_part('template-parts/content/search', 'excerpt');
     endwhile;
-    sarnia_number_pagination();
+    sarnia_number_pagination($wp_query);
 ?>
                         </div><!-- .search-results -->
                     </div><!-- .container.container--md -->

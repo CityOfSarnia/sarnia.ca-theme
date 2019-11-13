@@ -91,49 +91,5 @@ wp_reset_query();
         </div><!-- .container recent-notification-list -->
     </div><!-- .recent-notification-list--top -->
 
-    <div class="recent-notification-list--bottom" aria-hidden="true">
-        <div class="container recent-notification-list">
             <div class="recent-notification-list__item recent-notification-list--collapse"></div>
-            <!-- Recent Notification Query for Expert Only -->
-<?php
-$count = 0;
-$loop = new WP_Query(array('post_type' => 'notifications', 'filter' => 'sticky', 'posts_per_page' => 3));
-while ($loop->have_posts()) : $loop->the_post(); 
-?>
-            <a id="post-<?php the_ID();?>" href="<?= get_permalink(); ?>" class="recent-notification-list__item">
-                <p class="recent-notification__text"><?= get_the_excerpt(); ?></p>
-            </a><!-- #post-<?php the_ID();?> -->
-<?php 
-    $count++;
-endwhile;
-if ($count < 3) :
-    $num = 3 - $count;
-
-    $loop = new WP_Query(
-        array(
-            'post_type'  => 'notifications',
-            'posts_per_page' => $num,
-            'tax_query' => array(
-                array(
-                    'taxonomy'  => 'filter',
-                    'field'     => 'slug',
-                    'terms'     => array('sticky', 'feature'),
-                    'operator'  => 'NOT IN'
-                )
-            ),
-        )
-    );
-    while ($loop->have_posts()) : $loop->the_post(); 
-?>
-            <a href="<?= get_permalink(); ?>" id="post-<?php the_ID();?>" class="recent-notification-list__item">
-                <p class="recent-notification__text"><?= get_the_excerpt(); ?></p>
-            </a><!-- #post-<?php the_ID();?> -->
-<?php
-    endwhile;
-endif;
-wp_reset_query();
-?>
-            <div class="recent-notification-list__item recent-notification-list--collapse"></div>
-        </div><!-- .container recent-notification-list -->
-    </div><!-- .recent-notification-list--bottom -->
 </div><!-- .recent-notifications -->

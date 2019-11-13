@@ -4,29 +4,33 @@
 						<div class="post-list">
 <?php
 if ( have_posts() ):
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	if (is_day()):
-		$currYear = get_the_time('Y');
-		$currMonth = get_the_time('m');
-		$currDay = get_the_time('d');
-		$wp_query = new WP_Query();
-		$wp_query->query('year=' . $currYear . '&monthnum=' . $currMonth . '&day=' . $currDay . '&post_type=post&paged=' . $paged);
-	elseif (is_month()):
-		$currYear = get_the_time('Y');
-		$currMonth = get_the_time('m');
-		$wp_query = new WP_Query();
-		$wp_query->query('year=' . $currYear . '&monthnum=' . $currMonth . '&post_type=post&paged=' . $paged);
-	elseif (is_year()):
-		$currYear = get_the_time('Y');
-		$wp_query = new WP_Query();
-		$wp_query->query('year=' . $currYear . '&post_type=post&paged=' . $paged);
+
+	$query_args = [
+		'post_type'     => 'post',
+		'orderby'       => 'date',
+		'order'         => 'desc',
+		'paged'         => (get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1),
+		'category_name' => get_query_var('category_name'),
+	];
+
+	if (is_date()):
+		$query_args['year'] = get_the_time('Y');	
+		if (is_month()):
+			$query_args['monthnum'] = get_the_time('m');
+		elseif (is_day()):
+			$query_args['monthnum'] = get_the_time('m');
+			$query_args['day'] = get_the_time('d');	
+		endif;
 	endif;
+
+	$wp_query = new WP_Query( $query_args );
+
 	while ($wp_query->have_posts()) : 
 		$wp_query->the_post();
 		get_template_part('template-parts/content/post', 'excerpt');
 	endwhile;
 	wp_reset_postdata();
-	sarnia_number_pagination();
+	sarnia_number_pagination($wp_query);
 ?>
 						</div><!-- .post-list -->
 					</div><!-- .container.container--min -->
