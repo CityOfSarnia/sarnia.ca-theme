@@ -72,7 +72,7 @@
     "koodimonni-language/fr_ca": "*",
     "oscarotero/env": "^1.2.0",
     "roots/soil": "^3.8.1",
-    "roots/wordpress": "5.2.4",
+    "roots/wordpress": "5.3",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/wp-stage-switcher": "^2.1",

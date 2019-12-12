@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removing wpackagist-plugin/elasticpress (3.2.1)
 
 ### Changed
+- Updating roots/wordpress (5.2.4 => 5.3)
 - Updating cos/sarnia.ca-theme (v2.9.0 => v2.10.1):  Checking out 6efd34f1dc
 - Updating koodimonni-plugin-language/woocommerce-en_ca (3.7.1 => 3.8.1)         
 - Updating koodimonni-plugin-language/bbpress-en_ca (2.5.14 => 2.6.3)         
