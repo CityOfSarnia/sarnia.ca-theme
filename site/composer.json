@@ -71,7 +71,6 @@
     "koodimonni-language/en_ca": "*",
     "koodimonni-language/fr_ca": "*",
     "oscarotero/env": "^1.2.0",
-    "pixelstudio/google-site-kit": "^1.0",
     "roots/soil": "^3.8.1",
     "roots/wordpress": "5.2.4",
     "roots/wp-config": "1.0.0",

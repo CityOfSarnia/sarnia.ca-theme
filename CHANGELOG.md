@@ -6,8 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
-### Added
-- Installing pixelstudio/google-site-kit (1.0.7)
 
 ### Removed
 - Removing wpackagist-plugin/theme-sniffer (1.1.1)
@@ -15,6 +13,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removing wpackagist-plugin/elasticpress (3.2.1)
 
 ### Changed
+- Updating cos/sarnia.ca-theme (v2.9.0 => v2.10.1):  Checking out 6efd34f1dc
+- Updating koodimonni-plugin-language/woocommerce-en_ca (3.7.1 => 3.8.1)         
+- Updating koodimonni-plugin-language/bbpress-en_ca (2.5.14 => 2.6.3)         
+- Updating koodimonni-language/en_ca (5.2.4 => 5.3)         
+- Updating koodimonni-plugin-language/woocommerce-fr_ca (3.7.1 => 3.8.1)         
+- Updating koodimonni-language/fr_ca (5.2.4 => 5.3)         
+- Updating roots/soil (3.8.1 => 3.9.0)         
+- Updating wpackagist-plugin/broken-link-checker (1.11.8 => 1.11.9)         
+- Updating wpackagist-plugin/duplicate-post (3.2.3 => 3.2.4)         
+- Updating wpackagist-plugin/luckywp-table-of-contents (1.9.8 => 1.9.11)         
+- Updating wpackagist-plugin/query-monitor (3.4.0 => 3.5.2)         
+- Updating wpackagist-plugin/safe-redirect-manager (1.9.2 => 1.9.3)         
+- Updating wpackagist-plugin/safe-svg (1.9.4 => 1.9.7)         
+- Updating wpackagist-plugin/wonderm00ns-simple-facebook-open-graph-tags (2.2.7.1 => 2.2.7.2)         
+- Updating squizlabs/php_codesniffer (3.5.2 => 3.5.3)         
+- Updating phpoption/phpoption (1.5.0 => 1.6.1)         
+- Updating symfony/polyfill-ctype (v1.12.0 => v1.13.1)         
+- Updating roave/security-advisories (dev-master f8c8349 => dev-master e4ee2c8)
 - Updating wpackagist-plugin/luckywp-table-of-contents (1.9.7 => 1.9.8)
 - Updating squizlabs/php_codesniffer (3.5.1 => 3.5.2)
 - Updating koodimonni-plugin-language/akismet-en_ca (4.1.2 => 4.1.3)
