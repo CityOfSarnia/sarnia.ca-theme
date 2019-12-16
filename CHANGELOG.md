@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removing wpackagist-plugin/elasticpress (3.2.1)
 
 ### Changed
+- Updating cos/gravityforms (2.4.14 => 2.4.15)
 - Updating roots/wordpress (5.3 => 5.3.1)
 - Updating koodimonni-language/en_ca (5.3 => 5.3.1)
 - Updating koodimonni-language/fr_ca (5.3 => 5.3.1)
