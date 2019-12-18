@@ -55,8 +55,7 @@
           "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
         },
         "require": {
-          "composer/installers": "^1.4",
-          "ffraenz/private-composer-installer": "^2.0"
+          "ffraenz/private-composer-installer": "^3.0"
         }
       }
     }
@@ -71,15 +70,14 @@
     "koodimonni-language/en_ca": "*",
     "koodimonni-language/fr_ca": "*",
     "oscarotero/env": "^1.2.0",
-    "pixelstudio/google-site-kit": "^1.0",
     "roots/soil": "^3.8.1",
-    "roots/wordpress": "5.2.4",
+    "roots/wordpress": "5.3.1",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/wp-stage-switcher": "^2.1",
     "soberwp/intervention": "^1.2",
     "solarissmoke/disable-comments-mu": "^1.2",
-    "vlucas/phpdotenv": "^3.4.0",
+    "vlucas/phpdotenv": "^3.6.0",
     "wp-api/basic-auth": "dev-master",
     "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0",
     "wpackagist-plugin/broken-link-checker": "^1.11.8",
