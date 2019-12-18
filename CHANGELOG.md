@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.11.0] - 2019/12/18
+### Changed
+- Package dependencies updated
+
 ## [v2.10.0] - 2019/11/13
 ### Changed
 - Change Pagination arguments for better accessibility.
@@ -135,6 +139,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added version information and tagged releases for deployment process
 
 [Unreleased]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/master...HEAD
+[v2.11.0]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.10.0...v2.11.0
 [v2.10.0]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.9.0...v2.10.0
 [v2.9.0]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.8...v2.9.0
 [v2.8]: https://github.com/CityOfSarnia/sarnia.ca-theme/compare/v2.7...v2.8
