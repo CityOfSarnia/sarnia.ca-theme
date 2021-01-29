@@ -2,7 +2,7 @@
 mail_smtp_server: mail.sarnia.ca:587
 mail_admin: sarnia_website@sarnia.ca
 mail_hostname: sarnia.ca
-mail_user: sarnia_ca_wordpress@cos.city.sarnia.on.ca
+mail_user: sarnia_ca_wordpress@sarnia.ca
 mail_password: "{{ vault_mail_password }}" # Define this variable in group_vars/all/vault.yml
 ssmtp_from_override: 'No'
 ssmtp_revaliases:
