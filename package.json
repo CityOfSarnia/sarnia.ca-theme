@@ -79,7 +79,7 @@
     "img-loader": "^3.0.2",
     "mini-css-extract-plugin": "^0.4.3",
     "moment": "^2.29.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "purgecss-webpack-plugin": "^1.6.0",
     "purgecss-whitelister": "^2.2.0",
